@@ -1,5 +1,11 @@
 # Progress log
 
+- 8 November 2026, sourced headline reference and publication: verified the dated ONS September 2026 bulletin (release21October), saved published annual CPI3.5%/CPIH3.6% with provenance, and updated the demo comparison. Other spending uses CPI only for a matching comparison period; invalid or stale references are ignored. Synthetic statements/category rules and secondary snack benchmark remain labelled. Verification: 100 Python, 33 TypeScript, 43 desktop/phone browser passes, one expected skip; 36 independent parity cases pass. Frozen models unchanged.
+
+
+- 8 November 2026, synthetic personal-inflation demo: added three labelled fictional statements, real frozen chocolate/crisps indices, a labelled synthetic 50/50 benchmark, local Python/browser parsing and spending-weighted annual changes, exclusions, warnings, aggregate downloads and separately reported recurring-payment amount changes. Official CPI/CPIH remain unavailable. No new datasets or trained categoriser were invented. Final checks: 96 Python, 31 TypeScript, 43 desktop/phone browser passes and one expected skip. Both layouts visually reviewed; all 1,778 model files unchanged. Log: `data/reports/personal-inflation-after.log`.
+
+
 - 8 November 2026, GitHub packaging: Added committed public demo data/images and an explicit research-refresh option. A staged-file checkout without the large research tables passes 66 Python and 22 TypeScript tests plus build; the full desktop/phone run passes 39 checks (one expected skip). Included saved model experiments and compact model inputs; excluded dependencies, caches, raw bulk downloads and runtime logs. Original experiment artifacts remain unchanged.
 
 - 8 November 2026, receipt/decision follow-up: Implemented snack-memory quiz, thermal receipt, proportional missing-weight overlays, exact whole-pack shopping planner and separately qualified conservative forecast output. Corrected Revels effective increase to 33.0%. Independent exhaustive optimization checks match 12 real baskets. Final checks pass 59 Python, 22 TypeScript and 39 desktop/phone browser checks, with one expected skip. All 1,778 model files are unchanged; the prospective fallback rule has no independent performance validation.

@@ -5,8 +5,9 @@ import { comparableUnitPriceChange, isReviewedReplacementPair, massChange, obser
 import { CategoryForecastPage } from './CategoryForecastPage';
 import { RevealChallenge, GhostWeightOverlay } from './RevealChallenge';
 import { WholePackPlanner } from './WholePackPlanner';
+import { PersonalInflationPage } from './PersonalInflationPage';
 
-type Page = 'history' | 'compare' | 'forecast';
+type Page = 'history' | 'compare' | 'forecast' | 'personal';
 const money = (value: number | null | undefined, digits = 2) => value == null || !Number.isFinite(value) ? 'Not reported' : new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP', minimumFractionDigits: digits, maximumFractionDigits: digits }).format(value);
 const formatMass = (value: number) => new Intl.NumberFormat('en-GB', { maximumFractionDigits: 3 }).format(value);
 const percent = (value: number | null | undefined, signed = false) => value == null || !Number.isFinite(value) ? '—' : `${signed && value > 0 ? '+' : ''}${(value * 100).toFixed(1)}%`;
@@ -16,7 +17,7 @@ const date = (value: string, long = false) => {
   return Number.isNaN(parsed.getTime()) ? value : parsed.toLocaleDateString('en-GB', { day: 'numeric', month: long ? 'long' : 'short', year: 'numeric' });
 };
 const readable = (value: string) => value.replaceAll('_', ' ').replaceAll('-', ' ');
-const route = (): Page => ['history', 'compare', 'forecast'].includes(location.hash.slice(1)) ? location.hash.slice(1) as Page : 'history';
+const route = (): Page => ['history', 'compare', 'forecast', 'personal'].includes(location.hash.slice(1)) ? location.hash.slice(1) as Page : 'history';
 
 function Icon({ name, size = 20, ...props }: { name: 'arrow' | 'search' | 'external' | 'close' | 'check' | 'clock' | 'info' | 'chart' | 'chevron'; size?: number; className?: string }) {
   const paths = {
@@ -68,6 +69,7 @@ function App() {
         <button aria-current={page === 'history' ? 'page' : undefined} onClick={() => navigate('history')}>The detective</button>
         <button aria-current={page === 'compare' ? 'page' : undefined} onClick={() => navigate('compare')}>Price comparison</button>
         <button aria-current={page === 'forecast' ? 'page' : undefined} onClick={() => navigate('forecast')}>Forecast lab<span className={`nav-status ${data?.category_forecast?.categories.length ? 'available' : ''}`} aria-label={data?.category_forecast?.categories.length ? 'category forecasts available' : 'forecast unavailable'} /></button>
+        <button aria-current={page === 'personal' ? 'page' : undefined} onClick={() => navigate('personal')}>Personal inflation</button>
       </nav>
       <span className="header-locale"><span className="live-dot" /> UK grocery evidence</span>
     </header>
@@ -76,6 +78,7 @@ function App() {
         {page === 'history' && <HistoryPage data={data} activeCase={activeCase} selected={selected} setSelected={setSelected} onEvidence={(snack, opener) => setEvidence({ snack, opener })} navigate={navigate} />}
         {page === 'compare' && <ComparePage groups={data.comparisons} />}
         {page === 'forecast' && <ForecastPage data={data} />}
+        {page === 'personal' && <PersonalInflationPage />}
       </>}
     </main>
     <footer className="site-footer"><div><Mark small /><span>Small changes. A clearer picture.</span></div><p>Monthly grocery outcomes. Weekly commodity inputs.</p><span>Built from public evidence · {data ? date(data.generated_at) : 'UK'}</span></footer>

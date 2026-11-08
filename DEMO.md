@@ -33,3 +33,10 @@ Use the historical slider and **Reveal actual**. Show misses as well as successe
 - Eleven independent 2024 listing histories and 56 same-day comparison observations remain separate from verified replacement evidence.
 - The model uses monthly UK category outcomes and genuine weekly commodity/FX inputs. Thirty-four earlier validation targets select models; 33 later targets measure their errors, under stated publication-delay assumptions.
 - Later model searches and RSI comparisons are retrospective exploratory work. The original default remains unchanged. The app does not yet predict when an individual brand will shrink.
+
+
+## Optional synthetic personal-inflation example
+
+Open **Personal inflation → Snack clubs · 13 months → Calculate sample**. Show that the real saved snack indices, weighted by the fictional statement, produce **1.1%** over September 2025–September 2026. The chocolate subscription's **20% amount increase** appears separately and does not enter the index calculation. The official comparison is **3.5% CPI**, with **3.6% CPIH** also shown, from the dated ONS release of 21 October 2026. These are fixed annual-rate references for the same period. The 1.9% equal-weight snack benchmark remains synthetic and separate.
+
+Switch to **Mixed household** to demonstrate the 99.6% `other` warning: these two narrow indices cannot estimate household inflation. The short statement exercises the less-than-three-month warning. All example statements are fabricated and labelled. Local file parsing does not upload bank data.

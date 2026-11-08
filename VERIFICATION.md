@@ -1,5 +1,21 @@
 # Verification record
 
+## Latest: fixed published ONS headline reference
+
+`./run.sh --check --browser-check --port 4174` passes **100 Python tests, 33 TypeScript tests and 43 Chromium desktop/phone browser checks**, with one expected skip and no unexpected failures. Log: `data/reports/personal-inflation-published-reference.log`. Current browser results and personal screenshots are in `data/reports/browser/`.
+
+The dated ONS release for September 2026 (published 21 October 2026) supplies fixed annual CPI3.5%/CPIH3.6%. Tests verify matching-period comparisons and all-items CPI fallback for other, while ignoring mismatched/invalid references. No monthly all-items levels are invented. Independent parity expanded to 36 scenarios, all passing; all 1,778 frozen model files remain unchanged. Updated desktop/phone screenshots were visually reviewed. The following earlier records describe the pre-reference demo and previous releases.
+
+
+## Latest: synthetic personal-inflation demo
+
+`./run.sh --check --browser-check --port 4174` passed **96 Python tests, 31 TypeScript tests and 43 Chromium desktop/phone browser checks**, with one expected phone-only skip on desktop and no unexpected failures. Log: `data/reports/personal-inflation-after.log`; baseline before changes passed 66/22/39 with one expected skip (`personal-inflation-before.log`). Current browser results are in `data/reports/browser/results.json`.
+
+The new checks cover independently hand-computed synthetic baskets, weights summing to one, single-category identity, synthetic reference-weight identity, income/refund/transfer/savings/cash exclusions, UK CSV formats and malformed input, coverage warnings, separate recurring-payment comparisons, CLI errors without raw descriptions, local-only uploads, clear/reset and aggregate downloads. All 282 ONS observations match the raw snapshot checksums/values; all 141 synthetic benchmark values match the rebased formula. Official CPI weights/headline data are absent, so no official headline reproduction is claimed. Independent Python/TypeScript parity checks passed 28 scenarios.
+
+Desktop and phone personal-inflation screenshots were captured and visually reviewed at `data/reports/browser/screenshots/desktop-personal-inflation.png` and `phone-personal-inflation.png`. Four-tab navigation fits the phone viewport; existing detective/comparison/forecast checks also pass. All 1,778 existing experiment files remain checksum-identical. The following sections preserve earlier verification records.
+
+
 8 November 2026, GitHub preparation. Default launch now validates and reuses the committed demo snapshot; `--refresh-data` explicitly invokes research preparation/export. Public metadata paths are portable copies; frozen artifacts are untouched. Checks pass **66 Python tests, 22 TypeScript tests and 39 Chromium desktop/phone browser checks**, with one expected skip. Log: `data/reports/github-publish-check.log`. A checkout of exactly the staged files, without the large retail/catalogue/raw downloads, also passed all 66 Python and 22 TypeScript tests plus production build. Installed runtime/dependency caches were reused for this check. Log: `data/reports/github-clean-checkout.log`. All 1,778 local frozen experiment files remain unchanged.
 
 8 November 2026, receipt and decision follow-up. **59 Python tests, 22 TypeScript tests and 39 Chromium desktop/phone browser checks pass**, with one expected phone-only skip on desktop. TypeScript and production build pass. Logs: `data/reports/receipt-upgrade-build.log` and `receipt-upgrade-browser-check.log`. The temporary browser server stopped; the existing preview on port 4173 serves the updated app/data with HTTP 200.

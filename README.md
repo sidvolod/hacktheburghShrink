@@ -30,7 +30,7 @@ For desktop and phone browser verification, including screenshots:
 
 This starts a temporary local server, runs the headless Chromium suite, and stops that server afterward. Checks use committed demo data and synthetic fixtures; the large retail tables are not required. Browser binaries, temporary profiles, screenshots and reports stay under `data/`. It downloads the pinned browser on first use. Results are saved in `data/reports/browser/results.json` and `data/reports/browser/html/`.
 
-The latest model/build check passes **66 Python tests and 22 TypeScript tests**. The browser suite covers desktop and phone; see `VERIFICATION.md` and the current reports for the latest run.
+The latest model/build check passes **100 Python tests and 33 TypeScript tests**. The browser suite covers desktop and phone; see `VERIFICATION.md` and the current reports for the latest run.
 
 ## Working paths
 
@@ -42,6 +42,20 @@ The latest model/build check passes **66 Python tests and 22 TypeScript tests**.
 Ten case files cover Quality Street, Doritos, McVitie’s Digestives, Snickers, Oreo Bites, M&M’s Chocolate, Galaxy Minstrels, Revels and two separate Maltesers changes. Nine have price comparisons: seven named-retailer shelf comparisons, one reported Maltesers price with retailer unspecified and one Snickers RRP comparison. The 2016 Maltesers prices remain unknown; the separate 2017 case records 103g→93g at a reported unchanged £1.50. Ingredient snapshots for Digestives now compare a government record of a 2008 purchase with a retailer specification updated in 2022, separately from the 2018/2019 size example. Exact transition dates remain unknown.
 
 The separate recipe detective also compares Penguin Original’s 2008 government label transcription with its official manufacturer declaration checked in 2026: milk chocolate becomes milk chocolate flavour coating in the description. The date of the recipe transition remains unknown, and coating percentage is kept distinct from cocoa percentage. Both recipe comparisons retain original sources and qualified ingredient facts.
+
+## Personal inflation demonstration
+
+Open **Personal inflation** (`#personal`) and calculate one of three explicitly synthetic bank statements: 13 months of snack-club payments, a mixed household debit/credit export, or a short statement exercising warnings. Sample CSVs can be downloaded; a local upload is parsed entirely in browser memory, with no external categorisation or transaction upload. Clear removes the current result. Aggregate downloads can contain normalised recurring merchant labels, but no raw transaction rows.
+
+The repo has only ONS chocolate (L79X, COICOP 01.1.8.3) and crisps (L79R, 01.1.7.5), January 2015–September 2026. Annual changes use September 2025 → September 2026. **A dated ONS reference supplies published annual CPI of 3.5% and CPIH of 3.6% for September 2026, released 21 October 2026.** These are fixed, source-linked rates in `data/curated/uk-inflation-reference.json`, not a live feed or a reconstructed all-items index history. The page compares the demo-weighted rate with official CPI for the same September 2025–September 2026 period. Unmapped spending uses the matching published CPI rate as a proxy; the synthetic 50/50 snack benchmark remains separate. Broader category indices, official expenditure weights and a trained merchant categoriser are absent, so this is still not a reliable household inflation estimate.
+
+Only explicit `DEMO CHOCOLATE SHOP/CLUB` and `DEMO CRISPS SHOP/CLUB` labels map to these indices. Ordinary supermarket transactions cannot reveal their item-level basket and stay `other`. Income, refunds, explicit own-account transfers, savings moves and cash withdrawals are excluded; cash remains separately flagged. Weights use the whole CSV period, not spending growth. Recurring monthly amount changes are shown separately and may reflect quantities, usage or plan changes.
+
+```sh
+PYTHONPATH=src .venv/bin/python -m shrinkflation personal-inflation data/synthetic/personal-inflation/snack-club.csv --json
+```
+
+The Python entry point is `shrinkflation.personal_inflation.personal_inflation(csv_path, indices_path=None)`. It returns rates/contributions as fractions, index months, spending weights, exclusions, warnings and observed recurring-payment changes. Without `--json`, the CLI prints a readable summary. Inputs are never copied into public data. The official comparison is from [the dated ONS bulletin](https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/september2026). A fixed reference is used only when its start/end months exactly match the calculated period; it is never carried forward to a different year. Without a matching reference or all-items series, the explicitly synthetic fallback remains available. The committed synthetic examples and index bundle need no new downloads; rebuild them from frozen local ONS/curated evidence with `PYTHONPATH=src .venv/bin/python -m shrinkflation.personal_demo` (the existing optional modelling dependencies provide the ONS parser).
 
 ## Train and inspect models
 

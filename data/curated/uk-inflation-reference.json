@@ -1,0 +1,13 @@
+{
+  "data_kind": "reported_ons_annual_rate",
+  "start_month": "2025-09",
+  "end_month": "2026-09",
+  "cpi_rate": 0.035,
+  "cpih_rate": 0.036,
+  "release_date": "2026-10-21",
+  "verified_on": "2026-11-08",
+  "source_url": "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/september2026",
+  "source_title": "Consumer price inflation, UK: September 2026",
+  "publisher": "Office for National Statistics",
+  "method": "Fixed published 12-month rates, transcribed from the ONS main points; fractions, not monthly rates. No all-items index history is fabricated."
+}
