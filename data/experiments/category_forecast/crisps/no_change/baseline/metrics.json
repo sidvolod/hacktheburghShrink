@@ -1,0 +1,14 @@
+{
+  "validation": {
+    "n": 34,
+    "mae_pp": 2.127870545240415,
+    "rmse_pp": 2.4748620314761025,
+    "directional_accuracy": 0.0
+  },
+  "test": {
+    "n": 33,
+    "mae_pp": 1.264796617401803,
+    "rmse_pp": 1.6077120176358837,
+    "directional_accuracy": 0.0
+  }
+}

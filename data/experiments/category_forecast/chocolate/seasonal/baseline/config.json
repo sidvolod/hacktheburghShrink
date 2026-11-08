@@ -1,0 +1,40 @@
+{
+  "model_id": "seasonal",
+  "feature_group": "baseline",
+  "features": [],
+  "selected_hyperparameters": {
+    "source_column": "baseline_seasonal"
+  },
+  "hyperparameter_selection": "pretest validation MAE only",
+  "selected_overall": false,
+  "validation_candidates": [],
+  "first_test_target": "2024-01-01",
+  "selection_cutoff": "2023-12-08T00:00:00+00:00",
+  "min_train": 24,
+  "preprocessing": "imputer and scaler fit inside each chronological training fold",
+  "final_model_fit_label_available_by": "2026-11-08T00:00:00+00:00",
+  "final_model_training_rows": 129,
+  "random_seed": 42,
+  "thread_limit": 4,
+  "runtime": {
+    "python": "3.14.0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "scikit_learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "provenance": "../../../provenance.json",
+  "feature_coverage_audit": {
+    "commodity_feature_validation_coverage": {
+      "commodity_cocoa_gbp_return_4w_pct": 1.0,
+      "commodity_cocoa_gbp_return_12w_pct": 1.0,
+      "commodity_cocoa_gbp_return_26w_pct": 1.0,
+      "commodity_cocoa_gbp_volatility_12w_pct": 1.0,
+      "commodity_gbp_per_usd_return_4w_pct": 1.0,
+      "commodity_gbp_per_usd_return_12w_pct": 1.0
+    },
+    "coverage_threshold": 0.8,
+    "coverage_selection_uses_test": false,
+    "commodity_group_status": "included"
+  }
+}

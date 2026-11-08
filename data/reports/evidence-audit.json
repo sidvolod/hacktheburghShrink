@@ -1,0 +1,11 @@
+{
+  "reported_cases": 5,
+  "reviewed_barcode_members": 2,
+  "unverified_candidate_pairs": 1,
+  "exact_monthly_event_labels": 0,
+  "limitations": [
+    "Selected positive demonstrations; not representative training data.",
+    "Unknown event and transaction dates remain null.",
+    "Recipe-change leads remain unverified."
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-08",
+  "warning": "Retrospective exploratory comparison: the 2024\u20132026 outcomes were already inspected before this feature experiment.",
+  "scope": "Monthly UK category CPI changes; not product-level prices or shrinkflation probabilities",
+  "selection": "No hyperparameter or arm selection on new scores; four predeclared fixed-model comparisons per category",
+  "baseline": "Exact saved history_plus_weekly_commodities HistGradientBoostingRegressor configuration and feature order",
+  "estimator_defaults": {
+    "learning_rate": 0.05,
+    "early_stopping": false,
+    "random_state": 42
+  },
+  "preprocessing": "Original fold-local median imputation, keep_empty_features=True; no rows dropped for missing RSI",
+  "feature_policy": {
+    "weekly_periods": 14,
+    "monthly_periods": 6,
+    "smoothing": "Initial simple average of n gains/losses followed by Wilder recursion alpha=1/n on raw level differences",
+    "flat": 50,
+    "only_gains": 100,
+    "only_losses": 0,
+    "missing_periods": "Break/reset the chain; no filling or bridging calendar gaps",
+    "weekly_lag": "Three calendar months before each actual issue date; buffers and staleness reapplied at that earlier issue",
+    "availability": "Original 7/14-day weekly buffers and 35-day staleness; CPI ends at latest_known_cpi_month"
+  },
+  "arms": {
+    "unchanged": "Original boosted trees + weekly inputs",
+    "weekly_rsi": "Add weekly commodity RSI",
+    "cpi_rsi": "Add monthly category RSI",
+    "both_rsi": "Add both RSI groups"
+  },
+  "feature_groups": {
+    "chocolate": {
+      "rsi_only": [
+        "commodity_cocoa_gbp_rsi_14w",
+        "commodity_cocoa_gbp_rsi_14w_issue_lag3m",
+        "commodity_gbp_per_usd_rsi_14w",
+        "commodity_gbp_per_usd_rsi_14w_issue_lag3m",
+        "history_cpi_rsi_6m"
+      ],
+      "rsi_commodities": [
+        "commodity_cocoa_gbp_rsi_14w",
+        "commodity_cocoa_gbp_rsi_14w_issue_lag3m",
+        "commodity_gbp_per_usd_rsi_14w",
+        "commodity_gbp_per_usd_rsi_14w_issue_lag3m"
+      ],
+      "rsi_cpi": [
+        "history_cpi_rsi_6m"
+      ]
+    },
+    "crisps": {
+      "rsi_only": [
+        "commodity_gbp_per_usd_rsi_14w",
+        "commodity_gbp_per_usd_rsi_14w_issue_lag3m",
+        "commodity_maize_us_gulf_rsi_14w",
+        "commodity_maize_us_gulf_rsi_14w_issue_lag3m",
+        "commodity_wheat_us_gulf_rsi_14w",
+        "commodity_wheat_us_gulf_rsi_14w_issue_lag3m",
+        "history_cpi_rsi_6m"
+      ],
+      "rsi_commodities": [
+        "commodity_gbp_per_usd_rsi_14w",
+        "commodity_gbp_per_usd_rsi_14w_issue_lag3m",
+        "commodity_maize_us_gulf_rsi_14w",
+        "commodity_maize_us_gulf_rsi_14w_issue_lag3m",
+        "commodity_wheat_us_gulf_rsi_14w",
+        "commodity_wheat_us_gulf_rsi_14w_issue_lag3m"
+      ],
+      "rsi_cpi": [
+        "history_cpi_rsi_6m"
+      ]
+    }
+  },
+  "configs": {
+    "chocolate": {
+      "features": [
+        "history_change_lag0_pct",
+        "history_change_lag1_pct",
+        "history_change_lag2_pct",
+        "history_change_lag3_pct",
+        "history_change_lag6_pct",
+        "history_change_lag12_pct",
+        "history_mean_3m_pct",
+        "history_std_3m_pct",
+        "history_mean_6m_pct",
+        "history_std_6m_pct",
+        "history_mean_12m_pct",
+        "history_std_12m_pct",
+        "season_sin",
+        "season_cos",
+        "commodity_cocoa_gbp_return_4w_pct",
+        "commodity_cocoa_gbp_return_12w_pct",
+        "commodity_cocoa_gbp_return_26w_pct",
+        "commodity_cocoa_gbp_volatility_12w_pct",
+        "commodity_gbp_per_usd_return_4w_pct",
+        "commodity_gbp_per_usd_return_12w_pct"
+      ],
+      "hyperparameters": {
+        "max_iter": 80,
+        "max_leaf_nodes": 5,
+        "min_samples_leaf": 10,
+        "l2_regularization": 10.0
+      }
+    },
+    "crisps": {
+      "features": [
+        "history_change_lag0_pct",
+        "history_change_lag1_pct",
+        "history_change_lag2_pct",
+        "history_change_lag3_pct",
+        "history_change_lag6_pct",
+        "history_change_lag12_pct",
+        "history_mean_3m_pct",
+        "history_std_3m_pct",
+        "history_mean_6m_pct",
+        "history_std_6m_pct",
+        "history_mean_12m_pct",
+        "history_std_12m_pct",
+        "season_sin",
+        "season_cos",
+        "commodity_gbp_per_usd_return_4w_pct",
+        "commodity_gbp_per_usd_return_12w_pct",
+        "commodity_maize_us_gulf_return_4w_pct",
+        "commodity_maize_us_gulf_return_12w_pct",
+        "commodity_maize_us_gulf_volatility_12w_pct",
+        "commodity_wheat_us_gulf_return_4w_pct",
+        "commodity_wheat_us_gulf_return_12w_pct",
+        "commodity_wheat_us_gulf_volatility_12w_pct"
+      ],
+      "hyperparameters": {
+        "max_iter": 120,
+        "max_leaf_nodes": 7,
+        "min_samples_leaf": 15,
+        "l2_regularization": 20.0
+      }
+    }
+  },
+  "evaluation_dates": "Exactly the saved original validation34 and test33 target months per category",
+  "reproduction_tolerance": 1e-10,
+  "original_experiment": "data/experiments/category_forecast",
+  "original_file_hashes": {
+    "chocolate/comparison.png": "d29d42f7d5f35004c5971a254fee766ecb20cef0ad4b95843024c22573941c75",
+    "chocolate/hist_gradient_boosting/history_only/config.json": "afe77c6fa725c2ccd06f59ea7adaa1392f5f1ac98f3b94a710911ed164c34ee2",
+    "chocolate/hist_gradient_boosting/history_only/metrics.json": "d152cd79a2e19f07f5e9f321278da3588fb8abda32799d49cfec7b2d2a428b00",
+    "chocolate/hist_gradient_boosting/history_only/model.joblib": "614f3da6bbcb162c6d1de2d9104e6ae0d6088b654768604e45b189b3b7179287",
+    "chocolate/hist_gradient_boosting/history_only/test_predictions.csv": "0bba8d82f1637fa3b6415385d03ce604213d3c7ad502752aee24ea01f410c060",
+    "chocolate/hist_gradient_boosting/history_only/validation_predictions.csv": "f654f6402ed8db1e02baaecc0b1803266e2ea686cdf9647a5c3d2f26c7805c80",
+    "chocolate/hist_gradient_boosting/history_plus_weekly_commodities/config.json": "cf715977887f4849e81babeeb62b61f828addd101ab6afb563dd624eca739e85",
+    "chocolate/hist_gradient_boosting/history_plus_weekly_commodities/metrics.json": "37e6b86a0c83bf4a591f0cf2e0322a58f5b98b6914e932b574b6b828476cfd99",
+    "chocolate/hist_gradient_boosting/history_plus_weekly_commodities/model.joblib": "f85ce408bb97ac7274b1e1a32b10124b36ebf9e0e26328b1ee9e12fe0669113a",
+    "chocolate/hist_gradient_boosting/history_plus_weekly_commodities/test_predictions.csv": "36feca01ba46eceaca5afd39538946c77a2822a17a98d2bd0faa171ebae5ba9b",
+    "chocolate/hist_gradient_boosting/history_plus_weekly_commodities/validation_predictions.csv": "38a71e13984d527d9040f34e99a69e2f94b1082f51de72e2d11b4e2995ee9c04",
+    "chocolate/no_change/baseline/config.json": "8f5d30cbfd936a7fc6b5a21d9f87220ba39311317d948d4658cdcf491c538fdc",
+    "chocolate/no_change/baseline/metrics.json": "f59bcad2b2b64d24fc2c2d9b49ed8bcb293fca984fdfd531ceb19d108fdf104b",
+    "chocolate/no_change/baseline/test_predictions.csv": "4d6e2e1bd55f46c1777bea3e12fe48ba99906282e43381065e8d81bb7d8bf403",
+    "chocolate/no_change/baseline/validation_predictions.csv": "9a2a19476cfaa4090a15f447b53331b49682fc73dabcb46c3cacaa27e262608b",
+    "chocolate/recent/baseline/config.json": "2fe6d510c188c069684a68ddadba07191c37a3c29092c59212a2568a3c856b56",
+    "chocolate/recent/baseline/metrics.json": "ed719b186a43fa83492c0302815b0c685c4a44d9517978cffda4ea98849704b8",
+    "chocolate/recent/baseline/test_predictions.csv": "2d5571673b29d69fbd000c62d74d4dff986cdb4e568cc3382865939f87234f37",
+    "chocolate/recent/baseline/validation_predictions.csv": "60f269d5b788f30630219db2b1300c586032a72a1c2e7db351dacc5adef3f558",
+    "chocolate/ridge/history_only/config.json": "6b11b937fd6494418fc5535b020df8014a15dc20377ea2084e230b786e0072e4",
+    "chocolate/ridge/history_only/metrics.json": "e50ef575b56c1d91467f180e2a52a2cb4353a8df3fdab8002f5db9c2abfec974",
+    "chocolate/ridge/history_only/model.joblib": "e08afdc2aa0a9e72a6c0d1f9a157a7c1de3027fa7ce592c7d25a6f685cc6850c",
+    "chocolate/ridge/history_only/test_predictions.csv": "97f4ebde672b646819e21b664c64a1296237a1d14181b2114e11ecbd0954bf99",
+    "chocolate/ridge/history_only/validation_predictions.csv": "f39aa52a64aeb38a91635874673c1dd860fa7adf86bbc7f54a186609a67e7b3d",
+    "chocolate/ridge/history_plus_weekly_commodities/config.json": "6c29dec462d2e4993f9908eea30100355e8a3f85257d21c7b84923c92f8da6b1",
+    "chocolate/ridge/history_plus_weekly_commodities/metrics.json": "c552be12f40ff7f38a5f06916026e2e1f0c45a0f8b07307092ccadd74c1356ec",
+    "chocolate/ridge/history_plus_weekly_commodities/model.joblib": "bbcaa9f358f5ef247b2b3f726394c53e00b42695e8d7ee2fc4924cd77b86430c",
+    "chocolate/ridge/history_plus_weekly_commodities/test_predictions.csv": "532f64a58b18b4293ddb730c0988e896861e5bb8e4769a3e9cd466e9bf66cdb4",
+    "chocolate/ridge/history_plus_weekly_commodities/validation_predictions.csv": "ca0996ed790111bd1295bbf13971c3d2fca22fa85da4d2bba5fc8ebfbfe1f5e3",
+    "chocolate/seasonal/baseline/config.json": "8b6a3a89778a8fd0f77d84dbe9743c6c64b05a911a05cf5e3b86ec5e8b2600bd",
+    "chocolate/seasonal/baseline/metrics.json": "a87291eb1dc0cf782a7e59c43b54f624caa681ec0ddb2f02e58e8ecd8ddafb9c",
+    "chocolate/seasonal/baseline/test_predictions.csv": "dbcc75965976d3b627080f9e3cda01cd0455be9b8f44dd93803df3c975954db0",
+    "chocolate/seasonal/baseline/validation_predictions.csv": "442f06622394cc6c9678788563506f0fe0f96482fae6fe0dd452547f4ee3c460",
+    "chocolate/trailing_mean/baseline/config.json": "2e3c5855820627fd89a40d662335d219615cbcf375c1663bf17ae88bad29004d",
+    "chocolate/trailing_mean/baseline/metrics.json": "e3fe5d3d768f518d032217a93e0e1859e7adb24e2b86639ffd409ee3ce9117fc",
+    "chocolate/trailing_mean/baseline/test_predictions.csv": "361e552192a9a39f59bd588e87db3562ad0d2621cca2e6b60bfcfedcfc80ffc5",
+    "chocolate/trailing_mean/baseline/validation_predictions.csv": "e91573dc55aa9c43168b7554f03e339eb3e7fdeea1104290a431548dec549d72",
+    "crisps/comparison.png": "973c51eea000ec5457a544045873d927091d92837d09b9ff175d56a74ffb64af",
+    "crisps/hist_gradient_boosting/history_only/config.json": "0070622d953f45cf7090424d980cfe647655ecc4d0a68186c2bdae014439fef6",
+    "crisps/hist_gradient_boosting/history_only/metrics.json": "ad4a17686ce41d54ec1cce3cb11b9661be2a005092f5989e4abe00910a66ea38",
+    "crisps/hist_gradient_boosting/history_only/model.joblib": "daf97a21f9a60db1c500a567f996496e2037c17b0385dd7ff68daab4ed13842c",
+    "crisps/hist_gradient_boosting/history_only/test_predictions.csv": "5723a7e5a8c4843c80fe410826572114ba55d29b768cea068a61296ee858e641",
+    "crisps/hist_gradient_boosting/history_only/validation_predictions.csv": "66fa6b93dbbc5535b7f3ae05e0d988fc694e4d18332ebbf9a1990ce73b471e07",
+    "crisps/hist_gradient_boosting/history_plus_weekly_commodities/config.json": "95bd05853cf3fe703982e6fdf353ae19ffa98a295d8b49b2ff0e125fd9f050a8",
+    "crisps/hist_gradient_boosting/history_plus_weekly_commodities/metrics.json": "6b267452b931072b3eead98fb79fd2afd64228dd480b635b366196823eb889d7",
+    "crisps/hist_gradient_boosting/history_plus_weekly_commodities/model.joblib": "7a2036237b4636cb80adddc5e374e3bd07f8cb50bb37d5c7d13d51caa4470d3d",
+    "crisps/hist_gradient_boosting/history_plus_weekly_commodities/test_predictions.csv": "5736f3df14fa5c744f02a5feb1f45ee360b98b11193ecfd10e16bac61157ee5c",
+    "crisps/hist_gradient_boosting/history_plus_weekly_commodities/validation_predictions.csv": "e3ba9e58457e8f64899d475c37fb8c39c20bd2a0b4c19a8355fba327f7f83713",
+    "crisps/no_change/baseline/config.json": "37f0a05516fd558e1f6d7f491118262f55e6d178233fd43de313f48c1ca4d2e1",
+    "crisps/no_change/baseline/metrics.json": "25a7ac65f094a7e5ee9c43ebdbe5687e0b4ebb825eefddd56b0bab9769c1fb3d",
+    "crisps/no_change/baseline/test_predictions.csv": "528879b1b593819177e547dbb1f7d4665f0522d8e7b0991480fbd4b1fcf57045",
+    "crisps/no_change/baseline/validation_predictions.csv": "e36f644211630de924b0d4f847a160477cda8a0acee5896b7660d06ed5cf2c99",
+    "crisps/recent/baseline/config.json": "6342145b051ff9971d461d04e8ae550ffdea329cdd667320220528a4aca62bac",
+    "crisps/recent/baseline/metrics.json": "455e09b6932f1cfd29fa9989053c03e35c49b9160cff9c62a04052a5531548bd",
+    "crisps/recent/baseline/test_predictions.csv": "32c480407c1eb528f4a87b5ba6d4cae0446c2caa8b7dff00e87f7db00a4eb2a3",
+    "crisps/recent/baseline/validation_predictions.csv": "ab4f7ae1bcea326c0a27b8ac21ee314d930964a9c982a9302b25482e2d15c319",
+    "crisps/ridge/history_only/config.json": "808134769c344ec8100618f5eafd6ee91806389de44104b6e57605eb7efdfafc",
+    "crisps/ridge/history_only/metrics.json": "958200e9717d40443e59297790a5a195fabfb56129a738d906be0bd17f1a6ea0",
+    "crisps/ridge/history_only/model.joblib": "95dd48dc04e9800473a16d2028877ecfdbf409ce063837ebea2dcac51a741499",
+    "crisps/ridge/history_only/test_predictions.csv": "6d061949a266f1f2ea0a37ab5d6e624240d26ea53d48d2642c31963cd2e2d70c",
+    "crisps/ridge/history_only/validation_predictions.csv": "6d659a25d843285cb0d4d447f51940b4bf0a3a5db1bc7e66dd503a715fa5b424",
+    "crisps/ridge/history_plus_weekly_commodities/config.json": "c139e7e9ed66bdda59a7289222878dc0497e539e474a133004ed4406779b7d39",
+    "crisps/ridge/history_plus_weekly_commodities/metrics.json": "f4783dfa328ec30ecc0947872a8e5dbf6c78099a1834f3d1d01f33f2a28f75bf",
+    "crisps/ridge/history_plus_weekly_commodities/model.joblib": "45ecd9f503434a77d0f9e39c733885151670f29c86d94231aa65fc9d5160bb39",
+    "crisps/ridge/history_plus_weekly_commodities/test_predictions.csv": "9b2d6a99e0a7ba5b468a76211ee15e3a6ebd4d6098b964209ae04fd9c2493e03",
+    "crisps/ridge/history_plus_weekly_commodities/validation_predictions.csv": "afa8cc8218457635e89e5435f48a8339f5df866f1178ad3d4c44dce3343c8098",
+    "crisps/seasonal/baseline/config.json": "29c2faddb443e301dca612369b6524fd61b2c70434d030a673cf37c9b2242d90",
+    "crisps/seasonal/baseline/metrics.json": "f41a350a5ae546bc7d5a9d309eb931dd96f5fa64993cfcc71872c7203e1f65f4",
+    "crisps/seasonal/baseline/test_predictions.csv": "08b0e6673818a3ad1aeab0a8c63a4d8f64868ea60fcc5de2653a50f586458634",
+    "crisps/seasonal/baseline/validation_predictions.csv": "1fbc02652f4b1a932808eff07a19d4130ee1fdb958f1ef6e6600c04555ce92f1",
+    "crisps/trailing_mean/baseline/config.json": "8e6023daa3eef5e8f49b5ce9fe54e571b1081cc41ab420524e1448b0938cb619",
+    "crisps/trailing_mean/baseline/metrics.json": "eb47a089884352bfd19392908f9d53d8142ec69b8ec2ff6ffba2da73136036d9",
+    "crisps/trailing_mean/baseline/test_predictions.csv": "a5539614e6ca9b6e2979bab918d237c36ccdb6d3f2f37de551f1ec32d6dd9372",
+    "crisps/trailing_mean/baseline/validation_predictions.csv": "33c35e972eebabcad80a521f25e5dffab319a6c582fc996809e6644ef0900272",
+    "dataset.parquet": "df2108fdbdfdd344a79cd55af1d5674dd1ecfeaf4f8f06a2c5fa10cb83c9042a",
+    "metadata.json": "1f578f8c0cfbcfa559051d20212d50805a7f75d2f5e7c4ac39f15ca477b8bdf8",
+    "provenance.json": "1f578f8c0cfbcfa559051d20212d50805a7f75d2f5e7c4ac39f15ca477b8bdf8",
+    "report.md": "ce39af5c34e0cb30069f9954a53b3056c366a6072f1371b00b7899b2f698bbc7",
+    "summary.json": "b5edd78378781f5684a6fc3429dad935c1efafd3538ba33401604de4f9bc6d6f"
+  },
+  "input_hashes": {
+    "data/raw/ons-category/l79x-cd3a7e465aa5a4a3a1d459e788119c94098ca37b1768032abb04ba746c85b7a2.csv": "cd3a7e465aa5a4a3a1d459e788119c94098ca37b1768032abb04ba746c85b7a2",
+    "data/raw/ons-category/l79r-ffbefed614dcb458b5003499ef757cfd33551e0e8cb5865dc9b9b2f0595f2fdd.csv": "ffbefed614dcb458b5003499ef757cfd33551e0e8cb5865dc9b9b2f0595f2fdd",
+    "data/processed/commodity_weekly.parquet": "d26fb548700f42a9753609754b6e1edd524a58a3f88f4982223f3e7807b537bb"
+  },
+  "code_hashes": {
+    "data/experiments/category_rsi/run.py": "f9ca13004bb618b8fa0722b300134ac2b17e2ad54a475e31c400c74f384aa4dc",
+    "data/experiments/category_rsi/rsi_features.py": "1e9f53ba85362b1c7137f66d6c40b560aa646b1089141a1baa4fa547191cc86a",
+    "data/experiments/category_rsi/run.sh": "dcfd252734c37a356abee3e0aaeb7939dbfdb3816b5a5f00c1ecd9c6f7fddd21",
+    "src/shrinkflation/category_models.py": "d0763271702f119d869c0656670e43e781c10a25b993e67fd26ef7f920460422",
+    "src/shrinkflation/category_data.py": "7d2e6c789f30dd92c0858c1db0dab2563d70704a670c0e9fa466e9f66280b636",
+    "src/shrinkflation/common.py": "5166bd35c88b7d4a198cdc6431d0962a41dceaba6a1155c01706de98d3143cea"
+  },
+  "runtime": {
+    "python": "3.14.0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "sklearn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "run_id": "886740bec87faf02"
+}

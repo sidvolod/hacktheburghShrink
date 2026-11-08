@@ -1,0 +1,79 @@
+{
+  "features": [
+    "history_change_lag0_pct",
+    "history_change_lag1_pct",
+    "history_change_lag2_pct",
+    "history_change_lag3_pct",
+    "history_change_lag6_pct",
+    "history_change_lag12_pct",
+    "history_mean_3m_pct",
+    "history_std_3m_pct",
+    "history_mean_6m_pct",
+    "history_std_6m_pct",
+    "history_mean_12m_pct",
+    "history_std_12m_pct",
+    "season_sin",
+    "season_cos",
+    "commodity_gbp_per_usd_return_4w_pct",
+    "commodity_gbp_per_usd_return_12w_pct",
+    "commodity_maize_us_gulf_return_4w_pct",
+    "commodity_maize_us_gulf_return_12w_pct",
+    "commodity_maize_us_gulf_volatility_12w_pct",
+    "commodity_wheat_us_gulf_return_4w_pct",
+    "commodity_wheat_us_gulf_return_12w_pct",
+    "commodity_wheat_us_gulf_volatility_12w_pct"
+  ],
+  "validation_metrics": {
+    "n": 34,
+    "mae_pp": 2.2364274677635416,
+    "rmse_pp": 2.7245626867989436,
+    "directional_accuracy": 0.5294117647058824
+  },
+  "test_metrics": {
+    "n": 33,
+    "mae_pp": 1.5405150472313047,
+    "rmse_pp": 1.919654268143682,
+    "directional_accuracy": 0.6363636363636364
+  },
+  "paired_test_comparison": {
+    "n": 33,
+    "mean_error_reduction_pp": 0.0,
+    "median_error_reduction_pp": 0.0,
+    "months_improved": 0,
+    "months_worsened": 0,
+    "months_tied": 33
+  },
+  "error_reduction_vs_unchanged_pct": 0.0,
+  "yearly_test_metrics": {
+    "2024": {
+      "n": 12,
+      "mae_pp": 1.1637619472786869,
+      "rmse_pp": 1.3008880364662672,
+      "directional_accuracy": 0.6666666666666666
+    },
+    "2025": {
+      "n": 12,
+      "mae_pp": 1.4597888164167863,
+      "rmse_pp": 1.8451308976545702,
+      "directional_accuracy": 0.6666666666666666
+    },
+    "2026": {
+      "n": 9,
+      "mae_pp": 2.1504874882541545,
+      "rmse_pp": 2.591558523978851,
+      "directional_accuracy": 0.5555555555555556
+    }
+  },
+  "feature_coverage": {
+    "validation": {},
+    "test": {}
+  },
+  "forecast": {
+    "as_of": "2026-11-08",
+    "target_month": "2026-12-01",
+    "change_pct": -0.39919978409122575,
+    "train_n": 129,
+    "max_train_label_available_date": "2026-11-01T00:00:00+00:00",
+    "selected_for_website": false
+  }
+}

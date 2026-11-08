@@ -1,0 +1,41 @@
+{
+  "candidate_id": "ridge_compactseasonal_a100",
+  "model_id": "ridge",
+  "feature_group": "compactseasonal",
+  "params": {
+    "alpha": 100.0
+  },
+  "training_window_months": null,
+  "residual_baseline": null,
+  "kind": "learned",
+  "features": [
+    "season_month_01",
+    "season_month_02",
+    "season_month_03",
+    "season_month_04",
+    "season_month_05",
+    "season_month_06",
+    "season_month_07",
+    "season_month_08",
+    "season_month_09",
+    "season_month_10",
+    "season_month_11",
+    "season_month_12",
+    "history_same_month_lag1y_pct",
+    "history_same_month_mean3y_pct",
+    "history_same_month_median3y_pct",
+    "history_same_month_mean5y_pct",
+    "season_easter_month",
+    "season_before_easter_month",
+    "season_after_easter_month"
+  ],
+  "run_id": "f97dd7d15914cda7",
+  "live_fit_audit": {
+    "train_n": 129,
+    "max_train_label_available_date": "2026-11-01T00:00:00+00:00",
+    "max_train_target_month": "2026-09-01",
+    "min_train_target_month": "2016-01-01",
+    "convergence_warnings": 0
+  },
+  "manifest": "../../../search_manifest.json"
+}

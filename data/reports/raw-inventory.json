@@ -1,0 +1,773 @@
+{
+  "generated_at": "2026-11-08T08:07:37.223725+00:00",
+  "raw_files": [
+    {
+      "path": "data/raw/commodities/ecb-disclaimer.html",
+      "bytes": 107792,
+      "sha256": "c161eccad23a779443e30924a7dc7437767746a3fa8c525bbcd8f5b0a4df1cd8",
+      "download_metadata": "data/raw/commodities/ecb-disclaimer.html.metadata.json"
+    },
+    {
+      "path": "data/raw/commodities/ecb-disclaimer.html.metadata.json",
+      "bytes": 471,
+      "sha256": "c60f40526bf608eecaf002c395369e603b3d9279014e65926401e6054900a476"
+    },
+    {
+      "path": "data/raw/commodities/ecb-eurofxref-hist.zip",
+      "bytes": 642720,
+      "sha256": "d34817759624a46b58a42ac585f6d9d2fb12ece793d158656dcc7ddd128779a3",
+      "download_metadata": "data/raw/commodities/ecb-eurofxref-hist.zip.metadata.json"
+    },
+    {
+      "path": "data/raw/commodities/ecb-eurofxref-hist.zip.metadata.json",
+      "bytes": 455,
+      "sha256": "246dc978e9a033e2bff6600eb59821ea8983d2941db749c2f3b9f0f254b8f484"
+    },
+    {
+      "path": "data/raw/commodities/ecb-fx-methodology.html",
+      "bytes": 119507,
+      "sha256": "04960b9cc03d9633cafc3a3150e9fc7c37f9da585a965b99cf5ea17cb2ace817",
+      "download_metadata": "data/raw/commodities/ecb-fx-methodology.html.metadata.json"
+    },
+    {
+      "path": "data/raw/commodities/ecb-fx-methodology.html.metadata.json",
+      "bytes": 544,
+      "sha256": "6a355550eefdffeab17fcfd25253c6f792864e6c1e3402bf480f14afdd19b5ac"
+    },
+    {
+      "path": "data/raw/commodities/eu-cereal-prices.xlsx",
+      "bytes": 4585500,
+      "sha256": "122899c79dfc44591cb8a9aed0864154cec6180d16d72c25604938f9ceeb3254",
+      "download_metadata": "data/raw/commodities/eu-cereal-prices.xlsx.metadata.json"
+    },
+    {
+      "path": "data/raw/commodities/eu-cereal-prices.xlsx.metadata.json",
+      "bytes": 552,
+      "sha256": "e811e5987c6b7f61e1c041a92c0d35a171e48022630351c71e64d38d4a199d9a"
+    },
+    {
+      "path": "data/raw/commodities/eu-cereals-page.html",
+      "bytes": 105324,
+      "sha256": "b3540f02a4a12ecd28eb20152c34326cf66d74ed823ed00390a3bbda7cebe5cc",
+      "download_metadata": "data/raw/commodities/eu-cereals-page.html.metadata.json"
+    },
+    {
+      "path": "data/raw/commodities/eu-cereals-page.html.metadata.json",
+      "bytes": 548,
+      "sha256": "3cbad51224d700749c30884769b79d38469bbcd4f411965889c8459bce32a768"
+    },
+    {
+      "path": "data/raw/commodities/eu-oilseeds-page.html",
+      "bytes": 100877,
+      "sha256": "3c614fd140be6e9305fcfa23d79c0f2f8b84a312451b7fdb14e573f20d69ae98",
+      "download_metadata": "data/raw/commodities/eu-oilseeds-page.html.metadata.json"
+    },
+    {
+      "path": "data/raw/commodities/eu-oilseeds-page.html.metadata.json",
+      "bytes": 565,
+      "sha256": "0e20bd70a0e8697218e07029a33a5c1bd36bb2bd828ece546a0fa1e4e644f70a"
+    },
+    {
+      "path": "data/raw/commodities/eu-reuse-notice.html",
+      "bytes": 153991,
+      "sha256": "bfcab16f573e209f39cdf2da6932192207249dabbf80e2dfaa60fd90bea0cfc5",
+      "download_metadata": "data/raw/commodities/eu-reuse-notice.html.metadata.json"
+    },
+    {
+      "path": "data/raw/commodities/eu-reuse-notice.html.metadata.json",
+      "bytes": 402,
+      "sha256": "d9390c561af0ef6308843ca4778ee46c1f2a477482551d31bb96816cbfc3f15f"
+    },
+    {
+      "path": "data/raw/commodities/eu-world-cereal-prices.xlsx",
+      "bytes": 290498,
+      "sha256": "97bc65d0f1639c12aeee8576853b999200c373146d4732225691e7d53ac32dc7",
+      "download_metadata": "data/raw/commodities/eu-world-cereal-prices.xlsx.metadata.json"
+    },
+    {
+      "path": "data/raw/commodities/eu-world-cereal-prices.xlsx.metadata.json",
+      "bytes": 563,
+      "sha256": "8120e49e19c91e6c17f024739ef5259f546ef1c288e6373afd0245b73e9279d2"
+    },
+    {
+      "path": "data/raw/commodities/eu-world-oilseed-prices.xlsx",
+      "bytes": 324996,
+      "sha256": "576784e9113c2da082c14a8981afa0344b135acea6ab4d6f94394935a105d73e",
+      "download_metadata": "data/raw/commodities/eu-world-oilseed-prices.xlsx.metadata.json"
+    },
+    {
+      "path": "data/raw/commodities/eu-world-oilseed-prices.xlsx.metadata.json",
+      "bytes": 566,
+      "sha256": "685235617a5518e693923b6aeec6fa7445229b144f83b55da9b940dcbf19f259"
+    },
+    {
+      "path": "data/raw/commodities/icco-current-statistics-page.html",
+      "bytes": 212977,
+      "sha256": "cd97a989b020ffcbc324dda54e7d9abb33ca52e0c2959c256b2624a78d992b7e",
+      "download_metadata": "data/raw/commodities/icco-current-statistics-page.html.metadata.json"
+    },
+    {
+      "path": "data/raw/commodities/icco-current-statistics-page.html.metadata.json",
+      "bytes": 391,
+      "sha256": "2dd7657e10bf342c9499f5b64692bdc0cb501af33c4a12686709ceb49678d9c9"
+    },
+    {
+      "path": "data/raw/commodities/icco-daily-prices-table14.json",
+      "bytes": 539006,
+      "sha256": "8cc03c8f7dcbd19a6bb0a681605b528430300490d5dedee4620bb89b10ccca2a",
+      "download_metadata": "data/raw/commodities/icco-daily-prices-table14.json.metadata.json"
+    },
+    {
+      "path": "data/raw/commodities/icco-daily-prices-table14.json.metadata.json",
+      "bytes": 395,
+      "sha256": "82c8f1d9432e3ff747afb621976f6634ccca76be4457206d2db1d5c652d3e343"
+    },
+    {
+      "path": "data/raw/commodities/icco-daily-prices-table15.json",
+      "bytes": 196,
+      "sha256": "8a8c06e6f900b81205406c4f7645dd2de71c588a08b2fb64a9cce92027f938ce",
+      "download_metadata": "data/raw/commodities/icco-daily-prices-table15.json.metadata.json"
+    },
+    {
+      "path": "data/raw/commodities/icco-daily-prices-table15.json.metadata.json",
+      "bytes": 392,
+      "sha256": "98ae2e486f35c2757a8085a163b676169122511fb7b3d82751213e7a1a5a7d95"
+    },
+    {
+      "path": "data/raw/commodities/icco-daily-prices-table26.json",
+      "bytes": 37276,
+      "sha256": "6b653ef283820c09d953fc0865224bb3e2096a3b7e7a9bd390e80cbc7c6ff365",
+      "download_metadata": "data/raw/commodities/icco-daily-prices-table26.json.metadata.json"
+    },
+    {
+      "path": "data/raw/commodities/icco-daily-prices-table26.json.metadata.json",
+      "bytes": 447,
+      "sha256": "47c977ae46b3ffbe1c679808ae920deb39d5dc999e96b29675ddd177a1f730d5"
+    },
+    {
+      "path": "data/raw/commodities/icco-home-page.html",
+      "bytes": 223908,
+      "sha256": "a5505783f92c5cd1420f2257e4c09eebcdc1bcfe7ca7c78d3930ee1b6821ff25",
+      "download_metadata": "data/raw/commodities/icco-home-page.html.metadata.json"
+    },
+    {
+      "path": "data/raw/commodities/icco-home-page.html.metadata.json",
+      "bytes": 350,
+      "sha256": "93a86be841f2b31a60a866dc39a8c329dd2a3eec7edbb613e4f7aabb4cf31056"
+    },
+    {
+      "path": "data/raw/commodities/icco-statistics-page.html",
+      "bytes": 244381,
+      "sha256": "83268d7a5ec5641630293fb5dee5ee779eb38aa7a3c8db14aaa72c2800e68dd3",
+      "download_metadata": "data/raw/commodities/icco-statistics-page.html.metadata.json"
+    },
+    {
+      "path": "data/raw/commodities/icco-statistics-page.html.metadata.json",
+      "bytes": 415,
+      "sha256": "328dd5704026f9eafed272b67e05b28adc656cfab4e97c01e4570bf7ee87c5ce"
+    },
+    {
+      "path": "data/raw/commodities/worldbank-monthly.xlsx",
+      "bytes": 587760,
+      "sha256": "3c8d9d8dbb48342fdbf24777c39a8ce8964cc2fd0958f72f6779e6e4ad99cde2"
+    },
+    {
+      "path": "data/raw/off/README.source.md",
+      "bytes": 3190,
+      "sha256": "7d49a18a519d65accd20204313d8b7f2b17f0b93edc232c8f8655f136eb46ad2",
+      "download_metadata": "data/raw/off/README.source.md.metadata.json"
+    },
+    {
+      "path": "data/raw/off/README.source.md.metadata.json",
+      "bytes": 426,
+      "sha256": "6fdca1c513859ea8444217285bdbf856ae075e2f4067a6e09fc227863b42e2bf"
+    },
+    {
+      "path": "data/raw/off/dataset-api.json",
+      "bytes": 2790,
+      "sha256": "2805c031575f516e3f0c6bfc6883f839ffa29a5f5e03454dc4b4c19babe0a459",
+      "download_metadata": "data/raw/off/dataset-api.json.metadata.json"
+    },
+    {
+      "path": "data/raw/off/dataset-api.json.metadata.json",
+      "bytes": 390,
+      "sha256": "18d43e97e5958e38b978f92654c603e60a00ffd6b89a4da59fa679134e4f4f98"
+    },
+    {
+      "path": "data/raw/off/dataset-revision-api.json",
+      "bytes": 2790,
+      "sha256": "2805c031575f516e3f0c6bfc6883f839ffa29a5f5e03454dc4b4c19babe0a459",
+      "download_metadata": "data/raw/off/dataset-revision-api.json.metadata.json"
+    },
+    {
+      "path": "data/raw/off/dataset-revision-api.json.metadata.json",
+      "bytes": 591,
+      "sha256": "e984a3475b25c225a56fa3e2b4822f249f7b1dce22a3afa78edfc033358bd78b"
+    },
+    {
+      "path": "data/raw/off/food.parquet",
+      "bytes": 8035571362,
+      "sha256": "05833a7085058ac492ac6b0fc092d7cf432581445dc872e89fb3a177ec073b48",
+      "download_metadata": "data/raw/off/food.parquet.metadata.json"
+    },
+    {
+      "path": "data/raw/off/food.parquet.metadata.json",
+      "bytes": 528,
+      "sha256": "85d93b05ead02e57779bf83b8d9ca503d89b1d804c40bfca57dff799386eef51"
+    },
+    {
+      "path": "data/raw/off/schema.json",
+      "bytes": 10660,
+      "sha256": "8c45ec8666b61ee5cebdd7c3619cb4a81338e63a32c1a941fa6bbddb7f2b49fb"
+    },
+    {
+      "path": "data/raw/off/tree.json",
+      "bytes": 1090,
+      "sha256": "0b548bd8c7102ffc42038d0312b00983a4bd71c265b61058ec6efdbe74ed71de",
+      "download_metadata": "data/raw/off/tree.json.metadata.json"
+    },
+    {
+      "path": "data/raw/off/tree.json.metadata.json",
+      "bytes": 587,
+      "sha256": "4a8157cb1dd47b5326c198f91d90ea9d4c9fe49174b209219c9f0b543372d5c4"
+    },
+    {
+      "path": "data/raw/off/uk-products-current.parquet",
+      "bytes": 27342143,
+      "sha256": "45a9120df63c67b3b8079a5724b2e9ed154607f118fa4ceecedc4efef9361d4a",
+      "projection_provenance": "data/raw/off/uk-products-current.provenance.json"
+    },
+    {
+      "path": "data/raw/off/uk-products-current.provenance.json",
+      "bytes": 1735,
+      "sha256": "c592b31a690599f1bda02134c3aba9f5b6d75e38ad5974bc7286f6e399e032a1"
+    },
+    {
+      "path": "data/raw/ons-category/incoming/l79r.csv",
+      "bytes": 3844,
+      "sha256": "ffbefed614dcb458b5003499ef757cfd33551e0e8cb5865dc9b9b2f0595f2fdd",
+      "download_metadata": "data/raw/ons-category/incoming/l79r.csv.metadata.json"
+    },
+    {
+      "path": "data/raw/ons-category/incoming/l79r.csv.metadata.json",
+      "bytes": 573,
+      "sha256": "664580f2f5802905c9c362680a3a8c52525fe72f31c4856ddb10e6a69f6288e0"
+    },
+    {
+      "path": "data/raw/ons-category/incoming/l79x.csv",
+      "bytes": 3826,
+      "sha256": "cd3a7e465aa5a4a3a1d459e788119c94098ca37b1768032abb04ba746c85b7a2",
+      "download_metadata": "data/raw/ons-category/incoming/l79x.csv.metadata.json"
+    },
+    {
+      "path": "data/raw/ons-category/incoming/l79x.csv.metadata.json",
+      "bytes": 573,
+      "sha256": "f361e0fa91c16c6ab1d8db97d1c4a6bfee561c0903eddc9e04dec2a34eb88f03"
+    },
+    {
+      "path": "data/raw/ons-category/l79r-ffbefed614dcb458b5003499ef757cfd33551e0e8cb5865dc9b9b2f0595f2fdd.csv",
+      "bytes": 3844,
+      "sha256": "ffbefed614dcb458b5003499ef757cfd33551e0e8cb5865dc9b9b2f0595f2fdd",
+      "download_metadata": "data/raw/ons-category/l79r-ffbefed614dcb458b5003499ef757cfd33551e0e8cb5865dc9b9b2f0595f2fdd.csv.metadata.json"
+    },
+    {
+      "path": "data/raw/ons-category/l79r-ffbefed614dcb458b5003499ef757cfd33551e0e8cb5865dc9b9b2f0595f2fdd.csv.metadata.json",
+      "bytes": 784,
+      "sha256": "d6c9d7503761ae2c65445e66333eaa87d0b00aacb9a0735c6e127149bada74ed"
+    },
+    {
+      "path": "data/raw/ons-category/l79x-cd3a7e465aa5a4a3a1d459e788119c94098ca37b1768032abb04ba746c85b7a2.csv",
+      "bytes": 3826,
+      "sha256": "cd3a7e465aa5a4a3a1d459e788119c94098ca37b1768032abb04ba746c85b7a2",
+      "download_metadata": "data/raw/ons-category/l79x-cd3a7e465aa5a4a3a1d459e788119c94098ca37b1768032abb04ba746c85b7a2.csv.metadata.json"
+    },
+    {
+      "path": "data/raw/ons-category/l79x-cd3a7e465aa5a4a3a1d459e788119c94098ca37b1768032abb04ba746c85b7a2.csv.metadata.json",
+      "bytes": 784,
+      "sha256": "feacb38cfa66929301e0bf7ecbee010269acf82993236329497a134e9b42cf26"
+    },
+    {
+      "path": "data/raw/ons-category/latest-l79r.json",
+      "bytes": 784,
+      "sha256": "d6c9d7503761ae2c65445e66333eaa87d0b00aacb9a0735c6e127149bada74ed"
+    },
+    {
+      "path": "data/raw/ons-category/latest-l79x.json",
+      "bytes": 784,
+      "sha256": "feacb38cfa66929301e0bf7ecbee010269acf82993236329497a134e9b42cf26"
+    },
+    {
+      "path": "data/raw/open-prices/coverage-report.json",
+      "bytes": 2196,
+      "sha256": "ce3d9ffd6e77a3232ffb99e7437671d85f99ecf3644b3a8c08f24e4337a94ce8"
+    },
+    {
+      "path": "data/raw/open-prices/fetch-report.json",
+      "bytes": 4198,
+      "sha256": "633209622d288a2e78a5063125464b491c3ea57d624f28c76be7385b504589bb"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page1.json",
+      "bytes": 296945,
+      "sha256": "82915f2f6a9add744793716b204cdfb517fafb99ff4ff17a73d7cca7cc86e1ac"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page10.json",
+      "bytes": 319169,
+      "sha256": "02689b01ef011bf03c12eba4f1c4de5afe1fd7f99816bf1c6d2a8109598732dd"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page11.json",
+      "bytes": 319916,
+      "sha256": "8960732527c5ca5998a4ce02cf3d8517897f6fccf96480e392f73b649f57482a"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page12.json",
+      "bytes": 318443,
+      "sha256": "8b4fec3831e82068c6be1847dfdd189500068b02118e322d04c19da35e32d57d"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page13.json",
+      "bytes": 315789,
+      "sha256": "0903758482992fbc1f78053c736141a3fbc118a1368a2eb4551651534582865b"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page14.json",
+      "bytes": 315941,
+      "sha256": "8cc5cff65797db2bfa2cea134db683a1d0ccf29203e94ee769e872141af8f7d3"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page15.json",
+      "bytes": 316916,
+      "sha256": "efdea439e9c7873e9bfff7c665506ed093641181f16999945b048286c8de833e"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page16.json",
+      "bytes": 311757,
+      "sha256": "6c0cbc3486c10426918e1851b730bc06b6d639e48f7e267513eb7fc391ee7e5b"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page17.json",
+      "bytes": 316002,
+      "sha256": "529c4f6555ac679ca7cd097ef860acaa6db999e870fd6e6c19dd388b64106495"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page18.json",
+      "bytes": 316134,
+      "sha256": "4f6b6b398d661300664b8f3e11e60aca2c60a04efc35eb8a4568ccd70a66a204"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page19.json",
+      "bytes": 315155,
+      "sha256": "ce3422fe40e39a528967a3e424ddaa0855fe8563eea85a263c1fddbc5ecf2ab0"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page2.json",
+      "bytes": 305122,
+      "sha256": "fcbdc13fc9e43303e3a63f83fc3cf3c759a371012beecfd93ec9961389dcd32f"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page20.json",
+      "bytes": 313036,
+      "sha256": "7f616449e705e7d15d77ca20757a0f93db4262c937a1f651597a7204e7b31c93"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page21.json",
+      "bytes": 153483,
+      "sha256": "5feca8558e368c45f6e68259f9136c2f84e2b771245100f6b80f0bd3a9217058"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page3.json",
+      "bytes": 313753,
+      "sha256": "2b316c55c581feaac015864a1fdba1fb9bada94cc2463408373038bae2896dfb"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page4.json",
+      "bytes": 296055,
+      "sha256": "e3b6751af3c6c52aa3c9ec485f9ccdf0c88e9babb9ae3b48b41fa537798f675f"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page5.json",
+      "bytes": 314096,
+      "sha256": "4986958603ea65eab2caee73bb1a91af1ddac0029e76a0a5fd3e41f3508bc5aa"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page6.json",
+      "bytes": 315673,
+      "sha256": "1b20ebc9bb43ecf1932c43ebac7545c75c4c847149ca1e2dd08cb066dd596438"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page7.json",
+      "bytes": 314353,
+      "sha256": "2dba7c2d3be1f5c8599637c7ebd1995e23cab1029076e27026025e5726beecb2"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page8.json",
+      "bytes": 313569,
+      "sha256": "3413c4b76da0ef3467f48a4eb31d627a6cd48e916f55e7ec2b8451adc9e183f4"
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page9.json",
+      "bytes": 318523,
+      "sha256": "747c76041fb49ef39ff4606710761e23cfa03b6fa9f85636132a08f00a634eaa"
+    },
+    {
+      "path": "data/raw/retail/NOTICE.MD",
+      "bytes": 247,
+      "sha256": "2f822dfe82c1aa943f8f25d91cd7329db70f4d116d957ecbccc6a08de83ddb42",
+      "download_metadata": "data/raw/retail/NOTICE.MD.metadata.json"
+    },
+    {
+      "path": "data/raw/retail/NOTICE.MD.metadata.json",
+      "bytes": 414,
+      "sha256": "e6811f8d825bb3e46d5d25b842fe2cb574d9560bc53bfce3b2536335611bd5e7"
+    },
+    {
+      "path": "data/raw/retail/README.md",
+      "bytes": 2632,
+      "sha256": "1e8d9c80aa1e73bde2a8db848f2d794ab57a2eceddc41b60108814c7247c26a9",
+      "download_metadata": "data/raw/retail/README.md.metadata.json"
+    },
+    {
+      "path": "data/raw/retail/README.md.metadata.json",
+      "bytes": 415,
+      "sha256": "660c80618be72caffe1dac497aa9f263807cc4d7e94289fe2245280d01ed79b6"
+    },
+    {
+      "path": "data/raw/retail/base_retail_gb_snappy.parquet",
+      "bytes": 104526467,
+      "sha256": "9d712bbead729442277d73692daee90b9535ed10e0b1834227f97d637560fe15",
+      "download_metadata": "data/raw/retail/base_retail_gb_snappy.parquet.metadata.json"
+    },
+    {
+      "path": "data/raw/retail/base_retail_gb_snappy.parquet.metadata.json",
+      "bytes": 440,
+      "sha256": "37c44a8d8db40f0fa8ef25bb03c49c19961fb105705658ed098c1a572f1f9a55"
+    },
+    {
+      "path": "data/raw/retail/hf-tree.json",
+      "bytes": 770,
+      "sha256": "594c924b5c57290bf3ad6f2f43ff02289e08dbe7cfb96062bd1849b680451357",
+      "download_metadata": "data/raw/retail/hf-tree.json.metadata.json"
+    },
+    {
+      "path": "data/raw/retail/hf-tree.json.metadata.json",
+      "bytes": 405,
+      "sha256": "79898491b6474466b04546adcaabba3fdc898001bb9b8796091a715c94d3866c"
+    },
+    {
+      "path": "data/raw/retail/kaggle-metadata.json",
+      "bytes": 8478,
+      "sha256": "1791ec79ea5ea54e48bd353c7e1d7b5fbea12be452eec3da50457f3a622d8485",
+      "download_metadata": "data/raw/retail/kaggle-metadata.json.metadata.json"
+    },
+    {
+      "path": "data/raw/retail/kaggle-metadata.json.metadata.json",
+      "bytes": 399,
+      "sha256": "fcbfe89d77a8f3355f2f5996129ec5f0ab62bead0a4a58812d5eb2287879a6d2"
+    },
+    {
+      "path": "data/raw/snack-evidence/assosia-chocolate-2025.html",
+      "bytes": 364569,
+      "sha256": "9a4291bd80b3a99c997deff36d75e0da9d35de01e8148d80b8604512a115396d",
+      "download_metadata": "data/raw/snack-evidence/assosia-chocolate-2025.html.metadata.json"
+    },
+    {
+      "path": "data/raw/snack-evidence/assosia-chocolate-2025.html.metadata.json",
+      "bytes": 516,
+      "sha256": "5eabc9165c9d081c3898addf6f6983279ce23f98aafa2eb45f33ce650397827c"
+    },
+    {
+      "path": "data/raw/snack-evidence/grocer-snickers-2013.html",
+      "bytes": 285235,
+      "sha256": "35f6300ead39b6ee4664db6e708935b285ae3a2016d117038a4a64f6c36e9812",
+      "download_metadata": "data/raw/snack-evidence/grocer-snickers-2013.html.metadata.json"
+    },
+    {
+      "path": "data/raw/snack-evidence/grocer-snickers-2013.html.metadata.json",
+      "bytes": 491,
+      "sha256": "4c4350d7a5babe34e96af17f7f79c5c5cea4e556f2b4f36cb396ac1f584183ea"
+    },
+    {
+      "path": "data/raw/snack-evidence/independent-maltesers-2017.html",
+      "bytes": 264743,
+      "sha256": "436396506f2b1bb0de204e634fd88da5994013c15e2e268507dc96a55bc093d5",
+      "download_metadata": "data/raw/snack-evidence/independent-maltesers-2017.html.metadata.json"
+    },
+    {
+      "path": "data/raw/snack-evidence/independent-maltesers-2017.html.metadata.json",
+      "bytes": 968,
+      "sha256": "539f8bc7e3c55434ef13954b04ca7b8b6682d3ab492f61560c43d6dfc3540718"
+    },
+    {
+      "path": "data/raw/snack-evidence/mcvities-gov-biscuit-survey-2011.pdf",
+      "bytes": 1402595,
+      "sha256": "c4ad0da7586204b2f41ac46bf4d773d0f56d6ea577ee6b22287c99073e90089d",
+      "download_metadata": "data/raw/snack-evidence/mcvities-gov-biscuit-survey-2011.pdf.metadata.json"
+    },
+    {
+      "path": "data/raw/snack-evidence/mcvities-gov-biscuit-survey-2011.pdf.metadata.json",
+      "bytes": 1810,
+      "sha256": "dac63fe6c7a9db5cee2837e45b2249b3f7f286bcb8d62db5bb516fd4216a24d2"
+    },
+    {
+      "path": "data/raw/snack-evidence/mcvities-onestop-400g-2022.pdf",
+      "bytes": 41206,
+      "sha256": "104e86dd188687d4935abd4914296a3e1c7cf28971076fb1fb6f51d6c2655ec8",
+      "download_metadata": "data/raw/snack-evidence/mcvities-onestop-400g-2022.pdf.metadata.json"
+    },
+    {
+      "path": "data/raw/snack-evidence/mcvities-onestop-400g-2022.pdf.metadata.json",
+      "bytes": 1297,
+      "sha256": "f55e91c26ffbb346df1d2d0466e5343499b6a6b872f524a415f9070f56e611d0"
+    },
+    {
+      "path": "data/raw/snack-evidence/penguin-manufacturer-2026.access.json",
+      "bytes": 1178,
+      "sha256": "7f43ee0e1261b474de557ef350f738214f5952a68b4c82c5f686db44c21a195e",
+      "download_metadata": "data/raw/snack-evidence/penguin-manufacturer-2026.access.json.metadata.json"
+    },
+    {
+      "path": "data/raw/snack-evidence/penguin-manufacturer-2026.access.json.metadata.json",
+      "bytes": 755,
+      "sha256": "bf14dd6a47be2fff483163791f1cf75d953125326c98325fb1962e47997a9546"
+    },
+    {
+      "path": "data/raw/snack-evidence/phe-sugar-reduction-2018.pdf",
+      "bytes": 976724,
+      "sha256": "bc8ec28950d869b27263f6213c962260b166e3de3235d98f61beaaaf0c1503ca",
+      "download_metadata": "data/raw/snack-evidence/phe-sugar-reduction-2018.pdf.metadata.json"
+    },
+    {
+      "path": "data/raw/snack-evidence/phe-sugar-reduction-2018.pdf.metadata.json",
+      "bytes": 623,
+      "sha256": "b93b4e54637126d5cdaeef1490381ff47b4f19dfb9ab56cbcec45504347aeaa7"
+    },
+    {
+      "path": "data/raw/snack-evidence/sky-maltesers-2016.access.json",
+      "bytes": 541,
+      "sha256": "5bfd73026fb4202d91bf4f9c43ae02a6daac2621619ca104fca4acbc5bf73b72"
+    },
+    {
+      "path": "data/raw/snack-evidence/which-2019.html",
+      "bytes": 427209,
+      "sha256": "c22c1d7799ddca50326f5f9266400f97e6831dd237ab5b0167015c0cf51fc841",
+      "download_metadata": "data/raw/snack-evidence/which-2019.html.metadata.json"
+    },
+    {
+      "path": "data/raw/snack-evidence/which-2019.html.metadata.json",
+      "bytes": 505,
+      "sha256": "20179b14e3656d51fc2a41a239285f2f8850b6c43dec12effdae623ddea58a16"
+    },
+    {
+      "path": "data/raw/snack-evidence/which-quality-street-2025.html",
+      "bytes": 418371,
+      "sha256": "bad0a69789b416dfa1204b4ec82bea94a60912a58b547383b68d4c8291bcac9c",
+      "download_metadata": "data/raw/snack-evidence/which-quality-street-2025.html.metadata.json"
+    },
+    {
+      "path": "data/raw/snack-evidence/which-quality-street-2025.html.metadata.json",
+      "bytes": 515,
+      "sha256": "2dbad599e15e2f4a2d29004e4c1d91920c98a6f299846d88411838d7bd99e970"
+    }
+  ],
+  "raw_bytes": 8186398411,
+  "original_copy_manifest": "research/source-manifest.json",
+  "original_copy_verification": [
+    {
+      "path": "PROJECT_HANDOFF.md",
+      "sha256": "4fda4daef51dbee3f40ff76389177db1ff6524be129dcb6be8e2a0dce089483d",
+      "verified": true
+    },
+    {
+      "path": "research/dataset-plan.json",
+      "sha256": "c32bcbc873dc9680f0d9d7f9265643983d8fe402b12c5fbfba6ce255ff195dfb",
+      "verified": true
+    },
+    {
+      "path": "research/off-parquet-tree.json",
+      "sha256": "0b548bd8c7102ffc42038d0312b00983a4bd71c265b61058ec6efdbe74ed71de",
+      "verified": true
+    },
+    {
+      "path": "research/reported-cases.json",
+      "sha256": "0d598be6bf5496644bc9b7b7788458b12a1687d8da1714f04fb851d2fdffa4c0",
+      "verified": true
+    },
+    {
+      "path": "research/images/dairy180-back.jpg",
+      "sha256": "bdfbd3e5aeb4d02835c07139ec7975a1a483a07ff5f4f4cecc6bdb9dda5e43e2",
+      "verified": true
+    },
+    {
+      "path": "research/images/dairy180-label.jpg",
+      "sha256": "31b68cafc42393585f8fb4973e5d86d4f8cafe67e3c6f1a7d89cfd532959d4fa",
+      "verified": true
+    },
+    {
+      "path": "research/images/dairy180.jpg",
+      "sha256": "d8b43f20aa9cb9b0c1fa858bc072b3eab5537e76ed869fe7e1c523d5b0a76844",
+      "verified": true
+    },
+    {
+      "path": "research/images/dairy200-back.jpg",
+      "sha256": "7076be168668d6bb75464bbfabf800e88e8afb96c0482bf89a738d409cbbac0b",
+      "verified": true
+    },
+    {
+      "path": "research/images/dairy200.jpg",
+      "sha256": "f08e5aff589700ab78c7a64b9b3056e1a01b01830f817d2ce972c46ef94e907d",
+      "verified": true
+    },
+    {
+      "path": "research/images/quality550-back.jpg",
+      "sha256": "b7be635ad8bcbd3cbddaa18f76eea47f7a926540cc17081bb4ccca94267c796d",
+      "verified": true
+    },
+    {
+      "path": "research/images/quality550.jpg",
+      "sha256": "69c9083e96bf7f00d6dc1a4b4a88466eaf2a21b213e7e15447442b5a2d814529",
+      "verified": true
+    },
+    {
+      "path": "research/images/quality600-back.jpg",
+      "sha256": "37eeb71e3717d92574116dc78c141be5d6d995813ec53d6bc27a45fdd2da0e29",
+      "verified": true
+    },
+    {
+      "path": "research/images/quality600-base.jpg",
+      "sha256": "d2f0385b3a478610562d0e1a0e128d65802231e5db88b025021fe8035035241c",
+      "verified": true
+    },
+    {
+      "path": "research/images/quality600-label.jpg",
+      "sha256": "413fb2fef467c135c817e3a0bfcc48911909d5fd4630926e6e6c2527c3e37ac6",
+      "verified": true
+    },
+    {
+      "path": "research/images/quality600.jpg",
+      "sha256": "6d211b2910096c45acaf250911143a4b4eb340fb1577205cc0c3ca4f2caa4bef",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page1.json",
+      "sha256": "82915f2f6a9add744793716b204cdfb517fafb99ff4ff17a73d7cca7cc86e1ac",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page10.json",
+      "sha256": "02689b01ef011bf03c12eba4f1c4de5afe1fd7f99816bf1c6d2a8109598732dd",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page11.json",
+      "sha256": "8960732527c5ca5998a4ce02cf3d8517897f6fccf96480e392f73b649f57482a",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page12.json",
+      "sha256": "8b4fec3831e82068c6be1847dfdd189500068b02118e322d04c19da35e32d57d",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page13.json",
+      "sha256": "0903758482992fbc1f78053c736141a3fbc118a1368a2eb4551651534582865b",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page14.json",
+      "sha256": "8cc5cff65797db2bfa2cea134db683a1d0ccf29203e94ee769e872141af8f7d3",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page15.json",
+      "sha256": "efdea439e9c7873e9bfff7c665506ed093641181f16999945b048286c8de833e",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page16.json",
+      "sha256": "6c0cbc3486c10426918e1851b730bc06b6d639e48f7e267513eb7fc391ee7e5b",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page17.json",
+      "sha256": "529c4f6555ac679ca7cd097ef860acaa6db999e870fd6e6c19dd388b64106495",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page18.json",
+      "sha256": "4f6b6b398d661300664b8f3e11e60aca2c60a04efc35eb8a4568ccd70a66a204",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page19.json",
+      "sha256": "ce3422fe40e39a528967a3e424ddaa0855fe8563eea85a263c1fddbc5ecf2ab0",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page2.json",
+      "sha256": "fcbdc13fc9e43303e3a63f83fc3cf3c759a371012beecfd93ec9961389dcd32f",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page20.json",
+      "sha256": "7f616449e705e7d15d77ca20757a0f93db4262c937a1f651597a7204e7b31c93",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page21.json",
+      "sha256": "5feca8558e368c45f6e68259f9136c2f84e2b771245100f6b80f0bd3a9217058",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page3.json",
+      "sha256": "2b316c55c581feaac015864a1fdba1fb9bada94cc2463408373038bae2896dfb",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page4.json",
+      "sha256": "e3b6751af3c6c52aa3c9ec485f9ccdf0c88e9babb9ae3b48b41fa537798f675f",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page5.json",
+      "sha256": "4986958603ea65eab2caee73bb1a91af1ddac0029e76a0a5fd3e41f3508bc5aa",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page6.json",
+      "sha256": "1b20ebc9bb43ecf1932c43ebac7545c75c4c847149ca1e2dd08cb066dd596438",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page7.json",
+      "sha256": "2dba7c2d3be1f5c8599637c7ebd1995e23cab1029076e27026025e5726beecb2",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page8.json",
+      "sha256": "3413c4b76da0ef3467f48a4eb31d627a6cd48e916f55e7ec2b8451adc9e183f4",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/open-prices-gbp-page9.json",
+      "sha256": "747c76041fb49ef39ff4606710761e23cfa03b6fa9f85636132a08f00a634eaa",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/coverage-report.json",
+      "sha256": "ce3d9ffd6e77a3232ffb99e7437671d85f99ecf3644b3a8c08f24e4337a94ce8",
+      "verified": true
+    },
+    {
+      "path": "data/raw/open-prices/fetch-report.json",
+      "sha256": "633209622d288a2e78a5063125464b491c3ea57d624f28c76be7385b504589bb",
+      "verified": true
+    },
+    {
+      "path": "data/raw/commodities/worldbank-monthly.xlsx",
+      "sha256": "3c8d9d8dbb48342fdbf24777c39a8ce8964cc2fd0958f72f6779e6e4ad99cde2",
+      "verified": true
+    }
+  ]
+}

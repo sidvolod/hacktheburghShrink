@@ -1,0 +1,24 @@
+{
+  "cases": 10,
+  "families": 9,
+  "curated_input_path": "data/curated/snack-cases.json",
+  "curated_input_sha256": "57d2b09696b719e616444ce3b0b0cbb377a2e80953be5b4d837193cc05b23ce4",
+  "price_comparable_cases": 9,
+  "recipe_comparable_cases": 1,
+  "standalone_recipe_findings": 1,
+  "rrp_only_price_cases": 1,
+  "reviewed_barcode_members": 2,
+  "eligible_monthly_training_labels": 0,
+  "source_files_present": 11,
+  "source_captures_present": 9,
+  "access_notes_present": 2,
+  "sources_missing_captures": [],
+  "source_access_failures": [],
+  "limitations": [
+    "Selected positive demonstrations, not representative training data.",
+    "Article publication dates are not exact market-transition or transaction dates.",
+    "RRP comparisons are labelled separately from reported shelf-price comparisons.",
+    "No price-per-100g is invented when price evidence is missing.",
+    "Recipe comparisons use dated label snapshots, not proven exact reformulation dates or cost changes."
+  ]
+}

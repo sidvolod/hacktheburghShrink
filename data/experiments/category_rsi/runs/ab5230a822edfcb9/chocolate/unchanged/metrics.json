@@ -1,0 +1,77 @@
+{
+  "features": [
+    "history_change_lag0_pct",
+    "history_change_lag1_pct",
+    "history_change_lag2_pct",
+    "history_change_lag3_pct",
+    "history_change_lag6_pct",
+    "history_change_lag12_pct",
+    "history_mean_3m_pct",
+    "history_std_3m_pct",
+    "history_mean_6m_pct",
+    "history_std_6m_pct",
+    "history_mean_12m_pct",
+    "history_std_12m_pct",
+    "season_sin",
+    "season_cos",
+    "commodity_cocoa_gbp_return_4w_pct",
+    "commodity_cocoa_gbp_return_12w_pct",
+    "commodity_cocoa_gbp_return_26w_pct",
+    "commodity_cocoa_gbp_volatility_12w_pct",
+    "commodity_gbp_per_usd_return_4w_pct",
+    "commodity_gbp_per_usd_return_12w_pct"
+  ],
+  "validation_metrics": {
+    "n": 34,
+    "mae_pp": 1.678637640791053,
+    "rmse_pp": 2.2512979791634757,
+    "directional_accuracy": 0.6764705882352942
+  },
+  "test_metrics": {
+    "n": 33,
+    "mae_pp": 1.5747375908632857,
+    "rmse_pp": 1.959604715118534,
+    "directional_accuracy": 0.6666666666666666
+  },
+  "paired_test_comparison": {
+    "n": 33,
+    "mean_error_reduction_pp": 0.0,
+    "median_error_reduction_pp": 0.0,
+    "months_improved": 0,
+    "months_worsened": 0,
+    "months_tied": 33
+  },
+  "error_reduction_vs_unchanged_pct": 0.0,
+  "yearly_test_metrics": {
+    "2024": {
+      "n": 12,
+      "mae_pp": 1.5104220163019508,
+      "rmse_pp": 2.0199811936224044,
+      "directional_accuracy": 0.75
+    },
+    "2025": {
+      "n": 12,
+      "mae_pp": 1.3423269403547629,
+      "rmse_pp": 1.6633988349614917,
+      "directional_accuracy": 0.5
+    },
+    "2026": {
+      "n": 9,
+      "mae_pp": 1.9703725576230964,
+      "rmse_pp": 2.224985258955283,
+      "directional_accuracy": 0.7777777777777778
+    }
+  },
+  "feature_coverage": {
+    "validation": {},
+    "test": {}
+  },
+  "forecast": {
+    "as_of": "2026-11-08",
+    "target_month": "2026-12-01",
+    "change_pct": 2.316692745933289,
+    "train_n": 129,
+    "max_train_label_available_date": "2026-11-01T00:00:00+00:00",
+    "selected_for_website": false
+  }
+}

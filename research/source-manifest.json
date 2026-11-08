@@ -1,0 +1,277 @@
+{
+  "prepared_on": "2026-11-08",
+  "files": [
+    {
+      "file": "PROJECT_HANDOFF.md",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/outputs/shrincflationTrack-handoff.md",
+      "description": "Substantive handoff prepared for the new VS Code workspace",
+      "sha256": "4fda4daef51dbee3f40ff76389177db1ff6524be129dcb6be8e2a0dce089483d",
+      "bytes": 24094
+    },
+    {
+      "file": "research/dataset-plan.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-research/dataset-plan.json",
+      "description": "Earlier source research; PROJECT_HANDOFF.md includes later findings and corrections",
+      "sha256": "c32bcbc873dc9680f0d9d7f9265643983d8fe402b12c5fbfba6ce255ff195dfb",
+      "bytes": 3451
+    },
+    {
+      "file": "research/off-parquet-tree.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-research/off-parquet-tree.json",
+      "description": "Earlier source research; PROJECT_HANDOFF.md includes later findings and corrections",
+      "sha256": "0b548bd8c7102ffc42038d0312b00983a4bd71c265b61058ec6efdbe74ed71de",
+      "bytes": 1090
+    },
+    {
+      "file": "research/reported-cases.json",
+      "derived_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-research/verified-cases.json",
+      "description": "Selected source-supported cases; removed unsupported old-year inference for Quality Street",
+      "sha256": "0d598be6bf5496644bc9b7b7788458b12a1687d8da1714f04fb851d2fdffa4c0"
+    },
+    {
+      "file": "research/images/dairy180-back.jpg",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-research/images/dairy180-back.jpg",
+      "description": "Public OFF label photograph; some are incomplete leads, see dataset-plan.json",
+      "sha256": "bdfbd3e5aeb4d02835c07139ec7975a1a483a07ff5f4f4cecc6bdb9dda5e43e2",
+      "bytes": 503122
+    },
+    {
+      "file": "research/images/dairy180-label.jpg",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-research/images/dairy180-label.jpg",
+      "description": "Public OFF label photograph; some are incomplete leads, see dataset-plan.json",
+      "sha256": "31b68cafc42393585f8fb4973e5d86d4f8cafe67e3c6f1a7d89cfd532959d4fa",
+      "bytes": 23545
+    },
+    {
+      "file": "research/images/dairy180.jpg",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-research/images/dairy180.jpg",
+      "description": "Public OFF label photograph; some are incomplete leads, see dataset-plan.json",
+      "sha256": "d8b43f20aa9cb9b0c1fa858bc072b3eab5537e76ed869fe7e1c523d5b0a76844",
+      "bytes": 21008
+    },
+    {
+      "file": "research/images/dairy200-back.jpg",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-research/images/dairy200-back.jpg",
+      "description": "Public OFF label photograph; some are incomplete leads, see dataset-plan.json",
+      "sha256": "7076be168668d6bb75464bbfabf800e88e8afb96c0482bf89a738d409cbbac0b",
+      "bytes": 15302
+    },
+    {
+      "file": "research/images/dairy200.jpg",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-research/images/dairy200.jpg",
+      "description": "Public OFF label photograph; some are incomplete leads, see dataset-plan.json",
+      "sha256": "f08e5aff589700ab78c7a64b9b3056e1a01b01830f817d2ce972c46ef94e907d",
+      "bytes": 27814
+    },
+    {
+      "file": "research/images/quality550-back.jpg",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-research/images/quality550-back.jpg",
+      "description": "Public OFF label photograph; some are incomplete leads, see dataset-plan.json",
+      "sha256": "b7be635ad8bcbd3cbddaa18f76eea47f7a926540cc17081bb4ccca94267c796d",
+      "bytes": 38962
+    },
+    {
+      "file": "research/images/quality550.jpg",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-research/images/quality550.jpg",
+      "description": "Public OFF label photograph; some are incomplete leads, see dataset-plan.json",
+      "sha256": "69c9083e96bf7f00d6dc1a4b4a88466eaf2a21b213e7e15447442b5a2d814529",
+      "bytes": 29378
+    },
+    {
+      "file": "research/images/quality600-back.jpg",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-research/images/quality600-back.jpg",
+      "description": "Public OFF label photograph; some are incomplete leads, see dataset-plan.json",
+      "sha256": "37eeb71e3717d92574116dc78c141be5d6d995813ec53d6bc27a45fdd2da0e29",
+      "bytes": 250724
+    },
+    {
+      "file": "research/images/quality600-base.jpg",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-research/images/quality600-base.jpg",
+      "description": "Public OFF label photograph; some are incomplete leads, see dataset-plan.json",
+      "sha256": "d2f0385b3a478610562d0e1a0e128d65802231e5db88b025021fe8035035241c",
+      "bytes": 49171
+    },
+    {
+      "file": "research/images/quality600-label.jpg",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-research/images/quality600-label.jpg",
+      "description": "Public OFF label photograph; some are incomplete leads, see dataset-plan.json",
+      "sha256": "413fb2fef467c135c817e3a0bfcc48911909d5fd4630926e6e6c2527c3e37ac6",
+      "bytes": 38269
+    },
+    {
+      "file": "research/images/quality600.jpg",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-research/images/quality600.jpg",
+      "description": "Public OFF label photograph; some are incomplete leads, see dataset-plan.json",
+      "sha256": "6d211b2910096c45acaf250911143a4b4eb340fb1577205cc0c3ca4f2caa4bef",
+      "bytes": 20941
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page1.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page1.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "82915f2f6a9add744793716b204cdfb517fafb99ff4ff17a73d7cca7cc86e1ac",
+      "bytes": 296945
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page10.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page10.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "02689b01ef011bf03c12eba4f1c4de5afe1fd7f99816bf1c6d2a8109598732dd",
+      "bytes": 319169
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page11.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page11.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "8960732527c5ca5998a4ce02cf3d8517897f6fccf96480e392f73b649f57482a",
+      "bytes": 319916
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page12.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page12.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "8b4fec3831e82068c6be1847dfdd189500068b02118e322d04c19da35e32d57d",
+      "bytes": 318443
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page13.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page13.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "0903758482992fbc1f78053c736141a3fbc118a1368a2eb4551651534582865b",
+      "bytes": 315789
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page14.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page14.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "8cc5cff65797db2bfa2cea134db683a1d0ccf29203e94ee769e872141af8f7d3",
+      "bytes": 315941
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page15.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page15.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "efdea439e9c7873e9bfff7c665506ed093641181f16999945b048286c8de833e",
+      "bytes": 316916
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page16.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page16.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "6c0cbc3486c10426918e1851b730bc06b6d639e48f7e267513eb7fc391ee7e5b",
+      "bytes": 311757
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page17.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page17.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "529c4f6555ac679ca7cd097ef860acaa6db999e870fd6e6c19dd388b64106495",
+      "bytes": 316002
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page18.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page18.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "4f6b6b398d661300664b8f3e11e60aca2c60a04efc35eb8a4568ccd70a66a204",
+      "bytes": 316134
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page19.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page19.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "ce3422fe40e39a528967a3e424ddaa0855fe8563eea85a263c1fddbc5ecf2ab0",
+      "bytes": 315155
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page2.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page2.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "fcbdc13fc9e43303e3a63f83fc3cf3c759a371012beecfd93ec9961389dcd32f",
+      "bytes": 305122
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page20.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page20.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "7f616449e705e7d15d77ca20757a0f93db4262c937a1f651597a7204e7b31c93",
+      "bytes": 313036
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page21.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page21.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "5feca8558e368c45f6e68259f9136c2f84e2b771245100f6b80f0bd3a9217058",
+      "bytes": 153483
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page3.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page3.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "2b316c55c581feaac015864a1fdba1fb9bada94cc2463408373038bae2896dfb",
+      "bytes": 313753
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page4.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page4.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "e3b6751af3c6c52aa3c9ec485f9ccdf0c88e9babb9ae3b48b41fa537798f675f",
+      "bytes": 296055
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page5.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page5.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "4986958603ea65eab2caee73bb1a91af1ddac0029e76a0a5fd3e41f3508bc5aa",
+      "bytes": 314096
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page6.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page6.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "1b20ebc9bb43ecf1932c43ebac7545c75c4c847149ca1e2dd08cb066dd596438",
+      "bytes": 315673
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page7.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page7.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "2dba7c2d3be1f5c8599637c7ebd1995e23cab1029076e27026025e5726beecb2",
+      "bytes": 314353
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page8.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page8.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "3413c4b76da0ef3467f48a4eb31d627a6cd48e916f55e7ec2b8451adc9e183f4",
+      "bytes": 313569
+    },
+    {
+      "file": "data/raw/open-prices/open-prices-gbp-page9.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/open-prices-gbp-page9.json",
+      "description": "Public GBP query page retrieved 8 November 2026; preserve original evidence fields",
+      "sha256": "747c76041fb49ef39ff4606710761e23cfa03b6fa9f85636132a08f00a634eaa",
+      "bytes": 318523
+    },
+    {
+      "file": "data/raw/open-prices/coverage-report.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/coverage-report.json",
+      "description": "Original audit report; broader GBP scope is distinguished from GB-only counts in handoff",
+      "sha256": "ce3d9ffd6e77a3232ffb99e7437671d85f99ecf3644b3a8c08f24e4337a94ce8",
+      "bytes": 2196
+    },
+    {
+      "file": "data/raw/open-prices/fetch-report.json",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/fetch-report.json",
+      "description": "Original audit report; broader GBP scope is distinguished from GB-only counts in handoff",
+      "sha256": "633209622d288a2e78a5063125464b491c3ea57d624f28c76be7385b504589bb",
+      "bytes": 4198
+    },
+    {
+      "file": "data/raw/commodities/worldbank-monthly.xlsx",
+      "copied_from": "/Users/volodymyrsydorenko/Documents/Codex/2026-11-07/can-x20/work/shrinkray-data-audit/worldbank-commodities.xlsx",
+      "description": "Monthly World Bank commodity workbook; does not fulfil the weekly input requirement",
+      "sha256": "3c8d9d8dbb48342fdbf24777c39a8ce8964cc2fd0958f72f6779e6e4ad99cde2",
+      "bytes": 587760
+    }
+  ]
+}

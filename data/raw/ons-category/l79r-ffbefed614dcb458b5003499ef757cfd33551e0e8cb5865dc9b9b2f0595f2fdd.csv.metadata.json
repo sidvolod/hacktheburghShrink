@@ -1,0 +1,14 @@
+{
+  "source_id": "ons-l79r",
+  "url": "https://www.ons.gov.uk/generator?format=csv&uri=/economy/inflationandpriceindices/timeseries/l79r/mm23",
+  "final_url": "https://www.ons.gov.uk/generator?format=csv&uri=/economy/inflationandpriceindices/timeseries/l79r/mm23",
+  "retrieved_at": "2026-11-08T06:22:28.221082+00:00",
+  "bytes": 3844,
+  "sha256": "ffbefed614dcb458b5003499ef757cfd33551e0e8cb5865dc9b9b2f0595f2fdd",
+  "content_type": "application/octet-stream;charset=utf-8",
+  "etag": "W/\"7a7a755f9ae6f3a6bfd4d36b553b9b24502784ff--gzip\"",
+  "http_last_modified": null,
+  "snapshot_path": "data/raw/ons-category/l79r-ffbefed614dcb458b5003499ef757cfd33551e0e8cb5865dc9b9b2f0595f2fdd.csv",
+  "source_frequency": "monthly",
+  "license": "Open Government Licence v3.0; attribute ONS"
+}

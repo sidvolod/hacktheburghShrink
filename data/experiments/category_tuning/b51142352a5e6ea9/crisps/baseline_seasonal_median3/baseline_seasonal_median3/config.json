@@ -1,0 +1,20 @@
+{
+  "candidate_id": "baseline_seasonal_median3",
+  "model_id": "baseline_seasonal_median3",
+  "feature_group": "baseline",
+  "params": {},
+  "training_window_months": null,
+  "residual_baseline": null,
+  "kind": "baseline",
+  "column": "baseline_seasonal_median3",
+  "features": [],
+  "run_id": "b51142352a5e6ea9",
+  "live_fit_audit": {
+    "train_n": 129,
+    "max_train_label_available_date": "2026-11-01T00:00:00+00:00",
+    "max_train_target_month": "2026-09-01",
+    "min_train_target_month": "2016-01-01",
+    "convergence_warnings": 0
+  },
+  "manifest": "../../../search_manifest.json"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "run_id": "886740bec87faf02",
+  "independently_verified": {
+    "historical_forecasts": 536,
+    "original_control_forecasts_reproduced": 134,
+    "live_models_reloaded": 8,
+    "feature_availability_rows": 2340,
+    "focused_tests_passed": 15,
+    "protected_files_unchanged": 1721,
+    "original_model_artifacts_unchanged": 79
+  },
+  "finding": "No timing or leakage blockers found. RSI worsened chocolate; the small crisps CPI-RSI improvement over its boosted-tree control still trails deployed Ridge and no change. No arm was selected or deployed.",
+  "evaluation_status": "retrospective exploratory"
+}

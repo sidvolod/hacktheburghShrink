@@ -1,0 +1,9 @@
+{
+  "candidate_error_window_months": 36,
+  "policy_id": "median_top3",
+  "aggregation": "median",
+  "top_k": 3,
+  "shrink_to_zero": 1.0,
+  "models_retrained": 0,
+  "manifest": "../../../search_manifest.json"
+}

@@ -1,0 +1,1817 @@
+{
+  "database": "data/processed/shrinkflation.duckdb",
+  "tables": [
+    {
+      "view": "candidate_family_links",
+      "parquet": "data/processed/candidate_family_links.parquet",
+      "bytes": 3702,
+      "rows": 1,
+      "columns": [
+        {
+          "name": "old_barcode",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "new_barcode",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "score",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "note",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "evidence_json",
+          "type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "view": "catalogue_products",
+      "parquet": "data/processed/catalogue_products.parquet",
+      "bytes": 51285295,
+      "rows": 200245,
+      "columns": [
+        {
+          "name": "source_product_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_record_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "barcode",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "barcode_record_count",
+          "type": "BIGINT"
+        },
+        {
+          "name": "conflicting_duplicate",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "barcode_format_valid",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "identity_eligible",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "product_name",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "product_name_raw_json",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "brand",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "brands_tags_json",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "raw_quantity",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "raw_product_quantity",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "raw_product_quantity_unit",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "quantity_temporal_status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "ingredients_text",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "raw_ingredients_json",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "raw_images_json",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "countries_tags_json",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "categories_tags_json",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "stores_tags_json",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_language",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "rev",
+          "type": "INTEGER"
+        },
+        {
+          "name": "off_created_epoch_s",
+          "type": "BIGINT"
+        },
+        {
+          "name": "off_modified_epoch_s",
+          "type": "BIGINT"
+        },
+        {
+          "name": "off_updated_epoch_s",
+          "type": "BIGINT"
+        },
+        {
+          "name": "obsolete",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "market_tag",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "record_type",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_url",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_dataset_revision",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "data_license",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "image_license",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "declared_total_mass_g",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "declared_total_volume_ml",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "item_mass_g",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "item_volume_ml",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "pack_count",
+          "type": "INTEGER"
+        },
+        {
+          "name": "quantity_parse_status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "structured_declared_quantity_conflict",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "structured_total_mass_g",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "structured_total_volume_ml",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "total_mass_g",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "total_volume_ml",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "quantity_basis",
+          "type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "view": "commodity_daily",
+      "parquet": "data/processed/commodity_daily.parquet",
+      "bytes": 1274771,
+      "rows": 47226,
+      "columns": [
+        {
+          "name": "observation_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "series_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "series_name",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "commodity",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "observation_date",
+          "type": "DATE"
+        },
+        {
+          "name": "source_period_start",
+          "type": "DATE"
+        },
+        {
+          "name": "source_period_end",
+          "type": "DATE"
+        },
+        {
+          "name": "source_frequency",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "value",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "raw_value",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "unit",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "raw_unit",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "unit_definition_status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "currency",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "market",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "market_stage",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "roll_convention",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "available_at",
+          "type": "TIMESTAMP WITH TIME ZONE"
+        },
+        {
+          "name": "publication_known",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "availability_note",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "eligible_for_backtest",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "license_status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_file",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "raw_locator",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_url",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "is_estimated",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "is_calculated",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "is_confidential",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "source_raw_json",
+          "type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "view": "commodity_monthly_features",
+      "parquet": "data/processed/commodity_monthly_features.parquet",
+      "bytes": 28826,
+      "rows": 4050,
+      "columns": [
+        {
+          "name": "cutoff_date",
+          "type": "DATE"
+        },
+        {
+          "name": "series_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "commodity",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "unit",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "currency",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "feature_mode",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "cutoff_at",
+          "type": "TIMESTAMP WITH TIME ZONE"
+        },
+        {
+          "name": "latest_week_end",
+          "type": "DATE"
+        },
+        {
+          "name": "latest_weekly_value",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "mean_4w",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "change_4w_fraction",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "weekly_change_stddev_pct_12w",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "observed_weeks_4w",
+          "type": "BIGINT"
+        },
+        {
+          "name": "observed_weeks_12w",
+          "type": "BIGINT"
+        },
+        {
+          "name": "eligible_for_backtest",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "feature_definition",
+          "type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "view": "commodity_monthly_support",
+      "parquet": "data/processed/commodity_monthly_support.parquet",
+      "bytes": 307363,
+      "rows": 56942,
+      "columns": [
+        {
+          "name": "source_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "series_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "series_name",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "name": "value",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "raw_value",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "unit",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "currency",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_frequency",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "available_at",
+          "type": "TIMESTAMP WITH TIME ZONE"
+        },
+        {
+          "name": "publication_known",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "eligible_as_weekly_input",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "source_file",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "raw_locator",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_url",
+          "type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "view": "commodity_observations",
+      "parquet": "data/processed/commodity_observations.parquet",
+      "bytes": 2435435,
+      "rows": 80521,
+      "columns": [
+        {
+          "name": "observation_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "series_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "series_name",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "commodity",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "observation_date",
+          "type": "DATE"
+        },
+        {
+          "name": "source_period_start",
+          "type": "DATE"
+        },
+        {
+          "name": "source_period_end",
+          "type": "DATE"
+        },
+        {
+          "name": "source_frequency",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "value",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "raw_value",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "unit",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "raw_unit",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "unit_definition_status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "currency",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "market",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "market_stage",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "roll_convention",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "available_at",
+          "type": "TIMESTAMP WITH TIME ZONE"
+        },
+        {
+          "name": "publication_known",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "availability_note",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "eligible_for_backtest",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "license_status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_file",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "raw_locator",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_url",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "is_estimated",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "is_calculated",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "is_confidential",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "source_raw_json",
+          "type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "view": "commodity_weekly",
+      "parquet": "data/processed/commodity_weekly.parquet",
+      "bytes": 1897943,
+      "rows": 41697,
+      "columns": [
+        {
+          "name": "series_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "series_name",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "commodity",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "week_start",
+          "type": "DATE"
+        },
+        {
+          "name": "week_end",
+          "type": "DATE"
+        },
+        {
+          "name": "value",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "last_value",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "unit",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "raw_unit",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "unit_definition_status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "currency",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "market",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "market_stage",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_frequency",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "observation_count",
+          "type": "BIGINT"
+        },
+        {
+          "name": "first_observation_date",
+          "type": "DATE"
+        },
+        {
+          "name": "last_observation_date",
+          "type": "DATE"
+        },
+        {
+          "name": "source_period_start",
+          "type": "DATE"
+        },
+        {
+          "name": "source_period_end",
+          "type": "DATE"
+        },
+        {
+          "name": "available_at",
+          "type": "TIMESTAMP WITH TIME ZONE"
+        },
+        {
+          "name": "publication_known",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "eligible_for_backtest",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "availability_note",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "license_status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "roll_convention",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_url",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "observation_ids",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "previous_week_value",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "previous_week_end",
+          "type": "DATE"
+        },
+        {
+          "name": "change_pct_1w",
+          "type": "DOUBLE"
+        }
+      ]
+    },
+    {
+      "view": "family_members",
+      "parquet": "data/processed/family_members.parquet",
+      "bytes": 2407,
+      "rows": 2,
+      "columns": [
+        {
+          "name": "family_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "barcode",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "role",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "review_status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_url",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "valid_from",
+          "type": "DATE"
+        },
+        {
+          "name": "valid_to",
+          "type": "DATE"
+        },
+        {
+          "name": "note",
+          "type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "view": "monthly_targets",
+      "parquet": "data/processed/monthly_targets.parquet",
+      "bytes": 4466198,
+      "rows": 237504,
+      "columns": [
+        {
+          "name": "source_product_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "retailer",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "price_basis",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "unit_price_basis",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "dimension",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "history_month",
+          "type": "DATE"
+        },
+        {
+          "name": "forecast_cutoff_date",
+          "type": "DATE"
+        },
+        {
+          "name": "target_month",
+          "type": "DATE"
+        },
+        {
+          "name": "history_median_price_per_100",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "target_median_price_per_100",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "next_month_unit_price_change_fraction",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "history_observed_days",
+          "type": "BIGINT"
+        },
+        {
+          "name": "target_observed_days",
+          "type": "BIGINT"
+        },
+        {
+          "name": "target_observed",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "history_full_calendar_month",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "target_full_calendar_month",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "eligible_for_sampled_monthly_price_evaluation",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "target_definition",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "identity_scope",
+          "type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "view": "open_prices",
+      "parquet": "data/processed/open_prices.parquet",
+      "bytes": 116173,
+      "rows": 2036,
+      "columns": [
+        {
+          "name": "observation_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_price_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "barcode",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_product_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "observation_date",
+          "type": "DATE"
+        },
+        {
+          "name": "retailer",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "location_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "country_code",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "price_gbp",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "currency",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "price_per_raw",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "price_per_100g_gbp",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "price_per_100ml_gbp",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "unit_price_basis",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "price_is_discounted",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "price_without_discount_gbp",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "discount_type",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "proof_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "proof_type",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "proof_file_path",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "proof_date",
+          "type": "DATE"
+        },
+        {
+          "name": "record_created_at",
+          "type": "TIMESTAMP WITH TIME ZONE"
+        },
+        {
+          "name": "record_updated_at",
+          "type": "TIMESTAMP WITH TIME ZONE"
+        },
+        {
+          "name": "current_product_snapshot_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "quantity_temporal_status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_url",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "raw_path",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "raw_item_index",
+          "type": "INTEGER"
+        }
+      ]
+    },
+    {
+      "view": "open_prices_exclusions",
+      "parquet": "data/processed/open_prices_exclusions.parquet",
+      "bytes": 1151,
+      "rows": 13,
+      "columns": [
+        {
+          "name": "source_price_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "reason",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "raw_path",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "raw_item_index",
+          "type": "INTEGER"
+        }
+      ]
+    },
+    {
+      "view": "open_prices_product_snapshots",
+      "parquet": "data/processed/open_prices_product_snapshots.parquet",
+      "bytes": 293474,
+      "rows": 1589,
+      "columns": [
+        {
+          "name": "snapshot_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_product_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "barcode",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "product_name",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "brands",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "raw_quantity",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "total_mass_g",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "total_volume_ml",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "pack_count",
+          "type": "INTEGER"
+        },
+        {
+          "name": "quantity_status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_last_synced_at",
+          "type": "TIMESTAMP WITH TIME ZONE"
+        },
+        {
+          "name": "quantity_temporal_status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "raw_product_json",
+          "type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "view": "product_families",
+      "parquet": "data/processed/product_families.parquet",
+      "bytes": 1495,
+      "rows": 5,
+      "columns": [
+        {
+          "name": "family_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "market",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "scope",
+          "type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "view": "reported_changes",
+      "parquet": "data/processed/reported_changes.parquet",
+      "bytes": 8432,
+      "rows": 5,
+      "columns": [
+        {
+          "name": "change_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "family_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "product_name",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "retailer",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "old_barcode",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "new_barcode",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "old_mass_g",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "new_mass_g",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "old_price_gbp",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "new_price_gbp",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "old_price_per_100g_gbp",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "new_price_per_100g_gbp",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "mass_change_fraction",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "unit_price_change_fraction",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "old_period_raw",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "new_period_raw",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "event_date",
+          "type": "DATE"
+        },
+        {
+          "name": "old_transaction_date",
+          "type": "DATE"
+        },
+        {
+          "name": "new_transaction_date",
+          "type": "DATE"
+        },
+        {
+          "name": "source_published_date",
+          "type": "DATE"
+        },
+        {
+          "name": "source_url",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "evidence_status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "evidence_json",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "eligible_monthly_training_label",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "label_exclusion_reason",
+          "type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "view": "retail_catalogue_candidates",
+      "parquet": "data/processed/retail_catalogue_candidates.parquet",
+      "bytes": 148799,
+      "rows": 7750,
+      "columns": [
+        {
+          "name": "focus_family",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "retail_source_product_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "retailer_raw",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "retail_product_name",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "retail_mass_g",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "retail_volume_ml",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "retail_pack_count",
+          "type": "INTEGER"
+        },
+        {
+          "name": "off_barcode",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "off_product_name",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "off_brand",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "off_raw_quantity",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "off_mass_g",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "off_volume_ml",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "name_similarity",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "source_url",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "review_status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "score_definition",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "matching_rule",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "candidate_rank",
+          "type": "BIGINT"
+        }
+      ]
+    },
+    {
+      "view": "retail_monthly",
+      "parquet": "data/processed/retail_monthly.parquet",
+      "bytes": 4822897,
+      "rows": 237504,
+      "columns": [
+        {
+          "name": "source_product_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "retailer",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "price_basis",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "unit_price_basis",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "dimension",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "name": "median_price_per_100",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "min_price_per_100",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "max_price_per_100",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "observed_days",
+          "type": "BIGINT"
+        },
+        {
+          "name": "observations",
+          "type": "BIGINT"
+        },
+        {
+          "name": "first_observed_date",
+          "type": "DATE"
+        },
+        {
+          "name": "last_observed_date",
+          "type": "DATE"
+        },
+        {
+          "name": "source_first",
+          "type": "DATE"
+        },
+        {
+          "name": "source_last",
+          "type": "DATE"
+        },
+        {
+          "name": "dataset_covers_full_calendar_month",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "observed_near_both_month_boundaries",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "identity_scope",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "aggregation",
+          "type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "view": "retail_prices",
+      "parquet": "data/processed/retail_prices.parquet",
+      "bytes": 715190564,
+      "rows": 9505414,
+      "columns": [
+        {
+          "name": "observation_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "product_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_file",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "retailer_raw",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "retailer",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "product_name_raw",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "product_name_normalised",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "observed_date",
+          "type": "DATE"
+        },
+        {
+          "name": "price_gbp",
+          "type": "DECIMAL(10,4)"
+        },
+        {
+          "name": "source_unit_price_gbp",
+          "type": "DECIMAL(10,4)"
+        },
+        {
+          "name": "source_unit",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "currency",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "market",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "price_basis",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "is_loyalty_price",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "is_promotional_price",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "categories",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "own_brand_values",
+          "type": "BOOLEAN[]"
+        },
+        {
+          "name": "is_food_candidate",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "raw_row_count",
+          "type": "BIGINT"
+        },
+        {
+          "name": "raw_row_index_first",
+          "type": "BIGINT"
+        },
+        {
+          "name": "conflicting_product_day",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "total_mass_g",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "total_volume_ml",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "item_mass_g",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "item_volume_ml",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "pack_count",
+          "type": "INTEGER"
+        },
+        {
+          "name": "quantity_status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "variable_weight_name",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "price_per_100g_source",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "price_per_100ml_source",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "price_per_100g_name",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "price_per_100ml_name",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "implied_mass_g",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "implied_volume_ml",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "source_name_unit_price_mismatch",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "invalid_pack_price",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "invalid_source_rate",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "invalid_identity",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "price_per_100g",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "price_per_100ml",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "unit_price_basis",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "mass_unit_price_basis",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "volume_unit_price_basis",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_product_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "observation_date",
+          "type": "DATE"
+        },
+        {
+          "name": "price_per_100g_gbp",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "price_per_100ml_gbp",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "unit_price_eligible",
+          "type": "BOOLEAN"
+        }
+      ]
+    },
+    {
+      "view": "retail_products",
+      "parquet": "data/processed/retail_products.parquet",
+      "bytes": 10886511,
+      "rows": 130633,
+      "columns": [
+        {
+          "name": "product_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_product_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "source_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "retailer_raw",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "product_name_raw",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "product_name_normalised",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "barcode",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "family_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "identity_status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "total_mass_g",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "total_volume_ml",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "item_mass_g",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "item_volume_ml",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "pack_count",
+          "type": "INTEGER"
+        },
+        {
+          "name": "quantity_status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "quantity_parse_json",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "variable_weight_name",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "first_observed_date",
+          "type": "DATE"
+        },
+        {
+          "name": "last_observed_date",
+          "type": "DATE"
+        },
+        {
+          "name": "distinct_observed_dates",
+          "type": "BIGINT"
+        },
+        {
+          "name": "distinct_observed_months",
+          "type": "BIGINT"
+        }
+      ]
+    },
+    {
+      "view": "snack_changes",
+      "parquet": "data/processed/snack_changes.parquet",
+      "bytes": 12929,
+      "rows": 10,
+      "columns": [
+        {
+          "name": "case_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "family_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "retailer",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "old_barcode",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "new_barcode",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "old_mass_g",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "new_mass_g",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "old_price_gbp",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "new_price_gbp",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "old_price_per_100g_gbp",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "new_price_per_100g_gbp",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "mass_change_fraction",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "unit_price_change_fraction",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "price_basis",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "event_date",
+          "type": "DATE"
+        },
+        {
+          "name": "source_published_date",
+          "type": "DATE"
+        },
+        {
+          "name": "evidence_status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "eligible_monthly_training_label",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "case_json",
+          "type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "view": "snack_family_members",
+      "parquet": "data/processed/snack_family_members.parquet",
+      "bytes": 2593,
+      "rows": 2,
+      "columns": [
+        {
+          "name": "family_id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "barcode",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "role",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "valid_from",
+          "type": "DATE"
+        },
+        {
+          "name": "valid_to",
+          "type": "DATE"
+        },
+        {
+          "name": "review_status",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "evidence_json",
+          "type": "VARCHAR"
+        }
+      ]
+    }
+  ]
+}

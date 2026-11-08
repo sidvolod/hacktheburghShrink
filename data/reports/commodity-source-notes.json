@@ -1,0 +1,998 @@
+{
+  "generated_at": "2026-11-08T05:13:39.952451+00:00",
+  "primary_sources": [
+    "https://www.icco.org/statistics/statistics_2025/",
+    "https://www.icco.org/statistics/",
+    "https://agriculture.ec.europa.eu/data-and-analysis/markets/overviews/market-observatories/crops/cereals-statistics_en",
+    "https://agriculture.ec.europa.eu/data-and-analysis/markets/overviews/market-observatories/crops/oilseeds-and-protein-crops_en",
+    "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html",
+    "https://www.worldbank.org/en/research/commodity-markets"
+  ],
+  "raw_directory": "data/raw/commodities",
+  "outputs": [
+    "commodity_observations.parquet",
+    "commodity_daily.parquet",
+    "commodity_weekly.parquet",
+    "commodity_monthly_support.parquet"
+  ],
+  "method_and_limitations": {
+    "generated_at": "2026-11-08T05:13:39.951247+00:00",
+    "status": "formatted_with_explicit_coverage_and_availability_gaps",
+    "observations": 80521,
+    "weekly_rows": 41697,
+    "monthly_support_rows": 56942,
+    "sources": [
+      {
+        "source_id": "ecb",
+        "observations": 14262,
+        "series": 2,
+        "date_min": "1999-01-04",
+        "date_max": "2026-11-06",
+        "missing_values": 0,
+        "flagged_values": 0
+      },
+      {
+        "source_id": "eu-cereal-notifications",
+        "observations": 24937,
+        "series": 379,
+        "date_min": "2024-07-07",
+        "date_max": "2026-10-25",
+        "missing_values": 0,
+        "flagged_values": 0
+      },
+      {
+        "source_id": "eu-world-cereal",
+        "observations": 4378,
+        "series": 11,
+        "date_min": "2019-03-20",
+        "date_max": "2026-10-28",
+        "missing_values": 643,
+        "flagged_values": 0
+      },
+      {
+        "source_id": "eu-world-oilseed",
+        "observations": 3980,
+        "series": 10,
+        "date_min": "2019-03-20",
+        "date_max": "2026-10-28",
+        "missing_values": 89,
+        "flagged_values": 0
+      },
+      {
+        "source_id": "icco",
+        "observations": 32964,
+        "series": 4,
+        "date_min": "1994-10-03",
+        "date_max": "2026-11-05",
+        "missing_values": 0,
+        "flagged_values": 0
+      }
+    ],
+    "cocoa_audit": {
+      "invalid_date_rows": [
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 6716,
+          "values": [
+            "6717",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7435,
+          "values": [
+            "7443",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7437,
+          "values": [
+            "7445",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7445,
+          "values": [
+            "7453",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7447,
+          "values": [
+            "7455",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7459,
+          "values": [
+            "7467",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7461,
+          "values": [
+            "7469",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7464,
+          "values": [
+            "7472",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7466,
+          "values": [
+            "7474",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7468,
+          "values": [
+            "7476",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7470,
+          "values": [
+            "7478",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7472,
+          "values": [
+            "7480",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7474,
+          "values": [
+            "7482",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7476,
+          "values": [
+            "7484",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7478,
+          "values": [
+            "7486",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7480,
+          "values": [
+            "7488",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7482,
+          "values": [
+            "7490",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7513,
+          "values": [
+            "7522",
+            "",
+            "3,445.67",
+            "4,208.67",
+            "4,266.58",
+            "3,970.69"
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7514,
+          "values": [
+            "7523",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7536,
+          "values": [
+            "7546",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7640,
+          "values": [
+            "7653",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7788,
+          "values": [
+            "7805",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7856,
+          "values": [
+            "7873",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7858,
+          "values": [
+            "7875",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7860,
+          "values": [
+            "7877",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7862,
+          "values": [
+            "7879",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7864,
+          "values": [
+            "7881",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7866,
+          "values": [
+            "7883",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7868,
+          "values": [
+            "7885",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 7925,
+          "values": [
+            "7942",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table14.json",
+          "row": 8058,
+          "values": [
+            "8077",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table26.json",
+          "row": 376,
+          "values": [
+            "8128",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table26.json",
+          "row": 378,
+          "values": [
+            "8130",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table26.json",
+          "row": 380,
+          "values": [
+            "8132",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table26.json",
+          "row": 383,
+          "values": [
+            "8135",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table26.json",
+          "row": 385,
+          "values": [
+            "8137",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table26.json",
+          "row": 387,
+          "values": [
+            "8139",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table26.json",
+          "row": 389,
+          "values": [
+            "8141",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table26.json",
+          "row": 391,
+          "values": [
+            "8143",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table26.json",
+          "row": 393,
+          "values": [
+            "8145",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table26.json",
+          "row": 395,
+          "values": [
+            "8147",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table26.json",
+          "row": 397,
+          "values": [
+            "8149",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table26.json",
+          "row": 398,
+          "values": [
+            "8151",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table26.json",
+          "row": 400,
+          "values": [
+            "8153",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table26.json",
+          "row": 402,
+          "values": [
+            "8155",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table26.json",
+          "row": 404,
+          "values": [
+            "8157",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table26.json",
+          "row": 468,
+          "values": [
+            "8223",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table26.json",
+          "row": 534,
+          "values": [
+            "8289",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        },
+        {
+          "source_file": "icco-daily-prices-table26.json",
+          "row": 536,
+          "values": [
+            "8291",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "reason": "invalid_or_blank_date"
+        }
+      ],
+      "duplicate_observations_removed": 1312
+    },
+    "conflicting_series_dates_excluded_from_weekly": 0,
+    "conflicting_series_dates_sample": [],
+    "weekly_values_policy": "Identical series/date/value duplicates counted once. Conflicting values for the same series/date are excluded from weekly aggregation; raw observations retained.",
+    "unit_review": {
+      "icco": "Official table headers are GBP sterling/tonne, US dollars/tonne and euros/tonne. No pence scaling or unit conversion performed. raw_unit preserves source labels.",
+      "ecb": "GBP and USD columns quote currency units per 1 EUR. USD per GBP = (USD per EUR)/(GBP per EUR). Original rates exported; no cross-rate or current-FX substitution performed.",
+      "eu_world": "Source workbook headings $/ton for cereal and $/t for oilseeds. Cereal unit retained as per_source_ton, unit_definition_status=unknown_ton_definition because a metric/short-ton definition was not independently established. Oilseed t is the source tonne symbol. No numeric mass/currency conversion performed. Source raw_unit preserved.",
+      "eu_cereal": "Vl Euro Price is euro/tonne. National price and currency remain in source_raw_json; normalized output uses the published euro price, without another FX conversion.",
+      "identity": "series IDs distinguish commodity, market, currency and stage. Different countries, quoted locations, stages and original currencies are never averaged into a common price."
+    },
+    "retail_panel_overlap": {
+      "retail_date_min": "2024-01-09",
+      "retail_date_max": "2024-04-13",
+      "note": "Observation-date overlap only; does not establish historical availability or vintages.",
+      "sources": [
+        {
+          "source_id": "ecb",
+          "source_rows": 134,
+          "nonmissing_values": 134,
+          "series_with_observation": 2,
+          "observed_date_min": "2024-01-09",
+          "observed_date_max": "2024-04-12"
+        },
+        {
+          "source_id": "eu-world-cereal",
+          "source_rows": 154,
+          "nonmissing_values": 139,
+          "series_with_observation": 11,
+          "observed_date_min": "2024-01-10",
+          "observed_date_max": "2024-04-10"
+        },
+        {
+          "source_id": "eu-world-oilseed",
+          "source_rows": 140,
+          "nonmissing_values": 139,
+          "series_with_observation": 10,
+          "observed_date_min": "2024-01-10",
+          "observed_date_max": "2024-04-10"
+        },
+        {
+          "source_id": "icco",
+          "source_rows": 272,
+          "nonmissing_values": 272,
+          "series_with_observation": 4,
+          "observed_date_min": "2024-01-09",
+          "observed_date_max": "2024-04-12"
+        }
+      ]
+    },
+    "monthly_2024_overlap": [
+      {
+        "source_id": "ecb",
+        "month": "2024-01-01",
+        "source_rows": 44,
+        "nonmissing_values": 44,
+        "series_with_observation": 2,
+        "observed_date_min": "2024-01-02",
+        "observed_date_max": "2024-01-31",
+        "strict_available_rows": 0
+      },
+      {
+        "source_id": "ecb",
+        "month": "2024-02-01",
+        "source_rows": 42,
+        "nonmissing_values": 42,
+        "series_with_observation": 2,
+        "observed_date_min": "2024-02-01",
+        "observed_date_max": "2024-02-29",
+        "strict_available_rows": 0
+      },
+      {
+        "source_id": "ecb",
+        "month": "2024-03-01",
+        "source_rows": 40,
+        "nonmissing_values": 40,
+        "series_with_observation": 2,
+        "observed_date_min": "2024-03-01",
+        "observed_date_max": "2024-03-28",
+        "strict_available_rows": 0
+      },
+      {
+        "source_id": "ecb",
+        "month": "2024-04-01",
+        "source_rows": 42,
+        "nonmissing_values": 42,
+        "series_with_observation": 2,
+        "observed_date_min": "2024-04-02",
+        "observed_date_max": "2024-04-30",
+        "strict_available_rows": 0
+      },
+      {
+        "source_id": "eu-cereal-notifications",
+        "month": "2024-01-01",
+        "source_rows": 0,
+        "nonmissing_values": 0,
+        "series_with_observation": 0,
+        "observed_date_min": null,
+        "observed_date_max": null,
+        "strict_available_rows": 0
+      },
+      {
+        "source_id": "eu-cereal-notifications",
+        "month": "2024-02-01",
+        "source_rows": 0,
+        "nonmissing_values": 0,
+        "series_with_observation": 0,
+        "observed_date_min": null,
+        "observed_date_max": null,
+        "strict_available_rows": 0
+      },
+      {
+        "source_id": "eu-cereal-notifications",
+        "month": "2024-03-01",
+        "source_rows": 0,
+        "nonmissing_values": 0,
+        "series_with_observation": 0,
+        "observed_date_min": null,
+        "observed_date_max": null,
+        "strict_available_rows": 0
+      },
+      {
+        "source_id": "eu-cereal-notifications",
+        "month": "2024-04-01",
+        "source_rows": 0,
+        "nonmissing_values": 0,
+        "series_with_observation": 0,
+        "observed_date_min": null,
+        "observed_date_max": null,
+        "strict_available_rows": 0
+      },
+      {
+        "source_id": "eu-world-cereal",
+        "month": "2024-01-01",
+        "source_rows": 55,
+        "nonmissing_values": 46,
+        "series_with_observation": 11,
+        "observed_date_min": "2024-01-03",
+        "observed_date_max": "2024-01-31",
+        "strict_available_rows": 0
+      },
+      {
+        "source_id": "eu-world-cereal",
+        "month": "2024-02-01",
+        "source_rows": 44,
+        "nonmissing_values": 40,
+        "series_with_observation": 11,
+        "observed_date_min": "2024-02-07",
+        "observed_date_max": "2024-02-28",
+        "strict_available_rows": 0
+      },
+      {
+        "source_id": "eu-world-cereal",
+        "month": "2024-03-01",
+        "source_rows": 44,
+        "nonmissing_values": 40,
+        "series_with_observation": 11,
+        "observed_date_min": "2024-03-06",
+        "observed_date_max": "2024-03-27",
+        "strict_available_rows": 0
+      },
+      {
+        "source_id": "eu-world-cereal",
+        "month": "2024-04-01",
+        "source_rows": 44,
+        "nonmissing_values": 40,
+        "series_with_observation": 11,
+        "observed_date_min": "2024-04-03",
+        "observed_date_max": "2024-04-24",
+        "strict_available_rows": 0
+      },
+      {
+        "source_id": "eu-world-oilseed",
+        "month": "2024-01-01",
+        "source_rows": 50,
+        "nonmissing_values": 50,
+        "series_with_observation": 10,
+        "observed_date_min": "2024-01-03",
+        "observed_date_max": "2024-01-31",
+        "strict_available_rows": 0
+      },
+      {
+        "source_id": "eu-world-oilseed",
+        "month": "2024-02-01",
+        "source_rows": 40,
+        "nonmissing_values": 40,
+        "series_with_observation": 10,
+        "observed_date_min": "2024-02-07",
+        "observed_date_max": "2024-02-28",
+        "strict_available_rows": 0
+      },
+      {
+        "source_id": "eu-world-oilseed",
+        "month": "2024-03-01",
+        "source_rows": 40,
+        "nonmissing_values": 40,
+        "series_with_observation": 10,
+        "observed_date_min": "2024-03-06",
+        "observed_date_max": "2024-03-27",
+        "strict_available_rows": 0
+      },
+      {
+        "source_id": "eu-world-oilseed",
+        "month": "2024-04-01",
+        "source_rows": 40,
+        "nonmissing_values": 39,
+        "series_with_observation": 10,
+        "observed_date_min": "2024-04-03",
+        "observed_date_max": "2024-04-24",
+        "strict_available_rows": 0
+      },
+      {
+        "source_id": "icco",
+        "month": "2024-01-01",
+        "source_rows": 88,
+        "nonmissing_values": 88,
+        "series_with_observation": 4,
+        "observed_date_min": "2024-01-02",
+        "observed_date_max": "2024-01-31",
+        "strict_available_rows": 0
+      },
+      {
+        "source_id": "icco",
+        "month": "2024-02-01",
+        "source_rows": 84,
+        "nonmissing_values": 84,
+        "series_with_observation": 4,
+        "observed_date_min": "2024-02-01",
+        "observed_date_max": "2024-02-29",
+        "strict_available_rows": 0
+      },
+      {
+        "source_id": "icco",
+        "month": "2024-03-01",
+        "source_rows": 80,
+        "nonmissing_values": 80,
+        "series_with_observation": 4,
+        "observed_date_min": "2024-03-01",
+        "observed_date_max": "2024-03-28",
+        "strict_available_rows": 0
+      },
+      {
+        "source_id": "icco",
+        "month": "2024-04-01",
+        "source_rows": 88,
+        "nonmissing_values": 88,
+        "series_with_observation": 4,
+        "observed_date_min": "2024-04-01",
+        "observed_date_max": "2024-04-30",
+        "strict_available_rows": 0
+      }
+    ],
+    "weekly_method": "W-FRI Saturday-Friday: mean of real daily observations, or weekly quoted points. Native weekly source intervals are retained. No interpolation/filling; changes require adjacent weekly buckets.",
+    "publication_times": "available_at=NULL,publication_known=false,eligible_for_backtest=false until historical release/vintage policy is verified. ECB normal 16:00 CET schedule alone is not a row-specific timestamp.",
+    "gaps": [
+      "No genuine daily/weekly sugar feed acquired.",
+      "World oilseed quotations are seeds, not crude vegetable oils; no dedicated weekly crude-oil feed acquired.",
+      "ICCO and world-reference quote redistribution/training permissions are not established by public accessibility. License_status records review requirements.",
+      "Current downloaded archives may revise historical observations; original vintages are not supplied.",
+      "World Bank monthly data is supporting history only and never upsampled into weekly observations."
+    ],
+    "source_access_failures": [
+      {
+        "url": "https://stooq.com/q/d/l/?s=cc.f&i=d",
+        "status": 404
+      },
+      {
+        "url": "https://api.tech.ec.europa.eu/agrifood/api/cereal/prices",
+        "status": 500,
+        "detail": "Upstream address endpoint SUSPENDED; official XLSX fallback used."
+      },
+      {
+        "url": "https://api.tech.ec.europa.eu/agrifood/api/oilseeds/prices",
+        "status": 500,
+        "detail": "Upstream address endpoint SUSPENDED."
+      },
+      {
+        "url": "https://ahdb.org.uk/UKDeliveredExport/API",
+        "detail": "Export timed out; latest workbook is a current snapshot only. Not added to historical panel."
+      },
+      {
+        "url": "https://fred.stlouisfed.org/legal/terms/",
+        "detail": "Current terms prohibit ML development/training uses. No FRED data downloaded; original ECB source used."
+      }
+    ]
+  }
+}

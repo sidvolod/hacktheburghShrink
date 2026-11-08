@@ -1,0 +1,1617 @@
+{
+  "generated_at": "2026-11-08T08:07:37.287757+00:00",
+  "prepared_tables": 20,
+  "raw_bytes": 8186398411,
+  "target_cadence": "monthly grocery unit-price outcomes",
+  "commodity_cadence": "weekly",
+  "status": "prepared_for_inspection_and_family_review_not_validated_model_training",
+  "reports": {
+    "app-export-audit": {
+      "cases": 10,
+      "histories": 11,
+      "comparison_groups": 4,
+      "recipe_findings": 1,
+      "comparison_items": 56,
+      "forecast_status": "category_available",
+      "tuning_status": "exploratory_available",
+      "product_forecast_status": "unavailable",
+      "comparison_cohort_rule": "Familiar brands plus explicit bar/finger/pouch/button or crisp/chip format in the captured name; exclude desserts, cereals, drinks and dips. No ingredient/dietary equivalence inferred.",
+      "output": "data/app-public/data/demo.json",
+      "bytes": 604175
+    },
+    "catalogue-audit": {
+      "rows": 200245,
+      "barcodes": 200243,
+      "missing_barcode_rows": 0,
+      "named_rows": 183956,
+      "branded_rows": 148242,
+      "raw_quantity_rows": 56114,
+      "structured_mass_rows": 43456,
+      "structured_volume_rows": 7690,
+      "accepted_current_mass_rows": 43357,
+      "accepted_current_volume_rows": 7667,
+      "ingredient_text_rows": 65670,
+      "declared_count_rows": 4791,
+      "structured_declared_quantity_conflicts": 122,
+      "marked_obsolete_rows": 0,
+      "oldest_database_edit_epoch_s": 1415652766,
+      "newest_database_edit_epoch_s": 1794026179,
+      "source": "https://huggingface.co/datasets/openfoodfacts/product-database",
+      "revision": "92cf2f1cbf3c51b8929f138105991ef1c4e72aa3",
+      "raw_projection": "data/raw/off/uk-products-current.parquet",
+      "output": "data/processed/catalogue_products.parquet",
+      "raw_projection_bytes": 27342143,
+      "raw_global_file": "data/raw/off/food.parquet",
+      "raw_global_bytes": 8035571362,
+      "raw_projection_sha256": "45a9120df63c67b3b8079a5724b2e9ed154607f118fa4ceecedc4efef9361d4a",
+      "duplicate_barcode_rows": 2,
+      "historical_market_dates_verified": 0,
+      "family_links_inferred": 0,
+      "limitations": [
+        "Current catalogue snapshot, not a product revision archive or price history.",
+        "UK country tags are contributor-supplied market metadata, not proof of a UK transaction.",
+        "OFF creation/edit/image-upload dates are database events, not launch, reformulation or shelf-transition dates.",
+        "Current quantities must not be attached to historical prices without dated quantity evidence.",
+        "Different barcodes, pack sizes and counts may be replacements or concurrent variants; no family link is inferred here.",
+        "Data ODbL / individual contents Database Contents License; photographs CC-BY-SA with attribution."
+      ],
+      "identity_eligible_rows": 199512,
+      "invalid_barcode_format_rows": 731,
+      "duplicate_barcode_groups": [
+        {
+          "barcode": "5010482907839",
+          "records": 2,
+          "revisions": [
+            7,
+            10
+          ],
+          "conflicting": true
+        },
+        {
+          "barcode": "915024285012997",
+          "records": 2,
+          "revisions": [
+            7,
+            16
+          ],
+          "conflicting": true
+        }
+      ],
+      "barcode_validation_note": "Identifier format only; GTIN checksums have not been validated. Duplicate barcode records remain separate and are ineligible for automatic exact-identity links."
+    },
+    "commodity-audit": {
+      "generated_at": "2026-11-08T05:13:39.951247+00:00",
+      "status": "formatted_with_explicit_coverage_and_availability_gaps",
+      "observations": 80521,
+      "weekly_rows": 41697,
+      "monthly_support_rows": 56942,
+      "sources": [
+        {
+          "source_id": "ecb",
+          "observations": 14262,
+          "series": 2,
+          "date_min": "1999-01-04",
+          "date_max": "2026-11-06",
+          "missing_values": 0,
+          "flagged_values": 0
+        },
+        {
+          "source_id": "eu-cereal-notifications",
+          "observations": 24937,
+          "series": 379,
+          "date_min": "2024-07-07",
+          "date_max": "2026-10-25",
+          "missing_values": 0,
+          "flagged_values": 0
+        },
+        {
+          "source_id": "eu-world-cereal",
+          "observations": 4378,
+          "series": 11,
+          "date_min": "2019-03-20",
+          "date_max": "2026-10-28",
+          "missing_values": 643,
+          "flagged_values": 0
+        },
+        {
+          "source_id": "eu-world-oilseed",
+          "observations": 3980,
+          "series": 10,
+          "date_min": "2019-03-20",
+          "date_max": "2026-10-28",
+          "missing_values": 89,
+          "flagged_values": 0
+        },
+        {
+          "source_id": "icco",
+          "observations": 32964,
+          "series": 4,
+          "date_min": "1994-10-03",
+          "date_max": "2026-11-05",
+          "missing_values": 0,
+          "flagged_values": 0
+        }
+      ],
+      "cocoa_audit": {
+        "invalid_date_rows": [
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 6716,
+            "values": [
+              "6717",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7435,
+            "values": [
+              "7443",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7437,
+            "values": [
+              "7445",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7445,
+            "values": [
+              "7453",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7447,
+            "values": [
+              "7455",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7459,
+            "values": [
+              "7467",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7461,
+            "values": [
+              "7469",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7464,
+            "values": [
+              "7472",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7466,
+            "values": [
+              "7474",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7468,
+            "values": [
+              "7476",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7470,
+            "values": [
+              "7478",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7472,
+            "values": [
+              "7480",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7474,
+            "values": [
+              "7482",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7476,
+            "values": [
+              "7484",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7478,
+            "values": [
+              "7486",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7480,
+            "values": [
+              "7488",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7482,
+            "values": [
+              "7490",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7513,
+            "values": [
+              "7522",
+              "",
+              "3,445.67",
+              "4,208.67",
+              "4,266.58",
+              "3,970.69"
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7514,
+            "values": [
+              "7523",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7536,
+            "values": [
+              "7546",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7640,
+            "values": [
+              "7653",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7788,
+            "values": [
+              "7805",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7856,
+            "values": [
+              "7873",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7858,
+            "values": [
+              "7875",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7860,
+            "values": [
+              "7877",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7862,
+            "values": [
+              "7879",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7864,
+            "values": [
+              "7881",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7866,
+            "values": [
+              "7883",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7868,
+            "values": [
+              "7885",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 7925,
+            "values": [
+              "7942",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table14.json",
+            "row": 8058,
+            "values": [
+              "8077",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table26.json",
+            "row": 376,
+            "values": [
+              "8128",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table26.json",
+            "row": 378,
+            "values": [
+              "8130",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table26.json",
+            "row": 380,
+            "values": [
+              "8132",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table26.json",
+            "row": 383,
+            "values": [
+              "8135",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table26.json",
+            "row": 385,
+            "values": [
+              "8137",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table26.json",
+            "row": 387,
+            "values": [
+              "8139",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table26.json",
+            "row": 389,
+            "values": [
+              "8141",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table26.json",
+            "row": 391,
+            "values": [
+              "8143",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table26.json",
+            "row": 393,
+            "values": [
+              "8145",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table26.json",
+            "row": 395,
+            "values": [
+              "8147",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table26.json",
+            "row": 397,
+            "values": [
+              "8149",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table26.json",
+            "row": 398,
+            "values": [
+              "8151",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table26.json",
+            "row": 400,
+            "values": [
+              "8153",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table26.json",
+            "row": 402,
+            "values": [
+              "8155",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table26.json",
+            "row": 404,
+            "values": [
+              "8157",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table26.json",
+            "row": 468,
+            "values": [
+              "8223",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table26.json",
+            "row": 534,
+            "values": [
+              "8289",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          },
+          {
+            "source_file": "icco-daily-prices-table26.json",
+            "row": 536,
+            "values": [
+              "8291",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "reason": "invalid_or_blank_date"
+          }
+        ],
+        "duplicate_observations_removed": 1312
+      },
+      "conflicting_series_dates_excluded_from_weekly": 0,
+      "conflicting_series_dates_sample": [],
+      "weekly_values_policy": "Identical series/date/value duplicates counted once. Conflicting values for the same series/date are excluded from weekly aggregation; raw observations retained.",
+      "unit_review": {
+        "icco": "Official table headers are GBP sterling/tonne, US dollars/tonne and euros/tonne. No pence scaling or unit conversion performed. raw_unit preserves source labels.",
+        "ecb": "GBP and USD columns quote currency units per 1 EUR. USD per GBP = (USD per EUR)/(GBP per EUR). Original rates exported; no cross-rate or current-FX substitution performed.",
+        "eu_world": "Source workbook headings $/ton for cereal and $/t for oilseeds. Cereal unit retained as per_source_ton, unit_definition_status=unknown_ton_definition because a metric/short-ton definition was not independently established. Oilseed t is the source tonne symbol. No numeric mass/currency conversion performed. Source raw_unit preserved.",
+        "eu_cereal": "Vl Euro Price is euro/tonne. National price and currency remain in source_raw_json; normalized output uses the published euro price, without another FX conversion.",
+        "identity": "series IDs distinguish commodity, market, currency and stage. Different countries, quoted locations, stages and original currencies are never averaged into a common price."
+      },
+      "retail_panel_overlap": {
+        "retail_date_min": "2024-01-09",
+        "retail_date_max": "2024-04-13",
+        "note": "Observation-date overlap only; does not establish historical availability or vintages.",
+        "sources": [
+          {
+            "source_id": "ecb",
+            "source_rows": 134,
+            "nonmissing_values": 134,
+            "series_with_observation": 2,
+            "observed_date_min": "2024-01-09",
+            "observed_date_max": "2024-04-12"
+          },
+          {
+            "source_id": "eu-world-cereal",
+            "source_rows": 154,
+            "nonmissing_values": 139,
+            "series_with_observation": 11,
+            "observed_date_min": "2024-01-10",
+            "observed_date_max": "2024-04-10"
+          },
+          {
+            "source_id": "eu-world-oilseed",
+            "source_rows": 140,
+            "nonmissing_values": 139,
+            "series_with_observation": 10,
+            "observed_date_min": "2024-01-10",
+            "observed_date_max": "2024-04-10"
+          },
+          {
+            "source_id": "icco",
+            "source_rows": 272,
+            "nonmissing_values": 272,
+            "series_with_observation": 4,
+            "observed_date_min": "2024-01-09",
+            "observed_date_max": "2024-04-12"
+          }
+        ]
+      },
+      "monthly_2024_overlap": [
+        {
+          "source_id": "ecb",
+          "month": "2024-01-01",
+          "source_rows": 44,
+          "nonmissing_values": 44,
+          "series_with_observation": 2,
+          "observed_date_min": "2024-01-02",
+          "observed_date_max": "2024-01-31",
+          "strict_available_rows": 0
+        },
+        {
+          "source_id": "ecb",
+          "month": "2024-02-01",
+          "source_rows": 42,
+          "nonmissing_values": 42,
+          "series_with_observation": 2,
+          "observed_date_min": "2024-02-01",
+          "observed_date_max": "2024-02-29",
+          "strict_available_rows": 0
+        },
+        {
+          "source_id": "ecb",
+          "month": "2024-03-01",
+          "source_rows": 40,
+          "nonmissing_values": 40,
+          "series_with_observation": 2,
+          "observed_date_min": "2024-03-01",
+          "observed_date_max": "2024-03-28",
+          "strict_available_rows": 0
+        },
+        {
+          "source_id": "ecb",
+          "month": "2024-04-01",
+          "source_rows": 42,
+          "nonmissing_values": 42,
+          "series_with_observation": 2,
+          "observed_date_min": "2024-04-02",
+          "observed_date_max": "2024-04-30",
+          "strict_available_rows": 0
+        },
+        {
+          "source_id": "eu-cereal-notifications",
+          "month": "2024-01-01",
+          "source_rows": 0,
+          "nonmissing_values": 0,
+          "series_with_observation": 0,
+          "observed_date_min": null,
+          "observed_date_max": null,
+          "strict_available_rows": 0
+        },
+        {
+          "source_id": "eu-cereal-notifications",
+          "month": "2024-02-01",
+          "source_rows": 0,
+          "nonmissing_values": 0,
+          "series_with_observation": 0,
+          "observed_date_min": null,
+          "observed_date_max": null,
+          "strict_available_rows": 0
+        },
+        {
+          "source_id": "eu-cereal-notifications",
+          "month": "2024-03-01",
+          "source_rows": 0,
+          "nonmissing_values": 0,
+          "series_with_observation": 0,
+          "observed_date_min": null,
+          "observed_date_max": null,
+          "strict_available_rows": 0
+        },
+        {
+          "source_id": "eu-cereal-notifications",
+          "month": "2024-04-01",
+          "source_rows": 0,
+          "nonmissing_values": 0,
+          "series_with_observation": 0,
+          "observed_date_min": null,
+          "observed_date_max": null,
+          "strict_available_rows": 0
+        },
+        {
+          "source_id": "eu-world-cereal",
+          "month": "2024-01-01",
+          "source_rows": 55,
+          "nonmissing_values": 46,
+          "series_with_observation": 11,
+          "observed_date_min": "2024-01-03",
+          "observed_date_max": "2024-01-31",
+          "strict_available_rows": 0
+        },
+        {
+          "source_id": "eu-world-cereal",
+          "month": "2024-02-01",
+          "source_rows": 44,
+          "nonmissing_values": 40,
+          "series_with_observation": 11,
+          "observed_date_min": "2024-02-07",
+          "observed_date_max": "2024-02-28",
+          "strict_available_rows": 0
+        },
+        {
+          "source_id": "eu-world-cereal",
+          "month": "2024-03-01",
+          "source_rows": 44,
+          "nonmissing_values": 40,
+          "series_with_observation": 11,
+          "observed_date_min": "2024-03-06",
+          "observed_date_max": "2024-03-27",
+          "strict_available_rows": 0
+        },
+        {
+          "source_id": "eu-world-cereal",
+          "month": "2024-04-01",
+          "source_rows": 44,
+          "nonmissing_values": 40,
+          "series_with_observation": 11,
+          "observed_date_min": "2024-04-03",
+          "observed_date_max": "2024-04-24",
+          "strict_available_rows": 0
+        },
+        {
+          "source_id": "eu-world-oilseed",
+          "month": "2024-01-01",
+          "source_rows": 50,
+          "nonmissing_values": 50,
+          "series_with_observation": 10,
+          "observed_date_min": "2024-01-03",
+          "observed_date_max": "2024-01-31",
+          "strict_available_rows": 0
+        },
+        {
+          "source_id": "eu-world-oilseed",
+          "month": "2024-02-01",
+          "source_rows": 40,
+          "nonmissing_values": 40,
+          "series_with_observation": 10,
+          "observed_date_min": "2024-02-07",
+          "observed_date_max": "2024-02-28",
+          "strict_available_rows": 0
+        },
+        {
+          "source_id": "eu-world-oilseed",
+          "month": "2024-03-01",
+          "source_rows": 40,
+          "nonmissing_values": 40,
+          "series_with_observation": 10,
+          "observed_date_min": "2024-03-06",
+          "observed_date_max": "2024-03-27",
+          "strict_available_rows": 0
+        },
+        {
+          "source_id": "eu-world-oilseed",
+          "month": "2024-04-01",
+          "source_rows": 40,
+          "nonmissing_values": 39,
+          "series_with_observation": 10,
+          "observed_date_min": "2024-04-03",
+          "observed_date_max": "2024-04-24",
+          "strict_available_rows": 0
+        },
+        {
+          "source_id": "icco",
+          "month": "2024-01-01",
+          "source_rows": 88,
+          "nonmissing_values": 88,
+          "series_with_observation": 4,
+          "observed_date_min": "2024-01-02",
+          "observed_date_max": "2024-01-31",
+          "strict_available_rows": 0
+        },
+        {
+          "source_id": "icco",
+          "month": "2024-02-01",
+          "source_rows": 84,
+          "nonmissing_values": 84,
+          "series_with_observation": 4,
+          "observed_date_min": "2024-02-01",
+          "observed_date_max": "2024-02-29",
+          "strict_available_rows": 0
+        },
+        {
+          "source_id": "icco",
+          "month": "2024-03-01",
+          "source_rows": 80,
+          "nonmissing_values": 80,
+          "series_with_observation": 4,
+          "observed_date_min": "2024-03-01",
+          "observed_date_max": "2024-03-28",
+          "strict_available_rows": 0
+        },
+        {
+          "source_id": "icco",
+          "month": "2024-04-01",
+          "source_rows": 88,
+          "nonmissing_values": 88,
+          "series_with_observation": 4,
+          "observed_date_min": "2024-04-01",
+          "observed_date_max": "2024-04-30",
+          "strict_available_rows": 0
+        }
+      ],
+      "weekly_method": "W-FRI Saturday-Friday: mean of real daily observations, or weekly quoted points. Native weekly source intervals are retained. No interpolation/filling; changes require adjacent weekly buckets.",
+      "publication_times": "available_at=NULL,publication_known=false,eligible_for_backtest=false until historical release/vintage policy is verified. ECB normal 16:00 CET schedule alone is not a row-specific timestamp.",
+      "gaps": [
+        "No genuine daily/weekly sugar feed acquired.",
+        "World oilseed quotations are seeds, not crude vegetable oils; no dedicated weekly crude-oil feed acquired.",
+        "ICCO and world-reference quote redistribution/training permissions are not established by public accessibility. License_status records review requirements.",
+        "Current downloaded archives may revise historical observations; original vintages are not supplied.",
+        "World Bank monthly data is supporting history only and never upsampled into weekly observations."
+      ],
+      "source_access_failures": [
+        {
+          "url": "https://stooq.com/q/d/l/?s=cc.f&i=d",
+          "status": 404
+        },
+        {
+          "url": "https://api.tech.ec.europa.eu/agrifood/api/cereal/prices",
+          "status": 500,
+          "detail": "Upstream address endpoint SUSPENDED; official XLSX fallback used."
+        },
+        {
+          "url": "https://api.tech.ec.europa.eu/agrifood/api/oilseeds/prices",
+          "status": 500,
+          "detail": "Upstream address endpoint SUSPENDED."
+        },
+        {
+          "url": "https://ahdb.org.uk/UKDeliveredExport/API",
+          "detail": "Export timed out; latest workbook is a current snapshot only. Not added to historical panel."
+        },
+        {
+          "url": "https://fred.stlouisfed.org/legal/terms/",
+          "detail": "Current terms prohibit ML development/training uses. No FRED data downloaded; original ECB source used."
+        }
+      ]
+    },
+    "evidence-audit": {
+      "reported_cases": 5,
+      "reviewed_barcode_members": 2,
+      "unverified_candidate_pairs": 1,
+      "exact_monthly_event_labels": 0,
+      "limitations": [
+        "Selected positive demonstrations; not representative training data.",
+        "Unknown event and transaction dates remain null.",
+        "Recipe-change leads remain unverified."
+      ]
+    },
+    "features-audit": {
+      "cutoffs": [
+        "2024-02-01",
+        "2024-03-01",
+        "2024-04-01",
+        "2024-05-01",
+        "2026-11-08"
+      ],
+      "rows": 4050,
+      "strict_eligible_rows": 0,
+      "exploratory_rows_with_observations": 513,
+      "limitations": [
+        "Historical quotes do not establish their publication or revision-vintage timing.",
+        "Exploratory rows must not be reported as leakage-safe backtest features.",
+        "Strict rows stay empty/null when documented availability is unknown.",
+        "Features retain series units/currencies; no assumed manufacturer cost weights.",
+        "Oilseed prices are not crude edible-oil prices; missing sugar/dairy weekly feeds are not interpolated from monthly data."
+      ]
+    },
+    "linking-audit": {
+      "scope": "11 familiar snack-name groups; not a catalogue-wide entity-resolution result",
+      "candidate_pairs": 7750,
+      "verified_new_links": 0,
+      "groups": [
+        {
+          "focus_family": "dairy-milk",
+          "retail_listings": 337,
+          "off_barcodes": 54,
+          "candidate_pairs": 1685
+        },
+        {
+          "focus_family": "doritos",
+          "retail_listings": 74,
+          "off_barcodes": 42,
+          "candidate_pairs": 370
+        },
+        {
+          "focus_family": "m-and-ms",
+          "retail_listings": 98,
+          "off_barcodes": 97,
+          "candidate_pairs": 490
+        },
+        {
+          "focus_family": "maltesers",
+          "retail_listings": 125,
+          "off_barcodes": 56,
+          "candidate_pairs": 625
+        },
+        {
+          "focus_family": "mcvities",
+          "retail_listings": 264,
+          "off_barcodes": 70,
+          "candidate_pairs": 1320
+        },
+        {
+          "focus_family": "milky-way",
+          "retail_listings": 34,
+          "off_barcodes": 21,
+          "candidate_pairs": 170
+        },
+        {
+          "focus_family": "oreo",
+          "retail_listings": 95,
+          "off_barcodes": 87,
+          "candidate_pairs": 475
+        },
+        {
+          "focus_family": "pringles",
+          "retail_listings": 86,
+          "off_barcodes": 42,
+          "candidate_pairs": 430
+        },
+        {
+          "focus_family": "quality-street",
+          "retail_listings": 17,
+          "off_barcodes": 11,
+          "candidate_pairs": 85
+        },
+        {
+          "focus_family": "snickers",
+          "retail_listings": 35,
+          "off_barcodes": 34,
+          "candidate_pairs": 175
+        },
+        {
+          "focus_family": "walkers",
+          "retail_listings": 385,
+          "off_barcodes": 125,
+          "candidate_pairs": 1925
+        }
+      ],
+      "limitations": [
+        "Current OFF snapshots and 2024 retailer listings may describe different eras or concurrent variants.",
+        "Top five name-similarity candidates require flavour, format, market and temporal evidence review.",
+        "Mass, count and recipe differences are evidence to investigate, never hard rejection gates.",
+        "Candidates are not inserted into reviewed family membership or monthly price targets."
+      ]
+    },
+    "monthly-audit": {
+      "target_cadence": "calendar_month",
+      "input_cadence": "weekly_commodities",
+      "aggregation": "Median of observed daily unit prices within month, separately by dimension and price basis",
+      "monthly_rows": 237504,
+      "next_month_observed_rows": 171482,
+      "eligible_sampled_monthly_pairs": 53063,
+      "distinct_eligible_target_months": 1,
+      "eligibility_rule": "Adjacent calendar months; dataset spans both full months; at least 3 observed days per month and observations in first/last 7 days; same listing, price basis and dimension.",
+      "limitations": [
+        "Sampled monthly medians do not imply daily continuous coverage.",
+        "January and April are partial dataset boundary months, excluded by default.",
+        "A large product panel still supplies few independent calendar-month commodity shocks.",
+        "Same retailer/name listings are provisional; family reconstruction remains a separate evidence-review task.",
+        "No commodity feature or future outcome is used to create history-only inputs.",
+        "Missing next-month observations remain null, never zero change."
+      ],
+      "eligible_pairs_by_target_month": [
+        {
+          "target_month": "2024-03-01",
+          "pairs": 53063,
+          "rises": 8512,
+          "falls": 8000,
+          "flat": 36551
+        }
+      ]
+    },
+    "open-prices-audit": {
+      "raw_rows": 2049,
+      "retained_explicit_gb_gbp_rows": 2036,
+      "exclusions": {
+        "not_explicit_gb": 6,
+        "marked_duplicate": 7
+      },
+      "current_product_snapshots": 1589,
+      "date_range": [
+        "2024-06-21",
+        "2026-11-02"
+      ],
+      "barcoded_rows": 2021,
+      "distinct_barcodes": 1590,
+      "barcodes_two_dates": 237,
+      "direct_unit_price_rows": 11,
+      "limitations": [
+        "Current nested product quantities are not dated proof of historical pack mass; no historical unit price is inferred from them.",
+        "Same-barcode coverage is not cross-barcode family coverage.",
+        "Currency is filtered separately from explicit GB location.",
+        "Promotional prices and proof references retained. Missing observations are not flat outcomes."
+      ]
+    },
+    "retail-audit": {
+      "prepared_price_observations": 9505414,
+      "raw_rows": 9529242,
+      "duplicate_or_category_repeat_rows": 23828,
+      "provisional_retailer_name_products": 130633,
+      "first_observed_date": "2024-01-09",
+      "last_observed_date": "2024-04-13",
+      "observed_days": 92,
+      "calendar_months": 4,
+      "conflicting_product_day_observations": 4,
+      "invalid_pack_price_observations": 10,
+      "invalid_source_rate_observations": 13065,
+      "source_name_rate_mismatch_observations": 143916,
+      "explicit_name_mass_observations": 2620545,
+      "explicit_name_volume_observations": 1476975,
+      "food_candidate_observations": 5438603,
+      "usable_mass_price_observations": 3673594,
+      "usable_volume_price_observations": 1240895,
+      "source_id": "uk-retail-panel",
+      "status": "prepared",
+      "sha256": "9d712bbead729442277d73692daee90b9535ed10e0b1834227f97d637560fe15",
+      "source_url": "https://huggingface.co/datasets/Rif-SQL/time-series-uk-retail-supermarket-price-data",
+      "original_source_url": "https://www.kaggle.com/datasets/declanmcalinden/time-series-uk-supermarket-data",
+      "price_basis": "lowest_available_including_loyalty",
+      "identity_scope": "retailer plus exact raw product name; no barcode or verified replacement links",
+      "quantity_rule": "Parse explicit name mass/volume; source price/rate implied quantity is separate and never treated as declared size.",
+      "rate_mismatch_rule": "Flag >5% disagreement between source unit rate and explicit-name unit price; allows source rounding.",
+      "food_candidate_categories": [
+        "food_cupboard",
+        "bakery",
+        "frozen",
+        "drinks",
+        "fresh_food",
+        "free-from"
+      ],
+      "limitations": [
+        "Only four calendar months of panel coverage; April is partial.",
+        "No row-level loyalty/promotion flag; source author reports lowest available price including loyalty.",
+        "Name-based identities can split renamed listings and conflate same-name variants.",
+        "Some categories contain non-food listings; food_candidate is a coarse filter.",
+        "Morrisons scraper coverage was variable before 2024-01-27.",
+        "Missing days are unobserved, never filled as no change.",
+        "Source has no ingredients, barcodes or sales quantities."
+      ],
+      "retailers": [
+        {
+          "retailer": "ASDA",
+          "observations": 2456414,
+          "products": 32661,
+          "first_date": "2024-01-09",
+          "last_date": "2024-04-13"
+        },
+        {
+          "retailer": "Aldi",
+          "observations": 464863,
+          "products": 7262,
+          "first_date": "2024-01-09",
+          "last_date": "2024-04-13"
+        },
+        {
+          "retailer": "Morrisons",
+          "observations": 1794065,
+          "products": 26187,
+          "first_date": "2024-01-09",
+          "last_date": "2024-04-13"
+        },
+        {
+          "retailer": "Sains",
+          "observations": 2600289,
+          "products": 33886,
+          "first_date": "2024-01-09",
+          "last_date": "2024-04-13"
+        },
+        {
+          "retailer": "Tesco",
+          "observations": 2189783,
+          "products": 30637,
+          "first_date": "2024-01-09",
+          "last_date": "2024-04-13"
+        }
+      ],
+      "source_units": [
+        {
+          "source_unit": "kg",
+          "observations": 4377820
+        },
+        {
+          "source_unit": "l",
+          "observations": 2299692
+        },
+        {
+          "source_unit": "m",
+          "observations": 14115
+        },
+        {
+          "source_unit": "unit",
+          "observations": 2813263
+        },
+        {
+          "source_unit": null,
+          "observations": 524
+        }
+      ],
+      "highest_source_mass_rates": [
+        {
+          "retailer": "Tesco",
+          "product_name_raw": "Lancashire Farm Whole Milk Yogurt 1Kg",
+          "observed_date": "2024-03-01",
+          "source_unit_price_gbp": 150000.0
+        },
+        {
+          "retailer": "Tesco",
+          "product_name_raw": "Lancashire Farm Whole Milk Yogurt 1Kg",
+          "observed_date": "2024-02-23",
+          "source_unit_price_gbp": 150000.0
+        },
+        {
+          "retailer": "ASDA",
+          "product_name_raw": "Max Factor Brow Shaper 20 Brown",
+          "observed_date": "2024-01-29",
+          "source_unit_price_gbp": 99778.0
+        },
+        {
+          "retailer": "ASDA",
+          "product_name_raw": "Max Factor Brow Shaper 10 Blonde",
+          "observed_date": "2024-02-09",
+          "source_unit_price_gbp": 99778.0
+        },
+        {
+          "retailer": "ASDA",
+          "product_name_raw": "Max Factor Brow Shaper 30 Deep Brown",
+          "observed_date": "2024-03-27",
+          "source_unit_price_gbp": 99778.0
+        },
+        {
+          "retailer": "ASDA",
+          "product_name_raw": "Max Factor Brow Shaper 10 Blonde",
+          "observed_date": "2024-03-27",
+          "source_unit_price_gbp": 99778.0
+        },
+        {
+          "retailer": "ASDA",
+          "product_name_raw": "Max Factor Brow Shaper 10 Blonde",
+          "observed_date": "2024-03-21",
+          "source_unit_price_gbp": 99778.0
+        },
+        {
+          "retailer": "ASDA",
+          "product_name_raw": "Max Factor Brow Shaper 30 Deep Brown",
+          "observed_date": "2024-02-08",
+          "source_unit_price_gbp": 99778.0
+        },
+        {
+          "retailer": "ASDA",
+          "product_name_raw": "Max Factor Brow Shaper 20 Brown",
+          "observed_date": "2024-01-26",
+          "source_unit_price_gbp": 99778.0
+        },
+        {
+          "retailer": "ASDA",
+          "product_name_raw": "Max Factor Brow Shaper 10 Blonde",
+          "observed_date": "2024-02-10",
+          "source_unit_price_gbp": 99778.0
+        }
+      ],
+      "quantity_status": [
+        {
+          "quantity_status": "ambiguous",
+          "products": 1420
+        },
+        {
+          "quantity_status": "count_only",
+          "products": 4201
+        },
+        {
+          "quantity_status": "missing",
+          "products": 1
+        },
+        {
+          "quantity_status": "parsed",
+          "products": 54895
+        },
+        {
+          "quantity_status": "unparsed",
+          "products": 70116
+        }
+      ]
+    },
+    "snack-cases-audit": {
+      "cases": 10,
+      "families": 9,
+      "curated_input_path": "data/curated/snack-cases.json",
+      "curated_input_sha256": "57d2b09696b719e616444ce3b0b0cbb377a2e80953be5b4d837193cc05b23ce4",
+      "price_comparable_cases": 9,
+      "recipe_comparable_cases": 1,
+      "standalone_recipe_findings": 1,
+      "rrp_only_price_cases": 1,
+      "reviewed_barcode_members": 2,
+      "eligible_monthly_training_labels": 0,
+      "source_files_present": 11,
+      "source_captures_present": 9,
+      "access_notes_present": 2,
+      "sources_missing_captures": [],
+      "source_access_failures": [],
+      "limitations": [
+        "Selected positive demonstrations, not representative training data.",
+        "Article publication dates are not exact market-transition or transaction dates.",
+        "RRP comparisons are labelled separately from reported shelf-price comparisons.",
+        "No price-per-100g is invented when price evidence is missing.",
+        "Recipe comparisons use dated label snapshots, not proven exact reformulation dates or cost changes."
+      ]
+    },
+    "evaluation": {
+      "schema_version": 1,
+      "generated_at": "2026-11-08T07:47:58.143229+00:00",
+      "status": "unavailable",
+      "title": "Monthly forecasting unavailable",
+      "reason": [
+        "39,920 eligible mass-price pairs cover 1 distinct target month(s). The minimum comparison policy requires three training target months and one later test target month. Splitting products from the same month would not test future calendar periods.",
+        "Real weekly commodity histories exist, but no strict publication-aware feature row is eligible at the retail forecast cutoffs. Observation dates and current archives do not establish original release or revision-vintage timing.",
+        "Reported changes and one reviewed cross-barcode replacement are retained, but the retailer panel has no verified dated family-response sequence linked to these monthly price rows. Candidate matches are not training labels."
+      ],
+      "reasons": [
+        {
+          "code": "insufficient_chronological_periods",
+          "title": "Only one fully covered target month",
+          "detail": "39,920 eligible mass-price pairs cover 1 distinct target month(s). The minimum comparison policy requires three training target months and one later test target month. Splitting products from the same month would not test future calendar periods."
+        },
+        {
+          "code": "commodity_publication_timing_unknown",
+          "title": "Weekly inputs lack verified historical availability",
+          "detail": "Real weekly commodity histories exist, but no strict publication-aware feature row is eligible at the retail forecast cutoffs. Observation dates and current archives do not establish original release or revision-vintage timing."
+        },
+        {
+          "code": "response_history_not_linked",
+          "title": "Previous response patterns cannot yet be evaluated",
+          "detail": "Reported changes and one reviewed cross-barcode replacement are retained, but the retailer panel has no verified dated family-response sequence linked to these monthly price rows. Candidate matches are not training labels."
+        }
+      ],
+      "target_definition": {
+        "cadence": "monthly",
+        "commodity_input_cadence": "weekly",
+        "quantity": "next-calendar-month change in price per gram",
+        "formula": "next_month_median_price_per_100g / current_month_median_price_per_100g - 1",
+        "aggregation": "Median of observed daily unit prices within each calendar month; no filling",
+        "forecast_cutoff": "00:00 Europe/London on the first day of the target month",
+        "error_unit": "percentage points of unit-price change",
+        "missing_target_policy": "unknown, never zero change"
+      },
+      "coverage": {
+        "retail_date_start": "2024-01-09",
+        "retail_date_end": "2024-04-13",
+        "retail_calendar_months": 4,
+        "eligible_mass_pairs": 39920,
+        "eligible_volume_pairs": 13143,
+        "eligible_target_months": [
+          "2024-03-01"
+        ],
+        "strict_commodity_feature_rows_at_eligible_cutoffs": 0,
+        "weekly_commodity_rows": 41697,
+        "reviewed_barcode_replacement_pairs": 1,
+        "retail_catalogue_candidate_pairs": 7750,
+        "dated_barcode_memberships": 0,
+        "exact_reported_monthly_event_labels": 0,
+        "price_linked_verified_response_events": 0,
+        "response_event_link_status": "no_reviewed_retail_listing_to_family_join_in_prepared_schema",
+        "identity_scope": "retailer and exact raw name, not fully reconstructed product families"
+      },
+      "chronological_split": {
+        "status": "not_constructed",
+        "training_target_months": [],
+        "test_target_months": [],
+        "minimum_training_target_months": 3,
+        "minimum_later_test_target_months": 1,
+        "note": "All labels used for training must finish and be available before a later forecast cutoff. No random product-day split."
+      },
+      "models": [
+        {
+          "id": "no_change",
+          "name": "No change",
+          "status": "not_run",
+          "mae_percentage_points": null,
+          "rmse_percentage_points": null,
+          "reason": "No chronological training/test split: only one eligible target month is available."
+        },
+        {
+          "id": "linear_regression",
+          "name": "Linear regression",
+          "status": "not_run",
+          "mae_percentage_points": null,
+          "rmse_percentage_points": null,
+          "reason": "No chronological training/test split: only one eligible target month is available."
+        },
+        {
+          "id": "boosted_tree",
+          "name": "Gradient-boosted trees",
+          "status": "not_run",
+          "mae_percentage_points": null,
+          "rmse_percentage_points": null,
+          "reason": "No chronological training/test split: only one eligible target month is available."
+        }
+      ],
+      "selected_model": null,
+      "forecast": null,
+      "observed_nochange_reference": {
+        "observations": 39920,
+        "prediction_change_fraction": 0.0,
+        "mae_percentage_points": 8.078393715162392,
+        "rmse_percentage_points": 20.149982902048286,
+        "median_absolute_error_percentage_points": 0.0,
+        "mean_actual_change_percentage_points": 1.6741909265937234,
+        "mean_signed_error_percentage_points": -1.6741909265937234,
+        "rises": 6233,
+        "falls": 5581,
+        "flat": 28106,
+        "min_actual_change_percentage_points": -99.8936170212766,
+        "max_actual_change_percentage_points": 900.0,
+        "status": "descriptive_only",
+        "is_chronological_backtest": false,
+        "label": "Observed no-change reference, not a held-out model result",
+        "target_months": [
+          "2024-03-01"
+        ],
+        "scope": "Only eligible mass-price monthly pairs; volume outcomes are excluded",
+        "interpretation": "Predicting zero change for every observed pair produces these errors. This is a single-period data reference and does not measure future skill or model accuracy.",
+        "limitations": [
+          "Provisional retailer/name identities, not reviewed family histories.",
+          "Prices may include loyalty discounts; per-row offer conditions are unknown.",
+          "Large source-observed changes remain and are not adjudicated shrink-event labels.",
+          "No training, tuning, interval calibration or chronological held-out comparison was performed."
+        ]
+      },
+      "feature_ablations": [
+        {
+          "id": "history_only",
+          "name": "Product-price history only",
+          "status": "unavailable",
+          "improvement_percentage_points": null,
+          "reason": "No earlier eligible training target period exists before March 2024."
+        },
+        {
+          "id": "weekly_commodities",
+          "name": "History plus weekly commodity movements",
+          "status": "unavailable",
+          "improvement_percentage_points": null,
+          "reason": "No valid chronological comparison and no verified publication-aware commodity features at eligible cutoffs."
+        },
+        {
+          "id": "response_patterns",
+          "name": "History, commodities and previous response patterns",
+          "status": "unavailable",
+          "improvement_percentage_points": null,
+          "reason": "No price-linked verified family-response sequence. Alternation between shrinking and raising price remains an untested hypothesis."
+        }
+      ],
+      "data_needed": [
+        {
+          "id": "longer_retail_history",
+          "title": "More complete retail months",
+          "detail": "For even one minimal chronological comparison, collect at least three additional distinct eligible target months after/before the existing March 2024 period, with complete adjacent-month sampling and labels available before each test cutoff. More periods are needed to assess commodity lags and performance stability."
+        },
+        {
+          "id": "dated_family_links",
+          "title": "Reviewed dated family histories",
+          "detail": "Connect retailer listings to reviewed old/new barcodes and document replacement timing, pack mass/count, prices, offer conditions and raw ingredient evidence. Distinguish concurrent variants."
+        },
+        {
+          "id": "publication_vintages",
+          "title": "Commodity release and revision timing",
+          "detail": "Retain daily/weekly release timestamps or defensible historical availability policies and original vintages. Current archive observation dates alone are insufficient for historical cutoffs."
+        },
+        {
+          "id": "remaining_weekly_inputs",
+          "title": "Weekly sugar, edible oils and dairy",
+          "detail": "Acquire genuine weekly/daily feeds for the missing relevant inputs; do not interpolate monthly World Bank values or substitute oilseeds for crude edible oils."
+        }
+      ],
+      "source_files": [
+        "data/processed/monthly_targets.parquet",
+        "data/processed/retail_monthly.parquet",
+        "data/processed/commodity_weekly.parquet",
+        "data/processed/commodity_monthly_features.parquet",
+        "data/processed/family_members.parquet",
+        "data/processed/reported_changes.parquet",
+        "data/processed/retail_catalogue_candidates.parquet"
+      ]
+    }
+  },
+  "completion_audit_file": "data/reports/completion-audit.json",
+  "remaining_work": [
+    "Review retailer/OFF identity candidates and reconstruct supported replacement histories.",
+    "Resolve unit-price anomalies and collect dated pack and ingredient evidence for additional families.",
+    "Establish row-specific commodity publication/vintage timing before leakage-safe backtesting.",
+    "Acquire longer retail time coverage; four calendar months do not support broad lag conclusions.",
+    "Choose model cohort and chronological cutoffs only after inspecting eligibility reports."
+  ]
+}

@@ -1,0 +1,3706 @@
+{
+  "schema_version": 1,
+  "run_id": "ab5230a822edfcb9",
+  "generated_at": "2026-11-08T08:23:20.992098+00:00",
+  "as_of": "2026-11-08",
+  "status": "ready",
+  "warning": "Retrospective exploratory comparison: the 2024\u20132026 outcomes were already inspected before this feature experiment.",
+  "scope": "Monthly UK category CPI changes; not product-level prices or shrinkflation probabilities",
+  "model_settings_fixed": true,
+  "website_changed": false,
+  "selected_arm": null,
+  "manifest": "runs/ab5230a822edfcb9/manifest.json",
+  "categories": [
+    {
+      "category_id": "chocolate",
+      "category_name": "UK chocolate",
+      "original_deployed_model": "hist_gradient_boosting",
+      "original_deployed_metrics": {
+        "n": 33,
+        "mae_pp": 1.5747375908632857,
+        "rmse_pp": 1.959604715118534,
+        "directional_accuracy": 0.6666666666666666
+      },
+      "no_change_metrics": {
+        "n": 33,
+        "mae_pp": 1.9770120494163437,
+        "rmse_pp": 2.45262117598347,
+        "directional_accuracy": 0.030303030303030304
+      },
+      "baseline_reproduction": {
+        "validation": {
+          "matched": true,
+          "n": 34,
+          "max_absolute_prediction_difference": 0.0
+        },
+        "test": {
+          "matched": true,
+          "n": 33,
+          "max_absolute_prediction_difference": 0.0
+        }
+      },
+      "arms": {
+        "unchanged": {
+          "features": [
+            "history_change_lag0_pct",
+            "history_change_lag1_pct",
+            "history_change_lag2_pct",
+            "history_change_lag3_pct",
+            "history_change_lag6_pct",
+            "history_change_lag12_pct",
+            "history_mean_3m_pct",
+            "history_std_3m_pct",
+            "history_mean_6m_pct",
+            "history_std_6m_pct",
+            "history_mean_12m_pct",
+            "history_std_12m_pct",
+            "season_sin",
+            "season_cos",
+            "commodity_cocoa_gbp_return_4w_pct",
+            "commodity_cocoa_gbp_return_12w_pct",
+            "commodity_cocoa_gbp_return_26w_pct",
+            "commodity_cocoa_gbp_volatility_12w_pct",
+            "commodity_gbp_per_usd_return_4w_pct",
+            "commodity_gbp_per_usd_return_12w_pct"
+          ],
+          "validation_metrics": {
+            "n": 34,
+            "mae_pp": 1.678637640791053,
+            "rmse_pp": 2.2512979791634757,
+            "directional_accuracy": 0.6764705882352942
+          },
+          "test_metrics": {
+            "n": 33,
+            "mae_pp": 1.5747375908632857,
+            "rmse_pp": 1.959604715118534,
+            "directional_accuracy": 0.6666666666666666
+          },
+          "paired_test_comparison": {
+            "n": 33,
+            "mean_error_reduction_pp": 0.0,
+            "median_error_reduction_pp": 0.0,
+            "months_improved": 0,
+            "months_worsened": 0,
+            "months_tied": 33
+          },
+          "error_reduction_vs_unchanged_pct": 0.0,
+          "yearly_test_metrics": {
+            "2024": {
+              "n": 12,
+              "mae_pp": 1.5104220163019508,
+              "rmse_pp": 2.0199811936224044,
+              "directional_accuracy": 0.75
+            },
+            "2025": {
+              "n": 12,
+              "mae_pp": 1.3423269403547629,
+              "rmse_pp": 1.6633988349614917,
+              "directional_accuracy": 0.5
+            },
+            "2026": {
+              "n": 9,
+              "mae_pp": 1.9703725576230964,
+              "rmse_pp": 2.224985258955283,
+              "directional_accuracy": 0.7777777777777778
+            }
+          },
+          "feature_coverage": {
+            "validation": {},
+            "test": {}
+          },
+          "forecast": {
+            "as_of": "2026-11-08",
+            "target_month": "2026-12-01",
+            "change_pct": 2.316692745933289,
+            "train_n": 129,
+            "max_train_label_available_date": "2026-11-01T00:00:00+00:00",
+            "selected_for_website": false
+          },
+          "test_predictions": [
+            {
+              "target_month": "2024-01-01",
+              "forecast_cutoff": "2023-12-08T00:00:00+00:00",
+              "label_available_date": "2024-03-01T00:00:00+00:00",
+              "actual_pct": 2.5704809286899,
+              "predicted_pct": 0.003247470935163619,
+              "baseline_pct": 0.0,
+              "train_n": 94,
+              "max_train_label_available_date": "2023-12-01T00:00:00+00:00",
+              "max_train_target_month": "2023-10-01"
+            },
+            {
+              "target_month": "2024-02-01",
+              "forecast_cutoff": "2024-01-08T00:00:00+00:00",
+              "label_available_date": "2024-04-01T00:00:00+00:00",
+              "actual_pct": -0.48504446240905663,
+              "predicted_pct": -0.5871857659956145,
+              "baseline_pct": 0.0,
+              "train_n": 95,
+              "max_train_label_available_date": "2024-01-01T00:00:00+00:00",
+              "max_train_target_month": "2023-11-01"
+            },
+            {
+              "target_month": "2024-03-01",
+              "forecast_cutoff": "2024-02-08T00:00:00+00:00",
+              "label_available_date": "2024-05-01T00:00:00+00:00",
+              "actual_pct": 2.3558082859463925,
+              "predicted_pct": 0.03872283864277589,
+              "baseline_pct": 0.0,
+              "train_n": 96,
+              "max_train_label_available_date": "2024-02-01T00:00:00+00:00",
+              "max_train_target_month": "2023-12-01"
+            },
+            {
+              "target_month": "2024-04-01",
+              "forecast_cutoff": "2024-03-08T00:00:00+00:00",
+              "label_available_date": "2024-06-01T00:00:00+00:00",
+              "actual_pct": 1.5873015873015817,
+              "predicted_pct": 1.1190435791843751,
+              "baseline_pct": 0.0,
+              "train_n": 97,
+              "max_train_label_available_date": "2024-03-01T00:00:00+00:00",
+              "max_train_target_month": "2024-01-01"
+            },
+            {
+              "target_month": "2024-05-01",
+              "forecast_cutoff": "2024-04-07T23:00:00+00:00",
+              "label_available_date": "2024-07-01T00:00:00+00:00",
+              "actual_pct": -1.3281250000000022,
+              "predicted_pct": 0.5212284335588319,
+              "baseline_pct": 0.0,
+              "train_n": 98,
+              "max_train_label_available_date": "2024-04-01T00:00:00+00:00",
+              "max_train_target_month": "2024-02-01"
+            },
+            {
+              "target_month": "2024-06-01",
+              "forecast_cutoff": "2024-05-07T23:00:00+00:00",
+              "label_available_date": "2024-08-01T00:00:00+00:00",
+              "actual_pct": -0.8709422011084711,
+              "predicted_pct": 0.6688416917783989,
+              "baseline_pct": 0.0,
+              "train_n": 99,
+              "max_train_label_available_date": "2024-05-01T00:00:00+00:00",
+              "max_train_target_month": "2024-03-01"
+            },
+            {
+              "target_month": "2024-07-01",
+              "forecast_cutoff": "2024-06-07T23:00:00+00:00",
+              "label_available_date": "2024-09-01T00:00:00+00:00",
+              "actual_pct": 2.635782747603832,
+              "predicted_pct": 1.057214097977168,
+              "baseline_pct": 0.0,
+              "train_n": 100,
+              "max_train_label_available_date": "2024-06-01T00:00:00+00:00",
+              "max_train_target_month": "2024-04-01"
+            },
+            {
+              "target_month": "2024-08-01",
+              "forecast_cutoff": "2024-07-07T23:00:00+00:00",
+              "label_available_date": "2024-10-01T00:00:00+00:00",
+              "actual_pct": 4.747081712062262,
+              "predicted_pct": -0.2968235964023075,
+              "baseline_pct": 0.0,
+              "train_n": 101,
+              "max_train_label_available_date": "2024-07-01T00:00:00+00:00",
+              "max_train_target_month": "2024-05-01"
+            },
+            {
+              "target_month": "2024-09-01",
+              "forecast_cutoff": "2024-08-07T23:00:00+00:00",
+              "label_available_date": "2024-11-01T00:00:00+00:00",
+              "actual_pct": -2.526002971768204,
+              "predicted_pct": -0.9374330137841911,
+              "baseline_pct": 0.0,
+              "train_n": 102,
+              "max_train_label_available_date": "2024-08-01T00:00:00+00:00",
+              "max_train_target_month": "2024-06-01"
+            },
+            {
+              "target_month": "2024-10-01",
+              "forecast_cutoff": "2024-09-07T23:00:00+00:00",
+              "label_available_date": "2024-12-01T00:00:00+00:00",
+              "actual_pct": 0.9146341463414753,
+              "predicted_pct": 0.8506011194455442,
+              "baseline_pct": 0.0,
+              "train_n": 103,
+              "max_train_label_available_date": "2024-09-01T00:00:00+00:00",
+              "max_train_target_month": "2024-07-01"
+            },
+            {
+              "target_month": "2024-11-01",
+              "forecast_cutoff": "2024-10-07T23:00:00+00:00",
+              "label_available_date": "2025-01-01T00:00:00+00:00",
+              "actual_pct": 0.1510574018126709,
+              "predicted_pct": 0.7460735599711761,
+              "baseline_pct": 0.0,
+              "train_n": 104,
+              "max_train_label_available_date": "2024-10-01T00:00:00+00:00",
+              "max_train_target_month": "2024-08-01"
+            },
+            {
+              "target_month": "2024-12-01",
+              "forecast_cutoff": "2024-11-08T00:00:00+00:00",
+              "label_available_date": "2025-02-01T00:00:00+00:00",
+              "actual_pct": 1.6591251885369696,
+              "predicted_pct": 2.0702407398228755,
+              "baseline_pct": 0.0,
+              "train_n": 105,
+              "max_train_label_available_date": "2024-11-01T00:00:00+00:00",
+              "max_train_target_month": "2024-09-01"
+            },
+            {
+              "target_month": "2025-01-01",
+              "forecast_cutoff": "2024-12-08T00:00:00+00:00",
+              "label_available_date": "2025-03-01T00:00:00+00:00",
+              "actual_pct": 4.6735905044510195,
+              "predicted_pct": 1.7949323021974153,
+              "baseline_pct": 0.0,
+              "train_n": 106,
+              "max_train_label_available_date": "2024-12-01T00:00:00+00:00",
+              "max_train_target_month": "2024-10-01"
+            },
+            {
+              "target_month": "2025-02-01",
+              "forecast_cutoff": "2025-01-08T00:00:00+00:00",
+              "label_available_date": "2025-04-01T00:00:00+00:00",
+              "actual_pct": 1.700921332388372,
+              "predicted_pct": -0.06358464555043145,
+              "baseline_pct": 0.0,
+              "train_n": 107,
+              "max_train_label_available_date": "2025-01-01T00:00:00+00:00",
+              "max_train_target_month": "2024-11-01"
+            },
+            {
+              "target_month": "2025-03-01",
+              "forecast_cutoff": "2025-02-08T00:00:00+00:00",
+              "label_available_date": "2025-05-01T00:00:00+00:00",
+              "actual_pct": -0.2090592334494823,
+              "predicted_pct": 0.7408260587157979,
+              "baseline_pct": 0.0,
+              "train_n": 108,
+              "max_train_label_available_date": "2025-02-01T00:00:00+00:00",
+              "max_train_target_month": "2024-12-01"
+            },
+            {
+              "target_month": "2025-04-01",
+              "forecast_cutoff": "2025-03-08T00:00:00+00:00",
+              "label_available_date": "2025-06-01T00:00:00+00:00",
+              "actual_pct": 2.3743016759776525,
+              "predicted_pct": 1.4836797496958474,
+              "baseline_pct": 0.0,
+              "train_n": 109,
+              "max_train_label_available_date": "2025-03-01T00:00:00+00:00",
+              "max_train_target_month": "2025-01-01"
+            },
+            {
+              "target_month": "2025-05-01",
+              "forecast_cutoff": "2025-04-07T23:00:00+00:00",
+              "label_available_date": "2025-07-01T00:00:00+00:00",
+              "actual_pct": 1.3642564802182733,
+              "predicted_pct": 1.6414514771632174,
+              "baseline_pct": 0.0,
+              "train_n": 110,
+              "max_train_label_available_date": "2025-04-01T00:00:00+00:00",
+              "max_train_target_month": "2025-02-01"
+            },
+            {
+              "target_month": "2025-06-01",
+              "forecast_cutoff": "2025-05-07T23:00:00+00:00",
+              "label_available_date": "2025-08-01T00:00:00+00:00",
+              "actual_pct": -2.0188425302826385,
+              "predicted_pct": 0.6000172636405889,
+              "baseline_pct": 0.0,
+              "train_n": 111,
+              "max_train_label_available_date": "2025-05-01T00:00:00+00:00",
+              "max_train_target_month": "2025-03-01"
+            },
+            {
+              "target_month": "2025-07-01",
+              "forecast_cutoff": "2025-06-07T23:00:00+00:00",
+              "label_available_date": "2025-09-01T00:00:00+00:00",
+              "actual_pct": 3.434065934065944,
+              "predicted_pct": 1.561471824906425,
+              "baseline_pct": 0.0,
+              "train_n": 112,
+              "max_train_label_available_date": "2025-06-01T00:00:00+00:00",
+              "max_train_target_month": "2025-04-01"
+            },
+            {
+              "target_month": "2025-08-01",
+              "forecast_cutoff": "2025-07-07T23:00:00+00:00",
+              "label_available_date": "2025-10-01T00:00:00+00:00",
+              "actual_pct": 3.1872509960159334,
+              "predicted_pct": 0.2764726477973638,
+              "baseline_pct": 0.0,
+              "train_n": 113,
+              "max_train_label_available_date": "2025-07-01T00:00:00+00:00",
+              "max_train_target_month": "2025-05-01"
+            },
+            {
+              "target_month": "2025-09-01",
+              "forecast_cutoff": "2025-08-07T23:00:00+00:00",
+              "label_available_date": "2025-11-01T00:00:00+00:00",
+              "actual_pct": -0.3217503217503248,
+              "predicted_pct": 0.3345828567672539,
+              "baseline_pct": 0.0,
+              "train_n": 114,
+              "max_train_label_available_date": "2025-08-01T00:00:00+00:00",
+              "max_train_target_month": "2025-06-01"
+            },
+            {
+              "target_month": "2025-10-01",
+              "forecast_cutoff": "2025-09-07T23:00:00+00:00",
+              "label_available_date": "2025-12-01T00:00:00+00:00",
+              "actual_pct": 0.3873466752743582,
+              "predicted_pct": -0.16262872708114265,
+              "baseline_pct": 0.0,
+              "train_n": 115,
+              "max_train_label_available_date": "2025-09-01T00:00:00+00:00",
+              "max_train_target_month": "2025-07-01"
+            },
+            {
+              "target_month": "2025-11-01",
+              "forecast_cutoff": "2025-10-07T23:00:00+00:00",
+              "label_available_date": "2026-01-01T00:00:00+00:00",
+              "actual_pct": 0.0,
+              "predicted_pct": -0.0637648282941182,
+              "baseline_pct": 0.0,
+              "train_n": 116,
+              "max_train_label_available_date": "2025-10-01T00:00:00+00:00",
+              "max_train_target_month": "2025-08-01"
+            },
+            {
+              "target_month": "2025-12-01",
+              "forecast_cutoff": "2025-11-08T00:00:00+00:00",
+              "label_available_date": "2026-02-01T00:00:00+00:00",
+              "actual_pct": 0.12861736334404128,
+              "predicted_pct": 0.8033685915482418,
+              "baseline_pct": 0.0,
+              "train_n": 117,
+              "max_train_label_available_date": "2025-11-01T00:00:00+00:00",
+              "max_train_target_month": "2025-09-01"
+            },
+            {
+              "target_month": "2026-01-01",
+              "forecast_cutoff": "2025-12-08T00:00:00+00:00",
+              "label_available_date": "2026-03-01T00:00:00+00:00",
+              "actual_pct": 3.917790622992956,
+              "predicted_pct": 2.3256618136728013,
+              "baseline_pct": 0.0,
+              "train_n": 118,
+              "max_train_label_available_date": "2025-12-01T00:00:00+00:00",
+              "max_train_target_month": "2025-10-01"
+            },
+            {
+              "target_month": "2026-02-01",
+              "forecast_cutoff": "2026-01-08T00:00:00+00:00",
+              "label_available_date": "2026-04-01T00:00:00+00:00",
+              "actual_pct": -4.449938195302849,
+              "predicted_pct": -0.6190551804188584,
+              "baseline_pct": 0.0,
+              "train_n": 119,
+              "max_train_label_available_date": "2026-01-01T00:00:00+00:00",
+              "max_train_target_month": "2025-11-01"
+            },
+            {
+              "target_month": "2026-03-01",
+              "forecast_cutoff": "2026-02-08T00:00:00+00:00",
+              "label_available_date": "2026-05-01T00:00:00+00:00",
+              "actual_pct": 2.7166882276843607,
+              "predicted_pct": 1.0525533662117819,
+              "baseline_pct": 0.0,
+              "train_n": 120,
+              "max_train_label_available_date": "2026-02-01T00:00:00+00:00",
+              "max_train_target_month": "2025-12-01"
+            },
+            {
+              "target_month": "2026-04-01",
+              "forecast_cutoff": "2026-03-08T00:00:00+00:00",
+              "label_available_date": "2026-06-01T00:00:00+00:00",
+              "actual_pct": -0.5037783375314908,
+              "predicted_pct": 1.889459301519841,
+              "baseline_pct": 0.0,
+              "train_n": 121,
+              "max_train_label_available_date": "2026-03-01T00:00:00+00:00",
+              "max_train_target_month": "2026-01-01"
+            },
+            {
+              "target_month": "2026-05-01",
+              "forecast_cutoff": "2026-04-07T23:00:00+00:00",
+              "label_available_date": "2026-07-01T00:00:00+00:00",
+              "actual_pct": 1.8987341772152,
+              "predicted_pct": 1.434438562958431,
+              "baseline_pct": 0.0,
+              "train_n": 122,
+              "max_train_label_available_date": "2026-04-01T00:00:00+00:00",
+              "max_train_target_month": "2026-02-01"
+            },
+            {
+              "target_month": "2026-06-01",
+              "forecast_cutoff": "2026-05-07T23:00:00+00:00",
+              "label_available_date": "2026-08-01T00:00:00+00:00",
+              "actual_pct": -5.341614906832293,
+              "predicted_pct": -1.8907618033473652,
+              "baseline_pct": 0.0,
+              "train_n": 123,
+              "max_train_label_available_date": "2026-05-01T00:00:00+00:00",
+              "max_train_target_month": "2026-03-01"
+            },
+            {
+              "target_month": "2026-07-01",
+              "forecast_cutoff": "2026-06-07T23:00:00+00:00",
+              "label_available_date": "2026-09-01T00:00:00+00:00",
+              "actual_pct": 1.837270341207331,
+              "predicted_pct": 0.6666302307281543,
+              "baseline_pct": 0.0,
+              "train_n": 124,
+              "max_train_label_available_date": "2026-06-01T00:00:00+00:00",
+              "max_train_target_month": "2026-04-01"
+            },
+            {
+              "target_month": "2026-08-01",
+              "forecast_cutoff": "2026-07-07T23:00:00+00:00",
+              "label_available_date": "2026-10-01T00:00:00+00:00",
+              "actual_pct": 1.030927835051565,
+              "predicted_pct": 2.203607442170815,
+              "baseline_pct": 0.0,
+              "train_n": 125,
+              "max_train_label_available_date": "2026-07-01T00:00:00+00:00",
+              "max_train_target_month": "2026-05-01"
+            },
+            {
+              "target_month": "2026-09-01",
+              "forecast_cutoff": "2026-08-07T23:00:00+00:00",
+              "label_available_date": "2026-11-01T00:00:00+00:00",
+              "actual_pct": -1.913265306122447,
+              "predicted_pct": 0.08123495241724202,
+              "baseline_pct": 0.0,
+              "train_n": 126,
+              "max_train_label_available_date": "2026-08-01T00:00:00+00:00",
+              "max_train_target_month": "2026-06-01"
+            }
+          ]
+        },
+        "weekly_rsi": {
+          "features": [
+            "history_change_lag0_pct",
+            "history_change_lag1_pct",
+            "history_change_lag2_pct",
+            "history_change_lag3_pct",
+            "history_change_lag6_pct",
+            "history_change_lag12_pct",
+            "history_mean_3m_pct",
+            "history_std_3m_pct",
+            "history_mean_6m_pct",
+            "history_std_6m_pct",
+            "history_mean_12m_pct",
+            "history_std_12m_pct",
+            "season_sin",
+            "season_cos",
+            "commodity_cocoa_gbp_return_4w_pct",
+            "commodity_cocoa_gbp_return_12w_pct",
+            "commodity_cocoa_gbp_return_26w_pct",
+            "commodity_cocoa_gbp_volatility_12w_pct",
+            "commodity_gbp_per_usd_return_4w_pct",
+            "commodity_gbp_per_usd_return_12w_pct",
+            "commodity_cocoa_gbp_rsi_14w",
+            "commodity_cocoa_gbp_rsi_14w_issue_lag3m",
+            "commodity_gbp_per_usd_rsi_14w",
+            "commodity_gbp_per_usd_rsi_14w_issue_lag3m"
+          ],
+          "validation_metrics": {
+            "n": 34,
+            "mae_pp": 1.6783737004185277,
+            "rmse_pp": 2.299794457495372,
+            "directional_accuracy": 0.7352941176470589
+          },
+          "test_metrics": {
+            "n": 33,
+            "mae_pp": 1.655712177293063,
+            "rmse_pp": 2.0829869101022753,
+            "directional_accuracy": 0.6666666666666666
+          },
+          "paired_test_comparison": {
+            "n": 33,
+            "mean_error_reduction_pp": -0.0809745864297772,
+            "median_error_reduction_pp": -0.08354046289094019,
+            "months_improved": 14,
+            "months_worsened": 19,
+            "months_tied": 0
+          },
+          "error_reduction_vs_unchanged_pct": -5.142100302907372,
+          "yearly_test_metrics": {
+            "2024": {
+              "n": 12,
+              "mae_pp": 1.6178227356410781,
+              "rmse_pp": 2.145964417553279,
+              "directional_accuracy": 0.5833333333333334
+            },
+            "2025": {
+              "n": 12,
+              "mae_pp": 1.4655055340409102,
+              "rmse_pp": 1.7919820811885796,
+              "directional_accuracy": 0.5833333333333334
+            },
+            "2026": {
+              "n": 9,
+              "mae_pp": 1.95984029049858,
+              "rmse_pp": 2.3424863501138224,
+              "directional_accuracy": 0.8888888888888888
+            }
+          },
+          "feature_coverage": {
+            "validation": {
+              "commodity_cocoa_gbp_rsi_14w": 1.0,
+              "commodity_cocoa_gbp_rsi_14w_issue_lag3m": 1.0,
+              "commodity_gbp_per_usd_rsi_14w": 1.0,
+              "commodity_gbp_per_usd_rsi_14w_issue_lag3m": 1.0
+            },
+            "test": {
+              "commodity_cocoa_gbp_rsi_14w": 1.0,
+              "commodity_cocoa_gbp_rsi_14w_issue_lag3m": 1.0,
+              "commodity_gbp_per_usd_rsi_14w": 1.0,
+              "commodity_gbp_per_usd_rsi_14w_issue_lag3m": 1.0
+            }
+          },
+          "forecast": {
+            "as_of": "2026-11-08",
+            "target_month": "2026-12-01",
+            "change_pct": 1.9963353963292076,
+            "train_n": 129,
+            "max_train_label_available_date": "2026-11-01T00:00:00+00:00",
+            "selected_for_website": false
+          },
+          "test_predictions": [
+            {
+              "target_month": "2024-01-01",
+              "forecast_cutoff": "2023-12-08T00:00:00+00:00",
+              "label_available_date": "2024-03-01T00:00:00+00:00",
+              "actual_pct": 2.5704809286899,
+              "predicted_pct": -0.5801388653435158,
+              "baseline_pct": 0.0,
+              "train_n": 94,
+              "max_train_label_available_date": "2023-12-01T00:00:00+00:00",
+              "max_train_target_month": "2023-10-01"
+            },
+            {
+              "target_month": "2024-02-01",
+              "forecast_cutoff": "2024-01-08T00:00:00+00:00",
+              "label_available_date": "2024-04-01T00:00:00+00:00",
+              "actual_pct": -0.48504446240905663,
+              "predicted_pct": -0.4431249867943131,
+              "baseline_pct": 0.0,
+              "train_n": 95,
+              "max_train_label_available_date": "2024-01-01T00:00:00+00:00",
+              "max_train_target_month": "2023-11-01"
+            },
+            {
+              "target_month": "2024-03-01",
+              "forecast_cutoff": "2024-02-08T00:00:00+00:00",
+              "label_available_date": "2024-05-01T00:00:00+00:00",
+              "actual_pct": 2.3558082859463925,
+              "predicted_pct": -0.2776531888304716,
+              "baseline_pct": 0.0,
+              "train_n": 96,
+              "max_train_label_available_date": "2024-02-01T00:00:00+00:00",
+              "max_train_target_month": "2023-12-01"
+            },
+            {
+              "target_month": "2024-04-01",
+              "forecast_cutoff": "2024-03-08T00:00:00+00:00",
+              "label_available_date": "2024-06-01T00:00:00+00:00",
+              "actual_pct": 1.5873015873015817,
+              "predicted_pct": 0.8872016133197773,
+              "baseline_pct": 0.0,
+              "train_n": 97,
+              "max_train_label_available_date": "2024-03-01T00:00:00+00:00",
+              "max_train_target_month": "2024-01-01"
+            },
+            {
+              "target_month": "2024-05-01",
+              "forecast_cutoff": "2024-04-07T23:00:00+00:00",
+              "label_available_date": "2024-07-01T00:00:00+00:00",
+              "actual_pct": -1.3281250000000022,
+              "predicted_pct": 0.47771882790603337,
+              "baseline_pct": 0.0,
+              "train_n": 98,
+              "max_train_label_available_date": "2024-04-01T00:00:00+00:00",
+              "max_train_target_month": "2024-02-01"
+            },
+            {
+              "target_month": "2024-06-01",
+              "forecast_cutoff": "2024-05-07T23:00:00+00:00",
+              "label_available_date": "2024-08-01T00:00:00+00:00",
+              "actual_pct": -0.8709422011084711,
+              "predicted_pct": 0.992744297091336,
+              "baseline_pct": 0.0,
+              "train_n": 99,
+              "max_train_label_available_date": "2024-05-01T00:00:00+00:00",
+              "max_train_target_month": "2024-03-01"
+            },
+            {
+              "target_month": "2024-07-01",
+              "forecast_cutoff": "2024-06-07T23:00:00+00:00",
+              "label_available_date": "2024-09-01T00:00:00+00:00",
+              "actual_pct": 2.635782747603832,
+              "predicted_pct": 0.9258090627745725,
+              "baseline_pct": 0.0,
+              "train_n": 100,
+              "max_train_label_available_date": "2024-06-01T00:00:00+00:00",
+              "max_train_target_month": "2024-04-01"
+            },
+            {
+              "target_month": "2024-08-01",
+              "forecast_cutoff": "2024-07-07T23:00:00+00:00",
+              "label_available_date": "2024-10-01T00:00:00+00:00",
+              "actual_pct": 4.747081712062262,
+              "predicted_pct": -0.2682486240395538,
+              "baseline_pct": 0.0,
+              "train_n": 101,
+              "max_train_label_available_date": "2024-07-01T00:00:00+00:00",
+              "max_train_target_month": "2024-05-01"
+            },
+            {
+              "target_month": "2024-09-01",
+              "forecast_cutoff": "2024-08-07T23:00:00+00:00",
+              "label_available_date": "2024-11-01T00:00:00+00:00",
+              "actual_pct": -2.526002971768204,
+              "predicted_pct": -0.9593701240032929,
+              "baseline_pct": 0.0,
+              "train_n": 102,
+              "max_train_label_available_date": "2024-08-01T00:00:00+00:00",
+              "max_train_target_month": "2024-06-01"
+            },
+            {
+              "target_month": "2024-10-01",
+              "forecast_cutoff": "2024-09-07T23:00:00+00:00",
+              "label_available_date": "2024-12-01T00:00:00+00:00",
+              "actual_pct": 0.9146341463414753,
+              "predicted_pct": 1.0295522366947139,
+              "baseline_pct": 0.0,
+              "train_n": 103,
+              "max_train_label_available_date": "2024-09-01T00:00:00+00:00",
+              "max_train_target_month": "2024-07-01"
+            },
+            {
+              "target_month": "2024-11-01",
+              "forecast_cutoff": "2024-10-07T23:00:00+00:00",
+              "label_available_date": "2025-01-01T00:00:00+00:00",
+              "actual_pct": 0.1510574018126709,
+              "predicted_pct": 0.9439659487836547,
+              "baseline_pct": 0.0,
+              "train_n": 104,
+              "max_train_label_available_date": "2024-10-01T00:00:00+00:00",
+              "max_train_target_month": "2024-08-01"
+            },
+            {
+              "target_month": "2024-12-01",
+              "forecast_cutoff": "2024-11-08T00:00:00+00:00",
+              "label_available_date": "2025-02-01T00:00:00+00:00",
+              "actual_pct": 1.6591251885369696,
+              "predicted_pct": 1.6776034656970265,
+              "baseline_pct": 0.0,
+              "train_n": 105,
+              "max_train_label_available_date": "2024-11-01T00:00:00+00:00",
+              "max_train_target_month": "2024-09-01"
+            },
+            {
+              "target_month": "2025-01-01",
+              "forecast_cutoff": "2024-12-08T00:00:00+00:00",
+              "label_available_date": "2025-03-01T00:00:00+00:00",
+              "actual_pct": 4.6735905044510195,
+              "predicted_pct": 1.1004596243671725,
+              "baseline_pct": 0.0,
+              "train_n": 106,
+              "max_train_label_available_date": "2024-12-01T00:00:00+00:00",
+              "max_train_target_month": "2024-10-01"
+            },
+            {
+              "target_month": "2025-02-01",
+              "forecast_cutoff": "2025-01-08T00:00:00+00:00",
+              "label_available_date": "2025-04-01T00:00:00+00:00",
+              "actual_pct": 1.700921332388372,
+              "predicted_pct": -0.23440114982957633,
+              "baseline_pct": 0.0,
+              "train_n": 107,
+              "max_train_label_available_date": "2025-01-01T00:00:00+00:00",
+              "max_train_target_month": "2024-11-01"
+            },
+            {
+              "target_month": "2025-03-01",
+              "forecast_cutoff": "2025-02-08T00:00:00+00:00",
+              "label_available_date": "2025-05-01T00:00:00+00:00",
+              "actual_pct": -0.2090592334494823,
+              "predicted_pct": 0.8264291515044198,
+              "baseline_pct": 0.0,
+              "train_n": 108,
+              "max_train_label_available_date": "2025-02-01T00:00:00+00:00",
+              "max_train_target_month": "2024-12-01"
+            },
+            {
+              "target_month": "2025-04-01",
+              "forecast_cutoff": "2025-03-08T00:00:00+00:00",
+              "label_available_date": "2025-06-01T00:00:00+00:00",
+              "actual_pct": 2.3743016759776525,
+              "predicted_pct": 1.4001392868049072,
+              "baseline_pct": 0.0,
+              "train_n": 109,
+              "max_train_label_available_date": "2025-03-01T00:00:00+00:00",
+              "max_train_target_month": "2025-01-01"
+            },
+            {
+              "target_month": "2025-05-01",
+              "forecast_cutoff": "2025-04-07T23:00:00+00:00",
+              "label_available_date": "2025-07-01T00:00:00+00:00",
+              "actual_pct": 1.3642564802182733,
+              "predicted_pct": 1.8230795169505587,
+              "baseline_pct": 0.0,
+              "train_n": 110,
+              "max_train_label_available_date": "2025-04-01T00:00:00+00:00",
+              "max_train_target_month": "2025-02-01"
+            },
+            {
+              "target_month": "2025-06-01",
+              "forecast_cutoff": "2025-05-07T23:00:00+00:00",
+              "label_available_date": "2025-08-01T00:00:00+00:00",
+              "actual_pct": -2.0188425302826385,
+              "predicted_pct": 0.6657424722419754,
+              "baseline_pct": 0.0,
+              "train_n": 111,
+              "max_train_label_available_date": "2025-05-01T00:00:00+00:00",
+              "max_train_target_month": "2025-03-01"
+            },
+            {
+              "target_month": "2025-07-01",
+              "forecast_cutoff": "2025-06-07T23:00:00+00:00",
+              "label_available_date": "2025-09-01T00:00:00+00:00",
+              "actual_pct": 3.434065934065944,
+              "predicted_pct": 1.6375294690302102,
+              "baseline_pct": 0.0,
+              "train_n": 112,
+              "max_train_label_available_date": "2025-06-01T00:00:00+00:00",
+              "max_train_target_month": "2025-04-01"
+            },
+            {
+              "target_month": "2025-08-01",
+              "forecast_cutoff": "2025-07-07T23:00:00+00:00",
+              "label_available_date": "2025-10-01T00:00:00+00:00",
+              "actual_pct": 3.1872509960159334,
+              "predicted_pct": 0.4538517013842658,
+              "baseline_pct": 0.0,
+              "train_n": 113,
+              "max_train_label_available_date": "2025-07-01T00:00:00+00:00",
+              "max_train_target_month": "2025-05-01"
+            },
+            {
+              "target_month": "2025-09-01",
+              "forecast_cutoff": "2025-08-07T23:00:00+00:00",
+              "label_available_date": "2025-11-01T00:00:00+00:00",
+              "actual_pct": -0.3217503217503248,
+              "predicted_pct": -0.014774191080030395,
+              "baseline_pct": 0.0,
+              "train_n": 114,
+              "max_train_label_available_date": "2025-08-01T00:00:00+00:00",
+              "max_train_target_month": "2025-06-01"
+            },
+            {
+              "target_month": "2025-10-01",
+              "forecast_cutoff": "2025-09-07T23:00:00+00:00",
+              "label_available_date": "2025-12-01T00:00:00+00:00",
+              "actual_pct": 0.3873466752743582,
+              "predicted_pct": -0.1016313057189936,
+              "baseline_pct": 0.0,
+              "train_n": 115,
+              "max_train_label_available_date": "2025-09-01T00:00:00+00:00",
+              "max_train_target_month": "2025-07-01"
+            },
+            {
+              "target_month": "2025-11-01",
+              "forecast_cutoff": "2025-10-07T23:00:00+00:00",
+              "label_available_date": "2026-01-01T00:00:00+00:00",
+              "actual_pct": 0.0,
+              "predicted_pct": 0.4300737824327053,
+              "baseline_pct": 0.0,
+              "train_n": 116,
+              "max_train_label_available_date": "2025-10-01T00:00:00+00:00",
+              "max_train_target_month": "2025-08-01"
+            },
+            {
+              "target_month": "2025-12-01",
+              "forecast_cutoff": "2025-11-08T00:00:00+00:00",
+              "label_available_date": "2026-02-01T00:00:00+00:00",
+              "actual_pct": 0.12861736334404128,
+              "predicted_pct": 1.2972079423858676,
+              "baseline_pct": 0.0,
+              "train_n": 117,
+              "max_train_label_available_date": "2025-11-01T00:00:00+00:00",
+              "max_train_target_month": "2025-09-01"
+            },
+            {
+              "target_month": "2026-01-01",
+              "forecast_cutoff": "2025-12-08T00:00:00+00:00",
+              "label_available_date": "2026-03-01T00:00:00+00:00",
+              "actual_pct": 3.917790622992956,
+              "predicted_pct": 2.9096438152125437,
+              "baseline_pct": 0.0,
+              "train_n": 118,
+              "max_train_label_available_date": "2025-12-01T00:00:00+00:00",
+              "max_train_target_month": "2025-10-01"
+            },
+            {
+              "target_month": "2026-02-01",
+              "forecast_cutoff": "2026-01-08T00:00:00+00:00",
+              "label_available_date": "2026-04-01T00:00:00+00:00",
+              "actual_pct": -4.449938195302849,
+              "predicted_pct": -0.15902187940913143,
+              "baseline_pct": 0.0,
+              "train_n": 119,
+              "max_train_label_available_date": "2026-01-01T00:00:00+00:00",
+              "max_train_target_month": "2025-11-01"
+            },
+            {
+              "target_month": "2026-03-01",
+              "forecast_cutoff": "2026-02-08T00:00:00+00:00",
+              "label_available_date": "2026-05-01T00:00:00+00:00",
+              "actual_pct": 2.7166882276843607,
+              "predicted_pct": 1.5972988291920729,
+              "baseline_pct": 0.0,
+              "train_n": 120,
+              "max_train_label_available_date": "2026-02-01T00:00:00+00:00",
+              "max_train_target_month": "2025-12-01"
+            },
+            {
+              "target_month": "2026-04-01",
+              "forecast_cutoff": "2026-03-08T00:00:00+00:00",
+              "label_available_date": "2026-06-01T00:00:00+00:00",
+              "actual_pct": -0.5037783375314908,
+              "predicted_pct": 2.381021113098562,
+              "baseline_pct": 0.0,
+              "train_n": 121,
+              "max_train_label_available_date": "2026-03-01T00:00:00+00:00",
+              "max_train_target_month": "2026-01-01"
+            },
+            {
+              "target_month": "2026-05-01",
+              "forecast_cutoff": "2026-04-07T23:00:00+00:00",
+              "label_available_date": "2026-07-01T00:00:00+00:00",
+              "actual_pct": 1.8987341772152,
+              "predicted_pct": 1.6121575392005436,
+              "baseline_pct": 0.0,
+              "train_n": 122,
+              "max_train_label_available_date": "2026-04-01T00:00:00+00:00",
+              "max_train_target_month": "2026-02-01"
+            },
+            {
+              "target_month": "2026-06-01",
+              "forecast_cutoff": "2026-05-07T23:00:00+00:00",
+              "label_available_date": "2026-08-01T00:00:00+00:00",
+              "actual_pct": -5.341614906832293,
+              "predicted_pct": -1.6464211238612252,
+              "baseline_pct": 0.0,
+              "train_n": 123,
+              "max_train_label_available_date": "2026-05-01T00:00:00+00:00",
+              "max_train_target_month": "2026-03-01"
+            },
+            {
+              "target_month": "2026-07-01",
+              "forecast_cutoff": "2026-06-07T23:00:00+00:00",
+              "label_available_date": "2026-09-01T00:00:00+00:00",
+              "actual_pct": 1.837270341207331,
+              "predicted_pct": 0.39002541252367473,
+              "baseline_pct": 0.0,
+              "train_n": 124,
+              "max_train_label_available_date": "2026-06-01T00:00:00+00:00",
+              "max_train_target_month": "2026-04-01"
+            },
+            {
+              "target_month": "2026-08-01",
+              "forecast_cutoff": "2026-07-07T23:00:00+00:00",
+              "label_available_date": "2026-10-01T00:00:00+00:00",
+              "actual_pct": 1.030927835051565,
+              "predicted_pct": 2.0794892211646148,
+              "baseline_pct": 0.0,
+              "train_n": 125,
+              "max_train_label_available_date": "2026-07-01T00:00:00+00:00",
+              "max_train_target_month": "2026-05-01"
+            },
+            {
+              "target_month": "2026-09-01",
+              "forecast_cutoff": "2026-08-07T23:00:00+00:00",
+              "label_available_date": "2026-11-01T00:00:00+00:00",
+              "actual_pct": -1.913265306122447,
+              "predicted_pct": -0.05553140021412795,
+              "baseline_pct": 0.0,
+              "train_n": 126,
+              "max_train_label_available_date": "2026-08-01T00:00:00+00:00",
+              "max_train_target_month": "2026-06-01"
+            }
+          ]
+        },
+        "cpi_rsi": {
+          "features": [
+            "history_change_lag0_pct",
+            "history_change_lag1_pct",
+            "history_change_lag2_pct",
+            "history_change_lag3_pct",
+            "history_change_lag6_pct",
+            "history_change_lag12_pct",
+            "history_mean_3m_pct",
+            "history_std_3m_pct",
+            "history_mean_6m_pct",
+            "history_std_6m_pct",
+            "history_mean_12m_pct",
+            "history_std_12m_pct",
+            "season_sin",
+            "season_cos",
+            "commodity_cocoa_gbp_return_4w_pct",
+            "commodity_cocoa_gbp_return_12w_pct",
+            "commodity_cocoa_gbp_return_26w_pct",
+            "commodity_cocoa_gbp_volatility_12w_pct",
+            "commodity_gbp_per_usd_return_4w_pct",
+            "commodity_gbp_per_usd_return_12w_pct",
+            "history_cpi_rsi_6m"
+          ],
+          "validation_metrics": {
+            "n": 34,
+            "mae_pp": 1.695379319492888,
+            "rmse_pp": 2.2776577157402427,
+            "directional_accuracy": 0.6470588235294118
+          },
+          "test_metrics": {
+            "n": 33,
+            "mae_pp": 1.5984510437682256,
+            "rmse_pp": 1.9797492467825013,
+            "directional_accuracy": 0.696969696969697
+          },
+          "paired_test_comparison": {
+            "n": 33,
+            "mean_error_reduction_pp": -0.023713452904939848,
+            "median_error_reduction_pp": -0.03844434992035284,
+            "months_improved": 12,
+            "months_worsened": 21,
+            "months_tied": 0
+          },
+          "error_reduction_vs_unchanged_pct": -1.5058669484063014,
+          "yearly_test_metrics": {
+            "2024": {
+              "n": 12,
+              "mae_pp": 1.5229519927030715,
+              "rmse_pp": 1.9604835715238584,
+              "directional_accuracy": 0.75
+            },
+            "2025": {
+              "n": 12,
+              "mae_pp": 1.3113515680791685,
+              "rmse_pp": 1.6495415130850473,
+              "directional_accuracy": 0.5833333333333334
+            },
+            "2026": {
+              "n": 9,
+              "mae_pp": 2.081915746107174,
+              "rmse_pp": 2.370340744215993,
+              "directional_accuracy": 0.7777777777777778
+            }
+          },
+          "feature_coverage": {
+            "validation": {
+              "history_cpi_rsi_6m": 1.0
+            },
+            "test": {
+              "history_cpi_rsi_6m": 1.0
+            }
+          },
+          "forecast": {
+            "as_of": "2026-11-08",
+            "target_month": "2026-12-01",
+            "change_pct": 1.575653720382187,
+            "train_n": 129,
+            "max_train_label_available_date": "2026-11-01T00:00:00+00:00",
+            "selected_for_website": false
+          },
+          "test_predictions": [
+            {
+              "target_month": "2024-01-01",
+              "forecast_cutoff": "2023-12-08T00:00:00+00:00",
+              "label_available_date": "2024-03-01T00:00:00+00:00",
+              "actual_pct": 2.5704809286899,
+              "predicted_pct": 0.21220262990029012,
+              "baseline_pct": 0.0,
+              "train_n": 94,
+              "max_train_label_available_date": "2023-12-01T00:00:00+00:00",
+              "max_train_target_month": "2023-10-01"
+            },
+            {
+              "target_month": "2024-02-01",
+              "forecast_cutoff": "2024-01-08T00:00:00+00:00",
+              "label_available_date": "2024-04-01T00:00:00+00:00",
+              "actual_pct": -0.48504446240905663,
+              "predicted_pct": -0.27767000699739647,
+              "baseline_pct": 0.0,
+              "train_n": 95,
+              "max_train_label_available_date": "2024-01-01T00:00:00+00:00",
+              "max_train_target_month": "2023-11-01"
+            },
+            {
+              "target_month": "2024-03-01",
+              "forecast_cutoff": "2024-02-08T00:00:00+00:00",
+              "label_available_date": "2024-05-01T00:00:00+00:00",
+              "actual_pct": 2.3558082859463925,
+              "predicted_pct": 0.19489409817105185,
+              "baseline_pct": 0.0,
+              "train_n": 96,
+              "max_train_label_available_date": "2024-02-01T00:00:00+00:00",
+              "max_train_target_month": "2023-12-01"
+            },
+            {
+              "target_month": "2024-04-01",
+              "forecast_cutoff": "2024-03-08T00:00:00+00:00",
+              "label_available_date": "2024-06-01T00:00:00+00:00",
+              "actual_pct": 1.5873015873015817,
+              "predicted_pct": 1.2004924566398782,
+              "baseline_pct": 0.0,
+              "train_n": 97,
+              "max_train_label_available_date": "2024-03-01T00:00:00+00:00",
+              "max_train_target_month": "2024-01-01"
+            },
+            {
+              "target_month": "2024-05-01",
+              "forecast_cutoff": "2024-04-07T23:00:00+00:00",
+              "label_available_date": "2024-07-01T00:00:00+00:00",
+              "actual_pct": -1.3281250000000022,
+              "predicted_pct": 0.6220890323801301,
+              "baseline_pct": 0.0,
+              "train_n": 98,
+              "max_train_label_available_date": "2024-04-01T00:00:00+00:00",
+              "max_train_target_month": "2024-02-01"
+            },
+            {
+              "target_month": "2024-06-01",
+              "forecast_cutoff": "2024-05-07T23:00:00+00:00",
+              "label_available_date": "2024-08-01T00:00:00+00:00",
+              "actual_pct": -0.8709422011084711,
+              "predicted_pct": 0.8518231374248579,
+              "baseline_pct": 0.0,
+              "train_n": 99,
+              "max_train_label_available_date": "2024-05-01T00:00:00+00:00",
+              "max_train_target_month": "2024-03-01"
+            },
+            {
+              "target_month": "2024-07-01",
+              "forecast_cutoff": "2024-06-07T23:00:00+00:00",
+              "label_available_date": "2024-09-01T00:00:00+00:00",
+              "actual_pct": 2.635782747603832,
+              "predicted_pct": 1.1939283762139066,
+              "baseline_pct": 0.0,
+              "train_n": 100,
+              "max_train_label_available_date": "2024-06-01T00:00:00+00:00",
+              "max_train_target_month": "2024-04-01"
+            },
+            {
+              "target_month": "2024-08-01",
+              "forecast_cutoff": "2024-07-07T23:00:00+00:00",
+              "label_available_date": "2024-10-01T00:00:00+00:00",
+              "actual_pct": 4.747081712062262,
+              "predicted_pct": -0.08468014573109511,
+              "baseline_pct": 0.0,
+              "train_n": 101,
+              "max_train_label_available_date": "2024-07-01T00:00:00+00:00",
+              "max_train_target_month": "2024-05-01"
+            },
+            {
+              "target_month": "2024-09-01",
+              "forecast_cutoff": "2024-08-07T23:00:00+00:00",
+              "label_available_date": "2024-11-01T00:00:00+00:00",
+              "actual_pct": -2.526002971768204,
+              "predicted_pct": -0.9143489359238671,
+              "baseline_pct": 0.0,
+              "train_n": 102,
+              "max_train_label_available_date": "2024-08-01T00:00:00+00:00",
+              "max_train_target_month": "2024-06-01"
+            },
+            {
+              "target_month": "2024-10-01",
+              "forecast_cutoff": "2024-09-07T23:00:00+00:00",
+              "label_available_date": "2024-12-01T00:00:00+00:00",
+              "actual_pct": 0.9146341463414753,
+              "predicted_pct": 0.47262634287631844,
+              "baseline_pct": 0.0,
+              "train_n": 103,
+              "max_train_label_available_date": "2024-09-01T00:00:00+00:00",
+              "max_train_target_month": "2024-07-01"
+            },
+            {
+              "target_month": "2024-11-01",
+              "forecast_cutoff": "2024-10-07T23:00:00+00:00",
+              "label_available_date": "2025-01-01T00:00:00+00:00",
+              "actual_pct": 0.1510574018126709,
+              "predicted_pct": 0.8632879009987199,
+              "baseline_pct": 0.0,
+              "train_n": 104,
+              "max_train_label_available_date": "2024-10-01T00:00:00+00:00",
+              "max_train_target_month": "2024-08-01"
+            },
+            {
+              "target_month": "2024-12-01",
+              "forecast_cutoff": "2024-11-08T00:00:00+00:00",
+              "label_available_date": "2025-02-01T00:00:00+00:00",
+              "actual_pct": 1.6591251885369696,
+              "predicted_pct": 2.1086850897432283,
+              "baseline_pct": 0.0,
+              "train_n": 105,
+              "max_train_label_available_date": "2024-11-01T00:00:00+00:00",
+              "max_train_target_month": "2024-09-01"
+            },
+            {
+              "target_month": "2025-01-01",
+              "forecast_cutoff": "2024-12-08T00:00:00+00:00",
+              "label_available_date": "2025-03-01T00:00:00+00:00",
+              "actual_pct": 4.6735905044510195,
+              "predicted_pct": 1.8744559932304834,
+              "baseline_pct": 0.0,
+              "train_n": 106,
+              "max_train_label_available_date": "2024-12-01T00:00:00+00:00",
+              "max_train_target_month": "2024-10-01"
+            },
+            {
+              "target_month": "2025-02-01",
+              "forecast_cutoff": "2025-01-08T00:00:00+00:00",
+              "label_available_date": "2025-04-01T00:00:00+00:00",
+              "actual_pct": 1.700921332388372,
+              "predicted_pct": -0.0524620377154877,
+              "baseline_pct": 0.0,
+              "train_n": 107,
+              "max_train_label_available_date": "2025-01-01T00:00:00+00:00",
+              "max_train_target_month": "2024-11-01"
+            },
+            {
+              "target_month": "2025-03-01",
+              "forecast_cutoff": "2025-02-08T00:00:00+00:00",
+              "label_available_date": "2025-05-01T00:00:00+00:00",
+              "actual_pct": -0.2090592334494823,
+              "predicted_pct": 0.8237595728764237,
+              "baseline_pct": 0.0,
+              "train_n": 108,
+              "max_train_label_available_date": "2025-02-01T00:00:00+00:00",
+              "max_train_target_month": "2024-12-01"
+            },
+            {
+              "target_month": "2025-04-01",
+              "forecast_cutoff": "2025-03-08T00:00:00+00:00",
+              "label_available_date": "2025-06-01T00:00:00+00:00",
+              "actual_pct": 2.3743016759776525,
+              "predicted_pct": 1.525193523068891,
+              "baseline_pct": 0.0,
+              "train_n": 109,
+              "max_train_label_available_date": "2025-03-01T00:00:00+00:00",
+              "max_train_target_month": "2025-01-01"
+            },
+            {
+              "target_month": "2025-05-01",
+              "forecast_cutoff": "2025-04-07T23:00:00+00:00",
+              "label_available_date": "2025-07-01T00:00:00+00:00",
+              "actual_pct": 1.3642564802182733,
+              "predicted_pct": 2.0009124873189563,
+              "baseline_pct": 0.0,
+              "train_n": 110,
+              "max_train_label_available_date": "2025-04-01T00:00:00+00:00",
+              "max_train_target_month": "2025-02-01"
+            },
+            {
+              "target_month": "2025-06-01",
+              "forecast_cutoff": "2025-05-07T23:00:00+00:00",
+              "label_available_date": "2025-08-01T00:00:00+00:00",
+              "actual_pct": -2.0188425302826385,
+              "predicted_pct": 0.7076805837478273,
+              "baseline_pct": 0.0,
+              "train_n": 111,
+              "max_train_label_available_date": "2025-05-01T00:00:00+00:00",
+              "max_train_target_month": "2025-03-01"
+            },
+            {
+              "target_month": "2025-07-01",
+              "forecast_cutoff": "2025-06-07T23:00:00+00:00",
+              "label_available_date": "2025-09-01T00:00:00+00:00",
+              "actual_pct": 3.434065934065944,
+              "predicted_pct": 1.4771923490372927,
+              "baseline_pct": 0.0,
+              "train_n": 112,
+              "max_train_label_available_date": "2025-06-01T00:00:00+00:00",
+              "max_train_target_month": "2025-04-01"
+            },
+            {
+              "target_month": "2025-08-01",
+              "forecast_cutoff": "2025-07-07T23:00:00+00:00",
+              "label_available_date": "2025-10-01T00:00:00+00:00",
+              "actual_pct": 3.1872509960159334,
+              "predicted_pct": 0.4293075690125416,
+              "baseline_pct": 0.0,
+              "train_n": 113,
+              "max_train_label_available_date": "2025-07-01T00:00:00+00:00",
+              "max_train_target_month": "2025-05-01"
+            },
+            {
+              "target_month": "2025-09-01",
+              "forecast_cutoff": "2025-08-07T23:00:00+00:00",
+              "label_available_date": "2025-11-01T00:00:00+00:00",
+              "actual_pct": -0.3217503217503248,
+              "predicted_pct": 0.4155198919965938,
+              "baseline_pct": 0.0,
+              "train_n": 114,
+              "max_train_label_available_date": "2025-08-01T00:00:00+00:00",
+              "max_train_target_month": "2025-06-01"
+            },
+            {
+              "target_month": "2025-10-01",
+              "forecast_cutoff": "2025-09-07T23:00:00+00:00",
+              "label_available_date": "2025-12-01T00:00:00+00:00",
+              "actual_pct": 0.3873466752743582,
+              "predicted_pct": 0.029797169606209296,
+              "baseline_pct": 0.0,
+              "train_n": 115,
+              "max_train_label_available_date": "2025-09-01T00:00:00+00:00",
+              "max_train_target_month": "2025-07-01"
+            },
+            {
+              "target_month": "2025-11-01",
+              "forecast_cutoff": "2025-10-07T23:00:00+00:00",
+              "label_available_date": "2026-01-01T00:00:00+00:00",
+              "actual_pct": 0.0,
+              "predicted_pct": -0.06949858415499702,
+              "baseline_pct": 0.0,
+              "train_n": 116,
+              "max_train_label_available_date": "2025-10-01T00:00:00+00:00",
+              "max_train_target_month": "2025-08-01"
+            },
+            {
+              "target_month": "2025-12-01",
+              "forecast_cutoff": "2025-11-08T00:00:00+00:00",
+              "label_available_date": "2026-02-01T00:00:00+00:00",
+              "actual_pct": 0.12861736334404128,
+              "predicted_pct": 0.06915782368634155,
+              "baseline_pct": 0.0,
+              "train_n": 117,
+              "max_train_label_available_date": "2025-11-01T00:00:00+00:00",
+              "max_train_target_month": "2025-09-01"
+            },
+            {
+              "target_month": "2026-01-01",
+              "forecast_cutoff": "2025-12-08T00:00:00+00:00",
+              "label_available_date": "2026-03-01T00:00:00+00:00",
+              "actual_pct": 3.917790622992956,
+              "predicted_pct": 2.1851575352676385,
+              "baseline_pct": 0.0,
+              "train_n": 118,
+              "max_train_label_available_date": "2025-12-01T00:00:00+00:00",
+              "max_train_target_month": "2025-10-01"
+            },
+            {
+              "target_month": "2026-02-01",
+              "forecast_cutoff": "2026-01-08T00:00:00+00:00",
+              "label_available_date": "2026-04-01T00:00:00+00:00",
+              "actual_pct": -4.449938195302849,
+              "predicted_pct": -0.41228572080556264,
+              "baseline_pct": 0.0,
+              "train_n": 119,
+              "max_train_label_available_date": "2026-01-01T00:00:00+00:00",
+              "max_train_target_month": "2025-11-01"
+            },
+            {
+              "target_month": "2026-03-01",
+              "forecast_cutoff": "2026-02-08T00:00:00+00:00",
+              "label_available_date": "2026-05-01T00:00:00+00:00",
+              "actual_pct": 2.7166882276843607,
+              "predicted_pct": 1.3822832525382869,
+              "baseline_pct": 0.0,
+              "train_n": 120,
+              "max_train_label_available_date": "2026-02-01T00:00:00+00:00",
+              "max_train_target_month": "2025-12-01"
+            },
+            {
+              "target_month": "2026-04-01",
+              "forecast_cutoff": "2026-03-08T00:00:00+00:00",
+              "label_available_date": "2026-06-01T00:00:00+00:00",
+              "actual_pct": -0.5037783375314908,
+              "predicted_pct": 2.164915915961711,
+              "baseline_pct": 0.0,
+              "train_n": 121,
+              "max_train_label_available_date": "2026-03-01T00:00:00+00:00",
+              "max_train_target_month": "2026-01-01"
+            },
+            {
+              "target_month": "2026-05-01",
+              "forecast_cutoff": "2026-04-07T23:00:00+00:00",
+              "label_available_date": "2026-07-01T00:00:00+00:00",
+              "actual_pct": 1.8987341772152,
+              "predicted_pct": 1.4267897976690411,
+              "baseline_pct": 0.0,
+              "train_n": 122,
+              "max_train_label_available_date": "2026-04-01T00:00:00+00:00",
+              "max_train_target_month": "2026-02-01"
+            },
+            {
+              "target_month": "2026-06-01",
+              "forecast_cutoff": "2026-05-07T23:00:00+00:00",
+              "label_available_date": "2026-08-01T00:00:00+00:00",
+              "actual_pct": -5.341614906832293,
+              "predicted_pct": -1.6004161326622215,
+              "baseline_pct": 0.0,
+              "train_n": 123,
+              "max_train_label_available_date": "2026-05-01T00:00:00+00:00",
+              "max_train_target_month": "2026-03-01"
+            },
+            {
+              "target_month": "2026-07-01",
+              "forecast_cutoff": "2026-06-07T23:00:00+00:00",
+              "label_available_date": "2026-09-01T00:00:00+00:00",
+              "actual_pct": 1.837270341207331,
+              "predicted_pct": 0.5180808574222822,
+              "baseline_pct": 0.0,
+              "train_n": 124,
+              "max_train_label_available_date": "2026-06-01T00:00:00+00:00",
+              "max_train_target_month": "2026-04-01"
+            },
+            {
+              "target_month": "2026-08-01",
+              "forecast_cutoff": "2026-07-07T23:00:00+00:00",
+              "label_available_date": "2026-10-01T00:00:00+00:00",
+              "actual_pct": 1.030927835051565,
+              "predicted_pct": 2.240638354867357,
+              "baseline_pct": 0.0,
+              "train_n": 125,
+              "max_train_label_available_date": "2026-07-01T00:00:00+00:00",
+              "max_train_target_month": "2026-05-01"
+            },
+            {
+              "target_month": "2026-09-01",
+              "forecast_cutoff": "2026-08-07T23:00:00+00:00",
+              "label_available_date": "2026-11-01T00:00:00+00:00",
+              "actual_pct": -1.913265306122447,
+              "predicted_pct": 0.30854846066316866,
+              "baseline_pct": 0.0,
+              "train_n": 126,
+              "max_train_label_available_date": "2026-08-01T00:00:00+00:00",
+              "max_train_target_month": "2026-06-01"
+            }
+          ]
+        },
+        "both_rsi": {
+          "features": [
+            "history_change_lag0_pct",
+            "history_change_lag1_pct",
+            "history_change_lag2_pct",
+            "history_change_lag3_pct",
+            "history_change_lag6_pct",
+            "history_change_lag12_pct",
+            "history_mean_3m_pct",
+            "history_std_3m_pct",
+            "history_mean_6m_pct",
+            "history_std_6m_pct",
+            "history_mean_12m_pct",
+            "history_std_12m_pct",
+            "season_sin",
+            "season_cos",
+            "commodity_cocoa_gbp_return_4w_pct",
+            "commodity_cocoa_gbp_return_12w_pct",
+            "commodity_cocoa_gbp_return_26w_pct",
+            "commodity_cocoa_gbp_volatility_12w_pct",
+            "commodity_gbp_per_usd_return_4w_pct",
+            "commodity_gbp_per_usd_return_12w_pct",
+            "commodity_cocoa_gbp_rsi_14w",
+            "commodity_cocoa_gbp_rsi_14w_issue_lag3m",
+            "commodity_gbp_per_usd_rsi_14w",
+            "commodity_gbp_per_usd_rsi_14w_issue_lag3m",
+            "history_cpi_rsi_6m"
+          ],
+          "validation_metrics": {
+            "n": 34,
+            "mae_pp": 1.7185157068513008,
+            "rmse_pp": 2.3706471216012788,
+            "directional_accuracy": 0.7352941176470589
+          },
+          "test_metrics": {
+            "n": 33,
+            "mae_pp": 1.6417346982761352,
+            "rmse_pp": 2.06931032819865,
+            "directional_accuracy": 0.6363636363636364
+          },
+          "paired_test_comparison": {
+            "n": 33,
+            "mean_error_reduction_pp": -0.06699710741284932,
+            "median_error_reduction_pp": -0.042559162492388225,
+            "months_improved": 13,
+            "months_worsened": 20,
+            "months_tied": 0
+          },
+          "error_reduction_vs_unchanged_pct": -4.254493434434434,
+          "yearly_test_metrics": {
+            "2024": {
+              "n": 12,
+              "mae_pp": 1.5872176852161584,
+              "rmse_pp": 2.1072584989894683,
+              "directional_accuracy": 0.5833333333333334
+            },
+            "2025": {
+              "n": 12,
+              "mae_pp": 1.3890551356565164,
+              "rmse_pp": 1.704326845640697,
+              "directional_accuracy": 0.5833333333333334
+            },
+            "2026": {
+              "n": 9,
+              "mae_pp": 2.051330132515595,
+              "rmse_pp": 2.4304611403974343,
+              "directional_accuracy": 0.7777777777777778
+            }
+          },
+          "feature_coverage": {
+            "validation": {
+              "commodity_cocoa_gbp_rsi_14w": 1.0,
+              "commodity_cocoa_gbp_rsi_14w_issue_lag3m": 1.0,
+              "commodity_gbp_per_usd_rsi_14w": 1.0,
+              "commodity_gbp_per_usd_rsi_14w_issue_lag3m": 1.0,
+              "history_cpi_rsi_6m": 1.0
+            },
+            "test": {
+              "commodity_cocoa_gbp_rsi_14w": 1.0,
+              "commodity_cocoa_gbp_rsi_14w_issue_lag3m": 1.0,
+              "commodity_gbp_per_usd_rsi_14w": 1.0,
+              "commodity_gbp_per_usd_rsi_14w_issue_lag3m": 1.0,
+              "history_cpi_rsi_6m": 1.0
+            }
+          },
+          "forecast": {
+            "as_of": "2026-11-08",
+            "target_month": "2026-12-01",
+            "change_pct": 1.9604562739200773,
+            "train_n": 129,
+            "max_train_label_available_date": "2026-11-01T00:00:00+00:00",
+            "selected_for_website": false
+          },
+          "test_predictions": [
+            {
+              "target_month": "2024-01-01",
+              "forecast_cutoff": "2023-12-08T00:00:00+00:00",
+              "label_available_date": "2024-03-01T00:00:00+00:00",
+              "actual_pct": 2.5704809286899,
+              "predicted_pct": -0.3835519444268473,
+              "baseline_pct": 0.0,
+              "train_n": 94,
+              "max_train_label_available_date": "2023-12-01T00:00:00+00:00",
+              "max_train_target_month": "2023-10-01"
+            },
+            {
+              "target_month": "2024-02-01",
+              "forecast_cutoff": "2024-01-08T00:00:00+00:00",
+              "label_available_date": "2024-04-01T00:00:00+00:00",
+              "actual_pct": -0.48504446240905663,
+              "predicted_pct": -0.5439077124927695,
+              "baseline_pct": 0.0,
+              "train_n": 95,
+              "max_train_label_available_date": "2024-01-01T00:00:00+00:00",
+              "max_train_target_month": "2023-11-01"
+            },
+            {
+              "target_month": "2024-03-01",
+              "forecast_cutoff": "2024-02-08T00:00:00+00:00",
+              "label_available_date": "2024-05-01T00:00:00+00:00",
+              "actual_pct": 2.3558082859463925,
+              "predicted_pct": -0.10619215996777867,
+              "baseline_pct": 0.0,
+              "train_n": 96,
+              "max_train_label_available_date": "2024-02-01T00:00:00+00:00",
+              "max_train_target_month": "2023-12-01"
+            },
+            {
+              "target_month": "2024-04-01",
+              "forecast_cutoff": "2024-03-08T00:00:00+00:00",
+              "label_available_date": "2024-06-01T00:00:00+00:00",
+              "actual_pct": 1.5873015873015817,
+              "predicted_pct": 1.205199077660325,
+              "baseline_pct": 0.0,
+              "train_n": 97,
+              "max_train_label_available_date": "2024-03-01T00:00:00+00:00",
+              "max_train_target_month": "2024-01-01"
+            },
+            {
+              "target_month": "2024-05-01",
+              "forecast_cutoff": "2024-04-07T23:00:00+00:00",
+              "label_available_date": "2024-07-01T00:00:00+00:00",
+              "actual_pct": -1.3281250000000022,
+              "predicted_pct": 0.47026461552486154,
+              "baseline_pct": 0.0,
+              "train_n": 98,
+              "max_train_label_available_date": "2024-04-01T00:00:00+00:00",
+              "max_train_target_month": "2024-02-01"
+            },
+            {
+              "target_month": "2024-06-01",
+              "forecast_cutoff": "2024-05-07T23:00:00+00:00",
+              "label_available_date": "2024-08-01T00:00:00+00:00",
+              "actual_pct": -0.8709422011084711,
+              "predicted_pct": 0.973991495151452,
+              "baseline_pct": 0.0,
+              "train_n": 99,
+              "max_train_label_available_date": "2024-05-01T00:00:00+00:00",
+              "max_train_target_month": "2024-03-01"
+            },
+            {
+              "target_month": "2024-07-01",
+              "forecast_cutoff": "2024-06-07T23:00:00+00:00",
+              "label_available_date": "2024-09-01T00:00:00+00:00",
+              "actual_pct": 2.635782747603832,
+              "predicted_pct": 0.9939607631341255,
+              "baseline_pct": 0.0,
+              "train_n": 100,
+              "max_train_label_available_date": "2024-06-01T00:00:00+00:00",
+              "max_train_target_month": "2024-04-01"
+            },
+            {
+              "target_month": "2024-08-01",
+              "forecast_cutoff": "2024-07-07T23:00:00+00:00",
+              "label_available_date": "2024-10-01T00:00:00+00:00",
+              "actual_pct": 4.747081712062262,
+              "predicted_pct": -0.30878004716301855,
+              "baseline_pct": 0.0,
+              "train_n": 101,
+              "max_train_label_available_date": "2024-07-01T00:00:00+00:00",
+              "max_train_target_month": "2024-05-01"
+            },
+            {
+              "target_month": "2024-09-01",
+              "forecast_cutoff": "2024-08-07T23:00:00+00:00",
+              "label_available_date": "2024-11-01T00:00:00+00:00",
+              "actual_pct": -2.526002971768204,
+              "predicted_pct": -0.9347580809837832,
+              "baseline_pct": 0.0,
+              "train_n": 102,
+              "max_train_label_available_date": "2024-08-01T00:00:00+00:00",
+              "max_train_target_month": "2024-06-01"
+            },
+            {
+              "target_month": "2024-10-01",
+              "forecast_cutoff": "2024-09-07T23:00:00+00:00",
+              "label_available_date": "2024-12-01T00:00:00+00:00",
+              "actual_pct": 0.9146341463414753,
+              "predicted_pct": 0.6722582424235684,
+              "baseline_pct": 0.0,
+              "train_n": 103,
+              "max_train_label_available_date": "2024-09-01T00:00:00+00:00",
+              "max_train_target_month": "2024-07-01"
+            },
+            {
+              "target_month": "2024-11-01",
+              "forecast_cutoff": "2024-10-07T23:00:00+00:00",
+              "label_available_date": "2025-01-01T00:00:00+00:00",
+              "actual_pct": 0.1510574018126709,
+              "predicted_pct": 1.0757010364230108,
+              "baseline_pct": 0.0,
+              "train_n": 104,
+              "max_train_label_available_date": "2024-10-01T00:00:00+00:00",
+              "max_train_target_month": "2024-08-01"
+            },
+            {
+              "target_month": "2024-12-01",
+              "forecast_cutoff": "2024-11-08T00:00:00+00:00",
+              "label_available_date": "2025-02-01T00:00:00+00:00",
+              "actual_pct": 1.6591251885369696,
+              "predicted_pct": 1.5687835294913988,
+              "baseline_pct": 0.0,
+              "train_n": 105,
+              "max_train_label_available_date": "2024-11-01T00:00:00+00:00",
+              "max_train_target_month": "2024-09-01"
+            },
+            {
+              "target_month": "2025-01-01",
+              "forecast_cutoff": "2024-12-08T00:00:00+00:00",
+              "label_available_date": "2025-03-01T00:00:00+00:00",
+              "actual_pct": 4.6735905044510195,
+              "predicted_pct": 1.3414129549639888,
+              "baseline_pct": 0.0,
+              "train_n": 106,
+              "max_train_label_available_date": "2024-12-01T00:00:00+00:00",
+              "max_train_target_month": "2024-10-01"
+            },
+            {
+              "target_month": "2025-02-01",
+              "forecast_cutoff": "2025-01-08T00:00:00+00:00",
+              "label_available_date": "2025-04-01T00:00:00+00:00",
+              "actual_pct": 1.700921332388372,
+              "predicted_pct": -0.08132269164006632,
+              "baseline_pct": 0.0,
+              "train_n": 107,
+              "max_train_label_available_date": "2025-01-01T00:00:00+00:00",
+              "max_train_target_month": "2024-11-01"
+            },
+            {
+              "target_month": "2025-03-01",
+              "forecast_cutoff": "2025-02-08T00:00:00+00:00",
+              "label_available_date": "2025-05-01T00:00:00+00:00",
+              "actual_pct": -0.2090592334494823,
+              "predicted_pct": 0.6814320252539674,
+              "baseline_pct": 0.0,
+              "train_n": 108,
+              "max_train_label_available_date": "2025-02-01T00:00:00+00:00",
+              "max_train_target_month": "2024-12-01"
+            },
+            {
+              "target_month": "2025-04-01",
+              "forecast_cutoff": "2025-03-08T00:00:00+00:00",
+              "label_available_date": "2025-06-01T00:00:00+00:00",
+              "actual_pct": 2.3743016759776525,
+              "predicted_pct": 1.3648587184560321,
+              "baseline_pct": 0.0,
+              "train_n": 109,
+              "max_train_label_available_date": "2025-03-01T00:00:00+00:00",
+              "max_train_target_month": "2025-01-01"
+            },
+            {
+              "target_month": "2025-05-01",
+              "forecast_cutoff": "2025-04-07T23:00:00+00:00",
+              "label_available_date": "2025-07-01T00:00:00+00:00",
+              "actual_pct": 1.3642564802182733,
+              "predicted_pct": 1.9735998754024786,
+              "baseline_pct": 0.0,
+              "train_n": 110,
+              "max_train_label_available_date": "2025-04-01T00:00:00+00:00",
+              "max_train_target_month": "2025-02-01"
+            },
+            {
+              "target_month": "2025-06-01",
+              "forecast_cutoff": "2025-05-07T23:00:00+00:00",
+              "label_available_date": "2025-08-01T00:00:00+00:00",
+              "actual_pct": -2.0188425302826385,
+              "predicted_pct": 0.6810088604045794,
+              "baseline_pct": 0.0,
+              "train_n": 111,
+              "max_train_label_available_date": "2025-05-01T00:00:00+00:00",
+              "max_train_target_month": "2025-03-01"
+            },
+            {
+              "target_month": "2025-07-01",
+              "forecast_cutoff": "2025-06-07T23:00:00+00:00",
+              "label_available_date": "2025-09-01T00:00:00+00:00",
+              "actual_pct": 3.434065934065944,
+              "predicted_pct": 1.5186827102684928,
+              "baseline_pct": 0.0,
+              "train_n": 112,
+              "max_train_label_available_date": "2025-06-01T00:00:00+00:00",
+              "max_train_target_month": "2025-04-01"
+            },
+            {
+              "target_month": "2025-08-01",
+              "forecast_cutoff": "2025-07-07T23:00:00+00:00",
+              "label_available_date": "2025-10-01T00:00:00+00:00",
+              "actual_pct": 3.1872509960159334,
+              "predicted_pct": 0.6625600165000881,
+              "baseline_pct": 0.0,
+              "train_n": 113,
+              "max_train_label_available_date": "2025-07-01T00:00:00+00:00",
+              "max_train_target_month": "2025-05-01"
+            },
+            {
+              "target_month": "2025-09-01",
+              "forecast_cutoff": "2025-08-07T23:00:00+00:00",
+              "label_available_date": "2025-11-01T00:00:00+00:00",
+              "actual_pct": -0.3217503217503248,
+              "predicted_pct": 0.37714201925964214,
+              "baseline_pct": 0.0,
+              "train_n": 114,
+              "max_train_label_available_date": "2025-08-01T00:00:00+00:00",
+              "max_train_target_month": "2025-06-01"
+            },
+            {
+              "target_month": "2025-10-01",
+              "forecast_cutoff": "2025-09-07T23:00:00+00:00",
+              "label_available_date": "2025-12-01T00:00:00+00:00",
+              "actual_pct": 0.3873466752743582,
+              "predicted_pct": 0.21466644234318719,
+              "baseline_pct": 0.0,
+              "train_n": 115,
+              "max_train_label_available_date": "2025-09-01T00:00:00+00:00",
+              "max_train_target_month": "2025-07-01"
+            },
+            {
+              "target_month": "2025-11-01",
+              "forecast_cutoff": "2025-10-07T23:00:00+00:00",
+              "label_available_date": "2026-01-01T00:00:00+00:00",
+              "actual_pct": 0.0,
+              "predicted_pct": 0.4479509616036985,
+              "baseline_pct": 0.0,
+              "train_n": 116,
+              "max_train_label_available_date": "2025-10-01T00:00:00+00:00",
+              "max_train_target_month": "2025-08-01"
+            },
+            {
+              "target_month": "2025-12-01",
+              "forecast_cutoff": "2025-11-08T00:00:00+00:00",
+              "label_available_date": "2026-02-01T00:00:00+00:00",
+              "actual_pct": 0.12861736334404128,
+              "predicted_pct": 0.7141306767521443,
+              "baseline_pct": 0.0,
+              "train_n": 117,
+              "max_train_label_available_date": "2025-11-01T00:00:00+00:00",
+              "max_train_target_month": "2025-09-01"
+            },
+            {
+              "target_month": "2026-01-01",
+              "forecast_cutoff": "2025-12-08T00:00:00+00:00",
+              "label_available_date": "2026-03-01T00:00:00+00:00",
+              "actual_pct": 3.917790622992956,
+              "predicted_pct": 2.5250194109848945,
+              "baseline_pct": 0.0,
+              "train_n": 118,
+              "max_train_label_available_date": "2025-12-01T00:00:00+00:00",
+              "max_train_target_month": "2025-10-01"
+            },
+            {
+              "target_month": "2026-02-01",
+              "forecast_cutoff": "2026-01-08T00:00:00+00:00",
+              "label_available_date": "2026-04-01T00:00:00+00:00",
+              "actual_pct": -4.449938195302849,
+              "predicted_pct": -0.18679286966583705,
+              "baseline_pct": 0.0,
+              "train_n": 119,
+              "max_train_label_available_date": "2026-01-01T00:00:00+00:00",
+              "max_train_target_month": "2025-11-01"
+            },
+            {
+              "target_month": "2026-03-01",
+              "forecast_cutoff": "2026-02-08T00:00:00+00:00",
+              "label_available_date": "2026-05-01T00:00:00+00:00",
+              "actual_pct": 2.7166882276843607,
+              "predicted_pct": 1.4287457350178419,
+              "baseline_pct": 0.0,
+              "train_n": 120,
+              "max_train_label_available_date": "2026-02-01T00:00:00+00:00",
+              "max_train_target_month": "2025-12-01"
+            },
+            {
+              "target_month": "2026-04-01",
+              "forecast_cutoff": "2026-03-08T00:00:00+00:00",
+              "label_available_date": "2026-06-01T00:00:00+00:00",
+              "actual_pct": -0.5037783375314908,
+              "predicted_pct": 2.3257899717987205,
+              "baseline_pct": 0.0,
+              "train_n": 121,
+              "max_train_label_available_date": "2026-03-01T00:00:00+00:00",
+              "max_train_target_month": "2026-01-01"
+            },
+            {
+              "target_month": "2026-05-01",
+              "forecast_cutoff": "2026-04-07T23:00:00+00:00",
+              "label_available_date": "2026-07-01T00:00:00+00:00",
+              "actual_pct": 1.8987341772152,
+              "predicted_pct": 1.7089035480094728,
+              "baseline_pct": 0.0,
+              "train_n": 122,
+              "max_train_label_available_date": "2026-04-01T00:00:00+00:00",
+              "max_train_target_month": "2026-02-01"
+            },
+            {
+              "target_month": "2026-06-01",
+              "forecast_cutoff": "2026-05-07T23:00:00+00:00",
+              "label_available_date": "2026-08-01T00:00:00+00:00",
+              "actual_pct": -5.341614906832293,
+              "predicted_pct": -1.286643118590108,
+              "baseline_pct": 0.0,
+              "train_n": 123,
+              "max_train_label_available_date": "2026-05-01T00:00:00+00:00",
+              "max_train_target_month": "2026-03-01"
+            },
+            {
+              "target_month": "2026-07-01",
+              "forecast_cutoff": "2026-06-07T23:00:00+00:00",
+              "label_available_date": "2026-09-01T00:00:00+00:00",
+              "actual_pct": 1.837270341207331,
+              "predicted_pct": 0.45281550091308437,
+              "baseline_pct": 0.0,
+              "train_n": 124,
+              "max_train_label_available_date": "2026-06-01T00:00:00+00:00",
+              "max_train_target_month": "2026-04-01"
+            },
+            {
+              "target_month": "2026-08-01",
+              "forecast_cutoff": "2026-07-07T23:00:00+00:00",
+              "label_available_date": "2026-10-01T00:00:00+00:00",
+              "actual_pct": 1.030927835051565,
+              "predicted_pct": 2.1671022744708672,
+              "baseline_pct": 0.0,
+              "train_n": 125,
+              "max_train_label_available_date": "2026-07-01T00:00:00+00:00",
+              "max_train_target_month": "2026-05-01"
+            },
+            {
+              "target_month": "2026-09-01",
+              "forecast_cutoff": "2026-08-07T23:00:00+00:00",
+              "label_available_date": "2026-11-01T00:00:00+00:00",
+              "actual_pct": -1.913265306122447,
+              "predicted_pct": 0.009846849714646513,
+              "baseline_pct": 0.0,
+              "train_n": 126,
+              "max_train_label_available_date": "2026-08-01T00:00:00+00:00",
+              "max_train_target_month": "2026-06-01"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "category_id": "crisps",
+      "category_name": "UK crisps",
+      "original_deployed_model": "ridge",
+      "original_deployed_metrics": {
+        "n": 33,
+        "mae_pp": 1.3520192122402246,
+        "rmse_pp": 1.7347774458975445,
+        "directional_accuracy": 0.48484848484848486
+      },
+      "no_change_metrics": {
+        "n": 33,
+        "mae_pp": 1.264796617401803,
+        "rmse_pp": 1.6077120176358837,
+        "directional_accuracy": 0.0
+      },
+      "baseline_reproduction": {
+        "validation": {
+          "matched": true,
+          "n": 34,
+          "max_absolute_prediction_difference": 0.0
+        },
+        "test": {
+          "matched": true,
+          "n": 33,
+          "max_absolute_prediction_difference": 0.0
+        }
+      },
+      "arms": {
+        "unchanged": {
+          "features": [
+            "history_change_lag0_pct",
+            "history_change_lag1_pct",
+            "history_change_lag2_pct",
+            "history_change_lag3_pct",
+            "history_change_lag6_pct",
+            "history_change_lag12_pct",
+            "history_mean_3m_pct",
+            "history_std_3m_pct",
+            "history_mean_6m_pct",
+            "history_std_6m_pct",
+            "history_mean_12m_pct",
+            "history_std_12m_pct",
+            "season_sin",
+            "season_cos",
+            "commodity_gbp_per_usd_return_4w_pct",
+            "commodity_gbp_per_usd_return_12w_pct",
+            "commodity_maize_us_gulf_return_4w_pct",
+            "commodity_maize_us_gulf_return_12w_pct",
+            "commodity_maize_us_gulf_volatility_12w_pct",
+            "commodity_wheat_us_gulf_return_4w_pct",
+            "commodity_wheat_us_gulf_return_12w_pct",
+            "commodity_wheat_us_gulf_volatility_12w_pct"
+          ],
+          "validation_metrics": {
+            "n": 34,
+            "mae_pp": 2.2364274677635416,
+            "rmse_pp": 2.7245626867989436,
+            "directional_accuracy": 0.5294117647058824
+          },
+          "test_metrics": {
+            "n": 33,
+            "mae_pp": 1.5405150472313047,
+            "rmse_pp": 1.919654268143682,
+            "directional_accuracy": 0.6363636363636364
+          },
+          "paired_test_comparison": {
+            "n": 33,
+            "mean_error_reduction_pp": 0.0,
+            "median_error_reduction_pp": 0.0,
+            "months_improved": 0,
+            "months_worsened": 0,
+            "months_tied": 33
+          },
+          "error_reduction_vs_unchanged_pct": 0.0,
+          "yearly_test_metrics": {
+            "2024": {
+              "n": 12,
+              "mae_pp": 1.1637619472786869,
+              "rmse_pp": 1.3008880364662672,
+              "directional_accuracy": 0.6666666666666666
+            },
+            "2025": {
+              "n": 12,
+              "mae_pp": 1.4597888164167863,
+              "rmse_pp": 1.8451308976545702,
+              "directional_accuracy": 0.6666666666666666
+            },
+            "2026": {
+              "n": 9,
+              "mae_pp": 2.1504874882541545,
+              "rmse_pp": 2.591558523978851,
+              "directional_accuracy": 0.5555555555555556
+            }
+          },
+          "feature_coverage": {
+            "validation": {},
+            "test": {}
+          },
+          "forecast": {
+            "as_of": "2026-11-08",
+            "target_month": "2026-12-01",
+            "change_pct": -0.39919978409122575,
+            "train_n": 129,
+            "max_train_label_available_date": "2026-11-01T00:00:00+00:00",
+            "selected_for_website": false
+          },
+          "test_predictions": [
+            {
+              "target_month": "2024-01-01",
+              "forecast_cutoff": "2023-12-08T00:00:00+00:00",
+              "label_available_date": "2024-03-01T00:00:00+00:00",
+              "actual_pct": 0.9192383453709541,
+              "predicted_pct": 1.9860306500465996,
+              "baseline_pct": 0.0,
+              "train_n": 94,
+              "max_train_label_available_date": "2023-12-01T00:00:00+00:00",
+              "max_train_target_month": "2023-10-01"
+            },
+            {
+              "target_month": "2024-02-01",
+              "forecast_cutoff": "2024-01-08T00:00:00+00:00",
+              "label_available_date": "2024-04-01T00:00:00+00:00",
+              "actual_pct": -1.3662979830839306,
+              "predicted_pct": 0.3918272272902559,
+              "baseline_pct": 0.0,
+              "train_n": 95,
+              "max_train_label_available_date": "2024-01-01T00:00:00+00:00",
+              "max_train_target_month": "2023-11-01"
+            },
+            {
+              "target_month": "2024-03-01",
+              "forecast_cutoff": "2024-02-08T00:00:00+00:00",
+              "label_available_date": "2024-05-01T00:00:00+00:00",
+              "actual_pct": 1.912928759894461,
+              "predicted_pct": 0.8413503179574214,
+              "baseline_pct": 0.0,
+              "train_n": 96,
+              "max_train_label_available_date": "2024-02-01T00:00:00+00:00",
+              "max_train_target_month": "2023-12-01"
+            },
+            {
+              "target_month": "2024-04-01",
+              "forecast_cutoff": "2024-03-08T00:00:00+00:00",
+              "label_available_date": "2024-06-01T00:00:00+00:00",
+              "actual_pct": -0.8414239482200769,
+              "predicted_pct": -0.8063190453681365,
+              "baseline_pct": 0.0,
+              "train_n": 97,
+              "max_train_label_available_date": "2024-03-01T00:00:00+00:00",
+              "max_train_target_month": "2024-01-01"
+            },
+            {
+              "target_month": "2024-05-01",
+              "forecast_cutoff": "2024-04-07T23:00:00+00:00",
+              "label_available_date": "2024-07-01T00:00:00+00:00",
+              "actual_pct": -0.9791122715404721,
+              "predicted_pct": 1.2483840093124676,
+              "baseline_pct": 0.0,
+              "train_n": 98,
+              "max_train_label_available_date": "2024-04-01T00:00:00+00:00",
+              "max_train_target_month": "2024-02-01"
+            },
+            {
+              "target_month": "2024-06-01",
+              "forecast_cutoff": "2024-05-07T23:00:00+00:00",
+              "label_available_date": "2024-08-01T00:00:00+00:00",
+              "actual_pct": 1.0547132498352152,
+              "predicted_pct": 0.19132755301613347,
+              "baseline_pct": 0.0,
+              "train_n": 99,
+              "max_train_label_available_date": "2024-05-01T00:00:00+00:00",
+              "max_train_target_month": "2024-03-01"
+            },
+            {
+              "target_month": "2024-07-01",
+              "forecast_cutoff": "2024-06-07T23:00:00+00:00",
+              "label_available_date": "2024-09-01T00:00:00+00:00",
+              "actual_pct": -0.9784735812133016,
+              "predicted_pct": 0.9499583699348736,
+              "baseline_pct": 0.0,
+              "train_n": 100,
+              "max_train_label_available_date": "2024-06-01T00:00:00+00:00",
+              "max_train_target_month": "2024-04-01"
+            },
+            {
+              "target_month": "2024-08-01",
+              "forecast_cutoff": "2024-07-07T23:00:00+00:00",
+              "label_available_date": "2024-10-01T00:00:00+00:00",
+              "actual_pct": -1.054018445322813,
+              "predicted_pct": -0.1660084021394554,
+              "baseline_pct": 0.0,
+              "train_n": 101,
+              "max_train_label_available_date": "2024-07-01T00:00:00+00:00",
+              "max_train_target_month": "2024-05-01"
+            },
+            {
+              "target_month": "2024-09-01",
+              "forecast_cutoff": "2024-08-07T23:00:00+00:00",
+              "label_available_date": "2024-11-01T00:00:00+00:00",
+              "actual_pct": 0.9320905459387463,
+              "predicted_pct": 1.6132918430279555,
+              "baseline_pct": 0.0,
+              "train_n": 102,
+              "max_train_label_available_date": "2024-08-01T00:00:00+00:00",
+              "max_train_target_month": "2024-06-01"
+            },
+            {
+              "target_month": "2024-10-01",
+              "forecast_cutoff": "2024-09-07T23:00:00+00:00",
+              "label_available_date": "2024-12-01T00:00:00+00:00",
+              "actual_pct": 1.3192612137203241,
+              "predicted_pct": 2.2645420855307496,
+              "baseline_pct": 0.0,
+              "train_n": 103,
+              "max_train_label_available_date": "2024-09-01T00:00:00+00:00",
+              "max_train_target_month": "2024-07-01"
+            },
+            {
+              "target_month": "2024-11-01",
+              "forecast_cutoff": "2024-10-07T23:00:00+00:00",
+              "label_available_date": "2025-01-01T00:00:00+00:00",
+              "actual_pct": 0.1953125,
+              "predicted_pct": 1.1041270524429303,
+              "baseline_pct": 0.0,
+              "train_n": 104,
+              "max_train_label_available_date": "2024-10-01T00:00:00+00:00",
+              "max_train_target_month": "2024-08-01"
+            },
+            {
+              "target_month": "2024-12-01",
+              "forecast_cutoff": "2024-11-08T00:00:00+00:00",
+              "label_available_date": "2025-02-01T00:00:00+00:00",
+              "actual_pct": 0.9096816114360085,
+              "predicted_pct": -0.6812402027233027,
+              "baseline_pct": 0.0,
+              "train_n": 105,
+              "max_train_label_available_date": "2024-11-01T00:00:00+00:00",
+              "max_train_target_month": "2024-09-01"
+            },
+            {
+              "target_month": "2025-01-01",
+              "forecast_cutoff": "2024-12-08T00:00:00+00:00",
+              "label_available_date": "2025-03-01T00:00:00+00:00",
+              "actual_pct": 1.7385705086928382,
+              "predicted_pct": 0.017834170099669734,
+              "baseline_pct": 0.0,
+              "train_n": 106,
+              "max_train_label_available_date": "2024-12-01T00:00:00+00:00",
+              "max_train_target_month": "2024-10-01"
+            },
+            {
+              "target_month": "2025-02-01",
+              "forecast_cutoff": "2025-01-08T00:00:00+00:00",
+              "label_available_date": "2025-04-01T00:00:00+00:00",
+              "actual_pct": -1.0126582278480956,
+              "predicted_pct": -0.29856260772411536,
+              "baseline_pct": 0.0,
+              "train_n": 107,
+              "max_train_label_available_date": "2025-01-01T00:00:00+00:00",
+              "max_train_target_month": "2024-11-01"
+            },
+            {
+              "target_month": "2025-03-01",
+              "forecast_cutoff": "2025-02-08T00:00:00+00:00",
+              "label_available_date": "2025-05-01T00:00:00+00:00",
+              "actual_pct": 1.278772378516635,
+              "predicted_pct": 0.97772048962493,
+              "baseline_pct": 0.0,
+              "train_n": 108,
+              "max_train_label_available_date": "2025-02-01T00:00:00+00:00",
+              "max_train_target_month": "2024-12-01"
+            },
+            {
+              "target_month": "2025-04-01",
+              "forecast_cutoff": "2025-03-08T00:00:00+00:00",
+              "label_available_date": "2025-06-01T00:00:00+00:00",
+              "actual_pct": -0.3156565656565635,
+              "predicted_pct": 0.6916622069083723,
+              "baseline_pct": 0.0,
+              "train_n": 109,
+              "max_train_label_available_date": "2025-03-01T00:00:00+00:00",
+              "max_train_target_month": "2025-01-01"
+            },
+            {
+              "target_month": "2025-05-01",
+              "forecast_cutoff": "2025-04-07T23:00:00+00:00",
+              "label_available_date": "2025-07-01T00:00:00+00:00",
+              "actual_pct": 0.1266624445851683,
+              "predicted_pct": 0.9210750996096341,
+              "baseline_pct": 0.0,
+              "train_n": 110,
+              "max_train_label_available_date": "2025-04-01T00:00:00+00:00",
+              "max_train_target_month": "2025-02-01"
+            },
+            {
+              "target_month": "2025-06-01",
+              "forecast_cutoff": "2025-05-07T23:00:00+00:00",
+              "label_available_date": "2025-08-01T00:00:00+00:00",
+              "actual_pct": 1.0752688172043223,
+              "predicted_pct": 1.6946532828272158,
+              "baseline_pct": 0.0,
+              "train_n": 111,
+              "max_train_label_available_date": "2025-05-01T00:00:00+00:00",
+              "max_train_target_month": "2025-03-01"
+            },
+            {
+              "target_month": "2025-07-01",
+              "forecast_cutoff": "2025-06-07T23:00:00+00:00",
+              "label_available_date": "2025-09-01T00:00:00+00:00",
+              "actual_pct": -0.25031289111389077,
+              "predicted_pct": 2.0771517718223063,
+              "baseline_pct": 0.0,
+              "train_n": 112,
+              "max_train_label_available_date": "2025-06-01T00:00:00+00:00",
+              "max_train_target_month": "2025-04-01"
+            },
+            {
+              "target_month": "2025-08-01",
+              "forecast_cutoff": "2025-07-07T23:00:00+00:00",
+              "label_available_date": "2025-10-01T00:00:00+00:00",
+              "actual_pct": 0.0627352572145412,
+              "predicted_pct": 0.6225043667163412,
+              "baseline_pct": 0.0,
+              "train_n": 113,
+              "max_train_label_available_date": "2025-07-01T00:00:00+00:00",
+              "max_train_target_month": "2025-05-01"
+            },
+            {
+              "target_month": "2025-09-01",
+              "forecast_cutoff": "2025-08-07T23:00:00+00:00",
+              "label_available_date": "2025-11-01T00:00:00+00:00",
+              "actual_pct": -3.1974921630093966,
+              "predicted_pct": 1.2120734057387492,
+              "baseline_pct": 0.0,
+              "train_n": 114,
+              "max_train_label_available_date": "2025-08-01T00:00:00+00:00",
+              "max_train_target_month": "2025-06-01"
+            },
+            {
+              "target_month": "2025-10-01",
+              "forecast_cutoff": "2025-09-07T23:00:00+00:00",
+              "label_available_date": "2025-12-01T00:00:00+00:00",
+              "actual_pct": 3.626943005181338,
+              "predicted_pct": 1.5107837495217364,
+              "baseline_pct": 0.0,
+              "train_n": 115,
+              "max_train_label_available_date": "2025-09-01T00:00:00+00:00",
+              "max_train_target_month": "2025-07-01"
+            },
+            {
+              "target_month": "2025-11-01",
+              "forecast_cutoff": "2025-10-07T23:00:00+00:00",
+              "label_available_date": "2026-01-01T00:00:00+00:00",
+              "actual_pct": -1.4375000000000027,
+              "predicted_pct": -0.7594995282732804,
+              "baseline_pct": 0.0,
+              "train_n": 116,
+              "max_train_label_available_date": "2025-10-01T00:00:00+00:00",
+              "max_train_target_month": "2025-08-01"
+            },
+            {
+              "target_month": "2025-12-01",
+              "forecast_cutoff": "2025-11-08T00:00:00+00:00",
+              "label_available_date": "2026-02-01T00:00:00+00:00",
+              "actual_pct": 2.0925808497146647,
+              "predicted_pct": -0.17692613789315342,
+              "baseline_pct": 0.0,
+              "train_n": 117,
+              "max_train_label_available_date": "2025-11-01T00:00:00+00:00",
+              "max_train_target_month": "2025-09-01"
+            },
+            {
+              "target_month": "2026-01-01",
+              "forecast_cutoff": "2025-12-08T00:00:00+00:00",
+              "label_available_date": "2026-03-01T00:00:00+00:00",
+              "actual_pct": -0.9937888198757738,
+              "predicted_pct": -0.1172625626256022,
+              "baseline_pct": 0.0,
+              "train_n": 118,
+              "max_train_label_available_date": "2025-12-01T00:00:00+00:00",
+              "max_train_target_month": "2025-10-01"
+            },
+            {
+              "target_month": "2026-02-01",
+              "forecast_cutoff": "2026-01-08T00:00:00+00:00",
+              "label_available_date": "2026-04-01T00:00:00+00:00",
+              "actual_pct": 0.12547051442910462,
+              "predicted_pct": 3.074673438098592,
+              "baseline_pct": 0.0,
+              "train_n": 119,
+              "max_train_label_available_date": "2026-01-01T00:00:00+00:00",
+              "max_train_target_month": "2025-11-01"
+            },
+            {
+              "target_month": "2026-03-01",
+              "forecast_cutoff": "2026-02-08T00:00:00+00:00",
+              "label_available_date": "2026-05-01T00:00:00+00:00",
+              "actual_pct": -0.43859649122806044,
+              "predicted_pct": 1.8049810043448584,
+              "baseline_pct": 0.0,
+              "train_n": 120,
+              "max_train_label_available_date": "2026-02-01T00:00:00+00:00",
+              "max_train_target_month": "2025-12-01"
+            },
+            {
+              "target_month": "2026-04-01",
+              "forecast_cutoff": "2026-03-08T00:00:00+00:00",
+              "label_available_date": "2026-06-01T00:00:00+00:00",
+              "actual_pct": 0.8810572687224738,
+              "predicted_pct": 0.449150281155396,
+              "baseline_pct": 0.0,
+              "train_n": 121,
+              "max_train_label_available_date": "2026-03-01T00:00:00+00:00",
+              "max_train_target_month": "2026-01-01"
+            },
+            {
+              "target_month": "2026-05-01",
+              "forecast_cutoff": "2026-04-07T23:00:00+00:00",
+              "label_available_date": "2026-07-01T00:00:00+00:00",
+              "actual_pct": -1.5595757953836609,
+              "predicted_pct": 2.0932884903576734,
+              "baseline_pct": 0.0,
+              "train_n": 122,
+              "max_train_label_available_date": "2026-04-01T00:00:00+00:00",
+              "max_train_target_month": "2026-02-01"
+            },
+            {
+              "target_month": "2026-06-01",
+              "forecast_cutoff": "2026-05-07T23:00:00+00:00",
+              "label_available_date": "2026-08-01T00:00:00+00:00",
+              "actual_pct": 0.9505703422053147,
+              "predicted_pct": -0.8660687591454336,
+              "baseline_pct": 0.0,
+              "train_n": 123,
+              "max_train_label_available_date": "2026-05-01T00:00:00+00:00",
+              "max_train_target_month": "2026-03-01"
+            },
+            {
+              "target_month": "2026-07-01",
+              "forecast_cutoff": "2026-06-07T23:00:00+00:00",
+              "label_available_date": "2026-09-01T00:00:00+00:00",
+              "actual_pct": -1.5065913370998163,
+              "predicted_pct": -0.8660157195946745,
+              "baseline_pct": 0.0,
+              "train_n": 124,
+              "max_train_label_available_date": "2026-06-01T00:00:00+00:00",
+              "max_train_target_month": "2026-04-01"
+            },
+            {
+              "target_month": "2026-08-01",
+              "forecast_cutoff": "2026-07-07T23:00:00+00:00",
+              "label_available_date": "2026-10-01T00:00:00+00:00",
+              "actual_pct": 4.780114722753348,
+              "predicted_pct": -0.3192499023802815,
+              "baseline_pct": 0.0,
+              "train_n": 125,
+              "max_train_label_available_date": "2026-07-01T00:00:00+00:00",
+              "max_train_target_month": "2026-05-01"
+            },
+            {
+              "target_month": "2026-09-01",
+              "forecast_cutoff": "2026-08-07T23:00:00+00:00",
+              "label_available_date": "2026-11-01T00:00:00+00:00",
+              "actual_pct": -1.8248175182481785,
+              "predicted_pct": -0.18108741775130166,
+              "baseline_pct": 0.0,
+              "train_n": 126,
+              "max_train_label_available_date": "2026-08-01T00:00:00+00:00",
+              "max_train_target_month": "2026-06-01"
+            }
+          ]
+        },
+        "weekly_rsi": {
+          "features": [
+            "history_change_lag0_pct",
+            "history_change_lag1_pct",
+            "history_change_lag2_pct",
+            "history_change_lag3_pct",
+            "history_change_lag6_pct",
+            "history_change_lag12_pct",
+            "history_mean_3m_pct",
+            "history_std_3m_pct",
+            "history_mean_6m_pct",
+            "history_std_6m_pct",
+            "history_mean_12m_pct",
+            "history_std_12m_pct",
+            "season_sin",
+            "season_cos",
+            "commodity_gbp_per_usd_return_4w_pct",
+            "commodity_gbp_per_usd_return_12w_pct",
+            "commodity_maize_us_gulf_return_4w_pct",
+            "commodity_maize_us_gulf_return_12w_pct",
+            "commodity_maize_us_gulf_volatility_12w_pct",
+            "commodity_wheat_us_gulf_return_4w_pct",
+            "commodity_wheat_us_gulf_return_12w_pct",
+            "commodity_wheat_us_gulf_volatility_12w_pct",
+            "commodity_gbp_per_usd_rsi_14w",
+            "commodity_gbp_per_usd_rsi_14w_issue_lag3m",
+            "commodity_maize_us_gulf_rsi_14w",
+            "commodity_maize_us_gulf_rsi_14w_issue_lag3m",
+            "commodity_wheat_us_gulf_rsi_14w",
+            "commodity_wheat_us_gulf_rsi_14w_issue_lag3m"
+          ],
+          "validation_metrics": {
+            "n": 34,
+            "mae_pp": 2.231297797123903,
+            "rmse_pp": 2.7035606784671575,
+            "directional_accuracy": 0.5294117647058824
+          },
+          "test_metrics": {
+            "n": 33,
+            "mae_pp": 1.5651567078980708,
+            "rmse_pp": 1.9337748862194848,
+            "directional_accuracy": 0.5151515151515151
+          },
+          "paired_test_comparison": {
+            "n": 33,
+            "mean_error_reduction_pp": -0.024641660666765902,
+            "median_error_reduction_pp": -0.07302414317534778,
+            "months_improved": 15,
+            "months_worsened": 18,
+            "months_tied": 0
+          },
+          "error_reduction_vs_unchanged_pct": -1.5995728643516591,
+          "yearly_test_metrics": {
+            "2024": {
+              "n": 12,
+              "mae_pp": 1.1591009754178596,
+              "rmse_pp": 1.319621025694882,
+              "directional_accuracy": 0.5833333333333334
+            },
+            "2025": {
+              "n": 12,
+              "mae_pp": 1.475261133370904,
+              "rmse_pp": 1.8645288255152477,
+              "directional_accuracy": 0.5
+            },
+            "2026": {
+              "n": 9,
+              "mae_pp": 2.2264251172412415,
+              "rmse_pp": 2.5989016170792785,
+              "directional_accuracy": 0.4444444444444444
+            }
+          },
+          "feature_coverage": {
+            "validation": {
+              "commodity_gbp_per_usd_rsi_14w": 1.0,
+              "commodity_gbp_per_usd_rsi_14w_issue_lag3m": 1.0,
+              "commodity_maize_us_gulf_rsi_14w": 1.0,
+              "commodity_maize_us_gulf_rsi_14w_issue_lag3m": 1.0,
+              "commodity_wheat_us_gulf_rsi_14w": 1.0,
+              "commodity_wheat_us_gulf_rsi_14w_issue_lag3m": 1.0
+            },
+            "test": {
+              "commodity_gbp_per_usd_rsi_14w": 1.0,
+              "commodity_gbp_per_usd_rsi_14w_issue_lag3m": 1.0,
+              "commodity_maize_us_gulf_rsi_14w": 1.0,
+              "commodity_maize_us_gulf_rsi_14w_issue_lag3m": 1.0,
+              "commodity_wheat_us_gulf_rsi_14w": 1.0,
+              "commodity_wheat_us_gulf_rsi_14w_issue_lag3m": 1.0
+            }
+          },
+          "forecast": {
+            "as_of": "2026-11-08",
+            "target_month": "2026-12-01",
+            "change_pct": -0.3182158130230566,
+            "train_n": 129,
+            "max_train_label_available_date": "2026-11-01T00:00:00+00:00",
+            "selected_for_website": false
+          },
+          "test_predictions": [
+            {
+              "target_month": "2024-01-01",
+              "forecast_cutoff": "2023-12-08T00:00:00+00:00",
+              "label_available_date": "2024-03-01T00:00:00+00:00",
+              "actual_pct": 0.9192383453709541,
+              "predicted_pct": 2.1252469882357294,
+              "baseline_pct": 0.0,
+              "train_n": 94,
+              "max_train_label_available_date": "2023-12-01T00:00:00+00:00",
+              "max_train_target_month": "2023-10-01"
+            },
+            {
+              "target_month": "2024-02-01",
+              "forecast_cutoff": "2024-01-08T00:00:00+00:00",
+              "label_available_date": "2024-04-01T00:00:00+00:00",
+              "actual_pct": -1.3662979830839306,
+              "predicted_pct": 0.17343961325156454,
+              "baseline_pct": 0.0,
+              "train_n": 95,
+              "max_train_label_available_date": "2024-01-01T00:00:00+00:00",
+              "max_train_target_month": "2023-11-01"
+            },
+            {
+              "target_month": "2024-03-01",
+              "forecast_cutoff": "2024-02-08T00:00:00+00:00",
+              "label_available_date": "2024-05-01T00:00:00+00:00",
+              "actual_pct": 1.912928759894461,
+              "predicted_pct": -0.0603103952141878,
+              "baseline_pct": 0.0,
+              "train_n": 96,
+              "max_train_label_available_date": "2024-02-01T00:00:00+00:00",
+              "max_train_target_month": "2023-12-01"
+            },
+            {
+              "target_month": "2024-04-01",
+              "forecast_cutoff": "2024-03-08T00:00:00+00:00",
+              "label_available_date": "2024-06-01T00:00:00+00:00",
+              "actual_pct": -0.8414239482200769,
+              "predicted_pct": -1.2375107481281287,
+              "baseline_pct": 0.0,
+              "train_n": 97,
+              "max_train_label_available_date": "2024-03-01T00:00:00+00:00",
+              "max_train_target_month": "2024-01-01"
+            },
+            {
+              "target_month": "2024-05-01",
+              "forecast_cutoff": "2024-04-07T23:00:00+00:00",
+              "label_available_date": "2024-07-01T00:00:00+00:00",
+              "actual_pct": -0.9791122715404721,
+              "predicted_pct": 0.766903191351428,
+              "baseline_pct": 0.0,
+              "train_n": 98,
+              "max_train_label_available_date": "2024-04-01T00:00:00+00:00",
+              "max_train_target_month": "2024-02-01"
+            },
+            {
+              "target_month": "2024-06-01",
+              "forecast_cutoff": "2024-05-07T23:00:00+00:00",
+              "label_available_date": "2024-08-01T00:00:00+00:00",
+              "actual_pct": 1.0547132498352152,
+              "predicted_pct": 0.8672231123121318,
+              "baseline_pct": 0.0,
+              "train_n": 99,
+              "max_train_label_available_date": "2024-05-01T00:00:00+00:00",
+              "max_train_target_month": "2024-03-01"
+            },
+            {
+              "target_month": "2024-07-01",
+              "forecast_cutoff": "2024-06-07T23:00:00+00:00",
+              "label_available_date": "2024-09-01T00:00:00+00:00",
+              "actual_pct": -0.9784735812133016,
+              "predicted_pct": 0.6329698833431929,
+              "baseline_pct": 0.0,
+              "train_n": 100,
+              "max_train_label_available_date": "2024-06-01T00:00:00+00:00",
+              "max_train_target_month": "2024-04-01"
+            },
+            {
+              "target_month": "2024-08-01",
+              "forecast_cutoff": "2024-07-07T23:00:00+00:00",
+              "label_available_date": "2024-10-01T00:00:00+00:00",
+              "actual_pct": -1.054018445322813,
+              "predicted_pct": -0.0811148935047957,
+              "baseline_pct": 0.0,
+              "train_n": 101,
+              "max_train_label_available_date": "2024-07-01T00:00:00+00:00",
+              "max_train_target_month": "2024-05-01"
+            },
+            {
+              "target_month": "2024-09-01",
+              "forecast_cutoff": "2024-08-07T23:00:00+00:00",
+              "label_available_date": "2024-11-01T00:00:00+00:00",
+              "actual_pct": 0.9320905459387463,
+              "predicted_pct": 2.055694257236298,
+              "baseline_pct": 0.0,
+              "train_n": 102,
+              "max_train_label_available_date": "2024-08-01T00:00:00+00:00",
+              "max_train_target_month": "2024-06-01"
+            },
+            {
+              "target_month": "2024-10-01",
+              "forecast_cutoff": "2024-09-07T23:00:00+00:00",
+              "label_available_date": "2024-12-01T00:00:00+00:00",
+              "actual_pct": 1.3192612137203241,
+              "predicted_pct": 1.440577289070537,
+              "baseline_pct": 0.0,
+              "train_n": 103,
+              "max_train_label_available_date": "2024-09-01T00:00:00+00:00",
+              "max_train_target_month": "2024-07-01"
+            },
+            {
+              "target_month": "2024-11-01",
+              "forecast_cutoff": "2024-10-07T23:00:00+00:00",
+              "label_available_date": "2025-01-01T00:00:00+00:00",
+              "actual_pct": 0.1953125,
+              "predicted_pct": 1.200026622097788,
+              "baseline_pct": 0.0,
+              "train_n": 104,
+              "max_train_label_available_date": "2024-10-01T00:00:00+00:00",
+              "max_train_target_month": "2024-08-01"
+            },
+            {
+              "target_month": "2024-12-01",
+              "forecast_cutoff": "2024-11-08T00:00:00+00:00",
+              "label_available_date": "2025-02-01T00:00:00+00:00",
+              "actual_pct": 0.9096816114360085,
+              "predicted_pct": -1.1169713738262872,
+              "baseline_pct": 0.0,
+              "train_n": 105,
+              "max_train_label_available_date": "2024-11-01T00:00:00+00:00",
+              "max_train_target_month": "2024-09-01"
+            },
+            {
+              "target_month": "2025-01-01",
+              "forecast_cutoff": "2024-12-08T00:00:00+00:00",
+              "label_available_date": "2025-03-01T00:00:00+00:00",
+              "actual_pct": 1.7385705086928382,
+              "predicted_pct": 0.4270089812349251,
+              "baseline_pct": 0.0,
+              "train_n": 106,
+              "max_train_label_available_date": "2024-12-01T00:00:00+00:00",
+              "max_train_target_month": "2024-10-01"
+            },
+            {
+              "target_month": "2025-02-01",
+              "forecast_cutoff": "2025-01-08T00:00:00+00:00",
+              "label_available_date": "2025-04-01T00:00:00+00:00",
+              "actual_pct": -1.0126582278480956,
+              "predicted_pct": 0.0992489604055489,
+              "baseline_pct": 0.0,
+              "train_n": 107,
+              "max_train_label_available_date": "2025-01-01T00:00:00+00:00",
+              "max_train_target_month": "2024-11-01"
+            },
+            {
+              "target_month": "2025-03-01",
+              "forecast_cutoff": "2025-02-08T00:00:00+00:00",
+              "label_available_date": "2025-05-01T00:00:00+00:00",
+              "actual_pct": 1.278772378516635,
+              "predicted_pct": 1.0659966040647404,
+              "baseline_pct": 0.0,
+              "train_n": 108,
+              "max_train_label_available_date": "2025-02-01T00:00:00+00:00",
+              "max_train_target_month": "2024-12-01"
+            },
+            {
+              "target_month": "2025-04-01",
+              "forecast_cutoff": "2025-03-08T00:00:00+00:00",
+              "label_available_date": "2025-06-01T00:00:00+00:00",
+              "actual_pct": -0.3156565656565635,
+              "predicted_pct": 0.9062218148487541,
+              "baseline_pct": 0.0,
+              "train_n": 109,
+              "max_train_label_available_date": "2025-03-01T00:00:00+00:00",
+              "max_train_target_month": "2025-01-01"
+            },
+            {
+              "target_month": "2025-05-01",
+              "forecast_cutoff": "2025-04-07T23:00:00+00:00",
+              "label_available_date": "2025-07-01T00:00:00+00:00",
+              "actual_pct": 0.1266624445851683,
+              "predicted_pct": 1.0355472083195447,
+              "baseline_pct": 0.0,
+              "train_n": 110,
+              "max_train_label_available_date": "2025-04-01T00:00:00+00:00",
+              "max_train_target_month": "2025-02-01"
+            },
+            {
+              "target_month": "2025-06-01",
+              "forecast_cutoff": "2025-05-07T23:00:00+00:00",
+              "label_available_date": "2025-08-01T00:00:00+00:00",
+              "actual_pct": 1.0752688172043223,
+              "predicted_pct": 1.8471965958739653,
+              "baseline_pct": 0.0,
+              "train_n": 111,
+              "max_train_label_available_date": "2025-05-01T00:00:00+00:00",
+              "max_train_target_month": "2025-03-01"
+            },
+            {
+              "target_month": "2025-07-01",
+              "forecast_cutoff": "2025-06-07T23:00:00+00:00",
+              "label_available_date": "2025-09-01T00:00:00+00:00",
+              "actual_pct": -0.25031289111389077,
+              "predicted_pct": 2.0692376214790333,
+              "baseline_pct": 0.0,
+              "train_n": 112,
+              "max_train_label_available_date": "2025-06-01T00:00:00+00:00",
+              "max_train_target_month": "2025-04-01"
+            },
+            {
+              "target_month": "2025-08-01",
+              "forecast_cutoff": "2025-07-07T23:00:00+00:00",
+              "label_available_date": "2025-10-01T00:00:00+00:00",
+              "actual_pct": 0.0627352572145412,
+              "predicted_pct": -0.2890608933380357,
+              "baseline_pct": 0.0,
+              "train_n": 113,
+              "max_train_label_available_date": "2025-07-01T00:00:00+00:00",
+              "max_train_target_month": "2025-05-01"
+            },
+            {
+              "target_month": "2025-09-01",
+              "forecast_cutoff": "2025-08-07T23:00:00+00:00",
+              "label_available_date": "2025-11-01T00:00:00+00:00",
+              "actual_pct": -3.1974921630093966,
+              "predicted_pct": 1.1234399856529502,
+              "baseline_pct": 0.0,
+              "train_n": 114,
+              "max_train_label_available_date": "2025-08-01T00:00:00+00:00",
+              "max_train_target_month": "2025-06-01"
+            },
+            {
+              "target_month": "2025-10-01",
+              "forecast_cutoff": "2025-09-07T23:00:00+00:00",
+              "label_available_date": "2025-12-01T00:00:00+00:00",
+              "actual_pct": 3.626943005181338,
+              "predicted_pct": 1.1802170103850431,
+              "baseline_pct": 0.0,
+              "train_n": 115,
+              "max_train_label_available_date": "2025-09-01T00:00:00+00:00",
+              "max_train_target_month": "2025-07-01"
+            },
+            {
+              "target_month": "2025-11-01",
+              "forecast_cutoff": "2025-10-07T23:00:00+00:00",
+              "label_available_date": "2026-01-01T00:00:00+00:00",
+              "actual_pct": -1.4375000000000027,
+              "predicted_pct": -1.056366508638539,
+              "baseline_pct": 0.0,
+              "train_n": 116,
+              "max_train_label_available_date": "2025-10-01T00:00:00+00:00",
+              "max_train_target_month": "2025-08-01"
+            },
+            {
+              "target_month": "2025-12-01",
+              "forecast_cutoff": "2025-11-08T00:00:00+00:00",
+              "label_available_date": "2026-02-01T00:00:00+00:00",
+              "actual_pct": 2.0925808497146647,
+              "predicted_pct": -0.2514790396977862,
+              "baseline_pct": 0.0,
+              "train_n": 117,
+              "max_train_label_available_date": "2025-11-01T00:00:00+00:00",
+              "max_train_target_month": "2025-09-01"
+            },
+            {
+              "target_month": "2026-01-01",
+              "forecast_cutoff": "2025-12-08T00:00:00+00:00",
+              "label_available_date": "2026-03-01T00:00:00+00:00",
+              "actual_pct": -0.9937888198757738,
+              "predicted_pct": 0.29713695979381305,
+              "baseline_pct": 0.0,
+              "train_n": 118,
+              "max_train_label_available_date": "2025-12-01T00:00:00+00:00",
+              "max_train_target_month": "2025-10-01"
+            },
+            {
+              "target_month": "2026-02-01",
+              "forecast_cutoff": "2026-01-08T00:00:00+00:00",
+              "label_available_date": "2026-04-01T00:00:00+00:00",
+              "actual_pct": 0.12547051442910462,
+              "predicted_pct": 3.0602542296575663,
+              "baseline_pct": 0.0,
+              "train_n": 119,
+              "max_train_label_available_date": "2026-01-01T00:00:00+00:00",
+              "max_train_target_month": "2025-11-01"
+            },
+            {
+              "target_month": "2026-03-01",
+              "forecast_cutoff": "2026-02-08T00:00:00+00:00",
+              "label_available_date": "2026-05-01T00:00:00+00:00",
+              "actual_pct": -0.43859649122806044,
+              "predicted_pct": 1.4743996289203745,
+              "baseline_pct": 0.0,
+              "train_n": 120,
+              "max_train_label_available_date": "2026-02-01T00:00:00+00:00",
+              "max_train_target_month": "2025-12-01"
+            },
+            {
+              "target_month": "2026-04-01",
+              "forecast_cutoff": "2026-03-08T00:00:00+00:00",
+              "label_available_date": "2026-06-01T00:00:00+00:00",
+              "actual_pct": 0.8810572687224738,
+              "predicted_pct": 0.37612613798004824,
+              "baseline_pct": 0.0,
+              "train_n": 121,
+              "max_train_label_available_date": "2026-03-01T00:00:00+00:00",
+              "max_train_target_month": "2026-01-01"
+            },
+            {
+              "target_month": "2026-05-01",
+              "forecast_cutoff": "2026-04-07T23:00:00+00:00",
+              "label_available_date": "2026-07-01T00:00:00+00:00",
+              "actual_pct": -1.5595757953836609,
+              "predicted_pct": 1.8820004764729292,
+              "baseline_pct": 0.0,
+              "train_n": 122,
+              "max_train_label_available_date": "2026-04-01T00:00:00+00:00",
+              "max_train_target_month": "2026-02-01"
+            },
+            {
+              "target_month": "2026-06-01",
+              "forecast_cutoff": "2026-05-07T23:00:00+00:00",
+              "label_available_date": "2026-08-01T00:00:00+00:00",
+              "actual_pct": 0.9505703422053147,
+              "predicted_pct": -0.8385206889192222,
+              "baseline_pct": 0.0,
+              "train_n": 123,
+              "max_train_label_available_date": "2026-05-01T00:00:00+00:00",
+              "max_train_target_month": "2026-03-01"
+            },
+            {
+              "target_month": "2026-07-01",
+              "forecast_cutoff": "2026-06-07T23:00:00+00:00",
+              "label_available_date": "2026-09-01T00:00:00+00:00",
+              "actual_pct": -1.5065913370998163,
+              "predicted_pct": -0.24091689242991096,
+              "baseline_pct": 0.0,
+              "train_n": 124,
+              "max_train_label_available_date": "2026-06-01T00:00:00+00:00",
+              "max_train_target_month": "2026-04-01"
+            },
+            {
+              "target_month": "2026-08-01",
+              "forecast_cutoff": "2026-07-07T23:00:00+00:00",
+              "label_available_date": "2026-10-01T00:00:00+00:00",
+              "actual_pct": 4.780114722753348,
+              "predicted_pct": -0.42341383783423076,
+              "baseline_pct": 0.0,
+              "train_n": 125,
+              "max_train_label_available_date": "2026-07-01T00:00:00+00:00",
+              "max_train_target_month": "2026-05-01"
+            },
+            {
+              "target_month": "2026-09-01",
+              "forecast_cutoff": "2026-08-07T23:00:00+00:00",
+              "label_available_date": "2026-11-01T00:00:00+00:00",
+              "actual_pct": -1.8248175182481785,
+              "predicted_pct": -0.13049851710452348,
+              "baseline_pct": 0.0,
+              "train_n": 126,
+              "max_train_label_available_date": "2026-08-01T00:00:00+00:00",
+              "max_train_target_month": "2026-06-01"
+            }
+          ]
+        },
+        "cpi_rsi": {
+          "features": [
+            "history_change_lag0_pct",
+            "history_change_lag1_pct",
+            "history_change_lag2_pct",
+            "history_change_lag3_pct",
+            "history_change_lag6_pct",
+            "history_change_lag12_pct",
+            "history_mean_3m_pct",
+            "history_std_3m_pct",
+            "history_mean_6m_pct",
+            "history_std_6m_pct",
+            "history_mean_12m_pct",
+            "history_std_12m_pct",
+            "season_sin",
+            "season_cos",
+            "commodity_gbp_per_usd_return_4w_pct",
+            "commodity_gbp_per_usd_return_12w_pct",
+            "commodity_maize_us_gulf_return_4w_pct",
+            "commodity_maize_us_gulf_return_12w_pct",
+            "commodity_maize_us_gulf_volatility_12w_pct",
+            "commodity_wheat_us_gulf_return_4w_pct",
+            "commodity_wheat_us_gulf_return_12w_pct",
+            "commodity_wheat_us_gulf_volatility_12w_pct",
+            "history_cpi_rsi_6m"
+          ],
+          "validation_metrics": {
+            "n": 34,
+            "mae_pp": 2.2497145167265735,
+            "rmse_pp": 2.7153338542577474,
+            "directional_accuracy": 0.5588235294117647
+          },
+          "test_metrics": {
+            "n": 33,
+            "mae_pp": 1.5317922498825778,
+            "rmse_pp": 1.8699247138784636,
+            "directional_accuracy": 0.6666666666666666
+          },
+          "paired_test_comparison": {
+            "n": 33,
+            "mean_error_reduction_pp": 0.008722797348726934,
+            "median_error_reduction_pp": -0.0025267535944220043,
+            "months_improved": 16,
+            "months_worsened": 17,
+            "months_tied": 0
+          },
+          "error_reduction_vs_unchanged_pct": 0.5662260400769219,
+          "yearly_test_metrics": {
+            "2024": {
+              "n": 12,
+              "mae_pp": 1.2071279385875626,
+              "rmse_pp": 1.4031529289157603,
+              "directional_accuracy": 0.6666666666666666
+            },
+            "2025": {
+              "n": 12,
+              "mae_pp": 1.4575537411263737,
+              "rmse_pp": 1.829710983653581,
+              "directional_accuracy": 0.75
+            },
+            "2026": {
+              "n": 9,
+              "mae_pp": 2.0636626766175374,
+              "rmse_pp": 2.394165205160125,
+              "directional_accuracy": 0.5555555555555556
+            }
+          },
+          "feature_coverage": {
+            "validation": {
+              "history_cpi_rsi_6m": 1.0
+            },
+            "test": {
+              "history_cpi_rsi_6m": 1.0
+            }
+          },
+          "forecast": {
+            "as_of": "2026-11-08",
+            "target_month": "2026-12-01",
+            "change_pct": -0.29244062712925045,
+            "train_n": 129,
+            "max_train_label_available_date": "2026-11-01T00:00:00+00:00",
+            "selected_for_website": false
+          },
+          "test_predictions": [
+            {
+              "target_month": "2024-01-01",
+              "forecast_cutoff": "2023-12-08T00:00:00+00:00",
+              "label_available_date": "2024-03-01T00:00:00+00:00",
+              "actual_pct": 0.9192383453709541,
+              "predicted_pct": 2.0644108774344767,
+              "baseline_pct": 0.0,
+              "train_n": 94,
+              "max_train_label_available_date": "2023-12-01T00:00:00+00:00",
+              "max_train_target_month": "2023-10-01"
+            },
+            {
+              "target_month": "2024-02-01",
+              "forecast_cutoff": "2024-01-08T00:00:00+00:00",
+              "label_available_date": "2024-04-01T00:00:00+00:00",
+              "actual_pct": -1.3662979830839306,
+              "predicted_pct": 0.46879202060846376,
+              "baseline_pct": 0.0,
+              "train_n": 95,
+              "max_train_label_available_date": "2024-01-01T00:00:00+00:00",
+              "max_train_target_month": "2023-11-01"
+            },
+            {
+              "target_month": "2024-03-01",
+              "forecast_cutoff": "2024-02-08T00:00:00+00:00",
+              "label_available_date": "2024-05-01T00:00:00+00:00",
+              "actual_pct": 1.912928759894461,
+              "predicted_pct": 0.16914949454719913,
+              "baseline_pct": 0.0,
+              "train_n": 96,
+              "max_train_label_available_date": "2024-02-01T00:00:00+00:00",
+              "max_train_target_month": "2023-12-01"
+            },
+            {
+              "target_month": "2024-04-01",
+              "forecast_cutoff": "2024-03-08T00:00:00+00:00",
+              "label_available_date": "2024-06-01T00:00:00+00:00",
+              "actual_pct": -0.8414239482200769,
+              "predicted_pct": -0.6026846335994275,
+              "baseline_pct": 0.0,
+              "train_n": 97,
+              "max_train_label_available_date": "2024-03-01T00:00:00+00:00",
+              "max_train_target_month": "2024-01-01"
+            },
+            {
+              "target_month": "2024-05-01",
+              "forecast_cutoff": "2024-04-07T23:00:00+00:00",
+              "label_available_date": "2024-07-01T00:00:00+00:00",
+              "actual_pct": -0.9791122715404721,
+              "predicted_pct": 0.7762162940932779,
+              "baseline_pct": 0.0,
+              "train_n": 98,
+              "max_train_label_available_date": "2024-04-01T00:00:00+00:00",
+              "max_train_target_month": "2024-02-01"
+            },
+            {
+              "target_month": "2024-06-01",
+              "forecast_cutoff": "2024-05-07T23:00:00+00:00",
+              "label_available_date": "2024-08-01T00:00:00+00:00",
+              "actual_pct": 1.0547132498352152,
+              "predicted_pct": 0.7567089701646921,
+              "baseline_pct": 0.0,
+              "train_n": 99,
+              "max_train_label_available_date": "2024-05-01T00:00:00+00:00",
+              "max_train_target_month": "2024-03-01"
+            },
+            {
+              "target_month": "2024-07-01",
+              "forecast_cutoff": "2024-06-07T23:00:00+00:00",
+              "label_available_date": "2024-09-01T00:00:00+00:00",
+              "actual_pct": -0.9784735812133016,
+              "predicted_pct": 0.8373467648396197,
+              "baseline_pct": 0.0,
+              "train_n": 100,
+              "max_train_label_available_date": "2024-06-01T00:00:00+00:00",
+              "max_train_target_month": "2024-04-01"
+            },
+            {
+              "target_month": "2024-08-01",
+              "forecast_cutoff": "2024-07-07T23:00:00+00:00",
+              "label_available_date": "2024-10-01T00:00:00+00:00",
+              "actual_pct": -1.054018445322813,
+              "predicted_pct": -0.39704323012534554,
+              "baseline_pct": 0.0,
+              "train_n": 101,
+              "max_train_label_available_date": "2024-07-01T00:00:00+00:00",
+              "max_train_target_month": "2024-05-01"
+            },
+            {
+              "target_month": "2024-09-01",
+              "forecast_cutoff": "2024-08-07T23:00:00+00:00",
+              "label_available_date": "2024-11-01T00:00:00+00:00",
+              "actual_pct": 0.9320905459387463,
+              "predicted_pct": 1.9519799932974908,
+              "baseline_pct": 0.0,
+              "train_n": 102,
+              "max_train_label_available_date": "2024-08-01T00:00:00+00:00",
+              "max_train_target_month": "2024-06-01"
+            },
+            {
+              "target_month": "2024-10-01",
+              "forecast_cutoff": "2024-09-07T23:00:00+00:00",
+              "label_available_date": "2024-12-01T00:00:00+00:00",
+              "actual_pct": 1.3192612137203241,
+              "predicted_pct": 1.6808750722055124,
+              "baseline_pct": 0.0,
+              "train_n": 103,
+              "max_train_label_available_date": "2024-09-01T00:00:00+00:00",
+              "max_train_target_month": "2024-07-01"
+            },
+            {
+              "target_month": "2024-11-01",
+              "forecast_cutoff": "2024-10-07T23:00:00+00:00",
+              "label_available_date": "2025-01-01T00:00:00+00:00",
+              "actual_pct": 0.1953125,
+              "predicted_pct": 1.2138804973238428,
+              "baseline_pct": 0.0,
+              "train_n": 104,
+              "max_train_label_available_date": "2024-10-01T00:00:00+00:00",
+              "max_train_target_month": "2024-08-01"
+            },
+            {
+              "target_month": "2024-12-01",
+              "forecast_cutoff": "2024-11-08T00:00:00+00:00",
+              "label_available_date": "2025-02-01T00:00:00+00:00",
+              "actual_pct": 0.9096816114360085,
+              "predicted_pct": -1.6868728261684764,
+              "baseline_pct": 0.0,
+              "train_n": 105,
+              "max_train_label_available_date": "2024-11-01T00:00:00+00:00",
+              "max_train_target_month": "2024-09-01"
+            },
+            {
+              "target_month": "2025-01-01",
+              "forecast_cutoff": "2024-12-08T00:00:00+00:00",
+              "label_available_date": "2025-03-01T00:00:00+00:00",
+              "actual_pct": 1.7385705086928382,
+              "predicted_pct": 0.009327956398048419,
+              "baseline_pct": 0.0,
+              "train_n": 106,
+              "max_train_label_available_date": "2024-12-01T00:00:00+00:00",
+              "max_train_target_month": "2024-10-01"
+            },
+            {
+              "target_month": "2025-02-01",
+              "forecast_cutoff": "2025-01-08T00:00:00+00:00",
+              "label_available_date": "2025-04-01T00:00:00+00:00",
+              "actual_pct": -1.0126582278480956,
+              "predicted_pct": -0.47836668891407064,
+              "baseline_pct": 0.0,
+              "train_n": 107,
+              "max_train_label_available_date": "2025-01-01T00:00:00+00:00",
+              "max_train_target_month": "2024-11-01"
+            },
+            {
+              "target_month": "2025-03-01",
+              "forecast_cutoff": "2025-02-08T00:00:00+00:00",
+              "label_available_date": "2025-05-01T00:00:00+00:00",
+              "actual_pct": 1.278772378516635,
+              "predicted_pct": 1.4331381751229448,
+              "baseline_pct": 0.0,
+              "train_n": 108,
+              "max_train_label_available_date": "2025-02-01T00:00:00+00:00",
+              "max_train_target_month": "2024-12-01"
+            },
+            {
+              "target_month": "2025-04-01",
+              "forecast_cutoff": "2025-03-08T00:00:00+00:00",
+              "label_available_date": "2025-06-01T00:00:00+00:00",
+              "actual_pct": -0.3156565656565635,
+              "predicted_pct": 0.6199762659046533,
+              "baseline_pct": 0.0,
+              "train_n": 109,
+              "max_train_label_available_date": "2025-03-01T00:00:00+00:00",
+              "max_train_target_month": "2025-01-01"
+            },
+            {
+              "target_month": "2025-05-01",
+              "forecast_cutoff": "2025-04-07T23:00:00+00:00",
+              "label_available_date": "2025-07-01T00:00:00+00:00",
+              "actual_pct": 0.1266624445851683,
+              "predicted_pct": 0.5646964700030159,
+              "baseline_pct": 0.0,
+              "train_n": 110,
+              "max_train_label_available_date": "2025-04-01T00:00:00+00:00",
+              "max_train_target_month": "2025-02-01"
+            },
+            {
+              "target_month": "2025-06-01",
+              "forecast_cutoff": "2025-05-07T23:00:00+00:00",
+              "label_available_date": "2025-08-01T00:00:00+00:00",
+              "actual_pct": 1.0752688172043223,
+              "predicted_pct": 1.947904847995384,
+              "baseline_pct": 0.0,
+              "train_n": 111,
+              "max_train_label_available_date": "2025-05-01T00:00:00+00:00",
+              "max_train_target_month": "2025-03-01"
+            },
+            {
+              "target_month": "2025-07-01",
+              "forecast_cutoff": "2025-06-07T23:00:00+00:00",
+              "label_available_date": "2025-09-01T00:00:00+00:00",
+              "actual_pct": -0.25031289111389077,
+              "predicted_pct": 2.191552052492654,
+              "baseline_pct": 0.0,
+              "train_n": 112,
+              "max_train_label_available_date": "2025-06-01T00:00:00+00:00",
+              "max_train_target_month": "2025-04-01"
+            },
+            {
+              "target_month": "2025-08-01",
+              "forecast_cutoff": "2025-07-07T23:00:00+00:00",
+              "label_available_date": "2025-10-01T00:00:00+00:00",
+              "actual_pct": 0.0627352572145412,
+              "predicted_pct": 1.1762235830581895,
+              "baseline_pct": 0.0,
+              "train_n": 113,
+              "max_train_label_available_date": "2025-07-01T00:00:00+00:00",
+              "max_train_target_month": "2025-05-01"
+            },
+            {
+              "target_month": "2025-09-01",
+              "forecast_cutoff": "2025-08-07T23:00:00+00:00",
+              "label_available_date": "2025-11-01T00:00:00+00:00",
+              "actual_pct": -3.1974921630093966,
+              "predicted_pct": 1.211978689447246,
+              "baseline_pct": 0.0,
+              "train_n": 114,
+              "max_train_label_available_date": "2025-08-01T00:00:00+00:00",
+              "max_train_target_month": "2025-06-01"
+            },
+            {
+              "target_month": "2025-10-01",
+              "forecast_cutoff": "2025-09-07T23:00:00+00:00",
+              "label_available_date": "2025-12-01T00:00:00+00:00",
+              "actual_pct": 3.626943005181338,
+              "predicted_pct": 1.508256995927314,
+              "baseline_pct": 0.0,
+              "train_n": 115,
+              "max_train_label_available_date": "2025-09-01T00:00:00+00:00",
+              "max_train_target_month": "2025-07-01"
+            },
+            {
+              "target_month": "2025-11-01",
+              "forecast_cutoff": "2025-10-07T23:00:00+00:00",
+              "label_available_date": "2026-01-01T00:00:00+00:00",
+              "actual_pct": -1.4375000000000027,
+              "predicted_pct": -0.3390659697941091,
+              "baseline_pct": 0.0,
+              "train_n": 116,
+              "max_train_label_available_date": "2025-10-01T00:00:00+00:00",
+              "max_train_target_month": "2025-08-01"
+            },
+            {
+              "target_month": "2025-12-01",
+              "forecast_cutoff": "2025-11-08T00:00:00+00:00",
+              "label_available_date": "2026-02-01T00:00:00+00:00",
+              "actual_pct": 2.0925808497146647,
+              "predicted_pct": 0.44808289317018374,
+              "baseline_pct": 0.0,
+              "train_n": 117,
+              "max_train_label_available_date": "2025-11-01T00:00:00+00:00",
+              "max_train_target_month": "2025-09-01"
+            },
+            {
+              "target_month": "2026-01-01",
+              "forecast_cutoff": "2025-12-08T00:00:00+00:00",
+              "label_available_date": "2026-03-01T00:00:00+00:00",
+              "actual_pct": -0.9937888198757738,
+              "predicted_pct": 0.08097719451891232,
+              "baseline_pct": 0.0,
+              "train_n": 118,
+              "max_train_label_available_date": "2025-12-01T00:00:00+00:00",
+              "max_train_target_month": "2025-10-01"
+            },
+            {
+              "target_month": "2026-02-01",
+              "forecast_cutoff": "2026-01-08T00:00:00+00:00",
+              "label_available_date": "2026-04-01T00:00:00+00:00",
+              "actual_pct": 0.12547051442910462,
+              "predicted_pct": 3.0239734524394883,
+              "baseline_pct": 0.0,
+              "train_n": 119,
+              "max_train_label_available_date": "2026-01-01T00:00:00+00:00",
+              "max_train_target_month": "2025-11-01"
+            },
+            {
+              "target_month": "2026-03-01",
+              "forecast_cutoff": "2026-02-08T00:00:00+00:00",
+              "label_available_date": "2026-05-01T00:00:00+00:00",
+              "actual_pct": -0.43859649122806044,
+              "predicted_pct": 1.898201581157376,
+              "baseline_pct": 0.0,
+              "train_n": 120,
+              "max_train_label_available_date": "2026-02-01T00:00:00+00:00",
+              "max_train_target_month": "2025-12-01"
+            },
+            {
+              "target_month": "2026-04-01",
+              "forecast_cutoff": "2026-03-08T00:00:00+00:00",
+              "label_available_date": "2026-06-01T00:00:00+00:00",
+              "actual_pct": 0.8810572687224738,
+              "predicted_pct": 0.005174106468894251,
+              "baseline_pct": 0.0,
+              "train_n": 121,
+              "max_train_label_available_date": "2026-03-01T00:00:00+00:00",
+              "max_train_target_month": "2026-01-01"
+            },
+            {
+              "target_month": "2026-05-01",
+              "forecast_cutoff": "2026-04-07T23:00:00+00:00",
+              "label_available_date": "2026-07-01T00:00:00+00:00",
+              "actual_pct": -1.5595757953836609,
+              "predicted_pct": 1.7466073972030955,
+              "baseline_pct": 0.0,
+              "train_n": 122,
+              "max_train_label_available_date": "2026-04-01T00:00:00+00:00",
+              "max_train_target_month": "2026-02-01"
+            },
+            {
+              "target_month": "2026-06-01",
+              "forecast_cutoff": "2026-05-07T23:00:00+00:00",
+              "label_available_date": "2026-08-01T00:00:00+00:00",
+              "actual_pct": 0.9505703422053147,
+              "predicted_pct": -0.6152370848433943,
+              "baseline_pct": 0.0,
+              "train_n": 123,
+              "max_train_label_available_date": "2026-05-01T00:00:00+00:00",
+              "max_train_target_month": "2026-03-01"
+            },
+            {
+              "target_month": "2026-07-01",
+              "forecast_cutoff": "2026-06-07T23:00:00+00:00",
+              "label_available_date": "2026-09-01T00:00:00+00:00",
+              "actual_pct": -1.5065913370998163,
+              "predicted_pct": -0.6534356337352298,
+              "baseline_pct": 0.0,
+              "train_n": 124,
+              "max_train_label_available_date": "2026-06-01T00:00:00+00:00",
+              "max_train_target_month": "2026-04-01"
+            },
+            {
+              "target_month": "2026-08-01",
+              "forecast_cutoff": "2026-07-07T23:00:00+00:00",
+              "label_available_date": "2026-10-01T00:00:00+00:00",
+              "actual_pct": 4.780114722753348,
+              "predicted_pct": 0.2661541426100861,
+              "baseline_pct": 0.0,
+              "train_n": 125,
+              "max_train_label_available_date": "2026-07-01T00:00:00+00:00",
+              "max_train_target_month": "2026-05-01"
+            },
+            {
+              "target_month": "2026-09-01",
+              "forecast_cutoff": "2026-08-07T23:00:00+00:00",
+              "label_available_date": "2026-11-01T00:00:00+00:00",
+              "actual_pct": -1.8248175182481785,
+              "predicted_pct": -0.6769105188777407,
+              "baseline_pct": 0.0,
+              "train_n": 126,
+              "max_train_label_available_date": "2026-08-01T00:00:00+00:00",
+              "max_train_target_month": "2026-06-01"
+            }
+          ]
+        },
+        "both_rsi": {
+          "features": [
+            "history_change_lag0_pct",
+            "history_change_lag1_pct",
+            "history_change_lag2_pct",
+            "history_change_lag3_pct",
+            "history_change_lag6_pct",
+            "history_change_lag12_pct",
+            "history_mean_3m_pct",
+            "history_std_3m_pct",
+            "history_mean_6m_pct",
+            "history_std_6m_pct",
+            "history_mean_12m_pct",
+            "history_std_12m_pct",
+            "season_sin",
+            "season_cos",
+            "commodity_gbp_per_usd_return_4w_pct",
+            "commodity_gbp_per_usd_return_12w_pct",
+            "commodity_maize_us_gulf_return_4w_pct",
+            "commodity_maize_us_gulf_return_12w_pct",
+            "commodity_maize_us_gulf_volatility_12w_pct",
+            "commodity_wheat_us_gulf_return_4w_pct",
+            "commodity_wheat_us_gulf_return_12w_pct",
+            "commodity_wheat_us_gulf_volatility_12w_pct",
+            "commodity_gbp_per_usd_rsi_14w",
+            "commodity_gbp_per_usd_rsi_14w_issue_lag3m",
+            "commodity_maize_us_gulf_rsi_14w",
+            "commodity_maize_us_gulf_rsi_14w_issue_lag3m",
+            "commodity_wheat_us_gulf_rsi_14w",
+            "commodity_wheat_us_gulf_rsi_14w_issue_lag3m",
+            "history_cpi_rsi_6m"
+          ],
+          "validation_metrics": {
+            "n": 34,
+            "mae_pp": 2.2441078020701886,
+            "rmse_pp": 2.7055983712486005,
+            "directional_accuracy": 0.5294117647058824
+          },
+          "test_metrics": {
+            "n": 33,
+            "mae_pp": 1.5801648398417176,
+            "rmse_pp": 1.9480815407150587,
+            "directional_accuracy": 0.6363636363636364
+          },
+          "paired_test_comparison": {
+            "n": 33,
+            "mean_error_reduction_pp": -0.03964979261041264,
+            "median_error_reduction_pp": -0.11712810142755803,
+            "months_improved": 14,
+            "months_worsened": 19,
+            "months_tied": 0
+          },
+          "error_reduction_vs_unchanged_pct": -2.573801059695821,
+          "yearly_test_metrics": {
+            "2024": {
+              "n": 12,
+              "mae_pp": 1.2347589087254247,
+              "rmse_pp": 1.4471582741359605,
+              "directional_accuracy": 0.5833333333333334
+            },
+            "2025": {
+              "n": 12,
+              "mae_pp": 1.4286766942870823,
+              "rmse_pp": 1.8365228974815184,
+              "directional_accuracy": 0.75
+            },
+            "2026": {
+              "n": 9,
+              "mae_pp": 2.242690275402955,
+              "rmse_pp": 2.574030878377724,
+              "directional_accuracy": 0.5555555555555556
+            }
+          },
+          "feature_coverage": {
+            "validation": {
+              "commodity_gbp_per_usd_rsi_14w": 1.0,
+              "commodity_gbp_per_usd_rsi_14w_issue_lag3m": 1.0,
+              "commodity_maize_us_gulf_rsi_14w": 1.0,
+              "commodity_maize_us_gulf_rsi_14w_issue_lag3m": 1.0,
+              "commodity_wheat_us_gulf_rsi_14w": 1.0,
+              "commodity_wheat_us_gulf_rsi_14w_issue_lag3m": 1.0,
+              "history_cpi_rsi_6m": 1.0
+            },
+            "test": {
+              "commodity_gbp_per_usd_rsi_14w": 1.0,
+              "commodity_gbp_per_usd_rsi_14w_issue_lag3m": 1.0,
+              "commodity_maize_us_gulf_rsi_14w": 1.0,
+              "commodity_maize_us_gulf_rsi_14w_issue_lag3m": 1.0,
+              "commodity_wheat_us_gulf_rsi_14w": 1.0,
+              "commodity_wheat_us_gulf_rsi_14w_issue_lag3m": 1.0,
+              "history_cpi_rsi_6m": 1.0
+            }
+          },
+          "forecast": {
+            "as_of": "2026-11-08",
+            "target_month": "2026-12-01",
+            "change_pct": -0.354850428074189,
+            "train_n": 129,
+            "max_train_label_available_date": "2026-11-01T00:00:00+00:00",
+            "selected_for_website": false
+          },
+          "test_predictions": [
+            {
+              "target_month": "2024-01-01",
+              "forecast_cutoff": "2023-12-08T00:00:00+00:00",
+              "label_available_date": "2024-03-01T00:00:00+00:00",
+              "actual_pct": 0.9192383453709541,
+              "predicted_pct": 2.190110396256842,
+              "baseline_pct": 0.0,
+              "train_n": 94,
+              "max_train_label_available_date": "2023-12-01T00:00:00+00:00",
+              "max_train_target_month": "2023-10-01"
+            },
+            {
+              "target_month": "2024-02-01",
+              "forecast_cutoff": "2024-01-08T00:00:00+00:00",
+              "label_available_date": "2024-04-01T00:00:00+00:00",
+              "actual_pct": -1.3662979830839306,
+              "predicted_pct": 0.08145444160741844,
+              "baseline_pct": 0.0,
+              "train_n": 95,
+              "max_train_label_available_date": "2024-01-01T00:00:00+00:00",
+              "max_train_target_month": "2023-11-01"
+            },
+            {
+              "target_month": "2024-03-01",
+              "forecast_cutoff": "2024-02-08T00:00:00+00:00",
+              "label_available_date": "2024-05-01T00:00:00+00:00",
+              "actual_pct": 1.912928759894461,
+              "predicted_pct": -0.4792575458855962,
+              "baseline_pct": 0.0,
+              "train_n": 96,
+              "max_train_label_available_date": "2024-02-01T00:00:00+00:00",
+              "max_train_target_month": "2023-12-01"
+            },
+            {
+              "target_month": "2024-04-01",
+              "forecast_cutoff": "2024-03-08T00:00:00+00:00",
+              "label_available_date": "2024-06-01T00:00:00+00:00",
+              "actual_pct": -0.8414239482200769,
+              "predicted_pct": -1.2223522249164127,
+              "baseline_pct": 0.0,
+              "train_n": 97,
+              "max_train_label_available_date": "2024-03-01T00:00:00+00:00",
+              "max_train_target_month": "2024-01-01"
+            },
+            {
+              "target_month": "2024-05-01",
+              "forecast_cutoff": "2024-04-07T23:00:00+00:00",
+              "label_available_date": "2024-07-01T00:00:00+00:00",
+              "actual_pct": -0.9791122715404721,
+              "predicted_pct": 1.0545570616648876,
+              "baseline_pct": 0.0,
+              "train_n": 98,
+              "max_train_label_available_date": "2024-04-01T00:00:00+00:00",
+              "max_train_target_month": "2024-02-01"
+            },
+            {
+              "target_month": "2024-06-01",
+              "forecast_cutoff": "2024-05-07T23:00:00+00:00",
+              "label_available_date": "2024-08-01T00:00:00+00:00",
+              "actual_pct": 1.0547132498352152,
+              "predicted_pct": 1.1884379906250144,
+              "baseline_pct": 0.0,
+              "train_n": 99,
+              "max_train_label_available_date": "2024-05-01T00:00:00+00:00",
+              "max_train_target_month": "2024-03-01"
+            },
+            {
+              "target_month": "2024-07-01",
+              "forecast_cutoff": "2024-06-07T23:00:00+00:00",
+              "label_available_date": "2024-09-01T00:00:00+00:00",
+              "actual_pct": -0.9784735812133016,
+              "predicted_pct": 0.6967645647641347,
+              "baseline_pct": 0.0,
+              "train_n": 100,
+              "max_train_label_available_date": "2024-06-01T00:00:00+00:00",
+              "max_train_target_month": "2024-04-01"
+            },
+            {
+              "target_month": "2024-08-01",
+              "forecast_cutoff": "2024-07-07T23:00:00+00:00",
+              "label_available_date": "2024-10-01T00:00:00+00:00",
+              "actual_pct": -1.054018445322813,
+              "predicted_pct": -0.04888030071189745,
+              "baseline_pct": 0.0,
+              "train_n": 101,
+              "max_train_label_available_date": "2024-07-01T00:00:00+00:00",
+              "max_train_target_month": "2024-05-01"
+            },
+            {
+              "target_month": "2024-09-01",
+              "forecast_cutoff": "2024-08-07T23:00:00+00:00",
+              "label_available_date": "2024-11-01T00:00:00+00:00",
+              "actual_pct": 0.9320905459387463,
+              "predicted_pct": 2.2612887906564096,
+              "baseline_pct": 0.0,
+              "train_n": 102,
+              "max_train_label_available_date": "2024-08-01T00:00:00+00:00",
+              "max_train_target_month": "2024-06-01"
+            },
+            {
+              "target_month": "2024-10-01",
+              "forecast_cutoff": "2024-09-07T23:00:00+00:00",
+              "label_available_date": "2024-12-01T00:00:00+00:00",
+              "actual_pct": 1.3192612137203241,
+              "predicted_pct": 1.362545726429657,
+              "baseline_pct": 0.0,
+              "train_n": 103,
+              "max_train_label_available_date": "2024-09-01T00:00:00+00:00",
+              "max_train_target_month": "2024-07-01"
+            },
+            {
+              "target_month": "2024-11-01",
+              "forecast_cutoff": "2024-10-07T23:00:00+00:00",
+              "label_available_date": "2025-01-01T00:00:00+00:00",
+              "actual_pct": 0.1953125,
+              "predicted_pct": 1.0434157224611371,
+              "baseline_pct": 0.0,
+              "train_n": 104,
+              "max_train_label_available_date": "2024-10-01T00:00:00+00:00",
+              "max_train_target_month": "2024-08-01"
+            },
+            {
+              "target_month": "2024-12-01",
+              "forecast_cutoff": "2024-11-08T00:00:00+00:00",
+              "label_available_date": "2025-02-01T00:00:00+00:00",
+              "actual_pct": 0.9096816114360085,
+              "predicted_pct": -1.3473298907438125,
+              "baseline_pct": 0.0,
+              "train_n": 105,
+              "max_train_label_available_date": "2024-11-01T00:00:00+00:00",
+              "max_train_target_month": "2024-09-01"
+            },
+            {
+              "target_month": "2025-01-01",
+              "forecast_cutoff": "2024-12-08T00:00:00+00:00",
+              "label_available_date": "2025-03-01T00:00:00+00:00",
+              "actual_pct": 1.7385705086928382,
+              "predicted_pct": 0.4803231442847827,
+              "baseline_pct": 0.0,
+              "train_n": 106,
+              "max_train_label_available_date": "2024-12-01T00:00:00+00:00",
+              "max_train_target_month": "2024-10-01"
+            },
+            {
+              "target_month": "2025-02-01",
+              "forecast_cutoff": "2025-01-08T00:00:00+00:00",
+              "label_available_date": "2025-04-01T00:00:00+00:00",
+              "actual_pct": -1.0126582278480956,
+              "predicted_pct": -0.1506367333176301,
+              "baseline_pct": 0.0,
+              "train_n": 107,
+              "max_train_label_available_date": "2025-01-01T00:00:00+00:00",
+              "max_train_target_month": "2024-11-01"
+            },
+            {
+              "target_month": "2025-03-01",
+              "forecast_cutoff": "2025-02-08T00:00:00+00:00",
+              "label_available_date": "2025-05-01T00:00:00+00:00",
+              "actual_pct": 1.278772378516635,
+              "predicted_pct": 1.2845313516988408,
+              "baseline_pct": 0.0,
+              "train_n": 108,
+              "max_train_label_available_date": "2025-02-01T00:00:00+00:00",
+              "max_train_target_month": "2024-12-01"
+            },
+            {
+              "target_month": "2025-04-01",
+              "forecast_cutoff": "2025-03-08T00:00:00+00:00",
+              "label_available_date": "2025-06-01T00:00:00+00:00",
+              "actual_pct": -0.3156565656565635,
+              "predicted_pct": 0.8815911692690553,
+              "baseline_pct": 0.0,
+              "train_n": 109,
+              "max_train_label_available_date": "2025-03-01T00:00:00+00:00",
+              "max_train_target_month": "2025-01-01"
+            },
+            {
+              "target_month": "2025-05-01",
+              "forecast_cutoff": "2025-04-07T23:00:00+00:00",
+              "label_available_date": "2025-07-01T00:00:00+00:00",
+              "actual_pct": 0.1266624445851683,
+              "predicted_pct": 0.8183191348945621,
+              "baseline_pct": 0.0,
+              "train_n": 110,
+              "max_train_label_available_date": "2025-04-01T00:00:00+00:00",
+              "max_train_target_month": "2025-02-01"
+            },
+            {
+              "target_month": "2025-06-01",
+              "forecast_cutoff": "2025-05-07T23:00:00+00:00",
+              "label_available_date": "2025-08-01T00:00:00+00:00",
+              "actual_pct": 1.0752688172043223,
+              "predicted_pct": 2.031826513629802,
+              "baseline_pct": 0.0,
+              "train_n": 111,
+              "max_train_label_available_date": "2025-05-01T00:00:00+00:00",
+              "max_train_target_month": "2025-03-01"
+            },
+            {
+              "target_month": "2025-07-01",
+              "forecast_cutoff": "2025-06-07T23:00:00+00:00",
+              "label_available_date": "2025-09-01T00:00:00+00:00",
+              "actual_pct": -0.25031289111389077,
+              "predicted_pct": 2.133480445979265,
+              "baseline_pct": 0.0,
+              "train_n": 112,
+              "max_train_label_available_date": "2025-06-01T00:00:00+00:00",
+              "max_train_target_month": "2025-04-01"
+            },
+            {
+              "target_month": "2025-08-01",
+              "forecast_cutoff": "2025-07-07T23:00:00+00:00",
+              "label_available_date": "2025-10-01T00:00:00+00:00",
+              "actual_pct": 0.0627352572145412,
+              "predicted_pct": 0.4219636731538147,
+              "baseline_pct": 0.0,
+              "train_n": 113,
+              "max_train_label_available_date": "2025-07-01T00:00:00+00:00",
+              "max_train_target_month": "2025-05-01"
+            },
+            {
+              "target_month": "2025-09-01",
+              "forecast_cutoff": "2025-08-07T23:00:00+00:00",
+              "label_available_date": "2025-11-01T00:00:00+00:00",
+              "actual_pct": -3.1974921630093966,
+              "predicted_pct": 1.3546852455210086,
+              "baseline_pct": 0.0,
+              "train_n": 114,
+              "max_train_label_available_date": "2025-08-01T00:00:00+00:00",
+              "max_train_target_month": "2025-06-01"
+            },
+            {
+              "target_month": "2025-10-01",
+              "forecast_cutoff": "2025-09-07T23:00:00+00:00",
+              "label_available_date": "2025-12-01T00:00:00+00:00",
+              "actual_pct": 3.626943005181338,
+              "predicted_pct": 1.3709848526592856,
+              "baseline_pct": 0.0,
+              "train_n": 115,
+              "max_train_label_available_date": "2025-09-01T00:00:00+00:00",
+              "max_train_target_month": "2025-07-01"
+            },
+            {
+              "target_month": "2025-11-01",
+              "forecast_cutoff": "2025-10-07T23:00:00+00:00",
+              "label_available_date": "2026-01-01T00:00:00+00:00",
+              "actual_pct": -1.4375000000000027,
+              "predicted_pct": -0.4883289914766018,
+              "baseline_pct": 0.0,
+              "train_n": 116,
+              "max_train_label_available_date": "2025-10-01T00:00:00+00:00",
+              "max_train_target_month": "2025-08-01"
+            },
+            {
+              "target_month": "2025-12-01",
+              "forecast_cutoff": "2025-11-08T00:00:00+00:00",
+              "label_available_date": "2026-02-01T00:00:00+00:00",
+              "actual_pct": 2.0925808497146647,
+              "predicted_pct": 0.4202787946591845,
+              "baseline_pct": 0.0,
+              "train_n": 117,
+              "max_train_label_available_date": "2025-11-01T00:00:00+00:00",
+              "max_train_target_month": "2025-09-01"
+            },
+            {
+              "target_month": "2026-01-01",
+              "forecast_cutoff": "2025-12-08T00:00:00+00:00",
+              "label_available_date": "2026-03-01T00:00:00+00:00",
+              "actual_pct": -0.9937888198757738,
+              "predicted_pct": 0.674547557444312,
+              "baseline_pct": 0.0,
+              "train_n": 118,
+              "max_train_label_available_date": "2025-12-01T00:00:00+00:00",
+              "max_train_target_month": "2025-10-01"
+            },
+            {
+              "target_month": "2026-02-01",
+              "forecast_cutoff": "2026-01-08T00:00:00+00:00",
+              "label_available_date": "2026-04-01T00:00:00+00:00",
+              "actual_pct": 0.12547051442910462,
+              "predicted_pct": 3.2736567463630495,
+              "baseline_pct": 0.0,
+              "train_n": 119,
+              "max_train_label_available_date": "2026-01-01T00:00:00+00:00",
+              "max_train_target_month": "2025-11-01"
+            },
+            {
+              "target_month": "2026-03-01",
+              "forecast_cutoff": "2026-02-08T00:00:00+00:00",
+              "label_available_date": "2026-05-01T00:00:00+00:00",
+              "actual_pct": -0.43859649122806044,
+              "predicted_pct": 1.9905714310059108,
+              "baseline_pct": 0.0,
+              "train_n": 120,
+              "max_train_label_available_date": "2026-02-01T00:00:00+00:00",
+              "max_train_target_month": "2025-12-01"
+            },
+            {
+              "target_month": "2026-04-01",
+              "forecast_cutoff": "2026-03-08T00:00:00+00:00",
+              "label_available_date": "2026-06-01T00:00:00+00:00",
+              "actual_pct": 0.8810572687224738,
+              "predicted_pct": 0.31440883055805746,
+              "baseline_pct": 0.0,
+              "train_n": 121,
+              "max_train_label_available_date": "2026-03-01T00:00:00+00:00",
+              "max_train_target_month": "2026-01-01"
+            },
+            {
+              "target_month": "2026-05-01",
+              "forecast_cutoff": "2026-04-07T23:00:00+00:00",
+              "label_available_date": "2026-07-01T00:00:00+00:00",
+              "actual_pct": -1.5595757953836609,
+              "predicted_pct": 2.1201146264005217,
+              "baseline_pct": 0.0,
+              "train_n": 122,
+              "max_train_label_available_date": "2026-04-01T00:00:00+00:00",
+              "max_train_target_month": "2026-02-01"
+            },
+            {
+              "target_month": "2026-06-01",
+              "forecast_cutoff": "2026-05-07T23:00:00+00:00",
+              "label_available_date": "2026-08-01T00:00:00+00:00",
+              "actual_pct": 0.9505703422053147,
+              "predicted_pct": -0.650380906255322,
+              "baseline_pct": 0.0,
+              "train_n": 123,
+              "max_train_label_available_date": "2026-05-01T00:00:00+00:00",
+              "max_train_target_month": "2026-03-01"
+            },
+            {
+              "target_month": "2026-07-01",
+              "forecast_cutoff": "2026-06-07T23:00:00+00:00",
+              "label_available_date": "2026-09-01T00:00:00+00:00",
+              "actual_pct": -1.5065913370998163,
+              "predicted_pct": -0.5188632071610307,
+              "baseline_pct": 0.0,
+              "train_n": 124,
+              "max_train_label_available_date": "2026-06-01T00:00:00+00:00",
+              "max_train_target_month": "2026-04-01"
+            },
+            {
+              "target_month": "2026-08-01",
+              "forecast_cutoff": "2026-07-07T23:00:00+00:00",
+              "label_available_date": "2026-10-01T00:00:00+00:00",
+              "actual_pct": 4.780114722753348,
+              "predicted_pct": 0.14577124708223604,
+              "baseline_pct": 0.0,
+              "train_n": 125,
+              "max_train_label_available_date": "2026-07-01T00:00:00+00:00",
+              "max_train_target_month": "2026-05-01"
+            },
+            {
+              "target_month": "2026-09-01",
+              "forecast_cutoff": "2026-08-07T23:00:00+00:00",
+              "label_available_date": "2026-11-01T00:00:00+00:00",
+              "actual_pct": -1.8248175182481785,
+              "predicted_pct": -0.3556572851287178,
+              "baseline_pct": 0.0,
+              "train_n": 126,
+              "max_train_label_available_date": "2026-08-01T00:00:00+00:00",
+              "max_train_target_month": "2026-06-01"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "original_files_unchanged": 79
+}

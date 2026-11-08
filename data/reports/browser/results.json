@@ -1,0 +1,1688 @@
+{
+  "config": {
+    "argv": [
+      "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/.cache/node/node-v26.13.0-darwin-arm64/bin/node",
+      "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/web/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.config.ts"
+    ],
+    "configFile": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/web/playwright.config.ts",
+    "rootDir": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/web/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/web/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "phone",
+        "name": "phone",
+        "testDir": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/web/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "desktop",
+        "testDir": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/web/e2e",
+        "snapshotDir": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/web/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4174",
+          "browserName": "chromium",
+          "channel": "chromium",
+          "headless": true,
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "video": "off",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "phone",
+        "testDir": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/web/e2e",
+        "snapshotDir": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/web/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4174",
+          "browserName": "chromium",
+          "channel": "chromium",
+          "headless": true,
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "video": "off",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "isMobile": true,
+          "hasTouch": true
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "phone"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/html",
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "mvp.spec.ts",
+      "file": "mvp.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "documented case: Quality Street (quality-street-uk-tub-2025)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 879,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:38.837Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 573,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:52.935Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-beb9d23b975f0dd3f5f2",
+          "file": "mvp.spec.ts",
+          "line": 73,
+          "column": 3
+        },
+        {
+          "title": "documented case: Doritos (doritos-uk-sharing-200-to-180)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 606,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:40.664Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "historical-detective",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-documented-case-Doritos-doritos-uk-sharing-200-to-180--desktop/attachments/historical-detective-ab9a95016446cf9a267ab1039cfada7eb43e1f77.png"
+                    },
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 521,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:53.797Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "historical-detective",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-documented-case-Doritos-doritos-uk-sharing-200-to-180--phone/attachments/historical-detective-ccbb1894ed6706c970e34d9b2f1c4dd20a158f34.png"
+                    },
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-78709caf76093c16a167",
+          "file": "mvp.spec.ts",
+          "line": 73,
+          "column": 3
+        },
+        {
+          "title": "documented case: McVitie's Digestives (mcvities-digestives-uk-500-to-400)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 459,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:41.277Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 424,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:54.324Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-21b941840f1a56d4e343",
+          "file": "mvp.spec.ts",
+          "line": 73,
+          "column": 3
+        },
+        {
+          "title": "documented case: Snickers (snickers-uk-single-2013)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 448,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:41.743Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 415,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:54.755Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-2eddc91767a61be191c1",
+          "file": "mvp.spec.ts",
+          "line": 73,
+          "column": 3
+        },
+        {
+          "title": "documented case: Cadbury Oreo Bites (cadbury-oreo-bites-uk-2025)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 415,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:42.200Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 401,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:55.178Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-de6e9af7fee6d9060950",
+          "file": "mvp.spec.ts",
+          "line": 73,
+          "column": 3
+        },
+        {
+          "title": "documented case: M&M's Chocolate (m-and-ms-chocolate-uk-2025)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 443,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:42.621Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 396,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:55.585Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-0ec798b9172ec9882ca2",
+          "file": "mvp.spec.ts",
+          "line": 73,
+          "column": 3
+        },
+        {
+          "title": "documented case: Galaxy Minstrels (galaxy-minstrels-uk-pouch-2025)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 409,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:43.071Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 415,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:55.988Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-8cccc6c8b407f78e9598",
+          "file": "mvp.spec.ts",
+          "line": 73,
+          "column": 3
+        },
+        {
+          "title": "documented case: Revels (revels-uk-pouch-2025)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 425,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:43.486Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 386,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:56.408Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-33ecaeaf5fdd1dcebe6f",
+          "file": "mvp.spec.ts",
+          "line": 73,
+          "column": 3
+        },
+        {
+          "title": "documented case: Maltesers (maltesers-uk-pouch-2017)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 403,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:43.920Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 381,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:56.800Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-d6ffe7bdfa191aa16cc7",
+          "file": "mvp.spec.ts",
+          "line": 73,
+          "column": 3
+        },
+        {
+          "title": "documented case: Maltesers (maltesers-uk-pouch-2016)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 408,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:44.329Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 393,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:57.188Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-1377243c90f0f391b825",
+          "file": "mvp.spec.ts",
+          "line": 73,
+          "column": 3
+        },
+        {
+          "title": "case search and the slash shortcut filter actual evidence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 465,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:44.744Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 447,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:57.586Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-41be0cca5bc7b35cafa6",
+          "file": "mvp.spec.ts",
+          "line": 98,
+          "column": 1
+        },
+        {
+          "title": "ingredient snapshots show documented differences with their own dates and sources",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 996,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:45.215Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "digestives-recipe",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-ingredient-snapshots-s-479ad-their-own-dates-and-sources-desktop/attachments/digestives-recipe-f3ba976adce3b329161e4f9abb4bb9d728edbf13.png"
+                    },
+                    {
+                      "name": "penguin-recipe",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-ingredient-snapshots-s-479ad-their-own-dates-and-sources-desktop/attachments/penguin-recipe-e1983ba2449f38fc2d65e1ec4378fcb7f1f5863e.png"
+                    },
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 976,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:58.040Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "digestives-recipe",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-ingredient-snapshots-s-479ad-their-own-dates-and-sources-phone/attachments/digestives-recipe-fa90fb9155069493033eb5ce69bacf5c657860ef.png"
+                    },
+                    {
+                      "name": "penguin-recipe",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-ingredient-snapshots-s-479ad-their-own-dates-and-sources-phone/attachments/penguin-recipe-187ea61a315c1332a6b38d7eae817bf9a6ad61a7.png"
+                    },
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-5f96dfd797c16f0ec8b8",
+          "file": "mvp.spec.ts",
+          "line": 114,
+          "column": 1
+        },
+        {
+          "title": "Quality Street evidence exposes barcodes, photographs, provenance and unknown dates",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1223,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:46.217Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "source-evidence",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-Quality-Street-evidenc-73b23-rovenance-and-unknown-dates-desktop/attachments/source-evidence-19b38ddc317eac9b45395418082fc3d1925fb1d8.png"
+                    },
+                    {
+                      "name": "source-photographs",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-Quality-Street-evidenc-73b23-rovenance-and-unknown-dates-desktop/attachments/source-photographs-bace1137bb0eeee8d35aef3d37bc45068f07775f.png"
+                    },
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1133,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:59.021Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "source-evidence",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-Quality-Street-evidenc-73b23-rovenance-and-unknown-dates-phone/attachments/source-evidence-fc3aabee4896881bff16e9f6b7758b92fdcc0a43.png"
+                    },
+                    {
+                      "name": "source-photographs",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-Quality-Street-evidenc-73b23-rovenance-and-unknown-dates-phone/attachments/source-photographs-4bccdbabaabbabfce5af91432a487215abbf2d12.png"
+                    },
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-da80e87cf95bca8286c3",
+          "file": "mvp.spec.ts",
+          "line": 152,
+          "column": 1
+        },
+        {
+          "title": "switching from the final point of a longer history to a shorter history stays usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 630,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:47.445Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "recorded-price-history",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-switching-from-the-fin-44284-horter-history-stays-usable-desktop/attachments/recorded-price-history-2f8de8d8b21b4e04c44174a88636f18e04f795f6.png"
+                    },
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 546,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:53:00.159Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "recorded-price-history",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-switching-from-the-fin-44284-horter-history-stays-usable-phone/attachments/recorded-price-history-7fe85a17ddd15472aa2bedb6c74bb6388dcef75f.png"
+                    },
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-acf6693388efb60fc15c",
+          "file": "mvp.spec.ts",
+          "line": 192,
+          "column": 1
+        },
+        {
+          "title": "comparison switches snapshots and finds the lowest-cost whole-pack basket",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1335,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:48.080Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "whole-pack-planner",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-comparison-switches-sn-577b0-west-cost-whole-pack-basket-desktop/attachments/whole-pack-planner-5335993a6d4bd918af3448ee72808eb62143fa07.png"
+                    },
+                    {
+                      "name": "price-comparison",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-comparison-switches-sn-577b0-west-cost-whole-pack-basket-desktop/attachments/price-comparison-75f07b9aca1e940a3158b5735aedf0dc5338962a.png"
+                    },
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1496,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:53:00.710Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "whole-pack-planner",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-comparison-switches-sn-577b0-west-cost-whole-pack-basket-phone/attachments/whole-pack-planner-7f8ecf164b7427600a193b06c2c6039de7437673.png"
+                    },
+                    {
+                      "name": "price-comparison",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-comparison-switches-sn-577b0-west-cost-whole-pack-basket-phone/attachments/price-comparison-ceea9f65e7eb595e067a51a72b1a0448d128833d.png"
+                    },
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-d7d6f82ec73d1f17cbcb",
+          "file": "mvp.spec.ts",
+          "line": 230,
+          "column": 1
+        },
+        {
+          "title": "forecast renders trained category results or the explicit product-data fallback",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1154,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:49.421Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "category-forecast",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-forecast-renders-train-99034-licit-product-data-fallback-desktop/attachments/category-forecast-af05425199d6d3a9de1a730063f904a9a3809f73.png"
+                    },
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1062,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:53:02.212Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "category-forecast",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-forecast-renders-train-99034-licit-product-data-fallback-phone/attachments/category-forecast-a048b86057a046d1dbe8c75631a8cdc4ff44c917.png"
+                    },
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-dcf5c7222f6ecd4020a1",
+          "file": "mvp.spec.ts",
+          "line": 278,
+          "column": 1
+        },
+        {
+          "title": "skip-to-content preserves comparison and forecast routes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 442,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:50.581Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 398,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:53:03.279Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-17e5afe45a53d2c06456",
+          "file": "mvp.spec.ts",
+          "line": 366,
+          "column": 1
+        },
+        {
+          "title": "phone layouts keep body copy and controls readable without page-level horizontal overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Phone-specific layout and touch-target checks.",
+                  "location": {
+                    "file": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/web/e2e/mvp.spec.ts",
+                    "line": 380,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 168,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:51.029Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Phone-specific layout and touch-target checks.",
+                      "location": {
+                        "file": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/web/e2e/mvp.spec.ts",
+                        "line": 380,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 469,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:53:03.684Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-dab34efee169f9b4fb7b",
+          "file": "mvp.spec.ts",
+          "line": 379,
+          "column": 1
+        },
+        {
+          "title": "memory challenge prints a sourced, exact inflation receipt and resets on a new case",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 796,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:51.204Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "hidden-inflation-receipt",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-memory-challenge-print-be7a1-pt-and-resets-on-a-new-case-desktop/attachments/hidden-inflation-receipt-c2da8ac6ae255bab5f6cc09bcee591865e47ff18.png"
+                    },
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 773,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:53:04.159Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "hidden-inflation-receipt",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-memory-challenge-print-be7a1-pt-and-resets-on-a-new-case-phone/attachments/hidden-inflation-receipt-dac80322cbc86cdf55a5a3a1e0ffb544a66c5780.png"
+                    },
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-6bd13b8820a44ba08e63",
+          "file": "mvp.spec.ts",
+          "line": 395,
+          "column": 1
+        },
+        {
+          "title": "conservative decision output keeps raw forecasts and identifies the post-evaluation rule",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 559,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:52:52.005Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "conservative-output",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-conservative-decision--c3b01-es-the-post-evaluation-rule-desktop/attachments/conservative-output-7e74716851d9458874461a541e7fe7e549a079cc.png"
+                    },
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 531,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T09:53:04.938Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "conservative-output",
+                      "contentType": "image/png",
+                      "path": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/reports/browser/test-results/mvp-conservative-decision--c3b01-es-the-post-evaluation-rule-phone/attachments/conservative-output-f5856eab5b8192748464a79ee096e08d13916baa.png"
+                    },
+                    {
+                      "name": "console-and-resource-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "616161ec86a02322bd37-3d2c3cc4f52661bc13cb",
+          "file": "mvp.spec.ts",
+          "line": 443,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-08T09:52:38.550Z",
+    "duration": 27009.614999999998,
+    "expected": 39,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

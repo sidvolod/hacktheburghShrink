@@ -1,0 +1,23 @@
+{
+  "raw_rows": 2049,
+  "retained_explicit_gb_gbp_rows": 2036,
+  "exclusions": {
+    "not_explicit_gb": 6,
+    "marked_duplicate": 7
+  },
+  "current_product_snapshots": 1589,
+  "date_range": [
+    "2024-06-21",
+    "2026-11-02"
+  ],
+  "barcoded_rows": 2021,
+  "distinct_barcodes": 1590,
+  "barcodes_two_dates": 237,
+  "direct_unit_price_rows": 11,
+  "limitations": [
+    "Current nested product quantities are not dated proof of historical pack mass; no historical unit price is inferred from them.",
+    "Same-barcode coverage is not cross-barcode family coverage.",
+    "Currency is filtered separately from explicit GB location.",
+    "Promotional prices and proof references retained. Missing observations are not flat outcomes."
+  ]
+}

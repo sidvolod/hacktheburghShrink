@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "scope": "Read-only source/data audit; browser rendering reviewed separately by parent agent",
+  "receipt": {
+    "revels_constant_weight_cost_gbp": 3.656756756756757,
+    "revels_effective_inflation_pct": 32.97297297297297,
+    "sticker_contribution_percentage_points": 20,
+    "shrink_contribution_percentage_points": 12.972972972972986,
+    "copy_checks": [
+      "hypothetical cost explicitly not a purchasable pack",
+      "RRP distinguished from checkout price",
+      "unknown retailer/offer conditions remain visible",
+      "ghost area represents weight, not wrapper dimensions"
+    ]
+  },
+  "whole_pack_optimizer": {
+    "independent_exhaustive_oracle_cases": 12,
+    "groups": 4,
+    "target_grams": [
+      300,
+      500,
+      1000
+    ],
+    "checked_outputs": [
+      "minimum checkout pence",
+      "total grams",
+      "excess grams",
+      "number of packs",
+      "basket reconstruction"
+    ],
+    "additional_edge_guards_passed": 6,
+    "conditions": [
+      "one retailer/date/category snapshot",
+      "whole pennies and milligrams with epsilon-only float recovery",
+      "unknown loyalty and stock conditions disclosed",
+      "no invented multibuy tiers"
+    ]
+  },
+  "forecast_decision": {
+    "chocolate_retained": true,
+    "crisps_fallback_pct": 0,
+    "basis": "Retrospective test error comparison, rule applied prospectively only",
+    "required_qualifier": "Rule added after reviewing these test results; future performance is untested.",
+    "original_predictions_and_metrics_mutated": false
+  },
+  "frozen_model_artifact_hashes": {
+    "checked": 1778,
+    "mismatches": 0
+  },
+  "blocking_findings": []
+}

@@ -1,0 +1,99 @@
+{
+  "features": [
+    "history_change_lag0_pct",
+    "history_change_lag1_pct",
+    "history_change_lag2_pct",
+    "history_change_lag3_pct",
+    "history_change_lag6_pct",
+    "history_change_lag12_pct",
+    "history_mean_3m_pct",
+    "history_std_3m_pct",
+    "history_mean_6m_pct",
+    "history_std_6m_pct",
+    "history_mean_12m_pct",
+    "history_std_12m_pct",
+    "season_sin",
+    "season_cos",
+    "commodity_gbp_per_usd_return_4w_pct",
+    "commodity_gbp_per_usd_return_12w_pct",
+    "commodity_maize_us_gulf_return_4w_pct",
+    "commodity_maize_us_gulf_return_12w_pct",
+    "commodity_maize_us_gulf_volatility_12w_pct",
+    "commodity_wheat_us_gulf_return_4w_pct",
+    "commodity_wheat_us_gulf_return_12w_pct",
+    "commodity_wheat_us_gulf_volatility_12w_pct",
+    "commodity_gbp_per_usd_rsi_14w",
+    "commodity_gbp_per_usd_rsi_14w_issue_lag3m",
+    "commodity_maize_us_gulf_rsi_14w",
+    "commodity_maize_us_gulf_rsi_14w_issue_lag3m",
+    "commodity_wheat_us_gulf_rsi_14w",
+    "commodity_wheat_us_gulf_rsi_14w_issue_lag3m"
+  ],
+  "validation_metrics": {
+    "n": 34,
+    "mae_pp": 2.231297797123903,
+    "rmse_pp": 2.7035606784671575,
+    "directional_accuracy": 0.5294117647058824
+  },
+  "test_metrics": {
+    "n": 33,
+    "mae_pp": 1.5651567078980708,
+    "rmse_pp": 1.9337748862194848,
+    "directional_accuracy": 0.5151515151515151
+  },
+  "paired_test_comparison": {
+    "n": 33,
+    "mean_error_reduction_pp": -0.024641660666765902,
+    "median_error_reduction_pp": -0.07302414317534778,
+    "months_improved": 15,
+    "months_worsened": 18,
+    "months_tied": 0
+  },
+  "error_reduction_vs_unchanged_pct": -1.5995728643516591,
+  "yearly_test_metrics": {
+    "2024": {
+      "n": 12,
+      "mae_pp": 1.1591009754178596,
+      "rmse_pp": 1.319621025694882,
+      "directional_accuracy": 0.5833333333333334
+    },
+    "2025": {
+      "n": 12,
+      "mae_pp": 1.475261133370904,
+      "rmse_pp": 1.8645288255152477,
+      "directional_accuracy": 0.5
+    },
+    "2026": {
+      "n": 9,
+      "mae_pp": 2.2264251172412415,
+      "rmse_pp": 2.5989016170792785,
+      "directional_accuracy": 0.4444444444444444
+    }
+  },
+  "feature_coverage": {
+    "validation": {
+      "commodity_gbp_per_usd_rsi_14w": 1.0,
+      "commodity_gbp_per_usd_rsi_14w_issue_lag3m": 1.0,
+      "commodity_maize_us_gulf_rsi_14w": 1.0,
+      "commodity_maize_us_gulf_rsi_14w_issue_lag3m": 1.0,
+      "commodity_wheat_us_gulf_rsi_14w": 1.0,
+      "commodity_wheat_us_gulf_rsi_14w_issue_lag3m": 1.0
+    },
+    "test": {
+      "commodity_gbp_per_usd_rsi_14w": 1.0,
+      "commodity_gbp_per_usd_rsi_14w_issue_lag3m": 1.0,
+      "commodity_maize_us_gulf_rsi_14w": 1.0,
+      "commodity_maize_us_gulf_rsi_14w_issue_lag3m": 1.0,
+      "commodity_wheat_us_gulf_rsi_14w": 1.0,
+      "commodity_wheat_us_gulf_rsi_14w_issue_lag3m": 1.0
+    }
+  },
+  "forecast": {
+    "as_of": "2026-11-08",
+    "target_month": "2026-12-01",
+    "change_pct": -0.3182158130230566,
+    "train_n": 129,
+    "max_train_label_available_date": "2026-11-01T00:00:00+00:00",
+    "selected_for_website": false
+  }
+}

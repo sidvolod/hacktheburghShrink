@@ -1,0 +1,27 @@
+{
+  "target_cadence": "calendar_month",
+  "input_cadence": "weekly_commodities",
+  "aggregation": "Median of observed daily unit prices within month, separately by dimension and price basis",
+  "monthly_rows": 237504,
+  "next_month_observed_rows": 171482,
+  "eligible_sampled_monthly_pairs": 53063,
+  "distinct_eligible_target_months": 1,
+  "eligibility_rule": "Adjacent calendar months; dataset spans both full months; at least 3 observed days per month and observations in first/last 7 days; same listing, price basis and dimension.",
+  "limitations": [
+    "Sampled monthly medians do not imply daily continuous coverage.",
+    "January and April are partial dataset boundary months, excluded by default.",
+    "A large product panel still supplies few independent calendar-month commodity shocks.",
+    "Same retailer/name listings are provisional; family reconstruction remains a separate evidence-review task.",
+    "No commodity feature or future outcome is used to create history-only inputs.",
+    "Missing next-month observations remain null, never zero change."
+  ],
+  "eligible_pairs_by_target_month": [
+    {
+      "target_month": "2024-03-01",
+      "pairs": 53063,
+      "rises": 8512,
+      "falls": 8000,
+      "flat": 36551
+    }
+  ]
+}

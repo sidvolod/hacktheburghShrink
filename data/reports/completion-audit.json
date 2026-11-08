@@ -1,0 +1,169 @@
+{
+  "checked_at": "2026-11-08T05:19:39.729885+00:00",
+  "overall_status": "complete_with_requested_forecast_unavailable_fallback",
+  "requirements": [
+    {
+      "requirement": "Reproducible evidence-preserving data pipeline and replacement-family matching",
+      "status": "verified_with_documented_scope",
+      "evidence": [
+        "data/reports/final-offline-pipeline.log",
+        "data/reports/raw-inventory.json",
+        "data/reports/schema.json",
+        "data/processed/family_members.parquet",
+        "data/processed/retail_catalogue_candidates.parquet"
+      ],
+      "scope": "20 Parquet views; one manually supported cross-barcode replacement and separate unverified candidates; no family-wide coverage claim"
+    },
+    {
+      "requirement": "At least five familiar UK snack changes with correct before/after unit prices",
+      "status": "verified_in_data_and_desktop_phone_browser",
+      "cases": 7,
+      "reported_shelf_price_cases": 5,
+      "evidence": [
+        "data/curated/snack-cases.json",
+        "data/reports/snack-cases-audit.json",
+        "tests/test_snack_cases.py",
+        "web/tests/math.test.ts",
+        "data/reports/browser/results.json",
+        "data/reports/browser/screenshots/desktop-historical-detective.png",
+        "data/reports/browser/screenshots/phone-historical-detective.png"
+      ]
+    },
+    {
+      "requirement": "Chronological three-model comparison or explicit unavailable-forecast fallback",
+      "status": "requested_fallback_verified",
+      "eligible_target_months": [
+        "2024-03-01"
+      ],
+      "model_comparison": "not_run; metrics null; no selected model or forecast",
+      "commodity_and_response_feature_improvement": "unknown",
+      "descriptive_no_change_reference": {
+        "observations": 39920,
+        "prediction_change_fraction": 0.0,
+        "mae_percentage_points": 8.078393715162392,
+        "rmse_percentage_points": 20.149982902048286,
+        "median_absolute_error_percentage_points": 0.0,
+        "mean_actual_change_percentage_points": 1.6741909265937234,
+        "mean_signed_error_percentage_points": -1.6741909265937234,
+        "rises": 6233,
+        "falls": 5581,
+        "flat": 28106,
+        "min_actual_change_percentage_points": -99.8936170212766,
+        "max_actual_change_percentage_points": 900.0,
+        "status": "descriptive_only",
+        "is_chronological_backtest": false,
+        "label": "Observed no-change reference, not a held-out model result",
+        "target_months": [
+          "2024-03-01"
+        ],
+        "scope": "Only eligible mass-price monthly pairs; volume outcomes are excluded",
+        "interpretation": "Predicting zero change for every observed pair produces these errors. This is a single-period data reference and does not measure future skill or model accuracy.",
+        "limitations": [
+          "Provisional retailer/name identities, not reviewed family histories.",
+          "Prices may include loyalty discounts; per-row offer conditions are unknown.",
+          "Large source-observed changes remain and are not adjudicated shrink-event labels.",
+          "No training, tuning, interval calibration or chronological held-out comparison was performed."
+        ]
+      },
+      "evidence": [
+        "data/reports/evaluation.json",
+        "data/reports/evaluation.md",
+        "tests/test_evaluation.py"
+      ]
+    },
+    {
+      "requirement": "Polished TypeScript interface connecting evidence, prices and forecast status",
+      "status": "verified_in_desktop_and_phone_browser_with_visual_review",
+      "evidence": [
+        "web/src/App.tsx",
+        "web/src/styles.css",
+        "data/reports/mvp-prepare-only.log",
+        "data/reports/browser/results.json",
+        "data/reports/browser/screenshots/"
+      ]
+    },
+    {
+      "requirement": "One-command local launch",
+      "status": "verified",
+      "evidence": [
+        "run.sh",
+        "scripts/launch.py",
+        "data/reports/mvp-launch.log",
+        "data/reports/mvp-prepare-only.log",
+        "data/reports/browser/release-browser-check.log"
+      ],
+      "checked_commands": [
+        "./run.sh --check",
+        "./run.sh --check --prepare-only",
+        "./run.sh --check --browser-check --port 4174"
+      ],
+      "http_status": 200
+    },
+    {
+      "requirement": "Meaningful calculation/data checks",
+      "status": "verified",
+      "python_tests": 29,
+      "typescript_tests": 7,
+      "evidence": [
+        "tests/",
+        "web/tests/math.test.ts",
+        "data/reports/mvp-prepare-only.log",
+        "data/reports/browser/release-browser-check.log"
+      ]
+    },
+    {
+      "requirement": "Browser verification and screenshots",
+      "status": "verified",
+      "evidence": [
+        "VERIFICATION.md",
+        "web/e2e/mvp.spec.ts",
+        "data/reports/browser/results.json",
+        "data/reports/browser/release-browser-check.log",
+        "data/reports/browser/screenshots/"
+      ],
+      "browser_tests_passed": 27,
+      "expected_desktop_skip": 1,
+      "unexpected_failures": 0,
+      "flaky_tests": 0,
+      "engine": "Full Chromium, Playwright 1.65.0",
+      "viewports": {
+        "desktop": [
+          1440,
+          1000
+        ],
+        "phone": [
+          390,
+          844
+        ]
+      }
+    },
+    {
+      "requirement": "Launch instructions, concise progress log, demo script and remaining-work documentation",
+      "status": "verified_present_and_reviewed",
+      "evidence": [
+        "README.md",
+        "PROGRESS.md",
+        "DEMO.md",
+        "DATA_GUIDE.md",
+        "VERIFICATION.md"
+      ]
+    }
+  ],
+  "next_required_action": null,
+  "previous_blocker": {
+    "resolved": true,
+    "resolution": "User explicitly authorised project-local headless Playwright; full Chromium was used successfully."
+  },
+  "remaining_future_work": [
+    "Longer overlapping retail history and chronological model evaluation",
+    "Reviewed dated retailer/family replacement joins and ingredient-label pairs",
+    "Historical commodity publication/vintage policy and missing weekly sugar/edible-oil/dairy inputs"
+  ],
+  "artifact_sha256": {
+    "web/src/App.tsx": "28cbdae9dd75d3f66be26961f305c3b16c73fa5d656608af44502e039b440cb5",
+    "web/src/styles.css": "467bcc5201f62022902901a2333ae7bd3e022497203abe7f1410baa67bf6556a",
+    "web/e2e/mvp.spec.ts": "5fc077bac55e1a5f09a7b425a8b086fe1b0929745e2ea4726bb386b8f910147f",
+    "data/curated/snack-cases.json": "e691747039594344a3f753c79a981b572120bd3baff7238faee5de1ac79b91e1",
+    "data/app-dist/data/demo.json": "256d3eaf31c26e14b9f83443cce5aa4498cb01a758bdeb9823d6190926477bb7"
+  }
+}

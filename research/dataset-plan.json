@@ -1,0 +1,41 @@
+{
+  "recommendation": "Separate a broad current UK catalogue, a small evidenced change registry, and any dated price observations. Never imply every catalogue product has a historical timeline.",
+  "catalogue": {
+    "provider": "Open Food Facts official Hugging Face organisation",
+    "url": "https://huggingface.co/datasets/openfoodfacts/product-database",
+    "file": "https://huggingface.co/datasets/openfoodfacts/product-database/resolve/main/food.parquet",
+    "checked_file_bytes": 8035571362,
+    "format": "Parquet current product states",
+    "filter": "countries_tags contains en:united-kingdom",
+    "recommended_fields": ["code", "product_name", "brands", "quantity", "product_quantity", "countries_tags", "ingredients_text", "images", "last_modified_t", "rev"],
+    "retrieval_plan": "Read only needed columns, then filter UK rows; verify actual row counts, completeness and content timestamps. No full scan was performed in this research task.",
+    "limitations": ["Not all revisions", "No retail-price history", "Missing or inaccurate fields are possible", "Cross-barcode replacement links require entity matching and verification"]
+  },
+  "history": {
+    "official_support": "https://support.openfoodfacts.org/help/en-gb/12-api-data-reuse/105-how-can-i-access-historical-data",
+    "per_product_example": "https://world.openfoodfacts.org/api/v2/product/7622300735838?rev=1",
+    "limitations": "Revision timestamps represent OFF database edits; missing photographs and contributor corrections can look like product changes."
+  },
+  "price_data": {
+    "url": "https://openfoodfacts.github.io/open-prices/guides/data/",
+    "assessment": "Coverage audit delegated to parent agent. Dated observations are separate from OFF product revisions; usable repeat observations for the same product/store must be counted before choosing a forecasting target."
+  },
+  "leads_not_verified_as_complete_pairs": [
+    {
+      "name": "Cadbury Dairy Milk 200g to 180g",
+      "old_barcode": "7622300735838",
+      "new_barcode": "7622201148782",
+      "old_label": "https://images.openfoodfacts.org/images/products/762/230/073/5838/5.400.jpg",
+      "new_label": "https://images.openfoodfacts.org/images/products/762/220/114/8782/6.400.jpg",
+      "assessment": "Old photo clearly shows barcode and 200g. New current OFF quantity is blank; chosen nutrition photo crops leading weight digits. Do not claim two fully photo-verified sizes from these particular images. No comparable price pair verified here."
+    },
+    {
+      "name": "Toffee Crisp recipe/description change",
+      "current_manufacturer": "https://www.nestle-confectionery.co.uk/brands/toffee-crisp",
+      "current_description": "milk chocolate flavour coating",
+      "assessment": "Manufacturer page confirms current description. Historical raw label comparison not retrieved; not a complete old/new formulation record."
+    }
+  ],
+  "csv_caveat": "Official issue15024 reported a stale CSV export, but parent verified it was closed by15053. Do not claim CSV is currently stale without checking downloaded content. Audit content dates rather than trusting an HTTP Last-Modified header.",
+  "forecasting_caveat": "The verified cases were selected because changes occurred. They cannot establish predictive accuracy or train a reliable product-change forecaster without comparable non-change products, known observation windows, sufficient events and time-separated validation."
+}

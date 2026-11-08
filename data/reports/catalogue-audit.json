@@ -1,0 +1,60 @@
+{
+  "rows": 200245,
+  "barcodes": 200243,
+  "missing_barcode_rows": 0,
+  "named_rows": 183956,
+  "branded_rows": 148242,
+  "raw_quantity_rows": 56114,
+  "structured_mass_rows": 43456,
+  "structured_volume_rows": 7690,
+  "accepted_current_mass_rows": 43357,
+  "accepted_current_volume_rows": 7667,
+  "ingredient_text_rows": 65670,
+  "declared_count_rows": 4791,
+  "structured_declared_quantity_conflicts": 122,
+  "marked_obsolete_rows": 0,
+  "oldest_database_edit_epoch_s": 1415652766,
+  "newest_database_edit_epoch_s": 1794026179,
+  "source": "https://huggingface.co/datasets/openfoodfacts/product-database",
+  "revision": "92cf2f1cbf3c51b8929f138105991ef1c4e72aa3",
+  "raw_projection": "data/raw/off/uk-products-current.parquet",
+  "output": "data/processed/catalogue_products.parquet",
+  "raw_projection_bytes": 27342143,
+  "raw_global_file": "data/raw/off/food.parquet",
+  "raw_global_bytes": 8035571362,
+  "raw_projection_sha256": "45a9120df63c67b3b8079a5724b2e9ed154607f118fa4ceecedc4efef9361d4a",
+  "duplicate_barcode_rows": 2,
+  "historical_market_dates_verified": 0,
+  "family_links_inferred": 0,
+  "limitations": [
+    "Current catalogue snapshot, not a product revision archive or price history.",
+    "UK country tags are contributor-supplied market metadata, not proof of a UK transaction.",
+    "OFF creation/edit/image-upload dates are database events, not launch, reformulation or shelf-transition dates.",
+    "Current quantities must not be attached to historical prices without dated quantity evidence.",
+    "Different barcodes, pack sizes and counts may be replacements or concurrent variants; no family link is inferred here.",
+    "Data ODbL / individual contents Database Contents License; photographs CC-BY-SA with attribution."
+  ],
+  "identity_eligible_rows": 199512,
+  "invalid_barcode_format_rows": 731,
+  "duplicate_barcode_groups": [
+    {
+      "barcode": "5010482907839",
+      "records": 2,
+      "revisions": [
+        7,
+        10
+      ],
+      "conflicting": true
+    },
+    {
+      "barcode": "915024285012997",
+      "records": 2,
+      "revisions": [
+        7,
+        16
+      ],
+      "conflicting": true
+    }
+  ],
+  "barcode_validation_note": "Identifier format only; GTIN checksums have not been validated. Duplicate barcode records remain separate and are ineligible for automatic exact-identity links."
+}

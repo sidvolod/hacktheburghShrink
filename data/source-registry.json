@@ -1,0 +1,101 @@
+{
+  "audited_on": "2026-11-08",
+  "scope": "Datasets and evidence sources discussed in PROJECT_HANDOFF.md; downloaded inputs and caches stay under data/.",
+  "sources": [
+    {
+      "id": "off",
+      "url": "https://huggingface.co/datasets/openfoodfacts/product-database",
+      "status": "acquired_by_catalogue_stage",
+      "role": "Current UK-tagged catalogue; barcode, raw ingredients, quantities, images, revision references",
+      "limitations": "Not historical retail prices or a complete revision archive. Database edits are not market dates. Replacement links require evidence."
+    },
+    {
+      "id": "uk-retail-panel",
+      "url": "https://huggingface.co/datasets/Rif-SQL/time-series-uk-retail-supermarket-price-data",
+      "original_url": "https://www.kaggle.com/datasets/declanmcalinden/time-series-uk-supermarket-data",
+      "status": "acquired_and_prepared",
+      "role": "Dated prices across five retailers, January-April 2024",
+      "limitations": "Only four calendar months. No barcodes/ingredients. Lowest available prices can include loyalty discounts."
+    },
+    {
+      "id": "open-prices",
+      "url": "https://prices.openfoodfacts.org/api/v1/prices?currency=GBP",
+      "status": "existing_frozen_21_pages_prepared",
+      "role": "Supplementary barcode/date/store/proof-linked prices, explicit GB filter",
+      "limitations": "Sparse histories. Current enriched product mass is not dated historical pack proof."
+    },
+    {
+      "id": "worldbank",
+      "url": "https://www.worldbank.org/en/research/commodity-markets",
+      "status": "existing_monthly_workbook_prepared_separately",
+      "role": "Supporting monthly commodity history",
+      "limitations": "Does not fulfil weekly input requirement; never interpolated to weekly observations."
+    },
+    {
+      "id": "icco",
+      "url": "https://www.icco.org/statistics/",
+      "status": "daily_prices_acquired_and_aggregated_weekly",
+      "role": "London, New York and ICCO cocoa prices",
+      "limitations": "Futures-derived definitions and roll conventions retained; publication/vintage timing and reuse review remain explicit."
+    },
+    {
+      "id": "eu-crops",
+      "url": "https://agriculture.ec.europa.eu/data-and-analysis/markets/overviews/market-observatories/crops_en",
+      "status": "official_weekly_workbooks_acquired_and_prepared",
+      "role": "World cereal and oilseed quotes plus detailed EU cereal notifications",
+      "limitations": "Oilseeds are not crude edible oils. Detailed EU cereal series begin after retail-panel window. Publication/vintage timing not established."
+    },
+    {
+      "id": "ecb",
+      "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html",
+      "status": "daily_fx_archive_acquired_and_aggregated_weekly",
+      "role": "Original GBP per EUR and USD per EUR reference rates",
+      "limitations": "Normal release schedule alone does not establish each row's original publication or vintage."
+    },
+    {
+      "id": "reported-cases",
+      "url": "https://www.which.co.uk/news/article/shrinkflation-the-brands-charging-you-more-for-less-atUkT4m2GjuP",
+      "status": "existing_five_selected_cases_prepared",
+      "role": "Reported change registry and reviewed Quality Street barcode membership",
+      "limitations": "Selected positives, exact transaction/transition dates unknown; not monthly training labels. The separate snack-cases registry now supplies the everyday-snack demo."
+    },
+    {
+      "id": "snack-cases",
+      "url": "https://www.which.co.uk/news/article/shrinking-products-are-we-paying-more-for-less-a0Px52J4CFU1",
+      "status": "seven_curated_cases_prepared_for_local_demo",
+      "role": "Quality Street, Doritos, Digestives, Snickers, Oreo Bites, M&M's Chocolate and Maltesers, with per-case source links and price bases",
+      "limitations": "Five reported shelf-price pairs, one RRP comparison and one size-only case. Exact transition dates remain unknown; only Quality Street has reviewed old/new barcodes. One source access note is retained separately from article captures. These selected cases are not monthly training labels."
+    },
+    {
+      "id": "ons-prices",
+      "url": "https://github.com/RDeconomist/prices",
+      "status": "deferred_not_downloaded",
+      "reason": "Long history of basket-item microdata does not directly provide branded barcode or ingredient histories. A separate category-level experiment could use it later."
+    },
+    {
+      "id": "oxford-fooddb",
+      "url": "https://www.nature.com/articles/s43016-026-01384-3",
+      "status": "not_publicly_downloadable_no_access_requested",
+      "reason": "Branded longitudinal data requires access arrangements; not a runnable public dependency."
+    },
+    {
+      "id": "yappman",
+      "url": "https://data.yappman.com/mcp/",
+      "status": "documented_future_feed_not_bulk_downloaded",
+      "reason": "212-item daily basket since 2026-09-24. As of 2026-11-08 it has only one complete calendar month; useful future barcode/size/loyalty evidence, but does not extend the 2024 modelling panel."
+    },
+    {
+      "id": "trolley",
+      "url": "https://www.trolley.co.uk/grocery-price-index/",
+      "status": "no_verified_bulk_access_not_downloaded",
+      "reason": "Bulk API/download and permission to ingest a full dataset have not been established."
+    }
+  ],
+  "missing_inputs": [
+    "Genuine weekly sugar price feed",
+    "Genuine weekly crude edible-oil and relevant dairy feeds",
+    "Longer overlapping branded retail-price history",
+    "Dated historical pack/ingredient observations and reviewed cross-barcode replacements",
+    "Commodity publication/vintage timing suitable for historical cutoffs"
+  ]
+}

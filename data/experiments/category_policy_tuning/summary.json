@@ -1,0 +1,2418 @@
+{
+  "schema_version": 1,
+  "run_id": "1488998508ebcb68",
+  "as_of": "2026-11-08",
+  "generated_at": "2026-11-08T07:40:45.546037+00:00",
+  "scope": "category_CPI_monthly_change",
+  "evaluation_status": "exploratory_second_stage_after_initial_retuning",
+  "evaluation_label": "Designed after examining initial retuning results; no untouched test remains. Category CPI only.",
+  "warning": "Designed after examining initial retuning results; no untouched test remains. Category CPI only.",
+  "selection_basis": "Past-only nested policy selection using36 published monthly OOF errors",
+  "search_manifest": "/Users/volodymyrsydorenko/Desktop/shrincflationTrack/data/experiments/category_policy_tuning/1488998508ebcb68/search_manifest.json",
+  "base_run_id": "f97dd7d15914cda7",
+  "policy_count": 10,
+  "models_retrained": 0,
+  "categories": [
+    {
+      "category_id": "chocolate",
+      "category_name": "UK chocolate",
+      "selected_model_id": "nested_policy_selector",
+      "selected_feature_group": "adaptive_past_only",
+      "selected_candidate_id": "mean_top5",
+      "selection_basis": "Past-only nested policy selection using36 published monthly OOF errors",
+      "selection_audit": {
+        "n": 36,
+        "max_label_available_date": "2026-11-01T00:00:00+00:00",
+        "window_months": 36,
+        "min_target_month": "2023-10-01",
+        "max_target_month": "2026-09-01"
+      },
+      "candidate_selection_audit": {
+        "n": 36,
+        "max_label_available_date": "2026-11-01T00:00:00+00:00",
+        "window_months": 36,
+        "min_target_month": "2023-10-01",
+        "max_target_month": "2026-09-01"
+      },
+      "validation_metrics": {
+        "n": 36,
+        "mae_pp": 1.4794361535761245,
+        "rmse_pp": 1.9251521083774823
+      },
+      "test_metrics": {
+        "n": 33,
+        "mae_pp": 1.6510759081450508,
+        "rmse_pp": 2.0052667915458486,
+        "directional_accuracy": 0.7878787878787878
+      },
+      "baseline_metrics": {
+        "n": 33,
+        "mae_pp": 1.9770120494163437,
+        "rmse_pp": 2.45262117598347,
+        "directional_accuracy": 0.030303030303030304
+      },
+      "original_metrics": {
+        "n": 33,
+        "mae_pp": 1.5747375908632857,
+        "rmse_pp": 1.959604715118534,
+        "directional_accuracy": 0.6666666666666666
+      },
+      "first_tuning_metrics": {
+        "n": 33,
+        "mae_pp": 1.5640480581861704,
+        "rmse_pp": 1.9601270982696086,
+        "directional_accuracy": 0.7878787878787878
+      },
+      "test_mae_improvement_vs_original_pp": -0.0763383172817651,
+      "test_mae_improvement_vs_first_tuning_pp": -0.08702784995888035,
+      "forecast": {
+        "as_of": "2026-11-08",
+        "forecast_cutoff": "2026-11-08T00:00:00+00:00",
+        "target_month": "2026-12-01",
+        "change_pct": -0.24040103151746584,
+        "scope": "category_index",
+        "interval": null,
+        "current_model_id": "mean_top5",
+        "current_candidate_id": "mean_top5",
+        "current_feature_group": "aggregation_policy",
+        "components": [
+          {
+            "candidate_id": "ensemble_seasonal_history_toward_zero",
+            "prediction_pct": -0.5850083912911777,
+            "past_mae_pp": 1.3028700420750141,
+            "weight": 0.2
+          },
+          {
+            "candidate_id": "ridge_compactseasonal_a100",
+            "prediction_pct": 0.09349986769383889,
+            "past_mae_pp": 1.3328300517662202,
+            "weight": 0.2
+          },
+          {
+            "candidate_id": "ridge_seasonal_history_a100",
+            "prediction_pct": 0.164342618543818,
+            "past_mae_pp": 1.3494265486074282,
+            "weight": 0.2
+          },
+          {
+            "candidate_id": "residual_ridge_seasonal_history_a10",
+            "prediction_pct": -1.0327582941891071,
+            "past_mae_pp": 1.3763992302610768,
+            "weight": 0.2
+          },
+          {
+            "candidate_id": "ridge_seasonal_history_a100_w60",
+            "prediction_pct": 0.1579190416552988,
+            "past_mae_pp": 1.3864303897078847,
+            "weight": 0.2
+          }
+        ],
+        "zero_weight": 0.0
+      },
+      "leaderboard": [
+        {
+          "candidate_id": "mean_top5",
+          "model_id": "mean_top5",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.5407301004004006,
+          "test_rmse_pp": 1.9900598055435577,
+          "test_n": 33,
+          "test_directional_accuracy": 0.8181818181818182,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        },
+        {
+          "candidate_id": "median_top5",
+          "model_id": "median_top5",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.541585708788054,
+          "test_rmse_pp": 1.9649523439673693,
+          "test_n": 33,
+          "test_directional_accuracy": 0.7575757575757576,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        },
+        {
+          "candidate_id": "inverse_mae_top3",
+          "model_id": "inverse_mae_top3",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.5499233886855879,
+          "test_rmse_pp": 1.94078472774361,
+          "test_n": 33,
+          "test_directional_accuracy": 0.7878787878787878,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        },
+        {
+          "candidate_id": "mean_top3",
+          "model_id": "mean_top3",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.550265520363935,
+          "test_rmse_pp": 1.9415383683546696,
+          "test_n": 33,
+          "test_directional_accuracy": 0.7878787878787878,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        },
+        {
+          "candidate_id": "median_top3",
+          "model_id": "median_top3",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.5582244101351541,
+          "test_rmse_pp": 1.9320951513540685,
+          "test_n": 33,
+          "test_directional_accuracy": 0.7272727272727273,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        },
+        {
+          "candidate_id": "best1",
+          "model_id": "best1",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.5640480581861704,
+          "test_rmse_pp": 1.9601270982696086,
+          "test_n": 33,
+          "test_directional_accuracy": 0.7878787878787878,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        },
+        {
+          "candidate_id": "best1_recent24",
+          "model_id": "best1_recent24",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.5780802950298045,
+          "test_rmse_pp": 1.9987576364302866,
+          "test_n": 33,
+          "test_directional_accuracy": 0.7272727272727273,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        },
+        {
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.6368317971105515,
+          "test_rmse_pp": 2.0089852337355807,
+          "test_n": 33,
+          "test_directional_accuracy": 0.7878787878787878,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        },
+        {
+          "candidate_id": "nested_policy_selector",
+          "model_id": "nested_policy_selector",
+          "feature_group": "adaptive_past_only",
+          "selected": true,
+          "test_mae_pp": 1.6510759081450508,
+          "test_rmse_pp": 2.0052667915458486,
+          "test_n": 33,
+          "test_directional_accuracy": 0.7878787878787878,
+          "comparison_status": "predeclared_nested_policy_strategy_exploratory"
+        },
+        {
+          "candidate_id": "best1_recent12",
+          "model_id": "best1_recent12",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.6703290475307595,
+          "test_rmse_pp": 2.0922468426754084,
+          "test_n": 33,
+          "test_directional_accuracy": 0.7272727272727273,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        },
+        {
+          "candidate_id": "zero",
+          "model_id": "zero",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.9770120494163437,
+          "test_rmse_pp": 2.45262117598347,
+          "test_n": 33,
+          "test_directional_accuracy": 0.030303030303030304,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        }
+      ],
+      "live_selection_ranking": [
+        {
+          "candidate_id": "mean_top5",
+          "mae_pp": 1.4794361535761245,
+          "rmse_pp": 1.9251521083774823,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "candidate_id": "median_top5",
+          "mae_pp": 1.4841179365750579,
+          "rmse_pp": 1.901993556640615,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "candidate_id": "inverse_mae_top3",
+          "mae_pp": 1.492806872689462,
+          "rmse_pp": 1.8806532108393197,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "candidate_id": "mean_top3",
+          "mae_pp": 1.4930603564381577,
+          "rmse_pp": 1.8814734803999649,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "candidate_id": "median_top3",
+          "mae_pp": 1.500332227998811,
+          "rmse_pp": 1.8754176503299125,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "candidate_id": "best1",
+          "mae_pp": 1.5067350045724102,
+          "rmse_pp": 1.895377739487101,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "candidate_id": "best1_recent24",
+          "mae_pp": 1.5282734105264917,
+          "rmse_pp": 1.9427722328721864,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "candidate_id": "best1_shrink075",
+          "mae_pp": 1.5586835472475224,
+          "rmse_pp": 1.9359028545144312,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "candidate_id": "best1_recent12",
+          "mae_pp": 1.5675422245710338,
+          "rmse_pp": 2.008235594781622,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "candidate_id": "zero",
+          "mae_pp": 1.8354151679033543,
+          "rmse_pp": 2.350923223909114,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        }
+      ],
+      "test_predictions": [
+        {
+          "target_month": "2024-01-01",
+          "forecast_cutoff": "2023-12-08T00:00:00+00:00",
+          "label_available_date": "2024-03-01T00:00:00+00:00",
+          "actual_pct": 2.5704809286899,
+          "predicted_pct": 1.792609892478979,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"baseline_seasonal_smoothed\",\"prediction_pct\":2.3901465233053054,\"past_mae_pp\":1.5326925710713484,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2023-12-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "baseline_seasonal_smoothed",
+              "prediction_pct": 2.3901465233053054,
+              "past_mae_pp": 1.5326925710713484,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.5852213031102877,
+          "policy_inner_validation_n": 32,
+          "policy_selection_max_label_available_date": "2023-12-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-02-01",
+          "forecast_cutoff": "2024-01-08T00:00:00+00:00",
+          "label_available_date": "2024-04-01T00:00:00+00:00",
+          "actual_pct": -0.48504446240905663,
+          "predicted_pct": -0.9826322079111688,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"baseline_seasonal_smoothed\",\"prediction_pct\":-1.3101762772148917,\"past_mae_pp\":1.5208861884758307,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-01-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "baseline_seasonal_smoothed",
+              "prediction_pct": -1.3101762772148917,
+              "past_mae_pp": 1.5208861884758307,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.5542990802039223,
+          "policy_inner_validation_n": 33,
+          "policy_selection_max_label_available_date": "2024-01-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-03-01",
+          "forecast_cutoff": "2024-02-08T00:00:00+00:00",
+          "label_available_date": "2024-05-01T00:00:00+00:00",
+          "actual_pct": 2.3558082859463925,
+          "predicted_pct": 0.18466306567980484,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"baseline_seasonal_smoothed\",\"prediction_pct\":0.24621742090640644,\"past_mae_pp\":1.435617592599994,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-02-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "baseline_seasonal_smoothed",
+              "prediction_pct": 0.24621742090640644,
+              "past_mae_pp": 1.435617592599994,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.5210131002627187,
+          "policy_inner_validation_n": 34,
+          "policy_selection_max_label_available_date": "2024-02-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-04-01",
+          "forecast_cutoff": "2024-03-08T00:00:00+00:00",
+          "label_available_date": "2024-06-01T00:00:00+00:00",
+          "actual_pct": 1.5873015873015817,
+          "predicted_pct": 1.1948788030605062,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"baseline_seasonal_smoothed\",\"prediction_pct\":1.5931717374140082,\"past_mae_pp\":1.3300545037891485,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-03-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "baseline_seasonal_smoothed",
+              "prediction_pct": 1.5931717374140082,
+              "past_mae_pp": 1.3300545037891485,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.4997804698612387,
+          "policy_inner_validation_n": 35,
+          "policy_selection_max_label_available_date": "2024-03-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-05-01",
+          "forecast_cutoff": "2024-04-07T23:00:00+00:00",
+          "label_available_date": "2024-07-01T00:00:00+00:00",
+          "actual_pct": -1.3281250000000022,
+          "predicted_pct": 1.1228027832859269,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"baseline_seasonal_smoothed\",\"prediction_pct\":1.497070377714569,\"past_mae_pp\":1.292029437713314,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-04-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "baseline_seasonal_smoothed",
+              "prediction_pct": 1.497070377714569,
+              "past_mae_pp": 1.292029437713314,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.471941783073485,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2024-04-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-06-01",
+          "forecast_cutoff": "2024-05-07T23:00:00+00:00",
+          "label_available_date": "2024-08-01T00:00:00+00:00",
+          "actual_pct": -0.8709422011084711,
+          "predicted_pct": -0.3720295783797789,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"baseline_seasonal_smoothed\",\"prediction_pct\":-0.49603943783970517,\"past_mae_pp\":1.3306677970860368,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-05-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "baseline_seasonal_smoothed",
+              "prediction_pct": -0.49603943783970517,
+              "past_mae_pp": 1.3306677970860368,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.5253833218412296,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2024-05-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-07-01",
+          "forecast_cutoff": "2024-06-07T23:00:00+00:00",
+          "label_available_date": "2024-09-01T00:00:00+00:00",
+          "actual_pct": 2.635782747603832,
+          "predicted_pct": 1.0205639550480026,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"baseline_seasonal_smoothed\",\"prediction_pct\":1.3607519400640034,\"past_mae_pp\":1.2802390832479518,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-06-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "baseline_seasonal_smoothed",
+              "prediction_pct": 1.3607519400640034,
+              "past_mae_pp": 1.2802390832479518,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.4994566529572775,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2024-06-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-08-01",
+          "forecast_cutoff": "2024-07-07T23:00:00+00:00",
+          "label_available_date": "2024-10-01T00:00:00+00:00",
+          "actual_pct": 4.747081712062262,
+          "predicted_pct": 1.2003107551002816,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ensemble_seasonal_history_toward_zero\",\"prediction_pct\":1.6004143401337088,\"past_mae_pp\":1.3518438788478409,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-07-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ensemble_seasonal_history_toward_zero",
+              "prediction_pct": 1.6004143401337088,
+              "past_mae_pp": 1.3518438788478409,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.5501804200881049,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2024-07-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-09-01",
+          "forecast_cutoff": "2024-08-07T23:00:00+00:00",
+          "label_available_date": "2024-11-01T00:00:00+00:00",
+          "actual_pct": -2.526002971768204,
+          "predicted_pct": -0.24989400569680442,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"hgb_seasonal_history_commodities_l7\",\"prediction_pct\":-0.33319200759573925,\"past_mae_pp\":1.3306715999553032,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-08-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "hgb_seasonal_history_commodities_l7",
+              "prediction_pct": -0.33319200759573925,
+              "past_mae_pp": 1.3306715999553032,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.5395633302487974,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2024-08-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-10-01",
+          "forecast_cutoff": "2024-09-07T23:00:00+00:00",
+          "label_available_date": "2024-12-01T00:00:00+00:00",
+          "actual_pct": 0.9146341463414753,
+          "predicted_pct": 0.10115671790641548,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"hgb_seasonal_history_commodities_l7\",\"prediction_pct\":0.13487562387522065,\"past_mae_pp\":1.3494033957405756,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-09-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "hgb_seasonal_history_commodities_l7",
+              "prediction_pct": 0.13487562387522065,
+              "past_mae_pp": 1.3494033957405756,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.574989537101969,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2024-09-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-11-01",
+          "forecast_cutoff": "2024-10-07T23:00:00+00:00",
+          "label_available_date": "2025-01-01T00:00:00+00:00",
+          "actual_pct": 0.1510574018126709,
+          "predicted_pct": 2.790641502855242,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_seasonal_history_commodities_a100_w36\",\"prediction_pct\":3.720855337140322,\"past_mae_pp\":1.461241755602818,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-10-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_seasonal_history_commodities_a100_w36",
+              "prediction_pct": 3.720855337140322,
+              "past_mae_pp": 1.461241755602818,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.6512297729377736,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2024-10-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-12-01",
+          "forecast_cutoff": "2024-11-08T00:00:00+00:00",
+          "label_available_date": "2025-02-01T00:00:00+00:00",
+          "actual_pct": 1.6591251885369696,
+          "predicted_pct": -0.0957921201400295,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ensemble_seasonal_history_toward_zero\",\"prediction_pct\":-0.12772282685337266,\"past_mae_pp\":1.4400740691908314,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-11-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ensemble_seasonal_history_toward_zero",
+              "prediction_pct": -0.12772282685337266,
+              "past_mae_pp": 1.4400740691908314,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.6295021354868597,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-01-01",
+          "forecast_cutoff": "2024-12-08T00:00:00+00:00",
+          "label_available_date": "2025-03-01T00:00:00+00:00",
+          "actual_pct": 4.6735905044510195,
+          "predicted_pct": 1.9932503426660406,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ensemble_seasonal_history_toward_zero\",\"prediction_pct\":2.6576671235547207,\"past_mae_pp\":1.3612667432897514,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-12-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ensemble_seasonal_history_toward_zero",
+              "prediction_pct": 2.6576671235547207,
+              "past_mae_pp": 1.3612667432897514,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.5556655344791919,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2024-12-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-02-01",
+          "forecast_cutoff": "2025-01-08T00:00:00+00:00",
+          "label_available_date": "2025-04-01T00:00:00+00:00",
+          "actual_pct": 1.700921332388372,
+          "predicted_pct": -1.031534192416286,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ensemble_seasonal_history_toward_zero\",\"prediction_pct\":-1.3753789232217146,\"past_mae_pp\":1.2877432120146424,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2025-01-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ensemble_seasonal_history_toward_zero",
+              "prediction_pct": -1.3753789232217146,
+              "past_mae_pp": 1.2877432120146424,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.5466150004696089,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-01-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-03-01",
+          "forecast_cutoff": "2025-02-08T00:00:00+00:00",
+          "label_available_date": "2025-05-01T00:00:00+00:00",
+          "actual_pct": -0.2090592334494823,
+          "predicted_pct": 0.7274092256769025,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ensemble_seasonal_history_toward_zero\",\"prediction_pct\":0.9698789675692032,\"past_mae_pp\":1.274362149206681,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2025-02-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ensemble_seasonal_history_toward_zero",
+              "prediction_pct": 0.9698789675692032,
+              "past_mae_pp": 1.274362149206681,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.5413266419313207,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-02-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-04-01",
+          "forecast_cutoff": "2025-03-08T00:00:00+00:00",
+          "label_available_date": "2025-06-01T00:00:00+00:00",
+          "actual_pct": 2.3743016759776525,
+          "predicted_pct": 0.6976366179352749,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ensemble_seasonal_history_toward_zero\",\"prediction_pct\":0.9301821572470331,\"past_mae_pp\":1.2874635184679797,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2025-03-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ensemble_seasonal_history_toward_zero",
+              "prediction_pct": 0.9301821572470331,
+              "past_mae_pp": 1.2874635184679797,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.5979890683388605,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-03-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-05-01",
+          "forecast_cutoff": "2025-04-07T23:00:00+00:00",
+          "label_available_date": "2025-07-01T00:00:00+00:00",
+          "actual_pct": 1.3642564802182733,
+          "predicted_pct": 0.8847207420772873,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ensemble_seasonal_history_toward_zero\",\"prediction_pct\":1.1796276561030499,\"past_mae_pp\":1.3671891192617727,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2025-04-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ensemble_seasonal_history_toward_zero",
+              "prediction_pct": 1.1796276561030499,
+              "past_mae_pp": 1.3671891192617727,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.6407991701052944,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-04-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-06-01",
+          "forecast_cutoff": "2025-05-07T23:00:00+00:00",
+          "label_available_date": "2025-08-01T00:00:00+00:00",
+          "actual_pct": -2.0188425302826385,
+          "predicted_pct": -0.40570946874640607,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ensemble_seasonal_history_toward_zero\",\"prediction_pct\":-0.5409459583285414,\"past_mae_pp\":1.3676412380688412,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2025-05-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ensemble_seasonal_history_toward_zero",
+              "prediction_pct": -0.5409459583285414,
+              "past_mae_pp": 1.3676412380688412,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.6214276143227198,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-05-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-07-01",
+          "forecast_cutoff": "2025-06-07T23:00:00+00:00",
+          "label_available_date": "2025-09-01T00:00:00+00:00",
+          "actual_pct": 3.434065934065944,
+          "predicted_pct": 0.39614376019907954,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ensemble_seasonal_history_toward_zero\",\"prediction_pct\":0.5281916802654394,\"past_mae_pp\":1.3791489133182036,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2025-06-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ensemble_seasonal_history_toward_zero",
+              "prediction_pct": 0.5281916802654394,
+              "past_mae_pp": 1.3791489133182036,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.6503167822520064,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-06-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-08-01",
+          "forecast_cutoff": "2025-07-07T23:00:00+00:00",
+          "label_available_date": "2025-10-01T00:00:00+00:00",
+          "actual_pct": 3.1872509960159334,
+          "predicted_pct": 1.2859618568727023,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ensemble_seasonal_history_toward_zero\",\"prediction_pct\":1.714615809163603,\"past_mae_pp\":1.272382208115105,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2025-07-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ensemble_seasonal_history_toward_zero",
+              "prediction_pct": 1.714615809163603,
+              "past_mae_pp": 1.272382208115105,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.555095176075234,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-07-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-09-01",
+          "forecast_cutoff": "2025-08-07T23:00:00+00:00",
+          "label_available_date": "2025-11-01T00:00:00+00:00",
+          "actual_pct": -0.3217503217503248,
+          "predicted_pct": -0.17559339330530432,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_seasonal_history_a1000\",\"prediction_pct\":-0.23412452440707243,\"past_mae_pp\":1.212363861722387,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2025-08-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_seasonal_history_a1000",
+              "prediction_pct": -0.23412452440707243,
+              "past_mae_pp": 1.212363861722387,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.5152745060523156,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-08-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-10-01",
+          "forecast_cutoff": "2025-09-07T23:00:00+00:00",
+          "label_available_date": "2025-12-01T00:00:00+00:00",
+          "actual_pct": 0.3873466752743582,
+          "predicted_pct": 0.3397403997892932,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_seasonal_history_a1000\",\"prediction_pct\":0.4529871997190576,\"past_mae_pp\":1.179360421639446,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2025-09-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_seasonal_history_a1000",
+              "prediction_pct": 0.4529871997190576,
+              "past_mae_pp": 1.179360421639446,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.5070744829196887,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-09-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-11-01",
+          "forecast_cutoff": "2025-10-07T23:00:00+00:00",
+          "label_available_date": "2026-01-01T00:00:00+00:00",
+          "actual_pct": 0.0,
+          "predicted_pct": 0.5114220973183017,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_seasonal_history_a1000\",\"prediction_pct\":0.6818961297577355,\"past_mae_pp\":1.2063858268525698,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2025-10-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_seasonal_history_a1000",
+              "prediction_pct": 0.6818961297577355,
+              "past_mae_pp": 1.2063858268525698,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.5446330468777063,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-10-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-12-01",
+          "forecast_cutoff": "2025-11-08T00:00:00+00:00",
+          "label_available_date": "2026-02-01T00:00:00+00:00",
+          "actual_pct": 0.12861736334404128,
+          "predicted_pct": 0.6067981913174139,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_seasonal_history_a1000\",\"prediction_pct\":0.8090642550898852,\"past_mae_pp\":1.193853772119587,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2025-11-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_seasonal_history_a1000",
+              "prediction_pct": 0.8090642550898852,
+              "past_mae_pp": 1.193853772119587,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.5139140951065728,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-11-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2026-01-01",
+          "forecast_cutoff": "2025-12-08T00:00:00+00:00",
+          "label_available_date": "2026-03-01T00:00:00+00:00",
+          "actual_pct": 3.917790622992956,
+          "predicted_pct": 1.4172137592253087,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_seasonal_history_a1000\",\"prediction_pct\":1.8896183456337448,\"past_mae_pp\":1.1693524142221756,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2025-12-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_seasonal_history_a1000",
+              "prediction_pct": 1.8896183456337448,
+              "past_mae_pp": 1.1693524142221756,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.452510053399286,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-12-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2026-02-01",
+          "forecast_cutoff": "2026-01-08T00:00:00+00:00",
+          "label_available_date": "2026-04-01T00:00:00+00:00",
+          "actual_pct": -4.449938195302849,
+          "predicted_pct": 0.23396643656003213,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_seasonal_history_a1000\",\"prediction_pct\":0.3119552487467095,\"past_mae_pp\":1.1845520145016273,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2026-01-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_seasonal_history_a1000",
+              "prediction_pct": 0.3119552487467095,
+              "past_mae_pp": 1.1845520145016273,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.4652297364628408,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2026-01-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2026-03-01",
+          "forecast_cutoff": "2026-02-08T00:00:00+00:00",
+          "label_available_date": "2026-05-01T00:00:00+00:00",
+          "actual_pct": 2.7166882276843607,
+          "predicted_pct": 0.5100415798656899,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_seasonal_history_a1000\",\"prediction_pct\":0.6800554398209198,\"past_mae_pp\":1.1565853341485042,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2026-02-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_seasonal_history_a1000",
+              "prediction_pct": 0.6800554398209198,
+              "past_mae_pp": 1.1565853341485042,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.3918131235426816,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2026-02-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2026-04-01",
+          "forecast_cutoff": "2026-03-08T00:00:00+00:00",
+          "label_available_date": "2026-06-01T00:00:00+00:00",
+          "actual_pct": -0.5037783375314908,
+          "predicted_pct": 1.9560597078501396,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_recent24",
+          "components_json": "[{\"candidate_id\":\"ridge_seasonal_history_a10_w36\",\"prediction_pct\":1.9560597078501396,\"past_mae_pp\":1.1421345177603826,\"weight\":1.0}]",
+          "zero_weight": 0.0,
+          "candidate_selection_max_label_available_date": "2026-03-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 24,
+          "candidate_error_window_months": 24,
+          "components": [
+            {
+              "candidate_id": "ridge_seasonal_history_a10_w36",
+              "prediction_pct": 1.9560597078501396,
+              "past_mae_pp": 1.1421345177603826,
+              "weight": 1.0
+            }
+          ],
+          "selected_policy_id": "best1_recent24",
+          "candidate_id": "best1_recent24",
+          "model_id": "best1_recent24",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.356287409026794,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2026-03-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2026-05-01",
+          "forecast_cutoff": "2026-04-07T23:00:00+00:00",
+          "label_available_date": "2026-07-01T00:00:00+00:00",
+          "actual_pct": 1.8987341772152,
+          "predicted_pct": 2.547159805134469,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_recent24",
+          "components_json": "[{\"candidate_id\":\"ridge_seasonal_history_a10_w36\",\"prediction_pct\":2.547159805134469,\"past_mae_pp\":1.2952322383435846,\"weight\":1.0}]",
+          "zero_weight": 0.0,
+          "candidate_selection_max_label_available_date": "2026-04-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 24,
+          "candidate_error_window_months": 24,
+          "components": [
+            {
+              "candidate_id": "ridge_seasonal_history_a10_w36",
+              "prediction_pct": 2.547159805134469,
+              "past_mae_pp": 1.2952322383435846,
+              "weight": 1.0
+            }
+          ],
+          "selected_policy_id": "best1_recent24",
+          "candidate_id": "best1_recent24",
+          "model_id": "best1_recent24",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.3661622864684877,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2026-04-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2026-06-01",
+          "forecast_cutoff": "2026-05-07T23:00:00+00:00",
+          "label_available_date": "2026-08-01T00:00:00+00:00",
+          "actual_pct": -5.341614906832293,
+          "predicted_pct": -2.1504642433130496,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_recent24",
+          "components_json": "[{\"candidate_id\":\"ensemble_seasonal_history_toward_seasonal\",\"prediction_pct\":-2.1504642433130496,\"past_mae_pp\":1.3126394481259573,\"weight\":1.0}]",
+          "zero_weight": 0.0,
+          "candidate_selection_max_label_available_date": "2026-05-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 24,
+          "candidate_error_window_months": 24,
+          "components": [
+            {
+              "candidate_id": "ensemble_seasonal_history_toward_seasonal",
+              "prediction_pct": -2.1504642433130496,
+              "past_mae_pp": 1.3126394481259573,
+              "weight": 1.0
+            }
+          ],
+          "selected_policy_id": "best1_recent24",
+          "candidate_id": "best1_recent24",
+          "model_id": "best1_recent24",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.3875633314383318,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2026-05-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2026-07-01",
+          "forecast_cutoff": "2026-06-07T23:00:00+00:00",
+          "label_available_date": "2026-09-01T00:00:00+00:00",
+          "actual_pct": 1.837270341207331,
+          "predicted_pct": 1.3118630021959472,
+          "baseline_pct": 0.0,
+          "policy_id": "mean_top5",
+          "components_json": "[{\"candidate_id\":\"ensemble_seasonal_history_toward_zero\",\"prediction_pct\":0.6528822039102087,\"past_mae_pp\":1.23024078181376,\"weight\":0.2},{\"candidate_id\":\"gbr_seasonal_history_absolute_error\",\"prediction_pct\":1.4561007217442794,\"past_mae_pp\":1.2885979397424587,\"weight\":0.2},{\"candidate_id\":\"ridge_compactseasonal_a100\",\"prediction_pct\":1.6886731468662983,\"past_mae_pp\":1.3087070363353774,\"weight\":0.2},{\"candidate_id\":\"ridge_seasonal_history_a1000\",\"prediction_pct\":1.096309015518512,\"past_mae_pp\":1.3265784565243344,\"weight\":0.2},{\"candidate_id\":\"ridge_seasonal_history_a100\",\"prediction_pct\":1.6653499229404378,\"past_mae_pp\":1.3326164116833723,\"weight\":0.2}]",
+          "zero_weight": 0.0,
+          "candidate_selection_max_label_available_date": "2026-06-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ensemble_seasonal_history_toward_zero",
+              "prediction_pct": 0.6528822039102087,
+              "past_mae_pp": 1.23024078181376,
+              "weight": 0.2
+            },
+            {
+              "candidate_id": "gbr_seasonal_history_absolute_error",
+              "prediction_pct": 1.4561007217442794,
+              "past_mae_pp": 1.2885979397424587,
+              "weight": 0.2
+            },
+            {
+              "candidate_id": "ridge_compactseasonal_a100",
+              "prediction_pct": 1.6886731468662983,
+              "past_mae_pp": 1.3087070363353774,
+              "weight": 0.2
+            },
+            {
+              "candidate_id": "ridge_seasonal_history_a1000",
+              "prediction_pct": 1.096309015518512,
+              "past_mae_pp": 1.3265784565243344,
+              "weight": 0.2
+            },
+            {
+              "candidate_id": "ridge_seasonal_history_a100",
+              "prediction_pct": 1.6653499229404378,
+              "past_mae_pp": 1.3326164116833723,
+              "weight": 0.2
+            }
+          ],
+          "selected_policy_id": "mean_top5",
+          "candidate_id": "mean_top5",
+          "model_id": "mean_top5",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.4390428937647393,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2026-06-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2026-08-01",
+          "forecast_cutoff": "2026-07-07T23:00:00+00:00",
+          "label_available_date": "2026-10-01T00:00:00+00:00",
+          "actual_pct": 1.030927835051565,
+          "predicted_pct": 3.2652308890984916,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_recent24",
+          "components_json": "[{\"candidate_id\":\"ensemble_seasonal_history_toward_seasonal\",\"prediction_pct\":3.2652308890984916,\"past_mae_pp\":1.2690522635815764,\"weight\":1.0}]",
+          "zero_weight": 0.0,
+          "candidate_selection_max_label_available_date": "2026-07-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 24,
+          "candidate_error_window_months": 24,
+          "components": [
+            {
+              "candidate_id": "ensemble_seasonal_history_toward_seasonal",
+              "prediction_pct": 3.2652308890984916,
+              "past_mae_pp": 1.2690522635815764,
+              "weight": 1.0
+            }
+          ],
+          "selected_policy_id": "best1_recent24",
+          "candidate_id": "best1_recent24",
+          "model_id": "best1_recent24",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.4558038910099063,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2026-07-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2026-09-01",
+          "forecast_cutoff": "2026-08-07T23:00:00+00:00",
+          "label_available_date": "2026-11-01T00:00:00+00:00",
+          "actual_pct": -1.913265306122447,
+          "predicted_pct": -2.2723972099348413,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_recent24",
+          "components_json": "[{\"candidate_id\":\"residual_ridge_seasonal_history_a10\",\"prediction_pct\":-2.2723972099348413,\"past_mae_pp\":1.308245717554003,\"weight\":1.0}]",
+          "zero_weight": 0.0,
+          "candidate_selection_max_label_available_date": "2026-08-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 24,
+          "candidate_error_window_months": 24,
+          "components": [
+            {
+              "candidate_id": "residual_ridge_seasonal_history_a10",
+              "prediction_pct": -2.2723972099348413,
+              "past_mae_pp": 1.308245717554003,
+              "weight": 1.0
+            }
+          ],
+          "selected_policy_id": "best1_recent24",
+          "candidate_id": "best1_recent24",
+          "model_id": "best1_recent24",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.5219448209936226,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2026-08-01T00:00:00+00:00"
+        }
+      ],
+      "warning": "Designed after examining initial retuning results; no untouched test remains. Category CPI only."
+    },
+    {
+      "category_id": "crisps",
+      "category_name": "UK crisps",
+      "selected_model_id": "nested_policy_selector",
+      "selected_feature_group": "adaptive_past_only",
+      "selected_candidate_id": "zero",
+      "selection_basis": "Past-only nested policy selection using36 published monthly OOF errors",
+      "selection_audit": {
+        "n": 36,
+        "max_label_available_date": "2026-11-01T00:00:00+00:00",
+        "window_months": 36,
+        "min_target_month": "2023-10-01",
+        "max_target_month": "2026-09-01"
+      },
+      "candidate_selection_audit": {
+        "n": 36,
+        "max_label_available_date": "2026-11-01T00:00:00+00:00",
+        "window_months": 36,
+        "min_target_month": "2023-10-01",
+        "max_target_month": "2026-09-01"
+      },
+      "validation_metrics": {
+        "n": 36,
+        "mae_pp": 1.33002528169165,
+        "rmse_pp": 1.6840694926672954
+      },
+      "test_metrics": {
+        "n": 33,
+        "mae_pp": 1.3382586904088438,
+        "rmse_pp": 1.6741381439129888,
+        "directional_accuracy": 0.3333333333333333
+      },
+      "baseline_metrics": {
+        "n": 33,
+        "mae_pp": 1.264796617401803,
+        "rmse_pp": 1.6077120176358837,
+        "directional_accuracy": 0.0
+      },
+      "original_metrics": {
+        "n": 33,
+        "mae_pp": 1.3520192122402246,
+        "rmse_pp": 1.7347774458975445,
+        "directional_accuracy": 0.48484848484848486
+      },
+      "first_tuning_metrics": {
+        "n": 33,
+        "mae_pp": 1.4478217042202972,
+        "rmse_pp": 1.7597290152295602,
+        "directional_accuracy": 0.42424242424242425
+      },
+      "test_mae_improvement_vs_original_pp": 0.013760521831380768,
+      "test_mae_improvement_vs_first_tuning_pp": 0.10956301381145339,
+      "forecast": {
+        "as_of": "2026-11-08",
+        "forecast_cutoff": "2026-11-08T00:00:00+00:00",
+        "target_month": "2026-12-01",
+        "change_pct": 0.0,
+        "scope": "category_index",
+        "interval": null,
+        "current_model_id": "zero",
+        "current_candidate_id": "zero",
+        "current_feature_group": "aggregation_policy",
+        "components": [],
+        "zero_weight": 1.0
+      },
+      "leaderboard": [
+        {
+          "candidate_id": "zero",
+          "model_id": "zero",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.264796617401803,
+          "test_rmse_pp": 1.6077120176358837,
+          "test_n": 33,
+          "test_directional_accuracy": 0.0,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        },
+        {
+          "candidate_id": "nested_policy_selector",
+          "model_id": "nested_policy_selector",
+          "feature_group": "adaptive_past_only",
+          "selected": true,
+          "test_mae_pp": 1.3382586904088438,
+          "test_rmse_pp": 1.6741381439129888,
+          "test_n": 33,
+          "test_directional_accuracy": 0.3333333333333333,
+          "comparison_status": "predeclared_nested_policy_strategy_exploratory"
+        },
+        {
+          "candidate_id": "best1_recent12",
+          "model_id": "best1_recent12",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.3410373862494613,
+          "test_rmse_pp": 1.672574952728306,
+          "test_n": 33,
+          "test_directional_accuracy": 0.3939393939393939,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        },
+        {
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.3804075679459802,
+          "test_rmse_pp": 1.6899554366825382,
+          "test_n": 33,
+          "test_directional_accuracy": 0.42424242424242425,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        },
+        {
+          "candidate_id": "median_top5",
+          "model_id": "median_top5",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.4121709732645145,
+          "test_rmse_pp": 1.7214136031166,
+          "test_n": 33,
+          "test_directional_accuracy": 0.5151515151515151,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        },
+        {
+          "candidate_id": "median_top3",
+          "model_id": "median_top3",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.4375063860644108,
+          "test_rmse_pp": 1.7366849227669572,
+          "test_n": 33,
+          "test_directional_accuracy": 0.5151515151515151,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        },
+        {
+          "candidate_id": "best1",
+          "model_id": "best1",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.4478217042202972,
+          "test_rmse_pp": 1.7597290152295602,
+          "test_n": 33,
+          "test_directional_accuracy": 0.42424242424242425,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        },
+        {
+          "candidate_id": "inverse_mae_top3",
+          "model_id": "inverse_mae_top3",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.4482085900512018,
+          "test_rmse_pp": 1.7469952253523138,
+          "test_n": 33,
+          "test_directional_accuracy": 0.5454545454545454,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        },
+        {
+          "candidate_id": "mean_top3",
+          "model_id": "mean_top3",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.4482361700436863,
+          "test_rmse_pp": 1.7469300335010407,
+          "test_n": 33,
+          "test_directional_accuracy": 0.5454545454545454,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        },
+        {
+          "candidate_id": "best1_recent24",
+          "model_id": "best1_recent24",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.478770132749715,
+          "test_rmse_pp": 1.81953147235027,
+          "test_n": 33,
+          "test_directional_accuracy": 0.36363636363636365,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        },
+        {
+          "candidate_id": "mean_top5",
+          "model_id": "mean_top5",
+          "feature_group": "aggregation_policy",
+          "test_mae_pp": 1.4805553595568106,
+          "test_rmse_pp": 1.7802747931934189,
+          "test_n": 33,
+          "test_directional_accuracy": 0.5151515151515151,
+          "comparison_status": "fixed_policy_descriptive_not_used_for_posthoc_choice"
+        }
+      ],
+      "live_selection_ranking": [
+        {
+          "candidate_id": "zero",
+          "mae_pp": 1.33002528169165,
+          "rmse_pp": 1.6840694926672954,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "candidate_id": "best1_recent12",
+          "mae_pp": 1.487709227060471,
+          "rmse_pp": 1.9423140922871818,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "candidate_id": "best1_shrink075",
+          "mae_pp": 1.5203372037337552,
+          "rmse_pp": 1.8983903777523534,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "candidate_id": "median_top5",
+          "mae_pp": 1.5419092472324496,
+          "rmse_pp": 1.944172419507632,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "candidate_id": "mean_top3",
+          "mae_pp": 1.5740688173507458,
+          "rmse_pp": 1.9650548849147595,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "candidate_id": "inverse_mae_top3",
+          "mae_pp": 1.5743788431820667,
+          "rmse_pp": 1.9655641835098299,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "candidate_id": "median_top3",
+          "mae_pp": 1.5793540467440248,
+          "rmse_pp": 1.9694347728046966,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "candidate_id": "mean_top5",
+          "mae_pp": 1.600191043601465,
+          "rmse_pp": 1.9806720821470132,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "candidate_id": "best1",
+          "mae_pp": 1.6102452344440823,
+          "rmse_pp": 2.0186871216859252,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "candidate_id": "best1_recent24",
+          "mae_pp": 1.62678756891421,
+          "rmse_pp": 2.0452439275377343,
+          "n": 36,
+          "max_label_available_date": "2026-11-01T00:00:00+00:00"
+        }
+      ],
+      "test_predictions": [
+        {
+          "target_month": "2024-01-01",
+          "forecast_cutoff": "2023-12-08T00:00:00+00:00",
+          "label_available_date": "2024-03-01T00:00:00+00:00",
+          "actual_pct": 0.9192383453709541,
+          "predicted_pct": 1.8695257899403732,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_compactseasonal_a100\",\"prediction_pct\":2.492701053253831,\"past_mae_pp\":1.7891698088169912,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2023-12-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_compactseasonal_a100",
+              "prediction_pct": 2.492701053253831,
+              "past_mae_pp": 1.7891698088169912,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.8866389216246942,
+          "policy_inner_validation_n": 32,
+          "policy_selection_max_label_available_date": "2023-12-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-02-01",
+          "forecast_cutoff": "2024-01-08T00:00:00+00:00",
+          "label_available_date": "2024-04-01T00:00:00+00:00",
+          "actual_pct": -1.3662979830839306,
+          "predicted_pct": 0.9417308409246847,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_compactseasonal_a100\",\"prediction_pct\":1.255641121232913,\"past_mae_pp\":1.785931390173101,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-01-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_compactseasonal_a100",
+              "prediction_pct": 1.255641121232913,
+              "past_mae_pp": 1.785931390173101,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.882769314891535,
+          "policy_inner_validation_n": 33,
+          "policy_selection_max_label_available_date": "2024-01-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-03-01",
+          "forecast_cutoff": "2024-02-08T00:00:00+00:00",
+          "label_available_date": "2024-05-01T00:00:00+00:00",
+          "actual_pct": 1.912928759894461,
+          "predicted_pct": -0.1906202069186899,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_compactseasonal_a100\",\"prediction_pct\":-0.2541602758915865,\"past_mae_pp\":1.7647844135884463,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-02-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_compactseasonal_a100",
+              "prediction_pct": -0.2541602758915865,
+              "past_mae_pp": 1.7647844135884463,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.890596291082607,
+          "policy_inner_validation_n": 34,
+          "policy_selection_max_label_available_date": "2024-02-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-04-01",
+          "forecast_cutoff": "2024-03-08T00:00:00+00:00",
+          "label_available_date": "2024-06-01T00:00:00+00:00",
+          "actual_pct": -0.8414239482200769,
+          "predicted_pct": 0.6680193252441866,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_compactseasonal_a100\",\"prediction_pct\":0.8906924336589155,\"past_mae_pp\":1.7736529335317348,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-03-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_compactseasonal_a100",
+              "prediction_pct": 0.8906924336589155,
+              "past_mae_pp": 1.7736529335317348,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.8637303240393732,
+          "policy_inner_validation_n": 35,
+          "policy_selection_max_label_available_date": "2024-03-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-05-01",
+          "forecast_cutoff": "2024-04-07T23:00:00+00:00",
+          "label_available_date": "2024-07-01T00:00:00+00:00",
+          "actual_pct": -0.9791122715404721,
+          "predicted_pct": 0.28276656968773184,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_seasonal_history_commodities_a1000\",\"prediction_pct\":0.3770220929169758,\"past_mae_pp\":1.7102679133986376,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-04-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_seasonal_history_commodities_a1000",
+              "prediction_pct": 0.3770220929169758,
+              "past_mae_pp": 1.7102679133986376,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.876071949038519,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2024-04-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-06-01",
+          "forecast_cutoff": "2024-05-07T23:00:00+00:00",
+          "label_available_date": "2024-08-01T00:00:00+00:00",
+          "actual_pct": 1.0547132498352152,
+          "predicted_pct": 0.25965746524368843,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_compactseasonal_a1000\",\"prediction_pct\":0.34620995365825125,\"past_mae_pp\":1.6597662345841762,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-05-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_compactseasonal_a1000",
+              "prediction_pct": 0.34620995365825125,
+              "past_mae_pp": 1.6597662345841762,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.7869032021671134,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2024-05-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-07-01",
+          "forecast_cutoff": "2024-06-07T23:00:00+00:00",
+          "label_available_date": "2024-09-01T00:00:00+00:00",
+          "actual_pct": -0.9784735812133016,
+          "predicted_pct": 0.4565532882124762,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_compactseasonal_a1000\",\"prediction_pct\":0.608737717616635,\"past_mae_pp\":1.6539023341012151,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-06-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_compactseasonal_a1000",
+              "prediction_pct": 0.608737717616635,
+              "past_mae_pp": 1.6539023341012151,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.7849494710011515,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2024-06-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-08-01",
+          "forecast_cutoff": "2024-07-07T23:00:00+00:00",
+          "label_available_date": "2024-10-01T00:00:00+00:00",
+          "actual_pct": -1.054018445322813,
+          "predicted_pct": 0.6361640068109516,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_compactseasonal_a1000\",\"prediction_pct\":0.8482186757479355,\"past_mae_pp\":1.6581547212517136,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-07-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_compactseasonal_a1000",
+              "prediction_pct": 0.8482186757479355,
+              "past_mae_pp": 1.6581547212517136,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.814510034103358,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2024-07-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-09-01",
+          "forecast_cutoff": "2024-08-07T23:00:00+00:00",
+          "label_available_date": "2024-11-01T00:00:00+00:00",
+          "actual_pct": 0.9320905459387463,
+          "predicted_pct": 0.294837504344337,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_compactseasonal_a1000\",\"prediction_pct\":0.39311667245911597,\"past_mae_pp\":1.6097661334155393,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-08-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_compactseasonal_a1000",
+              "prediction_pct": 0.39311667245911597,
+              "past_mae_pp": 1.6097661334155393,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.754604919553004,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2024-08-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-10-01",
+          "forecast_cutoff": "2024-09-07T23:00:00+00:00",
+          "label_available_date": "2024-12-01T00:00:00+00:00",
+          "actual_pct": 1.3192612137203241,
+          "predicted_pct": 0.44551209609726283,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_compactseasonal_a1000\",\"prediction_pct\":0.5940161281296837,\"past_mae_pp\":1.6239846845952568,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-09-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_compactseasonal_a1000",
+              "prediction_pct": 0.5940161281296837,
+              "past_mae_pp": 1.6239846845952568,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.7134322532659727,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2024-09-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-11-01",
+          "forecast_cutoff": "2024-10-07T23:00:00+00:00",
+          "label_available_date": "2025-01-01T00:00:00+00:00",
+          "actual_pct": 0.1953125,
+          "predicted_pct": 0.4315432510624886,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_seasonal_history_a1000\",\"prediction_pct\":0.5753910014166514,\"past_mae_pp\":1.5883321646872344,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-10-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_seasonal_history_a1000",
+              "prediction_pct": 0.5753910014166514,
+              "past_mae_pp": 1.5883321646872344,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.6751878551569859,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2024-10-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2024-12-01",
+          "forecast_cutoff": "2024-11-08T00:00:00+00:00",
+          "label_available_date": "2025-02-01T00:00:00+00:00",
+          "actual_pct": 0.9096816114360085,
+          "predicted_pct": 0.22174046176111561,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_seasonal_history_a1000\",\"prediction_pct\":0.29565394901482084,\"past_mae_pp\":1.5490906348773081,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-11-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_seasonal_history_a1000",
+              "prediction_pct": 0.29565394901482084,
+              "past_mae_pp": 1.5490906348773081,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.6289811673273733,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2024-11-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-01-01",
+          "forecast_cutoff": "2024-12-08T00:00:00+00:00",
+          "label_available_date": "2025-03-01T00:00:00+00:00",
+          "actual_pct": 1.7385705086928382,
+          "predicted_pct": 0.7616975559355468,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_seasonal_history_a1000\",\"prediction_pct\":1.0155967412473956,\"past_mae_pp\":1.5232810198363007,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2024-12-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_seasonal_history_a1000",
+              "prediction_pct": 1.0155967412473956,
+              "past_mae_pp": 1.5232810198363007,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.567162613075543,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2024-12-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-02-01",
+          "forecast_cutoff": "2025-01-08T00:00:00+00:00",
+          "label_available_date": "2025-04-01T00:00:00+00:00",
+          "actual_pct": -1.0126582278480956,
+          "predicted_pct": 0.45718390214307597,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_seasonal_history_a1000\",\"prediction_pct\":0.609578536190768,\"past_mae_pp\":1.502829320821597,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2025-01-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_seasonal_history_a1000",
+              "prediction_pct": 0.609578536190768,
+              "past_mae_pp": 1.502829320821597,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.5540080838452557,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-01-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-03-01",
+          "forecast_cutoff": "2025-02-08T00:00:00+00:00",
+          "label_available_date": "2025-05-01T00:00:00+00:00",
+          "actual_pct": 1.278772378516635,
+          "predicted_pct": 0.3739737733239957,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_seasonal_history_a1000\",\"prediction_pct\":0.49863169776532756,\"past_mae_pp\":1.4797074622394109,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2025-02-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_seasonal_history_a1000",
+              "prediction_pct": 0.49863169776532756,
+              "past_mae_pp": 1.4797074622394109,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.532512069240208,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-02-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-04-01",
+          "forecast_cutoff": "2025-03-08T00:00:00+00:00",
+          "label_available_date": "2025-06-01T00:00:00+00:00",
+          "actual_pct": -0.3156565656565635,
+          "predicted_pct": 0.4495475722315265,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_compactseasonal_a1000\",\"prediction_pct\":0.5993967629753687,\"past_mae_pp\":1.494373646222982,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2025-03-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_compactseasonal_a1000",
+              "prediction_pct": 0.5993967629753687,
+              "past_mae_pp": 1.494373646222982,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.5584655719782552,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-03-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-05-01",
+          "forecast_cutoff": "2025-04-07T23:00:00+00:00",
+          "label_available_date": "2025-07-01T00:00:00+00:00",
+          "actual_pct": 0.1266624445851683,
+          "predicted_pct": 0.46943326502856053,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_compactseasonal_a1000\",\"prediction_pct\":0.6259110200380807,\"past_mae_pp\":1.5068161927760189,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2025-04-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_compactseasonal_a1000",
+              "prediction_pct": 0.6259110200380807,
+              "past_mae_pp": 1.5068161927760189,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.5779446220177231,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-04-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-06-01",
+          "forecast_cutoff": "2025-05-07T23:00:00+00:00",
+          "label_available_date": "2025-08-01T00:00:00+00:00",
+          "actual_pct": 1.0752688172043223,
+          "predicted_pct": 0.25505268996833663,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_seasonal_history_a1000\",\"prediction_pct\":0.3400702532911155,\"past_mae_pp\":1.4459398594213277,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2025-05-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_seasonal_history_a1000",
+              "prediction_pct": 0.3400702532911155,
+              "past_mae_pp": 1.4459398594213277,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.514509175245718,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-05-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-07-01",
+          "forecast_cutoff": "2025-06-07T23:00:00+00:00",
+          "label_available_date": "2025-09-01T00:00:00+00:00",
+          "actual_pct": -0.25031289111389077,
+          "predicted_pct": 0.32457114601361287,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_shrink075",
+          "components_json": "[{\"candidate_id\":\"ridge_seasonal_history_a1000\",\"prediction_pct\":0.4327615280181505,\"past_mae_pp\":1.3849616749754614,\"weight\":0.75}]",
+          "zero_weight": 0.25,
+          "candidate_selection_max_label_available_date": "2025-06-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [
+            {
+              "candidate_id": "ridge_seasonal_history_a1000",
+              "prediction_pct": 0.4327615280181505,
+              "past_mae_pp": 1.3849616749754614,
+              "weight": 0.75
+            }
+          ],
+          "selected_policy_id": "best1_shrink075",
+          "candidate_id": "best1_shrink075",
+          "model_id": "best1_shrink075",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.4398728610782145,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-06-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-08-01",
+          "forecast_cutoff": "2025-07-07T23:00:00+00:00",
+          "label_available_date": "2025-10-01T00:00:00+00:00",
+          "actual_pct": 0.0627352572145412,
+          "predicted_pct": -0.2633044544031245,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_recent12",
+          "components_json": "[{\"candidate_id\":\"gbr_seasonal_history_absolute_w60\",\"prediction_pct\":-0.2633044544031245,\"past_mae_pp\":0.6480132598456227,\"weight\":1.0}]",
+          "zero_weight": 0.0,
+          "candidate_selection_max_label_available_date": "2025-07-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 12,
+          "candidate_error_window_months": 12,
+          "components": [
+            {
+              "candidate_id": "gbr_seasonal_history_absolute_w60",
+              "prediction_pct": -0.2633044544031245,
+              "past_mae_pp": 0.6480132598456227,
+              "weight": 1.0
+            }
+          ],
+          "selected_policy_id": "best1_recent12",
+          "candidate_id": "best1_recent12",
+          "model_id": "best1_recent12",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.4117529583215989,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-07-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-09-01",
+          "forecast_cutoff": "2025-08-07T23:00:00+00:00",
+          "label_available_date": "2025-11-01T00:00:00+00:00",
+          "actual_pct": -3.1974921630093966,
+          "predicted_pct": 0.9417405294486774,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_recent12",
+          "components_json": "[{\"candidate_id\":\"gbr_seasonal_history_absolute_w60\",\"prediction_pct\":0.9417405294486774,\"past_mae_pp\":0.695998883122043,\"weight\":1.0}]",
+          "zero_weight": 0.0,
+          "candidate_selection_max_label_available_date": "2025-08-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 12,
+          "candidate_error_window_months": 12,
+          "components": [
+            {
+              "candidate_id": "gbr_seasonal_history_absolute_w60",
+              "prediction_pct": 0.9417405294486774,
+              "past_mae_pp": 0.695998883122043,
+              "weight": 1.0
+            }
+          ],
+          "selected_policy_id": "best1_recent12",
+          "candidate_id": "best1_recent12",
+          "model_id": "best1_recent12",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.3848502819785695,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-08-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-10-01",
+          "forecast_cutoff": "2025-09-07T23:00:00+00:00",
+          "label_available_date": "2025-12-01T00:00:00+00:00",
+          "actual_pct": 3.626943005181338,
+          "predicted_pct": 0.8635576122512789,
+          "baseline_pct": 0.0,
+          "policy_id": "best1_recent12",
+          "components_json": "[{\"candidate_id\":\"gbr_seasonal_history_absolute_error\",\"prediction_pct\":0.8635576122512789,\"past_mae_pp\":0.6801444277124481,\"weight\":1.0}]",
+          "zero_weight": 0.0,
+          "candidate_selection_max_label_available_date": "2025-09-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 12,
+          "candidate_error_window_months": 12,
+          "components": [
+            {
+              "candidate_id": "gbr_seasonal_history_absolute_error",
+              "prediction_pct": 0.8635576122512789,
+              "past_mae_pp": 0.6801444277124481,
+              "weight": 1.0
+            }
+          ],
+          "selected_policy_id": "best1_recent12",
+          "candidate_id": "best1_recent12",
+          "model_id": "best1_recent12",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.3489564224731292,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-09-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-11-01",
+          "forecast_cutoff": "2025-10-07T23:00:00+00:00",
+          "label_available_date": "2026-01-01T00:00:00+00:00",
+          "actual_pct": -1.4375000000000027,
+          "predicted_pct": 0.0,
+          "baseline_pct": 0.0,
+          "policy_id": "zero",
+          "components_json": "[]",
+          "zero_weight": 1.0,
+          "candidate_selection_max_label_available_date": "2025-10-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [],
+          "selected_policy_id": "zero",
+          "candidate_id": "zero",
+          "model_id": "zero",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.335085458772464,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-10-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2025-12-01",
+          "forecast_cutoff": "2025-11-08T00:00:00+00:00",
+          "label_available_date": "2026-02-01T00:00:00+00:00",
+          "actual_pct": 2.0925808497146647,
+          "predicted_pct": 0.0,
+          "baseline_pct": 0.0,
+          "policy_id": "zero",
+          "components_json": "[]",
+          "zero_weight": 1.0,
+          "candidate_selection_max_label_available_date": "2025-11-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [],
+          "selected_policy_id": "zero",
+          "candidate_id": "zero",
+          "model_id": "zero",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.348546735258972,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-11-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2026-01-01",
+          "forecast_cutoff": "2025-12-08T00:00:00+00:00",
+          "label_available_date": "2026-03-01T00:00:00+00:00",
+          "actual_pct": -0.9937888198757738,
+          "predicted_pct": 0.0,
+          "baseline_pct": 0.0,
+          "policy_id": "zero",
+          "components_json": "[]",
+          "zero_weight": 1.0,
+          "candidate_selection_max_label_available_date": "2025-12-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [],
+          "selected_policy_id": "zero",
+          "candidate_id": "zero",
+          "model_id": "zero",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.3352577994574633,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2025-12-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2026-02-01",
+          "forecast_cutoff": "2026-01-08T00:00:00+00:00",
+          "label_available_date": "2026-04-01T00:00:00+00:00",
+          "actual_pct": 0.12547051442910462,
+          "predicted_pct": 0.0,
+          "baseline_pct": 0.0,
+          "policy_id": "zero",
+          "components_json": "[]",
+          "zero_weight": 1.0,
+          "candidate_selection_max_label_available_date": "2026-01-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [],
+          "selected_policy_id": "zero",
+          "candidate_id": "zero",
+          "model_id": "zero",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.3462531698278335,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2026-01-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2026-03-01",
+          "forecast_cutoff": "2026-02-08T00:00:00+00:00",
+          "label_available_date": "2026-05-01T00:00:00+00:00",
+          "actual_pct": -0.43859649122806044,
+          "predicted_pct": 0.0,
+          "baseline_pct": 0.0,
+          "policy_id": "zero",
+          "components_json": "[]",
+          "zero_weight": 1.0,
+          "candidate_selection_max_label_available_date": "2026-02-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [],
+          "selected_policy_id": "zero",
+          "candidate_id": "zero",
+          "model_id": "zero",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.3961984487083883,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2026-02-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2026-04-01",
+          "forecast_cutoff": "2026-03-08T00:00:00+00:00",
+          "label_available_date": "2026-06-01T00:00:00+00:00",
+          "actual_pct": 0.8810572687224738,
+          "predicted_pct": 0.0,
+          "baseline_pct": 0.0,
+          "policy_id": "zero",
+          "components_json": "[]",
+          "zero_weight": 1.0,
+          "candidate_selection_max_label_available_date": "2026-03-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [],
+          "selected_policy_id": "zero",
+          "candidate_id": "zero",
+          "model_id": "zero",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.3707770988281218,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2026-03-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2026-05-01",
+          "forecast_cutoff": "2026-04-07T23:00:00+00:00",
+          "label_available_date": "2026-07-01T00:00:00+00:00",
+          "actual_pct": -1.5595757953836609,
+          "predicted_pct": 0.0,
+          "baseline_pct": 0.0,
+          "policy_id": "zero",
+          "components_json": "[]",
+          "zero_weight": 1.0,
+          "candidate_selection_max_label_available_date": "2026-04-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [],
+          "selected_policy_id": "zero",
+          "candidate_id": "zero",
+          "model_id": "zero",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.2922098772868873,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2026-04-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2026-06-01",
+          "forecast_cutoff": "2026-05-07T23:00:00+00:00",
+          "label_available_date": "2026-08-01T00:00:00+00:00",
+          "actual_pct": 0.9505703422053147,
+          "predicted_pct": 0.0,
+          "baseline_pct": 0.0,
+          "policy_id": "zero",
+          "components_json": "[]",
+          "zero_weight": 1.0,
+          "candidate_selection_max_label_available_date": "2026-05-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [],
+          "selected_policy_id": "zero",
+          "candidate_id": "zero",
+          "model_id": "zero",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.2732913325773954,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2026-05-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2026-07-01",
+          "forecast_cutoff": "2026-06-07T23:00:00+00:00",
+          "label_available_date": "2026-09-01T00:00:00+00:00",
+          "actual_pct": -1.5065913370998163,
+          "predicted_pct": 0.0,
+          "baseline_pct": 0.0,
+          "policy_id": "zero",
+          "components_json": "[]",
+          "zero_weight": 1.0,
+          "candidate_selection_max_label_available_date": "2026-06-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [],
+          "selected_policy_id": "zero",
+          "candidate_id": "zero",
+          "model_id": "zero",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.2800722935097082,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2026-06-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2026-08-01",
+          "forecast_cutoff": "2026-07-07T23:00:00+00:00",
+          "label_available_date": "2026-10-01T00:00:00+00:00",
+          "actual_pct": 4.780114722753348,
+          "predicted_pct": 0.0,
+          "baseline_pct": 0.0,
+          "policy_id": "zero",
+          "components_json": "[]",
+          "zero_weight": 1.0,
+          "candidate_selection_max_label_available_date": "2026-07-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [],
+          "selected_policy_id": "zero",
+          "candidate_id": "zero",
+          "model_id": "zero",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.1905605881853516,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2026-07-01T00:00:00+00:00"
+        },
+        {
+          "target_month": "2026-09-01",
+          "forecast_cutoff": "2026-08-07T23:00:00+00:00",
+          "label_available_date": "2026-11-01T00:00:00+00:00",
+          "actual_pct": -1.8248175182481785,
+          "predicted_pct": 0.0,
+          "baseline_pct": 0.0,
+          "policy_id": "zero",
+          "components_json": "[]",
+          "zero_weight": 1.0,
+          "candidate_selection_max_label_available_date": "2026-08-01T00:00:00+00:00",
+          "candidate_inner_validation_n": 36,
+          "candidate_error_window_months": 36,
+          "components": [],
+          "selected_policy_id": "zero",
+          "candidate_id": "zero",
+          "model_id": "zero",
+          "feature_group": "adaptive_past_only",
+          "policy_inner_validation_mae_pp": 1.2076439179744254,
+          "policy_inner_validation_n": 36,
+          "policy_selection_max_label_available_date": "2026-08-01T00:00:00+00:00"
+        }
+      ],
+      "warning": "Designed after examining initial retuning results; no untouched test remains. Category CPI only."
+    }
+  ],
+  "status": "ready"
+}

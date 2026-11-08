@@ -1,0 +1,91 @@
+{
+  "features": [
+    "history_change_lag0_pct",
+    "history_change_lag1_pct",
+    "history_change_lag2_pct",
+    "history_change_lag3_pct",
+    "history_change_lag6_pct",
+    "history_change_lag12_pct",
+    "history_mean_3m_pct",
+    "history_std_3m_pct",
+    "history_mean_6m_pct",
+    "history_std_6m_pct",
+    "history_mean_12m_pct",
+    "history_std_12m_pct",
+    "season_sin",
+    "season_cos",
+    "commodity_cocoa_gbp_return_4w_pct",
+    "commodity_cocoa_gbp_return_12w_pct",
+    "commodity_cocoa_gbp_return_26w_pct",
+    "commodity_cocoa_gbp_volatility_12w_pct",
+    "commodity_gbp_per_usd_return_4w_pct",
+    "commodity_gbp_per_usd_return_12w_pct",
+    "commodity_cocoa_gbp_rsi_14w",
+    "commodity_cocoa_gbp_rsi_14w_issue_lag3m",
+    "commodity_gbp_per_usd_rsi_14w",
+    "commodity_gbp_per_usd_rsi_14w_issue_lag3m"
+  ],
+  "validation_metrics": {
+    "n": 34,
+    "mae_pp": 1.6783737004185277,
+    "rmse_pp": 2.299794457495372,
+    "directional_accuracy": 0.7352941176470589
+  },
+  "test_metrics": {
+    "n": 33,
+    "mae_pp": 1.655712177293063,
+    "rmse_pp": 2.0829869101022753,
+    "directional_accuracy": 0.6666666666666666
+  },
+  "paired_test_comparison": {
+    "n": 33,
+    "mean_error_reduction_pp": -0.0809745864297772,
+    "median_error_reduction_pp": -0.08354046289094019,
+    "months_improved": 14,
+    "months_worsened": 19,
+    "months_tied": 0
+  },
+  "error_reduction_vs_unchanged_pct": -5.142100302907372,
+  "yearly_test_metrics": {
+    "2024": {
+      "n": 12,
+      "mae_pp": 1.6178227356410781,
+      "rmse_pp": 2.145964417553279,
+      "directional_accuracy": 0.5833333333333334
+    },
+    "2025": {
+      "n": 12,
+      "mae_pp": 1.4655055340409102,
+      "rmse_pp": 1.7919820811885796,
+      "directional_accuracy": 0.5833333333333334
+    },
+    "2026": {
+      "n": 9,
+      "mae_pp": 1.95984029049858,
+      "rmse_pp": 2.3424863501138224,
+      "directional_accuracy": 0.8888888888888888
+    }
+  },
+  "feature_coverage": {
+    "validation": {
+      "commodity_cocoa_gbp_rsi_14w": 1.0,
+      "commodity_cocoa_gbp_rsi_14w_issue_lag3m": 1.0,
+      "commodity_gbp_per_usd_rsi_14w": 1.0,
+      "commodity_gbp_per_usd_rsi_14w_issue_lag3m": 1.0
+    },
+    "test": {
+      "commodity_cocoa_gbp_rsi_14w": 1.0,
+      "commodity_cocoa_gbp_rsi_14w_issue_lag3m": 1.0,
+      "commodity_gbp_per_usd_rsi_14w": 1.0,
+      "commodity_gbp_per_usd_rsi_14w_issue_lag3m": 1.0
+    }
+  },
+  "forecast": {
+    "as_of": "2026-11-08",
+    "target_month": "2026-12-01",
+    "change_pct": 1.9963353963292076,
+    "train_n": 129,
+    "max_train_label_available_date": "2026-11-01T00:00:00+00:00",
+    "selected_for_website": false
+  }
+}

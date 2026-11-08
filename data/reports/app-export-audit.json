@@ -1,0 +1,13 @@
+{
+  "cases": 10,
+  "histories": 11,
+  "comparison_groups": 4,
+  "recipe_findings": 1,
+  "comparison_items": 56,
+  "forecast_status": "category_available",
+  "tuning_status": "exploratory_available",
+  "product_forecast_status": "unavailable",
+  "comparison_cohort_rule": "Familiar brands plus explicit bar/finger/pouch/button or crisp/chip format in the captured name; exclude desserts, cereals, drinks and dips. No ingredient/dietary equivalence inferred.",
+  "output": "data/app-public/data/demo.json",
+  "bytes": 604175
+}

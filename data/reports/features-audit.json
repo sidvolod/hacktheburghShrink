@@ -1,0 +1,19 @@
+{
+  "cutoffs": [
+    "2024-02-01",
+    "2024-03-01",
+    "2024-04-01",
+    "2024-05-01",
+    "2026-11-08"
+  ],
+  "rows": 4050,
+  "strict_eligible_rows": 0,
+  "exploratory_rows_with_observations": 513,
+  "limitations": [
+    "Historical quotes do not establish their publication or revision-vintage timing.",
+    "Exploratory rows must not be reported as leakage-safe backtest features.",
+    "Strict rows stay empty/null when documented availability is unknown.",
+    "Features retain series units/currencies; no assumed manufacturer cost weights.",
+    "Oilseed prices are not crude edible-oil prices; missing sugar/dairy weekly feeds are not interpolated from monthly data."
+  ]
+}

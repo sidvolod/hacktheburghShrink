@@ -1,0 +1,188 @@
+{
+  "prepared_price_observations": 9505414,
+  "raw_rows": 9529242,
+  "duplicate_or_category_repeat_rows": 23828,
+  "provisional_retailer_name_products": 130633,
+  "first_observed_date": "2024-01-09",
+  "last_observed_date": "2024-04-13",
+  "observed_days": 92,
+  "calendar_months": 4,
+  "conflicting_product_day_observations": 4,
+  "invalid_pack_price_observations": 10,
+  "invalid_source_rate_observations": 13065,
+  "source_name_rate_mismatch_observations": 143916,
+  "explicit_name_mass_observations": 2620545,
+  "explicit_name_volume_observations": 1476975,
+  "food_candidate_observations": 5438603,
+  "usable_mass_price_observations": 3673594,
+  "usable_volume_price_observations": 1240895,
+  "source_id": "uk-retail-panel",
+  "status": "prepared",
+  "sha256": "9d712bbead729442277d73692daee90b9535ed10e0b1834227f97d637560fe15",
+  "source_url": "https://huggingface.co/datasets/Rif-SQL/time-series-uk-retail-supermarket-price-data",
+  "original_source_url": "https://www.kaggle.com/datasets/declanmcalinden/time-series-uk-supermarket-data",
+  "price_basis": "lowest_available_including_loyalty",
+  "identity_scope": "retailer plus exact raw product name; no barcode or verified replacement links",
+  "quantity_rule": "Parse explicit name mass/volume; source price/rate implied quantity is separate and never treated as declared size.",
+  "rate_mismatch_rule": "Flag >5% disagreement between source unit rate and explicit-name unit price; allows source rounding.",
+  "food_candidate_categories": [
+    "food_cupboard",
+    "bakery",
+    "frozen",
+    "drinks",
+    "fresh_food",
+    "free-from"
+  ],
+  "limitations": [
+    "Only four calendar months of panel coverage; April is partial.",
+    "No row-level loyalty/promotion flag; source author reports lowest available price including loyalty.",
+    "Name-based identities can split renamed listings and conflate same-name variants.",
+    "Some categories contain non-food listings; food_candidate is a coarse filter.",
+    "Morrisons scraper coverage was variable before 2024-01-27.",
+    "Missing days are unobserved, never filled as no change.",
+    "Source has no ingredients, barcodes or sales quantities."
+  ],
+  "retailers": [
+    {
+      "retailer": "ASDA",
+      "observations": 2456414,
+      "products": 32661,
+      "first_date": "2024-01-09",
+      "last_date": "2024-04-13"
+    },
+    {
+      "retailer": "Aldi",
+      "observations": 464863,
+      "products": 7262,
+      "first_date": "2024-01-09",
+      "last_date": "2024-04-13"
+    },
+    {
+      "retailer": "Morrisons",
+      "observations": 1794065,
+      "products": 26187,
+      "first_date": "2024-01-09",
+      "last_date": "2024-04-13"
+    },
+    {
+      "retailer": "Sains",
+      "observations": 2600289,
+      "products": 33886,
+      "first_date": "2024-01-09",
+      "last_date": "2024-04-13"
+    },
+    {
+      "retailer": "Tesco",
+      "observations": 2189783,
+      "products": 30637,
+      "first_date": "2024-01-09",
+      "last_date": "2024-04-13"
+    }
+  ],
+  "source_units": [
+    {
+      "source_unit": "kg",
+      "observations": 4377820
+    },
+    {
+      "source_unit": "l",
+      "observations": 2299692
+    },
+    {
+      "source_unit": "m",
+      "observations": 14115
+    },
+    {
+      "source_unit": "unit",
+      "observations": 2813263
+    },
+    {
+      "source_unit": null,
+      "observations": 524
+    }
+  ],
+  "highest_source_mass_rates": [
+    {
+      "retailer": "Tesco",
+      "product_name_raw": "Lancashire Farm Whole Milk Yogurt 1Kg",
+      "observed_date": "2024-03-01",
+      "source_unit_price_gbp": 150000.0
+    },
+    {
+      "retailer": "Tesco",
+      "product_name_raw": "Lancashire Farm Whole Milk Yogurt 1Kg",
+      "observed_date": "2024-02-23",
+      "source_unit_price_gbp": 150000.0
+    },
+    {
+      "retailer": "ASDA",
+      "product_name_raw": "Max Factor Brow Shaper 20 Brown",
+      "observed_date": "2024-01-29",
+      "source_unit_price_gbp": 99778.0
+    },
+    {
+      "retailer": "ASDA",
+      "product_name_raw": "Max Factor Brow Shaper 10 Blonde",
+      "observed_date": "2024-02-09",
+      "source_unit_price_gbp": 99778.0
+    },
+    {
+      "retailer": "ASDA",
+      "product_name_raw": "Max Factor Brow Shaper 30 Deep Brown",
+      "observed_date": "2024-03-27",
+      "source_unit_price_gbp": 99778.0
+    },
+    {
+      "retailer": "ASDA",
+      "product_name_raw": "Max Factor Brow Shaper 10 Blonde",
+      "observed_date": "2024-03-27",
+      "source_unit_price_gbp": 99778.0
+    },
+    {
+      "retailer": "ASDA",
+      "product_name_raw": "Max Factor Brow Shaper 10 Blonde",
+      "observed_date": "2024-03-21",
+      "source_unit_price_gbp": 99778.0
+    },
+    {
+      "retailer": "ASDA",
+      "product_name_raw": "Max Factor Brow Shaper 30 Deep Brown",
+      "observed_date": "2024-02-08",
+      "source_unit_price_gbp": 99778.0
+    },
+    {
+      "retailer": "ASDA",
+      "product_name_raw": "Max Factor Brow Shaper 20 Brown",
+      "observed_date": "2024-01-26",
+      "source_unit_price_gbp": 99778.0
+    },
+    {
+      "retailer": "ASDA",
+      "product_name_raw": "Max Factor Brow Shaper 10 Blonde",
+      "observed_date": "2024-02-10",
+      "source_unit_price_gbp": 99778.0
+    }
+  ],
+  "quantity_status": [
+    {
+      "quantity_status": "ambiguous",
+      "products": 1420
+    },
+    {
+      "quantity_status": "count_only",
+      "products": 4201
+    },
+    {
+      "quantity_status": "missing",
+      "products": 1
+    },
+    {
+      "quantity_status": "parsed",
+      "products": 54895
+    },
+    {
+      "quantity_status": "unparsed",
+      "products": 70116
+    }
+  ]
+}

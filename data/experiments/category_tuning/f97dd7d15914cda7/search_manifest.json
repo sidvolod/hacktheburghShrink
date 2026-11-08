@@ -1,0 +1,1546 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-08",
+  "data_sha256": "f6c3108b645c3460b35a54bf316c782285824a70ee5cd53ce8c9536bada0f623",
+  "model_code_sha256": "45b8423e81f10b8493fa10247f30e635ad4d1d2f5ed272d30711f4f2f4d89b16",
+  "data_code_sha256": "9d68168fce64b6bf5b18cd0f7d2485dc36d50c28b2c6cb406bf0765436bbed2a",
+  "scope": "retrospective_exploratory_category_CPI_forecast",
+  "warning": "2024+ outcomes were examined before this design; this is not a fresh untouched test.",
+  "policy": {
+    "outer_start": "2024-01-01",
+    "oof_start": "2020-01-01",
+    "minimum_training_rows": 24,
+    "inner_window_months": 36,
+    "minimum_inner_outcomes": 12,
+    "inner_comparison": "common monthly outcomes with label_available_date <= outer forecast_cutoff",
+    "selection_objective": "MAE; deterministic candidate-id tie break",
+    "candidate_limit": 60,
+    "thread_limit": 4,
+    "imputer_scaler": "fit within every inner chronological training fold",
+    "test_driven_search_expansion": false,
+    "prediction_intervals": "not emitted; no independent calibration"
+  },
+  "candidates": [
+    {
+      "candidate_id": "baseline_zero",
+      "model_id": "baseline_zero",
+      "feature_group": "baseline",
+      "params": {},
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "baseline",
+      "column": "baseline_zero"
+    },
+    {
+      "candidate_id": "baseline_recent",
+      "model_id": "baseline_recent",
+      "feature_group": "baseline",
+      "params": {},
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "baseline",
+      "column": "baseline_recent"
+    },
+    {
+      "candidate_id": "baseline_trailing_mean",
+      "model_id": "baseline_trailing_mean",
+      "feature_group": "baseline",
+      "params": {},
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "baseline",
+      "column": "baseline_trailing_mean"
+    },
+    {
+      "candidate_id": "baseline_seasonal",
+      "model_id": "baseline_seasonal",
+      "feature_group": "baseline",
+      "params": {},
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "baseline",
+      "column": "baseline_seasonal"
+    },
+    {
+      "candidate_id": "baseline_seasonal_mean3",
+      "model_id": "baseline_seasonal_mean3",
+      "feature_group": "baseline",
+      "params": {},
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "baseline",
+      "column": "baseline_seasonal_mean3"
+    },
+    {
+      "candidate_id": "baseline_seasonal_median3",
+      "model_id": "baseline_seasonal_median3",
+      "feature_group": "baseline",
+      "params": {},
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "baseline",
+      "column": "baseline_seasonal_median3"
+    },
+    {
+      "candidate_id": "baseline_seasonal_mean5",
+      "model_id": "baseline_seasonal_mean5",
+      "feature_group": "baseline",
+      "params": {},
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "baseline",
+      "column": "baseline_seasonal_mean5"
+    },
+    {
+      "candidate_id": "baseline_seasonal_smoothed",
+      "model_id": "baseline_seasonal_smoothed",
+      "feature_group": "baseline",
+      "params": {},
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "baseline_blend",
+      "columns": [
+        "baseline_seasonal_mean3",
+        "baseline_trailing_mean"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "candidate_id": "ridge_compactseasonal_a0.01",
+      "model_id": "ridge",
+      "feature_group": "compactseasonal",
+      "params": {
+        "alpha": 0.01
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_compactseasonal_a0.1",
+      "model_id": "ridge",
+      "feature_group": "compactseasonal",
+      "params": {
+        "alpha": 0.1
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_compactseasonal_a1",
+      "model_id": "ridge",
+      "feature_group": "compactseasonal",
+      "params": {
+        "alpha": 1.0
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_compactseasonal_a10",
+      "model_id": "ridge",
+      "feature_group": "compactseasonal",
+      "params": {
+        "alpha": 10.0
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_compactseasonal_a100",
+      "model_id": "ridge",
+      "feature_group": "compactseasonal",
+      "params": {
+        "alpha": 100.0
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_compactseasonal_a1000",
+      "model_id": "ridge",
+      "feature_group": "compactseasonal",
+      "params": {
+        "alpha": 1000.0
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_a0.01",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history",
+      "params": {
+        "alpha": 0.01
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_a0.1",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history",
+      "params": {
+        "alpha": 0.1
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_a1",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history",
+      "params": {
+        "alpha": 1.0
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_a10",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history",
+      "params": {
+        "alpha": 10.0
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_a100",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history",
+      "params": {
+        "alpha": 100.0
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_a1000",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history",
+      "params": {
+        "alpha": 1000.0
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_commodities_a0.01",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history_commodities",
+      "params": {
+        "alpha": 0.01
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_commodities_a0.1",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history_commodities",
+      "params": {
+        "alpha": 0.1
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_commodities_a1",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history_commodities",
+      "params": {
+        "alpha": 1.0
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_commodities_a10",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history_commodities",
+      "params": {
+        "alpha": 10.0
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_commodities_a100",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history_commodities",
+      "params": {
+        "alpha": 100.0
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_commodities_a1000",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history_commodities",
+      "params": {
+        "alpha": 1000.0
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "residual_ridge_seasonal_history_a1",
+      "model_id": "residual_ridge",
+      "feature_group": "seasonal_history",
+      "params": {
+        "alpha": 1.0
+      },
+      "training_window_months": null,
+      "residual_baseline": "baseline_seasonal_mean3",
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "residual_ridge_seasonal_history_a10",
+      "model_id": "residual_ridge",
+      "feature_group": "seasonal_history",
+      "params": {
+        "alpha": 10.0
+      },
+      "training_window_months": null,
+      "residual_baseline": "baseline_seasonal_mean3",
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "residual_ridge_seasonal_history_a100",
+      "model_id": "residual_ridge",
+      "feature_group": "seasonal_history",
+      "params": {
+        "alpha": 100.0
+      },
+      "training_window_months": null,
+      "residual_baseline": "baseline_seasonal_mean3",
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_a10_w36",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history",
+      "params": {
+        "alpha": 10.0
+      },
+      "training_window_months": 36,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_a100_w36",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history",
+      "params": {
+        "alpha": 100.0
+      },
+      "training_window_months": 36,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_a10_w60",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history",
+      "params": {
+        "alpha": 10.0
+      },
+      "training_window_months": 60,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_a100_w60",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history",
+      "params": {
+        "alpha": 100.0
+      },
+      "training_window_months": 60,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "gbr_seasonal_history_squared_error",
+      "model_id": "gradient_boosting",
+      "feature_group": "seasonal_history",
+      "params": {
+        "loss": "squared_error",
+        "n_estimators": 80,
+        "learning_rate": 0.04,
+        "max_depth": 2,
+        "min_samples_leaf": 8
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "gbr_seasonal_history_huber",
+      "model_id": "gradient_boosting",
+      "feature_group": "seasonal_history",
+      "params": {
+        "loss": "huber",
+        "n_estimators": 80,
+        "learning_rate": 0.04,
+        "max_depth": 2,
+        "min_samples_leaf": 8
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "gbr_seasonal_history_absolute_error",
+      "model_id": "gradient_boosting",
+      "feature_group": "seasonal_history",
+      "params": {
+        "loss": "absolute_error",
+        "n_estimators": 80,
+        "learning_rate": 0.04,
+        "max_depth": 2,
+        "min_samples_leaf": 8
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "hgb_seasonal_history_l5",
+      "model_id": "hist_gradient_boosting",
+      "feature_group": "seasonal_history",
+      "params": {
+        "max_iter": 80,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 5,
+        "min_samples_leaf": 10,
+        "l2_regularization": 10.0
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "hgb_seasonal_history_l7",
+      "model_id": "hist_gradient_boosting",
+      "feature_group": "seasonal_history",
+      "params": {
+        "max_iter": 80,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 7,
+        "min_samples_leaf": 10,
+        "l2_regularization": 20.0
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "gbr_seasonal_history_absolute_w60",
+      "model_id": "gradient_boosting",
+      "feature_group": "seasonal_history",
+      "params": {
+        "loss": "absolute_error",
+        "n_estimators": 80,
+        "learning_rate": 0.04,
+        "max_depth": 2,
+        "min_samples_leaf": 8
+      },
+      "training_window_months": 60,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "residual_ridge_seasonal_history_commodities_a1",
+      "model_id": "residual_ridge",
+      "feature_group": "seasonal_history_commodities",
+      "params": {
+        "alpha": 1.0
+      },
+      "training_window_months": null,
+      "residual_baseline": "baseline_seasonal_mean3",
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "residual_ridge_seasonal_history_commodities_a10",
+      "model_id": "residual_ridge",
+      "feature_group": "seasonal_history_commodities",
+      "params": {
+        "alpha": 10.0
+      },
+      "training_window_months": null,
+      "residual_baseline": "baseline_seasonal_mean3",
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "residual_ridge_seasonal_history_commodities_a100",
+      "model_id": "residual_ridge",
+      "feature_group": "seasonal_history_commodities",
+      "params": {
+        "alpha": 100.0
+      },
+      "training_window_months": null,
+      "residual_baseline": "baseline_seasonal_mean3",
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_commodities_a10_w36",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history_commodities",
+      "params": {
+        "alpha": 10.0
+      },
+      "training_window_months": 36,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_commodities_a100_w36",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history_commodities",
+      "params": {
+        "alpha": 100.0
+      },
+      "training_window_months": 36,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_commodities_a10_w60",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history_commodities",
+      "params": {
+        "alpha": 10.0
+      },
+      "training_window_months": 60,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ridge_seasonal_history_commodities_a100_w60",
+      "model_id": "ridge",
+      "feature_group": "seasonal_history_commodities",
+      "params": {
+        "alpha": 100.0
+      },
+      "training_window_months": 60,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "gbr_seasonal_history_commodities_squared_error",
+      "model_id": "gradient_boosting",
+      "feature_group": "seasonal_history_commodities",
+      "params": {
+        "loss": "squared_error",
+        "n_estimators": 80,
+        "learning_rate": 0.04,
+        "max_depth": 2,
+        "min_samples_leaf": 8
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "gbr_seasonal_history_commodities_huber",
+      "model_id": "gradient_boosting",
+      "feature_group": "seasonal_history_commodities",
+      "params": {
+        "loss": "huber",
+        "n_estimators": 80,
+        "learning_rate": 0.04,
+        "max_depth": 2,
+        "min_samples_leaf": 8
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "gbr_seasonal_history_commodities_absolute_error",
+      "model_id": "gradient_boosting",
+      "feature_group": "seasonal_history_commodities",
+      "params": {
+        "loss": "absolute_error",
+        "n_estimators": 80,
+        "learning_rate": 0.04,
+        "max_depth": 2,
+        "min_samples_leaf": 8
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "hgb_seasonal_history_commodities_l5",
+      "model_id": "hist_gradient_boosting",
+      "feature_group": "seasonal_history_commodities",
+      "params": {
+        "max_iter": 80,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 5,
+        "min_samples_leaf": 10,
+        "l2_regularization": 10.0
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "hgb_seasonal_history_commodities_l7",
+      "model_id": "hist_gradient_boosting",
+      "feature_group": "seasonal_history_commodities",
+      "params": {
+        "max_iter": 80,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 7,
+        "min_samples_leaf": 10,
+        "l2_regularization": 20.0
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "gbr_seasonal_history_commodities_absolute_w60",
+      "model_id": "gradient_boosting",
+      "feature_group": "seasonal_history_commodities",
+      "params": {
+        "loss": "absolute_error",
+        "n_estimators": 80,
+        "learning_rate": 0.04,
+        "max_depth": 2,
+        "min_samples_leaf": 8
+      },
+      "training_window_months": 60,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "elastic_net_a0.05_l0.2",
+      "model_id": "elastic_net",
+      "feature_group": "seasonal_history",
+      "params": {
+        "alpha": 0.05,
+        "l1_ratio": 0.2,
+        "max_iter": 3000,
+        "tol": 0.0001
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "elastic_net_a0.2_l0.8",
+      "model_id": "elastic_net",
+      "feature_group": "seasonal_history",
+      "params": {
+        "alpha": 0.2,
+        "l1_ratio": 0.8,
+        "max_iter": 3000,
+        "tol": 0.0001
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "huber_history",
+      "model_id": "huber",
+      "feature_group": "seasonal_history",
+      "params": {
+        "epsilon": 1.35,
+        "alpha": 0.1,
+        "max_iter": 300,
+        "tol": 0.0001
+      },
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "learned"
+    },
+    {
+      "candidate_id": "ensemble_seasonal_history_toward_zero",
+      "model_id": "ensemble",
+      "feature_group": "seasonal_history",
+      "params": {},
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "ensemble",
+      "base_candidate": "ridge_seasonal_history_a10",
+      "baseline_column": "baseline_zero",
+      "learned_weight": 0.5
+    },
+    {
+      "candidate_id": "ensemble_seasonal_history_toward_seasonal",
+      "model_id": "ensemble",
+      "feature_group": "seasonal_history",
+      "params": {},
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "ensemble",
+      "base_candidate": "ridge_seasonal_history_a10",
+      "baseline_column": "baseline_seasonal_mean3",
+      "learned_weight": 0.5
+    },
+    {
+      "candidate_id": "ensemble_seasonal_history_commodities_toward_zero",
+      "model_id": "ensemble",
+      "feature_group": "seasonal_history_commodities",
+      "params": {},
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "ensemble",
+      "base_candidate": "ridge_seasonal_history_commodities_a10",
+      "baseline_column": "baseline_zero",
+      "learned_weight": 0.5
+    },
+    {
+      "candidate_id": "ensemble_seasonal_history_commodities_toward_seasonal",
+      "model_id": "ensemble",
+      "feature_group": "seasonal_history_commodities",
+      "params": {},
+      "training_window_months": null,
+      "residual_baseline": null,
+      "kind": "ensemble",
+      "base_candidate": "ridge_seasonal_history_commodities_a10",
+      "baseline_column": "baseline_seasonal_mean3",
+      "learned_weight": 0.5
+    }
+  ],
+  "feature_groups": {
+    "chocolate": {
+      "compactseasonal": [
+        "season_month_01",
+        "season_month_02",
+        "season_month_03",
+        "season_month_04",
+        "season_month_05",
+        "season_month_06",
+        "season_month_07",
+        "season_month_08",
+        "season_month_09",
+        "season_month_10",
+        "season_month_11",
+        "season_month_12",
+        "history_same_month_lag1y_pct",
+        "history_same_month_mean3y_pct",
+        "history_same_month_median3y_pct",
+        "history_same_month_mean5y_pct",
+        "season_easter_month",
+        "season_before_easter_month",
+        "season_after_easter_month"
+      ],
+      "seasonal_history": [
+        "season_month_01",
+        "season_month_02",
+        "season_month_03",
+        "season_month_04",
+        "season_month_05",
+        "season_month_06",
+        "season_month_07",
+        "season_month_08",
+        "season_month_09",
+        "season_month_10",
+        "season_month_11",
+        "season_month_12",
+        "history_same_month_lag1y_pct",
+        "history_same_month_mean3y_pct",
+        "history_same_month_median3y_pct",
+        "history_same_month_mean5y_pct",
+        "season_easter_month",
+        "season_before_easter_month",
+        "season_after_easter_month",
+        "history_change_lag0_pct",
+        "history_change_lag1_pct",
+        "history_change_lag2_pct",
+        "history_change_lag3_pct",
+        "history_change_lag6_pct",
+        "history_change_lag12_pct",
+        "history_mean_3m_pct",
+        "history_std_3m_pct",
+        "history_mean_6m_pct",
+        "history_std_6m_pct",
+        "history_mean_12m_pct",
+        "history_std_12m_pct",
+        "season_sin",
+        "season_cos",
+        "history_same_month_lag2y_pct",
+        "history_same_month_lag3y_pct",
+        "history_baseline_seasonal",
+        "history_pastyear_mean_pct",
+        "history_trend_6m_pct"
+      ],
+      "seasonal_history_commodities": [
+        "season_month_01",
+        "season_month_02",
+        "season_month_03",
+        "season_month_04",
+        "season_month_05",
+        "season_month_06",
+        "season_month_07",
+        "season_month_08",
+        "season_month_09",
+        "season_month_10",
+        "season_month_11",
+        "season_month_12",
+        "history_same_month_lag1y_pct",
+        "history_same_month_mean3y_pct",
+        "history_same_month_median3y_pct",
+        "history_same_month_mean5y_pct",
+        "season_easter_month",
+        "season_before_easter_month",
+        "season_after_easter_month",
+        "history_change_lag0_pct",
+        "history_change_lag1_pct",
+        "history_change_lag2_pct",
+        "history_change_lag3_pct",
+        "history_change_lag6_pct",
+        "history_change_lag12_pct",
+        "history_mean_3m_pct",
+        "history_std_3m_pct",
+        "history_mean_6m_pct",
+        "history_std_6m_pct",
+        "history_mean_12m_pct",
+        "history_std_12m_pct",
+        "season_sin",
+        "season_cos",
+        "history_same_month_lag2y_pct",
+        "history_same_month_lag3y_pct",
+        "history_baseline_seasonal",
+        "history_pastyear_mean_pct",
+        "history_trend_6m_pct",
+        "commodity_cocoa_gbp_return_4w_pct",
+        "commodity_cocoa_gbp_return_12w_pct",
+        "commodity_cocoa_gbp_return_26w_pct",
+        "commodity_cocoa_gbp_volatility_12w_pct",
+        "commodity_gbp_per_usd_return_4w_pct",
+        "commodity_gbp_per_usd_return_12w_pct",
+        "commodity_cocoa_gbp_return_52w_pct",
+        "commodity_gbp_per_usd_return_52w_pct",
+        "commodity_cocoa_gbp_return_4w_pct_issue_lag1m",
+        "commodity_cocoa_gbp_return_12w_pct_issue_lag1m",
+        "commodity_cocoa_gbp_return_26w_pct_issue_lag1m",
+        "commodity_cocoa_gbp_volatility_12w_pct_issue_lag1m",
+        "commodity_gbp_per_usd_return_4w_pct_issue_lag1m",
+        "commodity_gbp_per_usd_return_12w_pct_issue_lag1m",
+        "commodity_cocoa_gbp_return_52w_pct_issue_lag1m",
+        "commodity_gbp_per_usd_return_52w_pct_issue_lag1m",
+        "commodity_cocoa_gbp_return_4w_pct_issue_lag3m",
+        "commodity_cocoa_gbp_return_12w_pct_issue_lag3m",
+        "commodity_cocoa_gbp_return_26w_pct_issue_lag3m",
+        "commodity_cocoa_gbp_volatility_12w_pct_issue_lag3m",
+        "commodity_gbp_per_usd_return_4w_pct_issue_lag3m",
+        "commodity_gbp_per_usd_return_12w_pct_issue_lag3m",
+        "commodity_cocoa_gbp_return_52w_pct_issue_lag3m",
+        "commodity_gbp_per_usd_return_52w_pct_issue_lag3m",
+        "commodity_cocoa_gbp_return_4w_pct_issue_lag6m",
+        "commodity_cocoa_gbp_return_12w_pct_issue_lag6m",
+        "commodity_cocoa_gbp_return_26w_pct_issue_lag6m",
+        "commodity_cocoa_gbp_volatility_12w_pct_issue_lag6m",
+        "commodity_gbp_per_usd_return_4w_pct_issue_lag6m",
+        "commodity_gbp_per_usd_return_12w_pct_issue_lag6m",
+        "commodity_cocoa_gbp_return_52w_pct_issue_lag6m",
+        "commodity_gbp_per_usd_return_52w_pct_issue_lag6m"
+      ],
+      "original_history": [
+        "history_change_lag0_pct",
+        "history_change_lag1_pct",
+        "history_change_lag2_pct",
+        "history_change_lag3_pct",
+        "history_change_lag6_pct",
+        "history_change_lag12_pct",
+        "history_mean_3m_pct",
+        "history_std_3m_pct",
+        "history_mean_6m_pct",
+        "history_std_6m_pct",
+        "history_mean_12m_pct",
+        "history_std_12m_pct",
+        "season_sin",
+        "season_cos"
+      ]
+    },
+    "crisps": {
+      "compactseasonal": [
+        "season_month_01",
+        "season_month_02",
+        "season_month_03",
+        "season_month_04",
+        "season_month_05",
+        "season_month_06",
+        "season_month_07",
+        "season_month_08",
+        "season_month_09",
+        "season_month_10",
+        "season_month_11",
+        "season_month_12",
+        "history_same_month_lag1y_pct",
+        "history_same_month_mean3y_pct",
+        "history_same_month_median3y_pct",
+        "history_same_month_mean5y_pct"
+      ],
+      "seasonal_history": [
+        "season_month_01",
+        "season_month_02",
+        "season_month_03",
+        "season_month_04",
+        "season_month_05",
+        "season_month_06",
+        "season_month_07",
+        "season_month_08",
+        "season_month_09",
+        "season_month_10",
+        "season_month_11",
+        "season_month_12",
+        "history_same_month_lag1y_pct",
+        "history_same_month_mean3y_pct",
+        "history_same_month_median3y_pct",
+        "history_same_month_mean5y_pct",
+        "history_change_lag0_pct",
+        "history_change_lag1_pct",
+        "history_change_lag2_pct",
+        "history_change_lag3_pct",
+        "history_change_lag6_pct",
+        "history_change_lag12_pct",
+        "history_mean_3m_pct",
+        "history_std_3m_pct",
+        "history_mean_6m_pct",
+        "history_std_6m_pct",
+        "history_mean_12m_pct",
+        "history_std_12m_pct",
+        "season_sin",
+        "season_cos",
+        "history_same_month_lag2y_pct",
+        "history_same_month_lag3y_pct",
+        "history_baseline_seasonal",
+        "history_pastyear_mean_pct",
+        "history_trend_6m_pct"
+      ],
+      "seasonal_history_commodities": [
+        "season_month_01",
+        "season_month_02",
+        "season_month_03",
+        "season_month_04",
+        "season_month_05",
+        "season_month_06",
+        "season_month_07",
+        "season_month_08",
+        "season_month_09",
+        "season_month_10",
+        "season_month_11",
+        "season_month_12",
+        "history_same_month_lag1y_pct",
+        "history_same_month_mean3y_pct",
+        "history_same_month_median3y_pct",
+        "history_same_month_mean5y_pct",
+        "history_change_lag0_pct",
+        "history_change_lag1_pct",
+        "history_change_lag2_pct",
+        "history_change_lag3_pct",
+        "history_change_lag6_pct",
+        "history_change_lag12_pct",
+        "history_mean_3m_pct",
+        "history_std_3m_pct",
+        "history_mean_6m_pct",
+        "history_std_6m_pct",
+        "history_mean_12m_pct",
+        "history_std_12m_pct",
+        "season_sin",
+        "season_cos",
+        "history_same_month_lag2y_pct",
+        "history_same_month_lag3y_pct",
+        "history_baseline_seasonal",
+        "history_pastyear_mean_pct",
+        "history_trend_6m_pct",
+        "commodity_gbp_per_usd_return_4w_pct",
+        "commodity_gbp_per_usd_return_12w_pct",
+        "commodity_maize_us_gulf_return_4w_pct",
+        "commodity_maize_us_gulf_return_12w_pct",
+        "commodity_maize_us_gulf_volatility_12w_pct",
+        "commodity_wheat_us_gulf_return_4w_pct",
+        "commodity_wheat_us_gulf_return_12w_pct",
+        "commodity_wheat_us_gulf_volatility_12w_pct",
+        "commodity_gbp_per_usd_return_52w_pct",
+        "commodity_maize_us_gulf_return_52w_pct",
+        "commodity_wheat_us_gulf_return_52w_pct",
+        "commodity_gbp_per_usd_return_4w_pct_issue_lag1m",
+        "commodity_gbp_per_usd_return_12w_pct_issue_lag1m",
+        "commodity_maize_us_gulf_return_4w_pct_issue_lag1m",
+        "commodity_maize_us_gulf_return_12w_pct_issue_lag1m",
+        "commodity_maize_us_gulf_volatility_12w_pct_issue_lag1m",
+        "commodity_wheat_us_gulf_return_4w_pct_issue_lag1m",
+        "commodity_wheat_us_gulf_return_12w_pct_issue_lag1m",
+        "commodity_wheat_us_gulf_volatility_12w_pct_issue_lag1m",
+        "commodity_gbp_per_usd_return_52w_pct_issue_lag1m",
+        "commodity_maize_us_gulf_return_52w_pct_issue_lag1m",
+        "commodity_wheat_us_gulf_return_52w_pct_issue_lag1m",
+        "commodity_gbp_per_usd_return_4w_pct_issue_lag3m",
+        "commodity_gbp_per_usd_return_12w_pct_issue_lag3m",
+        "commodity_maize_us_gulf_return_4w_pct_issue_lag3m",
+        "commodity_maize_us_gulf_return_12w_pct_issue_lag3m",
+        "commodity_maize_us_gulf_volatility_12w_pct_issue_lag3m",
+        "commodity_wheat_us_gulf_return_4w_pct_issue_lag3m",
+        "commodity_wheat_us_gulf_return_12w_pct_issue_lag3m",
+        "commodity_wheat_us_gulf_volatility_12w_pct_issue_lag3m",
+        "commodity_gbp_per_usd_return_52w_pct_issue_lag3m",
+        "commodity_maize_us_gulf_return_52w_pct_issue_lag3m",
+        "commodity_wheat_us_gulf_return_52w_pct_issue_lag3m",
+        "commodity_gbp_per_usd_return_4w_pct_issue_lag6m",
+        "commodity_gbp_per_usd_return_12w_pct_issue_lag6m",
+        "commodity_maize_us_gulf_return_4w_pct_issue_lag6m",
+        "commodity_maize_us_gulf_return_12w_pct_issue_lag6m",
+        "commodity_maize_us_gulf_volatility_12w_pct_issue_lag6m",
+        "commodity_wheat_us_gulf_return_4w_pct_issue_lag6m",
+        "commodity_wheat_us_gulf_return_12w_pct_issue_lag6m",
+        "commodity_wheat_us_gulf_volatility_12w_pct_issue_lag6m",
+        "commodity_gbp_per_usd_return_52w_pct_issue_lag6m",
+        "commodity_maize_us_gulf_return_52w_pct_issue_lag6m",
+        "commodity_wheat_us_gulf_return_52w_pct_issue_lag6m"
+      ],
+      "original_history": [
+        "history_change_lag0_pct",
+        "history_change_lag1_pct",
+        "history_change_lag2_pct",
+        "history_change_lag3_pct",
+        "history_change_lag6_pct",
+        "history_change_lag12_pct",
+        "history_mean_3m_pct",
+        "history_std_3m_pct",
+        "history_mean_6m_pct",
+        "history_std_6m_pct",
+        "history_mean_12m_pct",
+        "history_std_12m_pct",
+        "season_sin",
+        "season_cos"
+      ]
+    }
+  },
+  "source_metadata": {
+    "schema_version": 1,
+    "as_of": "2026-11-08",
+    "experiment_status": "exploratory_followup_after_original_test_results_were_seen",
+    "scope": "UK category CPI percentage changes; not SKU prices or shrinkflation probabilities",
+    "target_frequency": "monthly",
+    "commodity_input_frequency": "genuine weekly observations, including daily-to-weekly source aggregates",
+    "original_dataset": "data/experiments/category_forecast/dataset.parquet",
+    "original_dataset_sha256": "df2108fdbdfdd344a79cd55af1d5674dd1ecfeaf4f8f06a2c5fa10cb83c9042a",
+    "original_metadata_sha256": "1f578f8c0cfbcfa559051d20212d50805a7f75d2f5e7c4ac39f15ca477b8bdf8",
+    "dataset_sha256": "e50b54c554836f2d21abee9e92b19ed4f2e818cac14e3910e73aa0299a28142d",
+    "sources": {
+      "ons": {
+        "chocolate": {
+          "source_id": "ons-l79x",
+          "url": "https://www.ons.gov.uk/generator?format=csv&uri=/economy/inflationandpriceindices/timeseries/l79x/mm23",
+          "final_url": "https://www.ons.gov.uk/generator?format=csv&uri=/economy/inflationandpriceindices/timeseries/l79x/mm23",
+          "retrieved_at": "2026-11-08T06:22:28.239718+00:00",
+          "bytes": 3826,
+          "sha256": "cd3a7e465aa5a4a3a1d459e788119c94098ca37b1768032abb04ba746c85b7a2",
+          "content_type": "application/octet-stream;charset=utf-8",
+          "etag": "W/\"d0b3368a2ee70a95fafea1ce88961cdf04eadf55--gzip\"",
+          "http_last_modified": null,
+          "snapshot_path": "data/raw/ons-category/l79x-cd3a7e465aa5a4a3a1d459e788119c94098ca37b1768032abb04ba746c85b7a2.csv",
+          "source_frequency": "monthly",
+          "license": "Open Government Licence v3.0; attribute ONS",
+          "ons_fields": {
+            "Title": "CPI INDEX 01.1.8.3 Chocolate 2015=100",
+            "CDID": "L79X",
+            "Unit": "",
+            "Release date": "21-10-2026",
+            "Next release": "18 November 2026"
+          },
+          "observations": 141,
+          "first_month": "2015-01-01",
+          "last_month": "2026-09-01"
+        },
+        "crisps": {
+          "source_id": "ons-l79r",
+          "url": "https://www.ons.gov.uk/generator?format=csv&uri=/economy/inflationandpriceindices/timeseries/l79r/mm23",
+          "final_url": "https://www.ons.gov.uk/generator?format=csv&uri=/economy/inflationandpriceindices/timeseries/l79r/mm23",
+          "retrieved_at": "2026-11-08T06:22:28.221082+00:00",
+          "bytes": 3844,
+          "sha256": "ffbefed614dcb458b5003499ef757cfd33551e0e8cb5865dc9b9b2f0595f2fdd",
+          "content_type": "application/octet-stream;charset=utf-8",
+          "etag": "W/\"7a7a755f9ae6f3a6bfd4d36b553b9b24502784ff--gzip\"",
+          "http_last_modified": null,
+          "snapshot_path": "data/raw/ons-category/l79r-ffbefed614dcb458b5003499ef757cfd33551e0e8cb5865dc9b9b2f0595f2fdd.csv",
+          "source_frequency": "monthly",
+          "license": "Open Government Licence v3.0; attribute ONS",
+          "ons_fields": {
+            "Title": "CPI INDEX 01.1.7.5 Crisps 2015=100",
+            "CDID": "L79R",
+            "Unit": "",
+            "Release date": "21-10-2026",
+            "Next release": "18 November 2026"
+          },
+          "observations": 141,
+          "first_month": "2015-01-01",
+          "last_month": "2026-09-01"
+        }
+      },
+      "weekly": {
+        "status": "current_archive",
+        "path": "data/processed/commodity_weekly.parquet",
+        "sha256": "d26fb548700f42a9753609754b6e1edd524a58a3f88f4982223f3e7807b537bb",
+        "series": {
+          "cocoa_gbp": {
+            "series_id": "icco-cocoa-london",
+            "source_ids": [
+              "icco"
+            ],
+            "units": [
+              "per_metric_tonne"
+            ],
+            "currencies": [
+              "GBP"
+            ],
+            "source_urls": [
+              "https://www.icco.org/statistics/statistics_2025/"
+            ],
+            "source_frequencies": [
+              "daily"
+            ],
+            "roll_conventions": [
+              "Average nearest three active ICE London/New York futures months; shift on 15th of month preceding nearest maturing month; London conversion uses six-month forward FX. See ICCO methodology."
+            ],
+            "weekly_rows": 1675,
+            "first_week_end": "1994-10-07",
+            "last_week_end": "2026-11-06",
+            "availability_buffer_days": 7
+          },
+          "gbp_per_usd": {
+            "series_id": "derived-ecb-gbp-per-usd",
+            "derived_from": [
+              "ecb-gbp-per-eur",
+              "ecb-usd-per-eur"
+            ],
+            "unit": "GBP per USD",
+            "formula": "weekly mean GBP/EUR divided by weekly mean USD/EUR; ratio of means, not mean of daily crosses",
+            "weekly_rows": 1453,
+            "first_week_end": "1999-01-08",
+            "last_week_end": "2026-11-06",
+            "availability_buffer_days": 7
+          },
+          "maize_us_gulf": {
+            "series_id": "eu-world-maize-us-gulf-3yc",
+            "source_ids": [
+              "eu-world-cereal"
+            ],
+            "units": [
+              "per_source_ton"
+            ],
+            "currencies": [
+              "USD"
+            ],
+            "source_urls": [
+              "https://agriculture.ec.europa.eu/data-and-analysis/markets/overviews/market-observatories/crops/cereals-statistics_en"
+            ],
+            "source_frequencies": [
+              "weekly_quote"
+            ],
+            "roll_conventions": [
+              "not_applicable"
+            ],
+            "weekly_rows": 398,
+            "first_week_end": "2019-03-22",
+            "last_week_end": "2026-10-30",
+            "availability_buffer_days": 14
+          },
+          "wheat_us_gulf": {
+            "series_id": "eu-world-wheat-us-gulf-hrw",
+            "source_ids": [
+              "eu-world-cereal"
+            ],
+            "units": [
+              "per_source_ton"
+            ],
+            "currencies": [
+              "USD"
+            ],
+            "source_urls": [
+              "https://agriculture.ec.europa.eu/data-and-analysis/markets/overviews/market-observatories/crops/cereals-statistics_en"
+            ],
+            "source_frequencies": [
+              "weekly_quote"
+            ],
+            "roll_conventions": [
+              "not_applicable"
+            ],
+            "weekly_rows": 398,
+            "first_week_end": "2019-03-22",
+            "last_week_end": "2026-10-30",
+            "availability_buffer_days": 14
+          }
+        }
+      }
+    },
+    "availability_status": "current_archive_with_explicit_buffer_assumptions_not_original_vintages",
+    "feature_groups": {
+      "chocolate": {
+        "compactseasonal": [
+          "season_month_01",
+          "season_month_02",
+          "season_month_03",
+          "season_month_04",
+          "season_month_05",
+          "season_month_06",
+          "season_month_07",
+          "season_month_08",
+          "season_month_09",
+          "season_month_10",
+          "season_month_11",
+          "season_month_12",
+          "history_same_month_lag1y_pct",
+          "history_same_month_mean3y_pct",
+          "history_same_month_median3y_pct",
+          "history_same_month_mean5y_pct",
+          "season_easter_month",
+          "season_before_easter_month",
+          "season_after_easter_month"
+        ],
+        "seasonal_history": [
+          "season_month_01",
+          "season_month_02",
+          "season_month_03",
+          "season_month_04",
+          "season_month_05",
+          "season_month_06",
+          "season_month_07",
+          "season_month_08",
+          "season_month_09",
+          "season_month_10",
+          "season_month_11",
+          "season_month_12",
+          "history_same_month_lag1y_pct",
+          "history_same_month_mean3y_pct",
+          "history_same_month_median3y_pct",
+          "history_same_month_mean5y_pct",
+          "season_easter_month",
+          "season_before_easter_month",
+          "season_after_easter_month",
+          "history_change_lag0_pct",
+          "history_change_lag1_pct",
+          "history_change_lag2_pct",
+          "history_change_lag3_pct",
+          "history_change_lag6_pct",
+          "history_change_lag12_pct",
+          "history_mean_3m_pct",
+          "history_std_3m_pct",
+          "history_mean_6m_pct",
+          "history_std_6m_pct",
+          "history_mean_12m_pct",
+          "history_std_12m_pct",
+          "season_sin",
+          "season_cos",
+          "history_same_month_lag2y_pct",
+          "history_same_month_lag3y_pct",
+          "history_baseline_seasonal",
+          "history_pastyear_mean_pct",
+          "history_trend_6m_pct"
+        ],
+        "seasonal_history_commodities": [
+          "season_month_01",
+          "season_month_02",
+          "season_month_03",
+          "season_month_04",
+          "season_month_05",
+          "season_month_06",
+          "season_month_07",
+          "season_month_08",
+          "season_month_09",
+          "season_month_10",
+          "season_month_11",
+          "season_month_12",
+          "history_same_month_lag1y_pct",
+          "history_same_month_mean3y_pct",
+          "history_same_month_median3y_pct",
+          "history_same_month_mean5y_pct",
+          "season_easter_month",
+          "season_before_easter_month",
+          "season_after_easter_month",
+          "history_change_lag0_pct",
+          "history_change_lag1_pct",
+          "history_change_lag2_pct",
+          "history_change_lag3_pct",
+          "history_change_lag6_pct",
+          "history_change_lag12_pct",
+          "history_mean_3m_pct",
+          "history_std_3m_pct",
+          "history_mean_6m_pct",
+          "history_std_6m_pct",
+          "history_mean_12m_pct",
+          "history_std_12m_pct",
+          "season_sin",
+          "season_cos",
+          "history_same_month_lag2y_pct",
+          "history_same_month_lag3y_pct",
+          "history_baseline_seasonal",
+          "history_pastyear_mean_pct",
+          "history_trend_6m_pct",
+          "commodity_cocoa_gbp_return_4w_pct",
+          "commodity_cocoa_gbp_return_12w_pct",
+          "commodity_cocoa_gbp_return_26w_pct",
+          "commodity_cocoa_gbp_volatility_12w_pct",
+          "commodity_gbp_per_usd_return_4w_pct",
+          "commodity_gbp_per_usd_return_12w_pct",
+          "commodity_cocoa_gbp_return_52w_pct",
+          "commodity_gbp_per_usd_return_52w_pct",
+          "commodity_cocoa_gbp_return_4w_pct_issue_lag1m",
+          "commodity_cocoa_gbp_return_12w_pct_issue_lag1m",
+          "commodity_cocoa_gbp_return_26w_pct_issue_lag1m",
+          "commodity_cocoa_gbp_volatility_12w_pct_issue_lag1m",
+          "commodity_gbp_per_usd_return_4w_pct_issue_lag1m",
+          "commodity_gbp_per_usd_return_12w_pct_issue_lag1m",
+          "commodity_cocoa_gbp_return_52w_pct_issue_lag1m",
+          "commodity_gbp_per_usd_return_52w_pct_issue_lag1m",
+          "commodity_cocoa_gbp_return_4w_pct_issue_lag3m",
+          "commodity_cocoa_gbp_return_12w_pct_issue_lag3m",
+          "commodity_cocoa_gbp_return_26w_pct_issue_lag3m",
+          "commodity_cocoa_gbp_volatility_12w_pct_issue_lag3m",
+          "commodity_gbp_per_usd_return_4w_pct_issue_lag3m",
+          "commodity_gbp_per_usd_return_12w_pct_issue_lag3m",
+          "commodity_cocoa_gbp_return_52w_pct_issue_lag3m",
+          "commodity_gbp_per_usd_return_52w_pct_issue_lag3m",
+          "commodity_cocoa_gbp_return_4w_pct_issue_lag6m",
+          "commodity_cocoa_gbp_return_12w_pct_issue_lag6m",
+          "commodity_cocoa_gbp_return_26w_pct_issue_lag6m",
+          "commodity_cocoa_gbp_volatility_12w_pct_issue_lag6m",
+          "commodity_gbp_per_usd_return_4w_pct_issue_lag6m",
+          "commodity_gbp_per_usd_return_12w_pct_issue_lag6m",
+          "commodity_cocoa_gbp_return_52w_pct_issue_lag6m",
+          "commodity_gbp_per_usd_return_52w_pct_issue_lag6m"
+        ],
+        "original_history": [
+          "history_change_lag0_pct",
+          "history_change_lag1_pct",
+          "history_change_lag2_pct",
+          "history_change_lag3_pct",
+          "history_change_lag6_pct",
+          "history_change_lag12_pct",
+          "history_mean_3m_pct",
+          "history_std_3m_pct",
+          "history_mean_6m_pct",
+          "history_std_6m_pct",
+          "history_mean_12m_pct",
+          "history_std_12m_pct",
+          "season_sin",
+          "season_cos"
+        ]
+      },
+      "crisps": {
+        "compactseasonal": [
+          "season_month_01",
+          "season_month_02",
+          "season_month_03",
+          "season_month_04",
+          "season_month_05",
+          "season_month_06",
+          "season_month_07",
+          "season_month_08",
+          "season_month_09",
+          "season_month_10",
+          "season_month_11",
+          "season_month_12",
+          "history_same_month_lag1y_pct",
+          "history_same_month_mean3y_pct",
+          "history_same_month_median3y_pct",
+          "history_same_month_mean5y_pct"
+        ],
+        "seasonal_history": [
+          "season_month_01",
+          "season_month_02",
+          "season_month_03",
+          "season_month_04",
+          "season_month_05",
+          "season_month_06",
+          "season_month_07",
+          "season_month_08",
+          "season_month_09",
+          "season_month_10",
+          "season_month_11",
+          "season_month_12",
+          "history_same_month_lag1y_pct",
+          "history_same_month_mean3y_pct",
+          "history_same_month_median3y_pct",
+          "history_same_month_mean5y_pct",
+          "history_change_lag0_pct",
+          "history_change_lag1_pct",
+          "history_change_lag2_pct",
+          "history_change_lag3_pct",
+          "history_change_lag6_pct",
+          "history_change_lag12_pct",
+          "history_mean_3m_pct",
+          "history_std_3m_pct",
+          "history_mean_6m_pct",
+          "history_std_6m_pct",
+          "history_mean_12m_pct",
+          "history_std_12m_pct",
+          "season_sin",
+          "season_cos",
+          "history_same_month_lag2y_pct",
+          "history_same_month_lag3y_pct",
+          "history_baseline_seasonal",
+          "history_pastyear_mean_pct",
+          "history_trend_6m_pct"
+        ],
+        "seasonal_history_commodities": [
+          "season_month_01",
+          "season_month_02",
+          "season_month_03",
+          "season_month_04",
+          "season_month_05",
+          "season_month_06",
+          "season_month_07",
+          "season_month_08",
+          "season_month_09",
+          "season_month_10",
+          "season_month_11",
+          "season_month_12",
+          "history_same_month_lag1y_pct",
+          "history_same_month_mean3y_pct",
+          "history_same_month_median3y_pct",
+          "history_same_month_mean5y_pct",
+          "history_change_lag0_pct",
+          "history_change_lag1_pct",
+          "history_change_lag2_pct",
+          "history_change_lag3_pct",
+          "history_change_lag6_pct",
+          "history_change_lag12_pct",
+          "history_mean_3m_pct",
+          "history_std_3m_pct",
+          "history_mean_6m_pct",
+          "history_std_6m_pct",
+          "history_mean_12m_pct",
+          "history_std_12m_pct",
+          "season_sin",
+          "season_cos",
+          "history_same_month_lag2y_pct",
+          "history_same_month_lag3y_pct",
+          "history_baseline_seasonal",
+          "history_pastyear_mean_pct",
+          "history_trend_6m_pct",
+          "commodity_gbp_per_usd_return_4w_pct",
+          "commodity_gbp_per_usd_return_12w_pct",
+          "commodity_maize_us_gulf_return_4w_pct",
+          "commodity_maize_us_gulf_return_12w_pct",
+          "commodity_maize_us_gulf_volatility_12w_pct",
+          "commodity_wheat_us_gulf_return_4w_pct",
+          "commodity_wheat_us_gulf_return_12w_pct",
+          "commodity_wheat_us_gulf_volatility_12w_pct",
+          "commodity_gbp_per_usd_return_52w_pct",
+          "commodity_maize_us_gulf_return_52w_pct",
+          "commodity_wheat_us_gulf_return_52w_pct",
+          "commodity_gbp_per_usd_return_4w_pct_issue_lag1m",
+          "commodity_gbp_per_usd_return_12w_pct_issue_lag1m",
+          "commodity_maize_us_gulf_return_4w_pct_issue_lag1m",
+          "commodity_maize_us_gulf_return_12w_pct_issue_lag1m",
+          "commodity_maize_us_gulf_volatility_12w_pct_issue_lag1m",
+          "commodity_wheat_us_gulf_return_4w_pct_issue_lag1m",
+          "commodity_wheat_us_gulf_return_12w_pct_issue_lag1m",
+          "commodity_wheat_us_gulf_volatility_12w_pct_issue_lag1m",
+          "commodity_gbp_per_usd_return_52w_pct_issue_lag1m",
+          "commodity_maize_us_gulf_return_52w_pct_issue_lag1m",
+          "commodity_wheat_us_gulf_return_52w_pct_issue_lag1m",
+          "commodity_gbp_per_usd_return_4w_pct_issue_lag3m",
+          "commodity_gbp_per_usd_return_12w_pct_issue_lag3m",
+          "commodity_maize_us_gulf_return_4w_pct_issue_lag3m",
+          "commodity_maize_us_gulf_return_12w_pct_issue_lag3m",
+          "commodity_maize_us_gulf_volatility_12w_pct_issue_lag3m",
+          "commodity_wheat_us_gulf_return_4w_pct_issue_lag3m",
+          "commodity_wheat_us_gulf_return_12w_pct_issue_lag3m",
+          "commodity_wheat_us_gulf_volatility_12w_pct_issue_lag3m",
+          "commodity_gbp_per_usd_return_52w_pct_issue_lag3m",
+          "commodity_maize_us_gulf_return_52w_pct_issue_lag3m",
+          "commodity_wheat_us_gulf_return_52w_pct_issue_lag3m",
+          "commodity_gbp_per_usd_return_4w_pct_issue_lag6m",
+          "commodity_gbp_per_usd_return_12w_pct_issue_lag6m",
+          "commodity_maize_us_gulf_return_4w_pct_issue_lag6m",
+          "commodity_maize_us_gulf_return_12w_pct_issue_lag6m",
+          "commodity_maize_us_gulf_volatility_12w_pct_issue_lag6m",
+          "commodity_wheat_us_gulf_return_4w_pct_issue_lag6m",
+          "commodity_wheat_us_gulf_return_12w_pct_issue_lag6m",
+          "commodity_wheat_us_gulf_volatility_12w_pct_issue_lag6m",
+          "commodity_gbp_per_usd_return_52w_pct_issue_lag6m",
+          "commodity_maize_us_gulf_return_52w_pct_issue_lag6m",
+          "commodity_wheat_us_gulf_return_52w_pct_issue_lag6m"
+        ],
+        "original_history": [
+          "history_change_lag0_pct",
+          "history_change_lag1_pct",
+          "history_change_lag2_pct",
+          "history_change_lag3_pct",
+          "history_change_lag6_pct",
+          "history_change_lag12_pct",
+          "history_mean_3m_pct",
+          "history_std_3m_pct",
+          "history_mean_6m_pct",
+          "history_std_6m_pct",
+          "history_mean_12m_pct",
+          "history_std_12m_pct",
+          "season_sin",
+          "season_cos"
+        ]
+      }
+    },
+    "new_baselines": [
+      "baseline_seasonal_mean3",
+      "baseline_seasonal_median3",
+      "baseline_seasonal_mean5"
+    ],
+    "features_fixed_before_new_test_scoring": true,
+    "same_calendar_policy": "Prior one/two/three years and past3/5year mean/median; only target-month returns with label_available_date<=issue cutoff; aggregate available years, no filling",
+    "known_calendar_policy": "Target-month onehot plus deterministic Gregorian Easter month, preceding and following month indicators for chocolate; calendar dates known ahead of issue, no external data acquisition",
+    "lagged_commodity_policy": "Fixed earlier issue snapshots at target-calendar lags1/3/6months, each with original7/14day buffers; also actual52week returns; no monthly interpolation",
+    "preserved_contract_columns": [
+      "category_id",
+      "category_name",
+      "target_month",
+      "forecast_cutoff",
+      "label_available_date",
+      "target_change_pct",
+      "is_live"
+    ],
+    "rows": 260,
+    "columns": 118,
+    "limitations": [
+      "Archive revisions are not reconstructed; buffers are explicit assumptions, not verified historical release timestamps.",
+      "Category indices do not establish individual brand, retailer, pack-size or recipe changes.",
+      "Cocoa, grain and exchange-rate references are proxies, not manufacturer purchase contracts or a complete ingredient cost model.",
+      "No monthly commodity interpolation; no monthly World Bank values used as weekly inputs.",
+      "Historical targets are observed values; missing labels and inapplicable or missing commodity features remain NaN.",
+      "New feature design follows inspection of original results; later-period gains are exploratory and require a new untouched period for confirmation.",
+      "Same-month aggregates use fewer than3/5years early in the archive when only fewer years are available.",
+      "Historical weekly lagged features are reconstructed from the frozen current archive with assumed release buffers; original vintages are not recovered."
+    ]
+  },
+  "runtime": {
+    "python": "3.14.0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "scikit_learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "run_id": "f97dd7d15914cda7"
+}

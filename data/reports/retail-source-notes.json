@@ -1,0 +1,25 @@
+{
+  "source_id": "uk-retail-panel",
+  "dataset_url": "https://huggingface.co/datasets/Rif-SQL/time-series-uk-retail-supermarket-price-data",
+  "original_url": "https://www.kaggle.com/datasets/declanmcalinden/time-series-uk-supermarket-data",
+  "original_metadata_url": "https://www.kaggle.com/api/v1/datasets/view/declanmcalinden/time-series-uk-supermarket-data",
+  "licence": "Apache 2.0",
+  "licence_evidence": "Saved original Kaggle public API metadata and HF README/NOTICE.",
+  "attribution": "Declan McAlinden (original collection), Rif Kiamil (Parquet merge).",
+  "original_author_notes": {
+    "price_basis": "Lowest available price, including Nectar/Clubcard; multi-buy and meal-deal discounts excluded.",
+    "scraper_coverage": "Days only when scraper was run; Morrisons coverage variable before 2024-01-27."
+  },
+  "retained_raw_fields": [
+    "supermarket_name",
+    "price_gbp",
+    "price_unit_gbp",
+    "unit",
+    "product_name",
+    "capture_date",
+    "category_name",
+    "is_own_brand"
+  ],
+  "row_lineage": "raw_row_index_first is the zero-based first Parquet file_row_number; raw_row_count counts all contributors. Recover every contributor by joining the preserved retailer/name/date/price/rate/unit grouping keys against the unchanged raw source file.",
+  "unit_price_basis_columns": "Use mass_unit_price_basis for price_per_100g_gbp and volume_unit_price_basis for price_per_100ml_gbp. Legacy unit_price_basis is mixed_dimensions when a row supports both dimensions; no density is assumed."
+}

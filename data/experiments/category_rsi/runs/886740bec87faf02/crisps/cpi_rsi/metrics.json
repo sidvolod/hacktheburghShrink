@@ -1,0 +1,84 @@
+{
+  "features": [
+    "history_change_lag0_pct",
+    "history_change_lag1_pct",
+    "history_change_lag2_pct",
+    "history_change_lag3_pct",
+    "history_change_lag6_pct",
+    "history_change_lag12_pct",
+    "history_mean_3m_pct",
+    "history_std_3m_pct",
+    "history_mean_6m_pct",
+    "history_std_6m_pct",
+    "history_mean_12m_pct",
+    "history_std_12m_pct",
+    "season_sin",
+    "season_cos",
+    "commodity_gbp_per_usd_return_4w_pct",
+    "commodity_gbp_per_usd_return_12w_pct",
+    "commodity_maize_us_gulf_return_4w_pct",
+    "commodity_maize_us_gulf_return_12w_pct",
+    "commodity_maize_us_gulf_volatility_12w_pct",
+    "commodity_wheat_us_gulf_return_4w_pct",
+    "commodity_wheat_us_gulf_return_12w_pct",
+    "commodity_wheat_us_gulf_volatility_12w_pct",
+    "history_cpi_rsi_6m"
+  ],
+  "validation_metrics": {
+    "n": 34,
+    "mae_pp": 2.2497145167265735,
+    "rmse_pp": 2.7153338542577474,
+    "directional_accuracy": 0.5588235294117647
+  },
+  "test_metrics": {
+    "n": 33,
+    "mae_pp": 1.5317922498825778,
+    "rmse_pp": 1.8699247138784636,
+    "directional_accuracy": 0.6666666666666666
+  },
+  "paired_test_comparison": {
+    "n": 33,
+    "mean_error_reduction_pp": 0.008722797348726934,
+    "median_error_reduction_pp": -0.0025267535944220043,
+    "months_improved": 16,
+    "months_worsened": 17,
+    "months_tied": 0
+  },
+  "error_reduction_vs_unchanged_pct": 0.5662260400769219,
+  "yearly_test_metrics": {
+    "2024": {
+      "n": 12,
+      "mae_pp": 1.2071279385875626,
+      "rmse_pp": 1.4031529289157603,
+      "directional_accuracy": 0.6666666666666666
+    },
+    "2025": {
+      "n": 12,
+      "mae_pp": 1.4575537411263737,
+      "rmse_pp": 1.829710983653581,
+      "directional_accuracy": 0.75
+    },
+    "2026": {
+      "n": 9,
+      "mae_pp": 2.0636626766175374,
+      "rmse_pp": 2.394165205160125,
+      "directional_accuracy": 0.5555555555555556
+    }
+  },
+  "feature_coverage": {
+    "validation": {
+      "history_cpi_rsi_6m": 1.0
+    },
+    "test": {
+      "history_cpi_rsi_6m": 1.0
+    }
+  },
+  "forecast": {
+    "as_of": "2026-11-08",
+    "target_month": "2026-12-01",
+    "change_pct": -0.29244062712925045,
+    "train_n": 129,
+    "max_train_label_available_date": "2026-11-01T00:00:00+00:00",
+    "selected_for_website": false
+  }
+}

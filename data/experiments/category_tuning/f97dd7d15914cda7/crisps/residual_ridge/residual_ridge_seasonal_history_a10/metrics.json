@@ -1,0 +1,9 @@
+{
+  "outer_exploratory": {
+    "n": 33,
+    "mae_pp": 2.085014805624488,
+    "rmse_pp": 2.37592569129119,
+    "directional_accuracy": 0.36363636363636365
+  },
+  "warning": "2024+ outcomes were examined before this design; this is not a fresh untouched test."
+}

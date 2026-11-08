@@ -1,0 +1,93 @@
+{
+  "model_id": "hist_gradient_boosting",
+  "feature_group": "history_plus_weekly_commodities",
+  "features": [
+    "history_change_lag0_pct",
+    "history_change_lag1_pct",
+    "history_change_lag2_pct",
+    "history_change_lag3_pct",
+    "history_change_lag6_pct",
+    "history_change_lag12_pct",
+    "history_mean_3m_pct",
+    "history_std_3m_pct",
+    "history_mean_6m_pct",
+    "history_std_6m_pct",
+    "history_mean_12m_pct",
+    "history_std_12m_pct",
+    "season_sin",
+    "season_cos",
+    "commodity_cocoa_gbp_return_4w_pct",
+    "commodity_cocoa_gbp_return_12w_pct",
+    "commodity_cocoa_gbp_return_26w_pct",
+    "commodity_cocoa_gbp_volatility_12w_pct",
+    "commodity_gbp_per_usd_return_4w_pct",
+    "commodity_gbp_per_usd_return_12w_pct"
+  ],
+  "selected_hyperparameters": {
+    "max_iter": 80,
+    "max_leaf_nodes": 5,
+    "min_samples_leaf": 10,
+    "l2_regularization": 10.0
+  },
+  "hyperparameter_selection": "pretest validation MAE only",
+  "selected_overall": true,
+  "validation_candidates": [
+    {
+      "config": {
+        "max_iter": 80,
+        "max_leaf_nodes": 5,
+        "min_samples_leaf": 10,
+        "l2_regularization": 10.0
+      },
+      "metrics": {
+        "n": 34,
+        "mae_pp": 1.678637640791053,
+        "rmse_pp": 2.2512979791634757,
+        "directional_accuracy": 0.6764705882352942
+      }
+    },
+    {
+      "config": {
+        "max_iter": 120,
+        "max_leaf_nodes": 7,
+        "min_samples_leaf": 15,
+        "l2_regularization": 20.0
+      },
+      "metrics": {
+        "n": 34,
+        "mae_pp": 1.833191795796333,
+        "rmse_pp": 2.4310512056127203,
+        "directional_accuracy": 0.6470588235294118
+      }
+    }
+  ],
+  "first_test_target": "2024-01-01",
+  "selection_cutoff": "2023-12-08T00:00:00+00:00",
+  "min_train": 24,
+  "preprocessing": "imputer and scaler fit inside each chronological training fold",
+  "final_model_fit_label_available_by": "2026-11-08T00:00:00+00:00",
+  "final_model_training_rows": 129,
+  "random_seed": 42,
+  "thread_limit": 4,
+  "runtime": {
+    "python": "3.14.0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "scikit_learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "provenance": "../../../provenance.json",
+  "feature_coverage_audit": {
+    "commodity_feature_validation_coverage": {
+      "commodity_cocoa_gbp_return_4w_pct": 1.0,
+      "commodity_cocoa_gbp_return_12w_pct": 1.0,
+      "commodity_cocoa_gbp_return_26w_pct": 1.0,
+      "commodity_cocoa_gbp_volatility_12w_pct": 1.0,
+      "commodity_gbp_per_usd_return_4w_pct": 1.0,
+      "commodity_gbp_per_usd_return_12w_pct": 1.0
+    },
+    "coverage_threshold": 0.8,
+    "coverage_selection_uses_test": false,
+    "commodity_group_status": "included"
+  }
+}

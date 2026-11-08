@@ -1,0 +1,1315 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-08T06:27:10.131872+00:00",
+  "as_of": "2026-11-08",
+  "scope": "UK grocery category CPI monthly change, not individual SKU unit price or shrink events",
+  "target": "100 * (category_index[target_month] / category_index[previous_month] - 1)",
+  "selection_basis": "Lowest pretest validation MAE on common dates; test outcomes never select the winner",
+  "test_start": "2024-01-01",
+  "selection_labels_available_by": "2023-12-08T00:00:00+00:00",
+  "minimum_training_labels": 24,
+  "thread_limit": 4,
+  "runtime": {
+    "python": "3.14.0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "scikit_learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "source_metadata": {
+    "schema_version": 1,
+    "generated_at": "2026-11-08T06:27:10.109863+00:00",
+    "as_of": "2026-11-08",
+    "scope": "UK category CPI percentage changes; not SKU prices or shrinkflation probabilities",
+    "target_frequency": "monthly",
+    "commodity_input_frequency": "genuine weekly observations, including daily-to-weekly source aggregates",
+    "target_formula": "100 * (category CPI index in target month / previous calendar month index - 1)",
+    "historical_forecast_cutoff": "00:00 Europe/London on eighth day of previous calendar month",
+    "live_forecast_cutoff": "as_of date, 00:00 Europe/London; target is next calendar month",
+    "cpi_feature_policy": "Only index observations through issue month minus two calendar months; calendar gaps are not filled",
+    "label_availability_policy": "First day of target month plus two months, conservatively after usual following-month ONS publication",
+    "availability_status": "current_archive_with_explicit_buffer_assumptions_not_original_vintages",
+    "weekly_availability_policy": "Completed weekly period plus seven days for ICCO/ECB, fourteen for EU; stale beyond35days becomes missing",
+    "category_commodity_features": {
+      "chocolate": [
+        "commodity_cocoa_gbp_return_4w_pct",
+        "commodity_cocoa_gbp_return_12w_pct",
+        "commodity_cocoa_gbp_return_26w_pct",
+        "commodity_cocoa_gbp_volatility_12w_pct",
+        "commodity_gbp_per_usd_return_4w_pct",
+        "commodity_gbp_per_usd_return_12w_pct"
+      ],
+      "crisps": [
+        "commodity_gbp_per_usd_return_4w_pct",
+        "commodity_gbp_per_usd_return_12w_pct",
+        "commodity_maize_us_gulf_return_4w_pct",
+        "commodity_maize_us_gulf_return_12w_pct",
+        "commodity_maize_us_gulf_volatility_12w_pct",
+        "commodity_wheat_us_gulf_return_4w_pct",
+        "commodity_wheat_us_gulf_return_12w_pct",
+        "commodity_wheat_us_gulf_volatility_12w_pct"
+      ]
+    },
+    "sources": {
+      "ons": {
+        "chocolate": {
+          "source_id": "ons-l79x",
+          "url": "https://www.ons.gov.uk/generator?format=csv&uri=/economy/inflationandpriceindices/timeseries/l79x/mm23",
+          "final_url": "https://www.ons.gov.uk/generator?format=csv&uri=/economy/inflationandpriceindices/timeseries/l79x/mm23",
+          "retrieved_at": "2026-11-08T06:22:28.239718+00:00",
+          "bytes": 3826,
+          "sha256": "cd3a7e465aa5a4a3a1d459e788119c94098ca37b1768032abb04ba746c85b7a2",
+          "content_type": "application/octet-stream;charset=utf-8",
+          "etag": "W/\"d0b3368a2ee70a95fafea1ce88961cdf04eadf55--gzip\"",
+          "http_last_modified": null,
+          "snapshot_path": "data/raw/ons-category/l79x-cd3a7e465aa5a4a3a1d459e788119c94098ca37b1768032abb04ba746c85b7a2.csv",
+          "source_frequency": "monthly",
+          "license": "Open Government Licence v3.0; attribute ONS",
+          "ons_fields": {
+            "Title": "CPI INDEX 01.1.8.3 Chocolate 2015=100",
+            "CDID": "L79X",
+            "Unit": "",
+            "Release date": "21-10-2026",
+            "Next release": "18 November 2026"
+          },
+          "observations": 141,
+          "first_month": "2015-01-01",
+          "last_month": "2026-09-01"
+        },
+        "crisps": {
+          "source_id": "ons-l79r",
+          "url": "https://www.ons.gov.uk/generator?format=csv&uri=/economy/inflationandpriceindices/timeseries/l79r/mm23",
+          "final_url": "https://www.ons.gov.uk/generator?format=csv&uri=/economy/inflationandpriceindices/timeseries/l79r/mm23",
+          "retrieved_at": "2026-11-08T06:22:28.221082+00:00",
+          "bytes": 3844,
+          "sha256": "ffbefed614dcb458b5003499ef757cfd33551e0e8cb5865dc9b9b2f0595f2fdd",
+          "content_type": "application/octet-stream;charset=utf-8",
+          "etag": "W/\"7a7a755f9ae6f3a6bfd4d36b553b9b24502784ff--gzip\"",
+          "http_last_modified": null,
+          "snapshot_path": "data/raw/ons-category/l79r-ffbefed614dcb458b5003499ef757cfd33551e0e8cb5865dc9b9b2f0595f2fdd.csv",
+          "source_frequency": "monthly",
+          "license": "Open Government Licence v3.0; attribute ONS",
+          "ons_fields": {
+            "Title": "CPI INDEX 01.1.7.5 Crisps 2015=100",
+            "CDID": "L79R",
+            "Unit": "",
+            "Release date": "21-10-2026",
+            "Next release": "18 November 2026"
+          },
+          "observations": 141,
+          "first_month": "2015-01-01",
+          "last_month": "2026-09-01"
+        }
+      },
+      "weekly": {
+        "status": "current_archive",
+        "path": "data/processed/commodity_weekly.parquet",
+        "sha256": "d26fb548700f42a9753609754b6e1edd524a58a3f88f4982223f3e7807b537bb",
+        "series": {
+          "cocoa_gbp": {
+            "series_id": "icco-cocoa-london",
+            "source_ids": [
+              "icco"
+            ],
+            "units": [
+              "per_metric_tonne"
+            ],
+            "currencies": [
+              "GBP"
+            ],
+            "source_urls": [
+              "https://www.icco.org/statistics/statistics_2025/"
+            ],
+            "source_frequencies": [
+              "daily"
+            ],
+            "roll_conventions": [
+              "Average nearest three active ICE London/New York futures months; shift on 15th of month preceding nearest maturing month; London conversion uses six-month forward FX. See ICCO methodology."
+            ],
+            "weekly_rows": 1675,
+            "first_week_end": "1994-10-07",
+            "last_week_end": "2026-11-06",
+            "availability_buffer_days": 7
+          },
+          "gbp_per_usd": {
+            "series_id": "derived-ecb-gbp-per-usd",
+            "derived_from": [
+              "ecb-gbp-per-eur",
+              "ecb-usd-per-eur"
+            ],
+            "unit": "GBP per USD",
+            "formula": "weekly mean GBP/EUR divided by weekly mean USD/EUR; ratio of means, not mean of daily crosses",
+            "weekly_rows": 1453,
+            "first_week_end": "1999-01-08",
+            "last_week_end": "2026-11-06",
+            "availability_buffer_days": 7
+          },
+          "maize_us_gulf": {
+            "series_id": "eu-world-maize-us-gulf-3yc",
+            "source_ids": [
+              "eu-world-cereal"
+            ],
+            "units": [
+              "per_source_ton"
+            ],
+            "currencies": [
+              "USD"
+            ],
+            "source_urls": [
+              "https://agriculture.ec.europa.eu/data-and-analysis/markets/overviews/market-observatories/crops/cereals-statistics_en"
+            ],
+            "source_frequencies": [
+              "weekly_quote"
+            ],
+            "roll_conventions": [
+              "not_applicable"
+            ],
+            "weekly_rows": 398,
+            "first_week_end": "2019-03-22",
+            "last_week_end": "2026-10-30",
+            "availability_buffer_days": 14
+          },
+          "wheat_us_gulf": {
+            "series_id": "eu-world-wheat-us-gulf-hrw",
+            "source_ids": [
+              "eu-world-cereal"
+            ],
+            "units": [
+              "per_source_ton"
+            ],
+            "currencies": [
+              "USD"
+            ],
+            "source_urls": [
+              "https://agriculture.ec.europa.eu/data-and-analysis/markets/overviews/market-observatories/crops/cereals-statistics_en"
+            ],
+            "source_frequencies": [
+              "weekly_quote"
+            ],
+            "roll_conventions": [
+              "not_applicable"
+            ],
+            "weekly_rows": 398,
+            "first_week_end": "2019-03-22",
+            "last_week_end": "2026-10-30",
+            "availability_buffer_days": 14
+          }
+        }
+      }
+    },
+    "coverage": {
+      "chocolate": {
+        "observed_target_rows": 129,
+        "live_rows": 1,
+        "feature_nonmissing_rows": {
+          "commodity_cocoa_gbp_return_4w_pct": 130,
+          "commodity_cocoa_gbp_return_12w_pct": 130,
+          "commodity_cocoa_gbp_return_26w_pct": 130,
+          "commodity_cocoa_gbp_volatility_12w_pct": 130,
+          "commodity_gbp_per_usd_return_4w_pct": 130,
+          "commodity_gbp_per_usd_return_12w_pct": 130
+        }
+      },
+      "crisps": {
+        "observed_target_rows": 129,
+        "live_rows": 1,
+        "feature_nonmissing_rows": {
+          "commodity_gbp_per_usd_return_4w_pct": 130,
+          "commodity_gbp_per_usd_return_12w_pct": 130,
+          "commodity_maize_us_gulf_return_4w_pct": 89,
+          "commodity_maize_us_gulf_return_12w_pct": 87,
+          "commodity_maize_us_gulf_volatility_12w_pct": 88,
+          "commodity_wheat_us_gulf_return_4w_pct": 89,
+          "commodity_wheat_us_gulf_return_12w_pct": 87,
+          "commodity_wheat_us_gulf_volatility_12w_pct": 88
+        }
+      }
+    },
+    "limitations": [
+      "Archive revisions are not reconstructed; buffers are explicit assumptions, not verified historical release timestamps.",
+      "Category indices do not establish individual brand, retailer, pack-size or recipe changes.",
+      "Cocoa, grain and exchange-rate references are proxies, not manufacturer purchase contracts or a complete ingredient cost model.",
+      "No monthly commodity interpolation; no monthly World Bank values used as weekly inputs.",
+      "Historical targets are observed values; missing labels and inapplicable or missing commodity features remain NaN."
+    ],
+    "dataset_sha256": "df2108fdbdfdd344a79cd55af1d5674dd1ecfeaf4f8f06a2c5fa10cb83c9042a"
+  },
+  "categories": [
+    {
+      "category_id": "chocolate",
+      "category_name": "UK chocolate",
+      "selected_model_id": "hist_gradient_boosting",
+      "selected_feature_group": "history_plus_weekly_commodities",
+      "selection_basis": "Lowest pretest validation MAE on common dates; test outcomes never select the winner",
+      "selection_cutoff": "2023-12-08T00:00:00+00:00",
+      "validation_metrics": {
+        "n": 34,
+        "mae_pp": 1.678637640791053,
+        "rmse_pp": 2.2512979791634757,
+        "directional_accuracy": 0.6764705882352942
+      },
+      "test_metrics": {
+        "n": 33,
+        "mae_pp": 1.5747375908632857,
+        "rmse_pp": 1.959604715118534,
+        "directional_accuracy": 0.6666666666666666
+      },
+      "baseline_metrics": {
+        "n": 33,
+        "mae_pp": 1.9770120494163437,
+        "rmse_pp": 2.45262117598347,
+        "directional_accuracy": 0.030303030303030304
+      },
+      "test_mae_improvement_vs_zero_pp": 0.402274458553058,
+      "forecast": {
+        "as_of": "2026-11-08",
+        "forecast_cutoff": "2026-11-08T00:00:00+00:00",
+        "target_month": "2026-12-01",
+        "change_pct": 2.316692745933289,
+        "scope": "category_index",
+        "interval": null
+      },
+      "leaderboard": [
+        {
+          "model_id": "hist_gradient_boosting",
+          "feature_group": "history_plus_weekly_commodities",
+          "selected": true,
+          "validation_mae_pp": 1.678637640791053,
+          "validation_n": 34,
+          "test_mae_pp": 1.5747375908632857,
+          "test_rmse_pp": 1.959604715118534,
+          "test_directional_accuracy": 0.6666666666666666,
+          "test_n": 33,
+          "hyperparameters": {
+            "max_iter": 80,
+            "max_leaf_nodes": 5,
+            "min_samples_leaf": 10,
+            "l2_regularization": 10.0
+          }
+        },
+        {
+          "model_id": "hist_gradient_boosting",
+          "feature_group": "history_only",
+          "selected": false,
+          "validation_mae_pp": 1.6940655462933336,
+          "validation_n": 34,
+          "test_mae_pp": 1.5947658752973108,
+          "test_rmse_pp": 1.9478500623147381,
+          "test_directional_accuracy": 0.696969696969697,
+          "test_n": 33,
+          "hyperparameters": {
+            "max_iter": 80,
+            "max_leaf_nodes": 5,
+            "min_samples_leaf": 10,
+            "l2_regularization": 10.0
+          }
+        },
+        {
+          "model_id": "trailing_mean",
+          "feature_group": "baseline",
+          "selected": false,
+          "validation_mae_pp": 1.8725112631808034,
+          "validation_n": 34,
+          "test_mae_pp": 1.9759120487322634,
+          "test_rmse_pp": 2.3851713336778824,
+          "test_directional_accuracy": 0.6363636363636364,
+          "test_n": 33,
+          "hyperparameters": {
+            "source_column": "baseline_trailing_mean"
+          }
+        },
+        {
+          "model_id": "ridge",
+          "feature_group": "history_plus_weekly_commodities",
+          "selected": false,
+          "validation_mae_pp": 1.9170968681763951,
+          "validation_n": 34,
+          "test_mae_pp": 1.9092396306157078,
+          "test_rmse_pp": 2.400278349662251,
+          "test_directional_accuracy": 0.6363636363636364,
+          "test_n": 33,
+          "hyperparameters": {
+            "alpha": 100.0
+          }
+        },
+        {
+          "model_id": "ridge",
+          "feature_group": "history_only",
+          "selected": false,
+          "validation_mae_pp": 1.920628683243124,
+          "validation_n": 34,
+          "test_mae_pp": 1.8906347104667107,
+          "test_rmse_pp": 2.2942764163867655,
+          "test_directional_accuracy": 0.7272727272727273,
+          "test_n": 33,
+          "hyperparameters": {
+            "alpha": 100.0
+          }
+        },
+        {
+          "model_id": "no_change",
+          "feature_group": "baseline",
+          "selected": false,
+          "validation_mae_pp": 2.1564534416895698,
+          "validation_n": 34,
+          "test_mae_pp": 1.9770120494163437,
+          "test_rmse_pp": 2.45262117598347,
+          "test_directional_accuracy": 0.030303030303030304,
+          "test_n": 33,
+          "hyperparameters": {
+            "source_column": "baseline_zero"
+          }
+        },
+        {
+          "model_id": "seasonal",
+          "feature_group": "baseline",
+          "selected": false,
+          "validation_mae_pp": 2.2212968147021677,
+          "validation_n": 34,
+          "test_mae_pp": 1.6158238292089573,
+          "test_rmse_pp": 2.0486729097228022,
+          "test_directional_accuracy": 0.696969696969697,
+          "test_n": 33,
+          "hyperparameters": {
+            "source_column": "baseline_seasonal"
+          }
+        },
+        {
+          "model_id": "recent",
+          "feature_group": "baseline",
+          "selected": false,
+          "validation_mae_pp": 2.913815708513602,
+          "validation_n": 34,
+          "test_mae_pp": 2.671651988280653,
+          "test_rmse_pp": 3.2180278922355847,
+          "test_directional_accuracy": 0.6060606060606061,
+          "test_n": 33,
+          "hyperparameters": {
+            "source_column": "baseline_recent"
+          }
+        }
+      ],
+      "test_predictions": [
+        {
+          "target_month": "2024-01-01",
+          "forecast_cutoff": "2023-12-08T00:00:00+00:00",
+          "label_available_date": "2024-03-01T00:00:00+00:00",
+          "actual_pct": 2.5704809286899,
+          "predicted_pct": 0.003247470935163619,
+          "baseline_pct": 0.0,
+          "train_n": 94,
+          "max_train_label_available_date": "2023-12-01T00:00:00+00:00",
+          "max_train_target_month": "2023-10-01"
+        },
+        {
+          "target_month": "2024-02-01",
+          "forecast_cutoff": "2024-01-08T00:00:00+00:00",
+          "label_available_date": "2024-04-01T00:00:00+00:00",
+          "actual_pct": -0.48504446240905663,
+          "predicted_pct": -0.5871857659956145,
+          "baseline_pct": 0.0,
+          "train_n": 95,
+          "max_train_label_available_date": "2024-01-01T00:00:00+00:00",
+          "max_train_target_month": "2023-11-01"
+        },
+        {
+          "target_month": "2024-03-01",
+          "forecast_cutoff": "2024-02-08T00:00:00+00:00",
+          "label_available_date": "2024-05-01T00:00:00+00:00",
+          "actual_pct": 2.3558082859463925,
+          "predicted_pct": 0.03872283864277589,
+          "baseline_pct": 0.0,
+          "train_n": 96,
+          "max_train_label_available_date": "2024-02-01T00:00:00+00:00",
+          "max_train_target_month": "2023-12-01"
+        },
+        {
+          "target_month": "2024-04-01",
+          "forecast_cutoff": "2024-03-08T00:00:00+00:00",
+          "label_available_date": "2024-06-01T00:00:00+00:00",
+          "actual_pct": 1.5873015873015817,
+          "predicted_pct": 1.1190435791843751,
+          "baseline_pct": 0.0,
+          "train_n": 97,
+          "max_train_label_available_date": "2024-03-01T00:00:00+00:00",
+          "max_train_target_month": "2024-01-01"
+        },
+        {
+          "target_month": "2024-05-01",
+          "forecast_cutoff": "2024-04-07T23:00:00+00:00",
+          "label_available_date": "2024-07-01T00:00:00+00:00",
+          "actual_pct": -1.3281250000000022,
+          "predicted_pct": 0.5212284335588319,
+          "baseline_pct": 0.0,
+          "train_n": 98,
+          "max_train_label_available_date": "2024-04-01T00:00:00+00:00",
+          "max_train_target_month": "2024-02-01"
+        },
+        {
+          "target_month": "2024-06-01",
+          "forecast_cutoff": "2024-05-07T23:00:00+00:00",
+          "label_available_date": "2024-08-01T00:00:00+00:00",
+          "actual_pct": -0.8709422011084711,
+          "predicted_pct": 0.6688416917783989,
+          "baseline_pct": 0.0,
+          "train_n": 99,
+          "max_train_label_available_date": "2024-05-01T00:00:00+00:00",
+          "max_train_target_month": "2024-03-01"
+        },
+        {
+          "target_month": "2024-07-01",
+          "forecast_cutoff": "2024-06-07T23:00:00+00:00",
+          "label_available_date": "2024-09-01T00:00:00+00:00",
+          "actual_pct": 2.635782747603832,
+          "predicted_pct": 1.057214097977168,
+          "baseline_pct": 0.0,
+          "train_n": 100,
+          "max_train_label_available_date": "2024-06-01T00:00:00+00:00",
+          "max_train_target_month": "2024-04-01"
+        },
+        {
+          "target_month": "2024-08-01",
+          "forecast_cutoff": "2024-07-07T23:00:00+00:00",
+          "label_available_date": "2024-10-01T00:00:00+00:00",
+          "actual_pct": 4.747081712062262,
+          "predicted_pct": -0.2968235964023075,
+          "baseline_pct": 0.0,
+          "train_n": 101,
+          "max_train_label_available_date": "2024-07-01T00:00:00+00:00",
+          "max_train_target_month": "2024-05-01"
+        },
+        {
+          "target_month": "2024-09-01",
+          "forecast_cutoff": "2024-08-07T23:00:00+00:00",
+          "label_available_date": "2024-11-01T00:00:00+00:00",
+          "actual_pct": -2.526002971768204,
+          "predicted_pct": -0.9374330137841911,
+          "baseline_pct": 0.0,
+          "train_n": 102,
+          "max_train_label_available_date": "2024-08-01T00:00:00+00:00",
+          "max_train_target_month": "2024-06-01"
+        },
+        {
+          "target_month": "2024-10-01",
+          "forecast_cutoff": "2024-09-07T23:00:00+00:00",
+          "label_available_date": "2024-12-01T00:00:00+00:00",
+          "actual_pct": 0.9146341463414753,
+          "predicted_pct": 0.8506011194455442,
+          "baseline_pct": 0.0,
+          "train_n": 103,
+          "max_train_label_available_date": "2024-09-01T00:00:00+00:00",
+          "max_train_target_month": "2024-07-01"
+        },
+        {
+          "target_month": "2024-11-01",
+          "forecast_cutoff": "2024-10-07T23:00:00+00:00",
+          "label_available_date": "2025-01-01T00:00:00+00:00",
+          "actual_pct": 0.1510574018126709,
+          "predicted_pct": 0.7460735599711761,
+          "baseline_pct": 0.0,
+          "train_n": 104,
+          "max_train_label_available_date": "2024-10-01T00:00:00+00:00",
+          "max_train_target_month": "2024-08-01"
+        },
+        {
+          "target_month": "2024-12-01",
+          "forecast_cutoff": "2024-11-08T00:00:00+00:00",
+          "label_available_date": "2025-02-01T00:00:00+00:00",
+          "actual_pct": 1.6591251885369696,
+          "predicted_pct": 2.0702407398228755,
+          "baseline_pct": 0.0,
+          "train_n": 105,
+          "max_train_label_available_date": "2024-11-01T00:00:00+00:00",
+          "max_train_target_month": "2024-09-01"
+        },
+        {
+          "target_month": "2025-01-01",
+          "forecast_cutoff": "2024-12-08T00:00:00+00:00",
+          "label_available_date": "2025-03-01T00:00:00+00:00",
+          "actual_pct": 4.6735905044510195,
+          "predicted_pct": 1.7949323021974153,
+          "baseline_pct": 0.0,
+          "train_n": 106,
+          "max_train_label_available_date": "2024-12-01T00:00:00+00:00",
+          "max_train_target_month": "2024-10-01"
+        },
+        {
+          "target_month": "2025-02-01",
+          "forecast_cutoff": "2025-01-08T00:00:00+00:00",
+          "label_available_date": "2025-04-01T00:00:00+00:00",
+          "actual_pct": 1.700921332388372,
+          "predicted_pct": -0.06358464555043145,
+          "baseline_pct": 0.0,
+          "train_n": 107,
+          "max_train_label_available_date": "2025-01-01T00:00:00+00:00",
+          "max_train_target_month": "2024-11-01"
+        },
+        {
+          "target_month": "2025-03-01",
+          "forecast_cutoff": "2025-02-08T00:00:00+00:00",
+          "label_available_date": "2025-05-01T00:00:00+00:00",
+          "actual_pct": -0.2090592334494823,
+          "predicted_pct": 0.7408260587157979,
+          "baseline_pct": 0.0,
+          "train_n": 108,
+          "max_train_label_available_date": "2025-02-01T00:00:00+00:00",
+          "max_train_target_month": "2024-12-01"
+        },
+        {
+          "target_month": "2025-04-01",
+          "forecast_cutoff": "2025-03-08T00:00:00+00:00",
+          "label_available_date": "2025-06-01T00:00:00+00:00",
+          "actual_pct": 2.3743016759776525,
+          "predicted_pct": 1.4836797496958474,
+          "baseline_pct": 0.0,
+          "train_n": 109,
+          "max_train_label_available_date": "2025-03-01T00:00:00+00:00",
+          "max_train_target_month": "2025-01-01"
+        },
+        {
+          "target_month": "2025-05-01",
+          "forecast_cutoff": "2025-04-07T23:00:00+00:00",
+          "label_available_date": "2025-07-01T00:00:00+00:00",
+          "actual_pct": 1.3642564802182733,
+          "predicted_pct": 1.6414514771632174,
+          "baseline_pct": 0.0,
+          "train_n": 110,
+          "max_train_label_available_date": "2025-04-01T00:00:00+00:00",
+          "max_train_target_month": "2025-02-01"
+        },
+        {
+          "target_month": "2025-06-01",
+          "forecast_cutoff": "2025-05-07T23:00:00+00:00",
+          "label_available_date": "2025-08-01T00:00:00+00:00",
+          "actual_pct": -2.0188425302826385,
+          "predicted_pct": 0.6000172636405889,
+          "baseline_pct": 0.0,
+          "train_n": 111,
+          "max_train_label_available_date": "2025-05-01T00:00:00+00:00",
+          "max_train_target_month": "2025-03-01"
+        },
+        {
+          "target_month": "2025-07-01",
+          "forecast_cutoff": "2025-06-07T23:00:00+00:00",
+          "label_available_date": "2025-09-01T00:00:00+00:00",
+          "actual_pct": 3.434065934065944,
+          "predicted_pct": 1.561471824906425,
+          "baseline_pct": 0.0,
+          "train_n": 112,
+          "max_train_label_available_date": "2025-06-01T00:00:00+00:00",
+          "max_train_target_month": "2025-04-01"
+        },
+        {
+          "target_month": "2025-08-01",
+          "forecast_cutoff": "2025-07-07T23:00:00+00:00",
+          "label_available_date": "2025-10-01T00:00:00+00:00",
+          "actual_pct": 3.1872509960159334,
+          "predicted_pct": 0.2764726477973638,
+          "baseline_pct": 0.0,
+          "train_n": 113,
+          "max_train_label_available_date": "2025-07-01T00:00:00+00:00",
+          "max_train_target_month": "2025-05-01"
+        },
+        {
+          "target_month": "2025-09-01",
+          "forecast_cutoff": "2025-08-07T23:00:00+00:00",
+          "label_available_date": "2025-11-01T00:00:00+00:00",
+          "actual_pct": -0.3217503217503248,
+          "predicted_pct": 0.3345828567672539,
+          "baseline_pct": 0.0,
+          "train_n": 114,
+          "max_train_label_available_date": "2025-08-01T00:00:00+00:00",
+          "max_train_target_month": "2025-06-01"
+        },
+        {
+          "target_month": "2025-10-01",
+          "forecast_cutoff": "2025-09-07T23:00:00+00:00",
+          "label_available_date": "2025-12-01T00:00:00+00:00",
+          "actual_pct": 0.3873466752743582,
+          "predicted_pct": -0.16262872708114265,
+          "baseline_pct": 0.0,
+          "train_n": 115,
+          "max_train_label_available_date": "2025-09-01T00:00:00+00:00",
+          "max_train_target_month": "2025-07-01"
+        },
+        {
+          "target_month": "2025-11-01",
+          "forecast_cutoff": "2025-10-07T23:00:00+00:00",
+          "label_available_date": "2026-01-01T00:00:00+00:00",
+          "actual_pct": 0.0,
+          "predicted_pct": -0.0637648282941182,
+          "baseline_pct": 0.0,
+          "train_n": 116,
+          "max_train_label_available_date": "2025-10-01T00:00:00+00:00",
+          "max_train_target_month": "2025-08-01"
+        },
+        {
+          "target_month": "2025-12-01",
+          "forecast_cutoff": "2025-11-08T00:00:00+00:00",
+          "label_available_date": "2026-02-01T00:00:00+00:00",
+          "actual_pct": 0.12861736334404128,
+          "predicted_pct": 0.8033685915482418,
+          "baseline_pct": 0.0,
+          "train_n": 117,
+          "max_train_label_available_date": "2025-11-01T00:00:00+00:00",
+          "max_train_target_month": "2025-09-01"
+        },
+        {
+          "target_month": "2026-01-01",
+          "forecast_cutoff": "2025-12-08T00:00:00+00:00",
+          "label_available_date": "2026-03-01T00:00:00+00:00",
+          "actual_pct": 3.917790622992956,
+          "predicted_pct": 2.3256618136728013,
+          "baseline_pct": 0.0,
+          "train_n": 118,
+          "max_train_label_available_date": "2025-12-01T00:00:00+00:00",
+          "max_train_target_month": "2025-10-01"
+        },
+        {
+          "target_month": "2026-02-01",
+          "forecast_cutoff": "2026-01-08T00:00:00+00:00",
+          "label_available_date": "2026-04-01T00:00:00+00:00",
+          "actual_pct": -4.449938195302849,
+          "predicted_pct": -0.6190551804188584,
+          "baseline_pct": 0.0,
+          "train_n": 119,
+          "max_train_label_available_date": "2026-01-01T00:00:00+00:00",
+          "max_train_target_month": "2025-11-01"
+        },
+        {
+          "target_month": "2026-03-01",
+          "forecast_cutoff": "2026-02-08T00:00:00+00:00",
+          "label_available_date": "2026-05-01T00:00:00+00:00",
+          "actual_pct": 2.7166882276843607,
+          "predicted_pct": 1.0525533662117819,
+          "baseline_pct": 0.0,
+          "train_n": 120,
+          "max_train_label_available_date": "2026-02-01T00:00:00+00:00",
+          "max_train_target_month": "2025-12-01"
+        },
+        {
+          "target_month": "2026-04-01",
+          "forecast_cutoff": "2026-03-08T00:00:00+00:00",
+          "label_available_date": "2026-06-01T00:00:00+00:00",
+          "actual_pct": -0.5037783375314908,
+          "predicted_pct": 1.889459301519841,
+          "baseline_pct": 0.0,
+          "train_n": 121,
+          "max_train_label_available_date": "2026-03-01T00:00:00+00:00",
+          "max_train_target_month": "2026-01-01"
+        },
+        {
+          "target_month": "2026-05-01",
+          "forecast_cutoff": "2026-04-07T23:00:00+00:00",
+          "label_available_date": "2026-07-01T00:00:00+00:00",
+          "actual_pct": 1.8987341772152,
+          "predicted_pct": 1.434438562958431,
+          "baseline_pct": 0.0,
+          "train_n": 122,
+          "max_train_label_available_date": "2026-04-01T00:00:00+00:00",
+          "max_train_target_month": "2026-02-01"
+        },
+        {
+          "target_month": "2026-06-01",
+          "forecast_cutoff": "2026-05-07T23:00:00+00:00",
+          "label_available_date": "2026-08-01T00:00:00+00:00",
+          "actual_pct": -5.341614906832293,
+          "predicted_pct": -1.8907618033473652,
+          "baseline_pct": 0.0,
+          "train_n": 123,
+          "max_train_label_available_date": "2026-05-01T00:00:00+00:00",
+          "max_train_target_month": "2026-03-01"
+        },
+        {
+          "target_month": "2026-07-01",
+          "forecast_cutoff": "2026-06-07T23:00:00+00:00",
+          "label_available_date": "2026-09-01T00:00:00+00:00",
+          "actual_pct": 1.837270341207331,
+          "predicted_pct": 0.6666302307281543,
+          "baseline_pct": 0.0,
+          "train_n": 124,
+          "max_train_label_available_date": "2026-06-01T00:00:00+00:00",
+          "max_train_target_month": "2026-04-01"
+        },
+        {
+          "target_month": "2026-08-01",
+          "forecast_cutoff": "2026-07-07T23:00:00+00:00",
+          "label_available_date": "2026-10-01T00:00:00+00:00",
+          "actual_pct": 1.030927835051565,
+          "predicted_pct": 2.203607442170815,
+          "baseline_pct": 0.0,
+          "train_n": 125,
+          "max_train_label_available_date": "2026-07-01T00:00:00+00:00",
+          "max_train_target_month": "2026-05-01"
+        },
+        {
+          "target_month": "2026-09-01",
+          "forecast_cutoff": "2026-08-07T23:00:00+00:00",
+          "label_available_date": "2026-11-01T00:00:00+00:00",
+          "actual_pct": -1.913265306122447,
+          "predicted_pct": 0.08123495241724202,
+          "baseline_pct": 0.0,
+          "train_n": 126,
+          "max_train_label_available_date": "2026-08-01T00:00:00+00:00",
+          "max_train_target_month": "2026-06-01"
+        }
+      ],
+      "feature_coverage_audit": {
+        "commodity_feature_validation_coverage": {
+          "commodity_cocoa_gbp_return_4w_pct": 1.0,
+          "commodity_cocoa_gbp_return_12w_pct": 1.0,
+          "commodity_cocoa_gbp_return_26w_pct": 1.0,
+          "commodity_cocoa_gbp_volatility_12w_pct": 1.0,
+          "commodity_gbp_per_usd_return_4w_pct": 1.0,
+          "commodity_gbp_per_usd_return_12w_pct": 1.0
+        },
+        "coverage_threshold": 0.8,
+        "coverage_selection_uses_test": false,
+        "commodity_group_status": "included"
+      }
+    },
+    {
+      "category_id": "crisps",
+      "category_name": "UK crisps",
+      "selected_model_id": "ridge",
+      "selected_feature_group": "history_only",
+      "selection_basis": "Lowest pretest validation MAE on common dates; test outcomes never select the winner",
+      "selection_cutoff": "2023-12-08T00:00:00+00:00",
+      "validation_metrics": {
+        "n": 34,
+        "mae_pp": 2.0055998170114124,
+        "rmse_pp": 2.455508186440673,
+        "directional_accuracy": 0.6176470588235294
+      },
+      "test_metrics": {
+        "n": 33,
+        "mae_pp": 1.3520192122402246,
+        "rmse_pp": 1.7347774458975445,
+        "directional_accuracy": 0.48484848484848486
+      },
+      "baseline_metrics": {
+        "n": 33,
+        "mae_pp": 1.264796617401803,
+        "rmse_pp": 1.6077120176358837,
+        "directional_accuracy": 0.0
+      },
+      "test_mae_improvement_vs_zero_pp": -0.08722259483842154,
+      "forecast": {
+        "as_of": "2026-11-08",
+        "forecast_cutoff": "2026-11-08T00:00:00+00:00",
+        "target_month": "2026-12-01",
+        "change_pct": 0.47910905384397634,
+        "scope": "category_index",
+        "interval": null
+      },
+      "leaderboard": [
+        {
+          "model_id": "ridge",
+          "feature_group": "history_only",
+          "selected": true,
+          "validation_mae_pp": 2.0055998170114124,
+          "validation_n": 34,
+          "test_mae_pp": 1.3520192122402246,
+          "test_rmse_pp": 1.7347774458975445,
+          "test_directional_accuracy": 0.48484848484848486,
+          "test_n": 33,
+          "hyperparameters": {
+            "alpha": 100.0
+          }
+        },
+        {
+          "model_id": "no_change",
+          "feature_group": "baseline",
+          "selected": false,
+          "validation_mae_pp": 2.127870545240415,
+          "validation_n": 34,
+          "test_mae_pp": 1.264796617401803,
+          "test_rmse_pp": 1.6077120176358837,
+          "test_directional_accuracy": 0.0,
+          "test_n": 33,
+          "hyperparameters": {
+            "source_column": "baseline_zero"
+          }
+        },
+        {
+          "model_id": "trailing_mean",
+          "feature_group": "baseline",
+          "selected": false,
+          "validation_mae_pp": 2.1284487864654613,
+          "validation_n": 34,
+          "test_mae_pp": 1.4971774901689507,
+          "test_rmse_pp": 1.8315891136620828,
+          "test_directional_accuracy": 0.30303030303030304,
+          "test_n": 33,
+          "hyperparameters": {
+            "source_column": "baseline_trailing_mean"
+          }
+        },
+        {
+          "model_id": "hist_gradient_boosting",
+          "feature_group": "history_only",
+          "selected": false,
+          "validation_mae_pp": 2.161247100803914,
+          "validation_n": 34,
+          "test_mae_pp": 1.497292845685402,
+          "test_rmse_pp": 1.9542056785224424,
+          "test_directional_accuracy": 0.5757575757575758,
+          "test_n": 33,
+          "hyperparameters": {
+            "max_iter": 120,
+            "max_leaf_nodes": 7,
+            "min_samples_leaf": 15,
+            "l2_regularization": 20.0
+          }
+        },
+        {
+          "model_id": "ridge",
+          "feature_group": "history_plus_weekly_commodities",
+          "selected": false,
+          "validation_mae_pp": 2.179806594335754,
+          "validation_n": 34,
+          "test_mae_pp": 1.3225106178618524,
+          "test_rmse_pp": 1.702869477901577,
+          "test_directional_accuracy": 0.45454545454545453,
+          "test_n": 33,
+          "hyperparameters": {
+            "alpha": 100.0
+          }
+        },
+        {
+          "model_id": "hist_gradient_boosting",
+          "feature_group": "history_plus_weekly_commodities",
+          "selected": false,
+          "validation_mae_pp": 2.2364274677635416,
+          "validation_n": 34,
+          "test_mae_pp": 1.5405150472313047,
+          "test_rmse_pp": 1.919654268143682,
+          "test_directional_accuracy": 0.6363636363636364,
+          "test_n": 33,
+          "hyperparameters": {
+            "max_iter": 120,
+            "max_leaf_nodes": 7,
+            "min_samples_leaf": 15,
+            "l2_regularization": 20.0
+          }
+        },
+        {
+          "model_id": "recent",
+          "feature_group": "baseline",
+          "selected": false,
+          "validation_mae_pp": 2.400541027654282,
+          "validation_n": 34,
+          "test_mae_pp": 1.905481441171436,
+          "test_rmse_pp": 2.5303397238924505,
+          "test_directional_accuracy": 0.3333333333333333,
+          "test_n": 33,
+          "hyperparameters": {
+            "source_column": "baseline_recent"
+          }
+        },
+        {
+          "model_id": "seasonal",
+          "feature_group": "baseline",
+          "selected": false,
+          "validation_mae_pp": 2.4246242699213276,
+          "validation_n": 34,
+          "test_mae_pp": 1.811591635336046,
+          "test_rmse_pp": 2.2954478534914804,
+          "test_directional_accuracy": 0.48484848484848486,
+          "test_n": 33,
+          "hyperparameters": {
+            "source_column": "baseline_seasonal"
+          }
+        }
+      ],
+      "test_predictions": [
+        {
+          "target_month": "2024-01-01",
+          "forecast_cutoff": "2023-12-08T00:00:00+00:00",
+          "label_available_date": "2024-03-01T00:00:00+00:00",
+          "actual_pct": 0.9192383453709541,
+          "predicted_pct": 0.49753997859286225,
+          "baseline_pct": 0.0,
+          "train_n": 94,
+          "max_train_label_available_date": "2023-12-01T00:00:00+00:00",
+          "max_train_target_month": "2023-10-01"
+        },
+        {
+          "target_month": "2024-02-01",
+          "forecast_cutoff": "2024-01-08T00:00:00+00:00",
+          "label_available_date": "2024-04-01T00:00:00+00:00",
+          "actual_pct": -1.3662979830839306,
+          "predicted_pct": 1.4819438948505987,
+          "baseline_pct": 0.0,
+          "train_n": 95,
+          "max_train_label_available_date": "2024-01-01T00:00:00+00:00",
+          "max_train_target_month": "2023-11-01"
+        },
+        {
+          "target_month": "2024-03-01",
+          "forecast_cutoff": "2024-02-08T00:00:00+00:00",
+          "label_available_date": "2024-05-01T00:00:00+00:00",
+          "actual_pct": 1.912928759894461,
+          "predicted_pct": 0.5117023613776305,
+          "baseline_pct": 0.0,
+          "train_n": 96,
+          "max_train_label_available_date": "2024-02-01T00:00:00+00:00",
+          "max_train_target_month": "2023-12-01"
+        },
+        {
+          "target_month": "2024-04-01",
+          "forecast_cutoff": "2024-03-08T00:00:00+00:00",
+          "label_available_date": "2024-06-01T00:00:00+00:00",
+          "actual_pct": -0.8414239482200769,
+          "predicted_pct": 0.9195030815060496,
+          "baseline_pct": 0.0,
+          "train_n": 97,
+          "max_train_label_available_date": "2024-03-01T00:00:00+00:00",
+          "max_train_target_month": "2024-01-01"
+        },
+        {
+          "target_month": "2024-05-01",
+          "forecast_cutoff": "2024-04-07T23:00:00+00:00",
+          "label_available_date": "2024-07-01T00:00:00+00:00",
+          "actual_pct": -0.9791122715404721,
+          "predicted_pct": 0.11702717697123965,
+          "baseline_pct": 0.0,
+          "train_n": 98,
+          "max_train_label_available_date": "2024-04-01T00:00:00+00:00",
+          "max_train_target_month": "2024-02-01"
+        },
+        {
+          "target_month": "2024-06-01",
+          "forecast_cutoff": "2024-05-07T23:00:00+00:00",
+          "label_available_date": "2024-08-01T00:00:00+00:00",
+          "actual_pct": 1.0547132498352152,
+          "predicted_pct": 0.8301256961512339,
+          "baseline_pct": 0.0,
+          "train_n": 99,
+          "max_train_label_available_date": "2024-05-01T00:00:00+00:00",
+          "max_train_target_month": "2024-03-01"
+        },
+        {
+          "target_month": "2024-07-01",
+          "forecast_cutoff": "2024-06-07T23:00:00+00:00",
+          "label_available_date": "2024-09-01T00:00:00+00:00",
+          "actual_pct": -0.9784735812133016,
+          "predicted_pct": 0.022672411235511447,
+          "baseline_pct": 0.0,
+          "train_n": 100,
+          "max_train_label_available_date": "2024-06-01T00:00:00+00:00",
+          "max_train_target_month": "2024-04-01"
+        },
+        {
+          "target_month": "2024-08-01",
+          "forecast_cutoff": "2024-07-07T23:00:00+00:00",
+          "label_available_date": "2024-10-01T00:00:00+00:00",
+          "actual_pct": -1.054018445322813,
+          "predicted_pct": -0.029564190701501847,
+          "baseline_pct": 0.0,
+          "train_n": 101,
+          "max_train_label_available_date": "2024-07-01T00:00:00+00:00",
+          "max_train_target_month": "2024-05-01"
+        },
+        {
+          "target_month": "2024-09-01",
+          "forecast_cutoff": "2024-08-07T23:00:00+00:00",
+          "label_available_date": "2024-11-01T00:00:00+00:00",
+          "actual_pct": 0.9320905459387463,
+          "predicted_pct": 0.4502727469945347,
+          "baseline_pct": 0.0,
+          "train_n": 102,
+          "max_train_label_available_date": "2024-08-01T00:00:00+00:00",
+          "max_train_target_month": "2024-06-01"
+        },
+        {
+          "target_month": "2024-10-01",
+          "forecast_cutoff": "2024-09-07T23:00:00+00:00",
+          "label_available_date": "2024-12-01T00:00:00+00:00",
+          "actual_pct": 1.3192612137203241,
+          "predicted_pct": 0.24317824001952493,
+          "baseline_pct": 0.0,
+          "train_n": 103,
+          "max_train_label_available_date": "2024-09-01T00:00:00+00:00",
+          "max_train_target_month": "2024-07-01"
+        },
+        {
+          "target_month": "2024-11-01",
+          "forecast_cutoff": "2024-10-07T23:00:00+00:00",
+          "label_available_date": "2025-01-01T00:00:00+00:00",
+          "actual_pct": 0.1953125,
+          "predicted_pct": 0.4504233917235083,
+          "baseline_pct": 0.0,
+          "train_n": 104,
+          "max_train_label_available_date": "2024-10-01T00:00:00+00:00",
+          "max_train_target_month": "2024-08-01"
+        },
+        {
+          "target_month": "2024-12-01",
+          "forecast_cutoff": "2024-11-08T00:00:00+00:00",
+          "label_available_date": "2025-02-01T00:00:00+00:00",
+          "actual_pct": 0.9096816114360085,
+          "predicted_pct": 0.5452638736075572,
+          "baseline_pct": 0.0,
+          "train_n": 105,
+          "max_train_label_available_date": "2024-11-01T00:00:00+00:00",
+          "max_train_target_month": "2024-09-01"
+        },
+        {
+          "target_month": "2025-01-01",
+          "forecast_cutoff": "2024-12-08T00:00:00+00:00",
+          "label_available_date": "2025-03-01T00:00:00+00:00",
+          "actual_pct": 1.7385705086928382,
+          "predicted_pct": 1.0305181014112377,
+          "baseline_pct": 0.0,
+          "train_n": 106,
+          "max_train_label_available_date": "2024-12-01T00:00:00+00:00",
+          "max_train_target_month": "2024-10-01"
+        },
+        {
+          "target_month": "2025-02-01",
+          "forecast_cutoff": "2025-01-08T00:00:00+00:00",
+          "label_available_date": "2025-04-01T00:00:00+00:00",
+          "actual_pct": -1.0126582278480956,
+          "predicted_pct": 0.5576700123383673,
+          "baseline_pct": 0.0,
+          "train_n": 107,
+          "max_train_label_available_date": "2025-01-01T00:00:00+00:00",
+          "max_train_target_month": "2024-11-01"
+        },
+        {
+          "target_month": "2025-03-01",
+          "forecast_cutoff": "2025-02-08T00:00:00+00:00",
+          "label_available_date": "2025-05-01T00:00:00+00:00",
+          "actual_pct": 1.278772378516635,
+          "predicted_pct": 0.8215134931507949,
+          "baseline_pct": 0.0,
+          "train_n": 108,
+          "max_train_label_available_date": "2025-02-01T00:00:00+00:00",
+          "max_train_target_month": "2024-12-01"
+        },
+        {
+          "target_month": "2025-04-01",
+          "forecast_cutoff": "2025-03-08T00:00:00+00:00",
+          "label_available_date": "2025-06-01T00:00:00+00:00",
+          "actual_pct": -0.3156565656565635,
+          "predicted_pct": 0.5779556298857047,
+          "baseline_pct": 0.0,
+          "train_n": 109,
+          "max_train_label_available_date": "2025-03-01T00:00:00+00:00",
+          "max_train_target_month": "2025-01-01"
+        },
+        {
+          "target_month": "2025-05-01",
+          "forecast_cutoff": "2025-04-07T23:00:00+00:00",
+          "label_available_date": "2025-07-01T00:00:00+00:00",
+          "actual_pct": 0.1266624445851683,
+          "predicted_pct": 0.28985936287896463,
+          "baseline_pct": 0.0,
+          "train_n": 110,
+          "max_train_label_available_date": "2025-04-01T00:00:00+00:00",
+          "max_train_target_month": "2025-02-01"
+        },
+        {
+          "target_month": "2025-06-01",
+          "forecast_cutoff": "2025-05-07T23:00:00+00:00",
+          "label_available_date": "2025-08-01T00:00:00+00:00",
+          "actual_pct": 1.0752688172043223,
+          "predicted_pct": 0.3639440011773899,
+          "baseline_pct": 0.0,
+          "train_n": 111,
+          "max_train_label_available_date": "2025-05-01T00:00:00+00:00",
+          "max_train_target_month": "2025-03-01"
+        },
+        {
+          "target_month": "2025-07-01",
+          "forecast_cutoff": "2025-06-07T23:00:00+00:00",
+          "label_available_date": "2025-09-01T00:00:00+00:00",
+          "actual_pct": -0.25031289111389077,
+          "predicted_pct": 0.1866641569673374,
+          "baseline_pct": 0.0,
+          "train_n": 112,
+          "max_train_label_available_date": "2025-06-01T00:00:00+00:00",
+          "max_train_target_month": "2025-04-01"
+        },
+        {
+          "target_month": "2025-08-01",
+          "forecast_cutoff": "2025-07-07T23:00:00+00:00",
+          "label_available_date": "2025-10-01T00:00:00+00:00",
+          "actual_pct": 0.0627352572145412,
+          "predicted_pct": 0.5123941824692864,
+          "baseline_pct": 0.0,
+          "train_n": 113,
+          "max_train_label_available_date": "2025-07-01T00:00:00+00:00",
+          "max_train_target_month": "2025-05-01"
+        },
+        {
+          "target_month": "2025-09-01",
+          "forecast_cutoff": "2025-08-07T23:00:00+00:00",
+          "label_available_date": "2025-11-01T00:00:00+00:00",
+          "actual_pct": -3.1974921630093966,
+          "predicted_pct": 0.5072559397567957,
+          "baseline_pct": 0.0,
+          "train_n": 114,
+          "max_train_label_available_date": "2025-08-01T00:00:00+00:00",
+          "max_train_target_month": "2025-06-01"
+        },
+        {
+          "target_month": "2025-10-01",
+          "forecast_cutoff": "2025-09-07T23:00:00+00:00",
+          "label_available_date": "2025-12-01T00:00:00+00:00",
+          "actual_pct": 3.626943005181338,
+          "predicted_pct": 0.6575834219097587,
+          "baseline_pct": 0.0,
+          "train_n": 115,
+          "max_train_label_available_date": "2025-09-01T00:00:00+00:00",
+          "max_train_target_month": "2025-07-01"
+        },
+        {
+          "target_month": "2025-11-01",
+          "forecast_cutoff": "2025-10-07T23:00:00+00:00",
+          "label_available_date": "2026-01-01T00:00:00+00:00",
+          "actual_pct": -1.4375000000000027,
+          "predicted_pct": 0.876934005849768,
+          "baseline_pct": 0.0,
+          "train_n": 116,
+          "max_train_label_available_date": "2025-10-01T00:00:00+00:00",
+          "max_train_target_month": "2025-08-01"
+        },
+        {
+          "target_month": "2025-12-01",
+          "forecast_cutoff": "2025-11-08T00:00:00+00:00",
+          "label_available_date": "2026-02-01T00:00:00+00:00",
+          "actual_pct": 2.0925808497146647,
+          "predicted_pct": 0.25746458188750415,
+          "baseline_pct": 0.0,
+          "train_n": 117,
+          "max_train_label_available_date": "2025-11-01T00:00:00+00:00",
+          "max_train_target_month": "2025-09-01"
+        },
+        {
+          "target_month": "2026-01-01",
+          "forecast_cutoff": "2025-12-08T00:00:00+00:00",
+          "label_available_date": "2026-03-01T00:00:00+00:00",
+          "actual_pct": -0.9937888198757738,
+          "predicted_pct": 1.0892932254156031,
+          "baseline_pct": 0.0,
+          "train_n": 118,
+          "max_train_label_available_date": "2025-12-01T00:00:00+00:00",
+          "max_train_target_month": "2025-10-01"
+        },
+        {
+          "target_month": "2026-02-01",
+          "forecast_cutoff": "2026-01-08T00:00:00+00:00",
+          "label_available_date": "2026-04-01T00:00:00+00:00",
+          "actual_pct": 0.12547051442910462,
+          "predicted_pct": 0.1250877007874857,
+          "baseline_pct": 0.0,
+          "train_n": 119,
+          "max_train_label_available_date": "2026-01-01T00:00:00+00:00",
+          "max_train_target_month": "2025-11-01"
+        },
+        {
+          "target_month": "2026-03-01",
+          "forecast_cutoff": "2026-02-08T00:00:00+00:00",
+          "label_available_date": "2026-05-01T00:00:00+00:00",
+          "actual_pct": -0.43859649122806044,
+          "predicted_pct": 0.9641431933859732,
+          "baseline_pct": 0.0,
+          "train_n": 120,
+          "max_train_label_available_date": "2026-02-01T00:00:00+00:00",
+          "max_train_target_month": "2025-12-01"
+        },
+        {
+          "target_month": "2026-04-01",
+          "forecast_cutoff": "2026-03-08T00:00:00+00:00",
+          "label_available_date": "2026-06-01T00:00:00+00:00",
+          "actual_pct": 0.8810572687224738,
+          "predicted_pct": -0.032138197936632085,
+          "baseline_pct": 0.0,
+          "train_n": 121,
+          "max_train_label_available_date": "2026-03-01T00:00:00+00:00",
+          "max_train_target_month": "2026-01-01"
+        },
+        {
+          "target_month": "2026-05-01",
+          "forecast_cutoff": "2026-04-07T23:00:00+00:00",
+          "label_available_date": "2026-07-01T00:00:00+00:00",
+          "actual_pct": -1.5595757953836609,
+          "predicted_pct": 0.5327124870452863,
+          "baseline_pct": 0.0,
+          "train_n": 122,
+          "max_train_label_available_date": "2026-04-01T00:00:00+00:00",
+          "max_train_target_month": "2026-02-01"
+        },
+        {
+          "target_month": "2026-06-01",
+          "forecast_cutoff": "2026-05-07T23:00:00+00:00",
+          "label_available_date": "2026-08-01T00:00:00+00:00",
+          "actual_pct": 0.9505703422053147,
+          "predicted_pct": -0.042720045395714834,
+          "baseline_pct": 0.0,
+          "train_n": 123,
+          "max_train_label_available_date": "2026-05-01T00:00:00+00:00",
+          "max_train_target_month": "2026-03-01"
+        },
+        {
+          "target_month": "2026-07-01",
+          "forecast_cutoff": "2026-06-07T23:00:00+00:00",
+          "label_available_date": "2026-09-01T00:00:00+00:00",
+          "actual_pct": -1.5065913370998163,
+          "predicted_pct": 0.3795047493852635,
+          "baseline_pct": 0.0,
+          "train_n": 124,
+          "max_train_label_available_date": "2026-06-01T00:00:00+00:00",
+          "max_train_target_month": "2026-04-01"
+        },
+        {
+          "target_month": "2026-08-01",
+          "forecast_cutoff": "2026-07-07T23:00:00+00:00",
+          "label_available_date": "2026-10-01T00:00:00+00:00",
+          "actual_pct": 4.780114722753348,
+          "predicted_pct": -0.13675947728848636,
+          "baseline_pct": 0.0,
+          "train_n": 125,
+          "max_train_label_available_date": "2026-07-01T00:00:00+00:00",
+          "max_train_target_month": "2026-05-01"
+        },
+        {
+          "target_month": "2026-09-01",
+          "forecast_cutoff": "2026-08-07T23:00:00+00:00",
+          "label_available_date": "2026-11-01T00:00:00+00:00",
+          "actual_pct": -1.8248175182481785,
+          "predicted_pct": 0.333949798750257,
+          "baseline_pct": 0.0,
+          "train_n": 126,
+          "max_train_label_available_date": "2026-08-01T00:00:00+00:00",
+          "max_train_target_month": "2026-06-01"
+        }
+      ],
+      "feature_coverage_audit": {
+        "commodity_feature_validation_coverage": {
+          "commodity_gbp_per_usd_return_4w_pct": 1.0,
+          "commodity_gbp_per_usd_return_12w_pct": 1.0,
+          "commodity_maize_us_gulf_return_4w_pct": 1.0,
+          "commodity_maize_us_gulf_return_12w_pct": 1.0,
+          "commodity_maize_us_gulf_volatility_12w_pct": 1.0,
+          "commodity_wheat_us_gulf_return_4w_pct": 1.0,
+          "commodity_wheat_us_gulf_return_12w_pct": 1.0,
+          "commodity_wheat_us_gulf_volatility_12w_pct": 1.0
+        },
+        "coverage_threshold": 0.8,
+        "coverage_selection_uses_test": false,
+        "commodity_group_status": "included"
+      }
+    }
+  ],
+  "skipped": [],
+  "limitations": [
+    "Category indices cannot identify a manufacturer's shrink/price/recipe mechanism.",
+    "Historical archives may contain corrections; source availability assumptions are documented, not recovered original vintages.",
+    "No calibrated SKU probabilities or causal ingredient cost pass-through claims.",
+    "No prediction intervals emitted: independent post-selection calibration is not established."
+  ],
+  "status": "ready"
+}

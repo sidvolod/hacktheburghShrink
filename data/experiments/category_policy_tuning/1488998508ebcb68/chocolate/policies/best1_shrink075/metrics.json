@@ -1,0 +1,9 @@
+{
+  "outer_exploratory": {
+    "n": 33,
+    "mae_pp": 1.6368317971105515,
+    "rmse_pp": 2.0089852337355807,
+    "directional_accuracy": 0.7878787878787878
+  },
+  "warning": "Designed after examining initial retuning results; no untouched test remains. Category CPI only."
+}

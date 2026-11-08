@@ -1,0 +1,758 @@
+{
+  "schema_version": 1,
+  "researched_on": "2026-11-08",
+  "purpose": "Selected UK historical demonstration cases, separate from representative forecasting labels.",
+  "sources": {
+    "which-quality-street-2025": {
+      "id": "which-quality-street-2025",
+      "title": "Which? — Shrinkflation: the brands charging you more for less",
+      "url": "https://www.which.co.uk/news/article/shrinkflation-the-brands-charging-you-more-for-less-atUkT4m2GjuP",
+      "published": "2025-10-28",
+      "role": "Consumer investigation: quantities and Morrisons prices",
+      "raw_path": "data/raw/snack-evidence/which-quality-street-2025.html",
+      "raw_kind": "publisher_html"
+    },
+    "which-2019": {
+      "id": "which-2019",
+      "title": "Which? — Shrinking products: are we paying more for less?",
+      "url": "https://www.which.co.uk/news/article/shrinking-products-are-we-paying-more-for-less-a0Px52J4CFU1",
+      "published": "2019-02-23",
+      "role": "Consumer investigation using historical supermarket-price data",
+      "raw_path": "data/raw/snack-evidence/which-2019.html",
+      "raw_kind": "publisher_html"
+    },
+    "grocer-snickers-2013": {
+      "id": "grocer-snickers-2013",
+      "title": "The Grocer — Mars bars shrink but price stays the same",
+      "url": "https://www.thegrocer.co.uk/news/mars-bars-shrink-but-price-stays-the-same/352754.article",
+      "published": "2013-12-14",
+      "role": "Manufacturer-reported bar sizes and recommended retail prices",
+      "raw_path": "data/raw/snack-evidence/grocer-snickers-2013.html",
+      "raw_kind": "publisher_html"
+    },
+    "phe-2018": {
+      "id": "phe-2018",
+      "title": "Public Health England — Sugar reduction progress report, appendix 4, page 72",
+      "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/709008/Sugar_reduction_progress_report.pdf#page=72",
+      "published": "2018-05",
+      "role": "Government report containing manufacturer-reported 2013 size changes",
+      "raw_path": "data/raw/snack-evidence/phe-sugar-reduction-2018.pdf",
+      "raw_kind": "government_pdf",
+      "license": "Open Government Licence v3.0, excluding third-party content"
+    },
+    "assosia-chocolate-2025": {
+      "id": "assosia-chocolate-2025",
+      "title": "Assosia / The Grocer — Cadbury and Mars Wrigley shrink chocolate packs amid cocoa inflation",
+      "url": "https://www.assosia.com/cadbury-and-mars-wrigley-shrink-chocolate-packs-amid-cocoa-inflation",
+      "original_url": "https://www.thegrocer.co.uk/news/cadbury-and-mars-wrigley-shrink-chocolate-packs-amid-cocoa-inflation/701463.article",
+      "published": "2025-02-25",
+      "role": "Original price-data provider's republication of the investigation; 12 weeks ending 24 February 2025",
+      "raw_path": "data/raw/snack-evidence/assosia-chocolate-2025.html",
+      "raw_kind": "data_provider_html",
+      "analysis_window_end": "2025-02-24",
+      "analysis_window_weeks": 12
+    },
+    "sky-maltesers-2016": {
+      "id": "sky-maltesers-2016",
+      "title": "Sky News — Maltesers shrink by 15% as prices rise, declares Mars",
+      "url": "https://news.sky.com/story/mars-blames-rising-costs-for-maltesers-reduction-10662160",
+      "published": "2016-11-19",
+      "role": "Contemporary report and manufacturer response; pack sizes only",
+      "raw_path": "data/raw/snack-evidence/sky-maltesers-2016.access.json",
+      "raw_kind": "access_note_not_article_capture",
+      "capture_note": "Public article text verified through the web-reading tool. Direct HTTP download returned 403; the access note is not a copy of the publisher's article."
+    },
+    "independent-maltesers-2017": {
+      "id": "independent-maltesers-2017",
+      "title": "The Independent — Maltesers, M&Ms and Minstrels packs all getting smaller",
+      "url": "https://www.the-independent.com/news/business/malteser-m-ms-minstrels-packs-smaller-shrinkflation-15-per-cent-reduction-size-a7651576.html",
+      "published": "2017-03-27",
+      "role": "Contemporary manufacturer-attributed size change and unchanged reported bag price; retailer unspecified",
+      "raw_path": "data/raw/snack-evidence/independent-maltesers-2017.html",
+      "raw_kind": "publisher_html"
+    },
+    "gov-mcvities-sampling-2011": {
+      "id": "gov-mcvities-sampling-2011",
+      "title": "Department of Health / Institute of Food Research - biscuit sampling report, sample 4.1, page 68",
+      "url": "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/216390/dh_129727.pdf#page=68",
+      "published": "2011-08-31",
+      "role": "Government label transcription for a 500 g McVitie's Digestives pack purchased 11 November 2008 at Sainsbury's, Norwich",
+      "raw_path": "data/raw/snack-evidence/mcvities-gov-biscuit-survey-2011.pdf",
+      "raw_kind": "government_pdf",
+      "license": "Open Government Licence v 3.0, except where otherwise stated",
+      "rights_note": "PDF page 3 states Crown copyright 2011. Official publication page footer states OGL v 3 except where otherwise stated; third-party rights remain excluded.",
+      "license_source_url": "https://www.gov.uk/government/publications/nutrient-analysis-survey-of-biscuits-buns-cakes-and-pastries",
+      "sample_purchase_date": "2008-11-11",
+      "verified_pdf_pages": [
+        3,
+        68
+      ]
+    },
+    "onestop-mcvities-400g-2022": {
+      "id": "onestop-mcvities-400g-2022",
+      "title": "One Stop - McVitie's Digestives The Original 400 g product specification",
+      "url": "https://www.onestop.co.uk/wp-content/uploads/McVities-Digestives-The-Original-400g-273037.pdf",
+      "published": null,
+      "role": "Retailer ingredient specification marked last updated 29 September 2022; the update is not a purchase or reformulation date",
+      "raw_path": "data/raw/snack-evidence/mcvities-onestop-400g-2022.pdf",
+      "raw_kind": "retailer_specification_pdf",
+      "license": "No explicit reuse licence stated in the PDF",
+      "rights_note": "Retailer specification and branding; use paraphrased facts and source link in the UI. Rendered document pages are verification material, not product-pack photographs.",
+      "document_updated": "2022-09-29",
+      "verified_pdf_pages": [
+        1
+      ]
+    },
+    "gov-penguin-sampling-2011": {
+      "id": "gov-penguin-sampling-2011",
+      "title": "Department of Health / Institute of Food Research - Penguin sample 15.1, sampling report page 234",
+      "url": "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/216390/dh_129727.pdf#page=234",
+      "published": "2011-08-31",
+      "role": "Government ingredient-label transcription for a Penguin sample purchased 4 September 2008 at Tesco, Norwich",
+      "raw_path": "data/raw/snack-evidence/mcvities-gov-biscuit-survey-2011.pdf",
+      "raw_kind": "government_pdf",
+      "license": "Open Government Licence v3.0, except where otherwise stated",
+      "rights_note": "PDF page 3 states Crown copyright 2011; the official GOV.UK publication page gives the standard OGL v3 notice.",
+      "license_source_url": "https://www.gov.uk/government/publications/nutrient-analysis-survey-of-biscuits-buns-cakes-and-pastries",
+      "verified_pdf_pages": [
+        234
+      ]
+    },
+    "mcvities-penguin-official-2026": {
+      "id": "mcvities-penguin-official-2026",
+      "title": "McVitie's official Penguin Original ingredient declaration",
+      "url": "https://mcvities.com/en-gb/penguin-original",
+      "published": null,
+      "role": "Manufacturer product and ingredient page accessed 8 November 2026; access date is not a recipe-transition date",
+      "raw_path": "data/raw/snack-evidence/penguin-manufacturer-2026.access.json",
+      "raw_kind": "access_note_not_article_capture",
+      "capture_note": "This file is an access note and paraphrased fact extract, not a copy of the original HTML. Direct HTTP retrieval returned 403. The manufacturer ingredient tab was verified through the web-reading tool; no claim of a captured browser screenshot of that tab is made.",
+      "license": "No explicit reuse licence established; facts paraphrased and official page linked"
+    }
+  },
+  "cases": [
+    {
+      "id": "quality-street-uk-tub-2025",
+      "family_id": "case-family:quality-street-uk-tub-2025",
+      "name": "Quality Street",
+      "format": "Chocolate tub",
+      "brand": "Quality Street",
+      "category": "Chocolate",
+      "market": "GB",
+      "retailer": "Morrisons",
+      "old": {
+        "mass_g": 600,
+        "price_gbp": 6,
+        "price_basis": "reported_shelf_price_same_retailer",
+        "barcode": "8445290146434",
+        "period": "Before the reported 2025 change",
+        "transaction_date": null
+      },
+      "new": {
+        "mass_g": 550,
+        "price_gbp": 7,
+        "price_basis": "reported_shelf_price_same_retailer",
+        "barcode": "8445291609181",
+        "period": "2025, reported 28 October",
+        "transaction_date": null
+      },
+      "event_date": null,
+      "event_date_precision": "Year-level reported change; exact transition day unavailable",
+      "reported_year": 2025,
+      "evidence_status": "Reported size and price change; independently supported old/new barcode identities",
+      "source_ids": [
+        "which-quality-street-2025"
+      ],
+      "limitations": [
+        "Old observation year is not established; no 2024 date is inferred.",
+        "Exact transactions and transition dates are unavailable.",
+        "The old front photograph identifies the product but does not show weight; 600g is corroborated by the OFF quantity and retailer listing.",
+        "OFF edit and image-upload dates are database events, not shelf dates."
+      ],
+      "family_link": {
+        "status": "manually_supported_replacement_pair",
+        "old_barcode": "8445290146434",
+        "new_barcode": "8445291609181",
+        "note": "Product identity, Which? investigation, OFF label/quantity and retailer corroboration; exact validity boundaries unknown",
+        "supporting_urls": [
+          "https://world.openfoodfacts.org/product/8445290146434",
+          "https://world.openfoodfacts.org/product/8445291609181",
+          "https://www.centralcoop.co.uk/food/products/8445290146434"
+        ]
+      },
+      "photos": [
+        {
+          "role": "old_front",
+          "local_path": "research/images/quality600.jpg",
+          "source_url": "https://images.openfoodfacts.org/images/products/844/529/014/6434/front_en.58.400.jpg",
+          "attribution": "macrofactor / Open Food Facts contributors",
+          "license": "CC-BY-SA",
+          "evidence_note": "Photo identifies the older barcode's product; weight is not visible on this front photo."
+        },
+        {
+          "role": "new_front",
+          "local_path": "research/images/quality550.jpg",
+          "source_url": "https://images.openfoodfacts.org/images/products/844/529/160/9181/front_en.22.400.jpg",
+          "attribution": "municorn-calorie-counter-app / Open Food Facts contributors",
+          "license": "CC-BY-SA",
+          "evidence_note": "Photo identifies the newer barcode's product; this is not a dated shop transaction."
+        },
+        {
+          "role": "new_label",
+          "local_path": "research/images/quality550-back.jpg",
+          "source_url": "https://images.openfoodfacts.org/images/products/844/529/160/9181/7.400.jpg",
+          "attribution": "alexiscy / Open Food Facts contributors",
+          "license": "CC-BY-SA",
+          "evidence_note": "Inspected label visibly shows 550g and barcode 8445291609181; upload time is not the transition date."
+        }
+      ]
+    },
+    {
+      "id": "doritos-uk-sharing-200-to-180",
+      "name": "Doritos",
+      "format": "Sharing bag",
+      "brand": "Doritos",
+      "category": "Crisps",
+      "market": "GB",
+      "retailer": "Asda",
+      "old": {
+        "mass_g": 200,
+        "price_gbp": 1,
+        "price_basis": "reported_shelf_price_same_retailer",
+        "barcode": null,
+        "period": "Earlier 200g bag",
+        "transaction_date": null
+      },
+      "new": {
+        "mass_g": 180,
+        "price_gbp": 1,
+        "price_basis": "reported_shelf_price_same_retailer",
+        "barcode": null,
+        "period": "Smaller bag, documented by February 2019",
+        "transaction_date": null
+      },
+      "event_date": null,
+      "event_date_precision": "Occurred before the report; publication is not the transition date",
+      "reported_year": 2019,
+      "evidence_status": "Consumer investigation supports quantities and unchanged Asda shelf price",
+      "source_ids": [
+        "which-2019"
+      ],
+      "limitations": [
+        "This change was already reported before 2019; 2019 is the investigation publication year, not an asserted event year.",
+        "Exact transaction and transition dates, flavour-specific barcode pair and promotion conditions are unavailable."
+      ],
+      "family_link": {
+        "status": "reported_replacement_barcodes_unresolved",
+        "old_barcode": null,
+        "new_barcode": null,
+        "note": "Reported product-level size change; no barcode pair has been verified"
+      },
+      "photos": []
+    },
+    {
+      "id": "mcvities-digestives-uk-500-to-400",
+      "name": "McVitie's Digestives",
+      "format": "Original plain biscuit packet",
+      "brand": "McVitie's",
+      "category": "Biscuits",
+      "market": "GB",
+      "retailer": "Tesco",
+      "old": {
+        "mass_g": 500,
+        "price_gbp": 1.1,
+        "price_basis": "reported_shelf_price_same_retailer",
+        "barcode": null,
+        "period": "Earlier 500g packet",
+        "transaction_date": null
+      },
+      "new": {
+        "mass_g": 400,
+        "price_gbp": 1,
+        "price_basis": "reported_shelf_price_same_retailer",
+        "barcode": null,
+        "period": "Smaller packet, announced in 2018 and reported in 2019",
+        "transaction_date": null
+      },
+      "event_date": null,
+      "event_date_precision": "Announcement year reported as 2018; exact shelf transition and transactions unavailable",
+      "reported_year": 2019,
+      "evidence_status": "Consumer investigation supports quantities and Tesco prices",
+      "source_ids": [
+        "which-2019",
+        "gov-mcvities-sampling-2011",
+        "onestop-mcvities-400g-2022"
+      ],
+      "limitations": [
+        "Tesco shelf prices are used consistently; the manufacturer's different RRP and Asda's £1 prices are not mixed into this comparison.",
+        "Exact dated transactions, barcode pair and promotion conditions remain unverified.",
+        "Ingredient snapshots from 2008 and a 2022 document update are separate evidence; the exact recipe transition date is unknown."
+      ],
+      "family_link": {
+        "status": "reported_replacement_barcodes_unresolved",
+        "old_barcode": null,
+        "new_barcode": null,
+        "note": "Reported product-level size change; no barcode pair has been verified"
+      },
+      "photos": [],
+      "recipe_history": {
+        "status": "documented_label_comparison",
+        "scope_note": "Two ingredient snapshots: a pack purchased in 2008 and a retailer specification updated in 2022. The recipe transition date is unknown; this comparison is separate from the 2018/2019 size change above.",
+        "old": {
+          "period": "Pack purchased 11 November 2008",
+          "mass_g": 500,
+          "source_id": "gov-mcvities-sampling-2011",
+          "date": "2008-11-11",
+          "date_basis": "actual_sample_purchase_date_recorded_in_government_survey",
+          "ingredients_summary": [
+            "Wheat flour declared at 54%",
+            "Wholemeal wheat flour declared at 16%",
+            "Vegetable oil without a named plant source",
+            "Dried skimmed milk listed as an ingredient",
+            "Tartaric acid listed among raising agents"
+          ]
+        },
+        "new": {
+          "period": "Retailer specification updated 29 September 2022",
+          "mass_g": 400,
+          "source_id": "onestop-mcvities-400g-2022",
+          "date": "2022-09-29",
+          "date_basis": "document_last_updated_not_purchase_or_reformulation_date",
+          "barcode": "5000168001159",
+          "ingredients_summary": [
+            "Flour blend declared at 55%, with fortification details",
+            "Wholemeal wheat flour declared at 16%",
+            "Palm identified as the vegetable-oil source",
+            "No milk ingredient listed; a may-contain-milk notice remains",
+            "Ammonium bicarbonate listed among raising agents"
+          ]
+        },
+        "changes": [
+          {
+            "label": "Declared milk ingredient",
+            "before": "Dried skimmed milk listed",
+            "after": "No milk ingredient listed; may-contain notice retained",
+            "note": "This establishes a declaration difference, not the date or reason a formulation changed."
+          },
+          {
+            "label": "Vegetable-oil description",
+            "before": "Plant source unspecified",
+            "after": "Palm identified",
+            "note": "The earlier record does not identify its oil source. This does not prove that palm oil was newly introduced or replaced butter."
+          },
+          {
+            "label": "Declared flour percentage",
+            "before": "54% wheat flour",
+            "after": "55% flour blend",
+            "note": "The later declaration also lists fortification details; compare the declarations rather than inferring an exact manufacturing adjustment."
+          },
+          {
+            "label": "Raising-agent declaration",
+            "before": "Tartaric acid listed",
+            "after": "Ammonium bicarbonate listed; tartaric acid not listed",
+            "note": "Sodium bicarbonate and malic acid appear in both documents."
+          }
+        ],
+        "limitations": [
+          "The 2008 date is a recorded purchase; the 2022 date is a document update. Neither is a reformulation date.",
+          "The documents concern different pack sizes in the same named product family; no historical barcode chain or exact recipe-transition event is established.",
+          "Some differences may reflect more detailed labelling. No oil substitution, cost saving, quality decline or manufacturer motive is established.",
+          "Do not merge these ingredient-observation dates with the separate 2018/2019 size-and-price comparison."
+        ],
+        "source_ids": [
+          "gov-mcvities-sampling-2011",
+          "onestop-mcvities-400g-2022"
+        ]
+      }
+    },
+    {
+      "id": "snickers-uk-single-2013",
+      "name": "Snickers",
+      "format": "Single bar",
+      "brand": "Snickers",
+      "category": "Chocolate",
+      "market": "GB",
+      "retailer": null,
+      "old": {
+        "mass_g": 58,
+        "price_gbp": 0.51,
+        "price_basis": "recommended_retail_price",
+        "barcode": null,
+        "period": "Before the 2013 change",
+        "transaction_date": null
+      },
+      "new": {
+        "mass_g": 48,
+        "price_gbp": 0.51,
+        "price_basis": "recommended_retail_price",
+        "barcode": null,
+        "period": "2013, reported 14 December",
+        "transaction_date": null
+      },
+      "event_date": null,
+      "event_date_precision": "Change year corroborated by government report; exact on-sale day unavailable",
+      "reported_year": 2013,
+      "evidence_status": "Government report corroborates manufacturer sizes; contemporary trade report gives unchanged 51p RRP",
+      "source_ids": [
+        "grocer-snickers-2013",
+        "phe-2018"
+      ],
+      "reported_context": "Manufacturer cited a calorie-reduction commitment; a commodity-cost cause is not inferred.",
+      "limitations": [
+        "51p is a recommended retail price, not an observed shop transaction.",
+        "No historical barcode/photo pair or exact transition day is verified."
+      ],
+      "family_link": {
+        "status": "reported_replacement_barcodes_unresolved",
+        "old_barcode": null,
+        "new_barcode": null,
+        "note": "Manufacturer-reported UK single-bar change; no barcode pair has been verified"
+      },
+      "photos": []
+    },
+    {
+      "id": "cadbury-oreo-bites-uk-2025",
+      "name": "Cadbury Oreo Bites",
+      "format": "Chocolate sharing bag",
+      "brand": "Cadbury",
+      "category": "Chocolate",
+      "market": "GB",
+      "retailer": "Tesco",
+      "old": {
+        "mass_g": 110,
+        "price_gbp": 1.75,
+        "price_basis": "reported_shelf_price_same_retailer",
+        "barcode": null,
+        "period": "Earlier 110g bag",
+        "transaction_date": null
+      },
+      "new": {
+        "mass_g": 100,
+        "price_gbp": 1.75,
+        "price_basis": "reported_shelf_price_same_retailer",
+        "barcode": null,
+        "period": "Replacement reported February 2025",
+        "transaction_date": null
+      },
+      "event_date": null,
+      "event_date_precision": "Investigation covers 12 weeks ending 24 February 2025; individual transition date unavailable",
+      "reported_year": 2025,
+      "evidence_status": "Price-data provider republishes investigation explicitly identifying the replacement and Tesco prices",
+      "source_ids": [
+        "assosia-chocolate-2025"
+      ],
+      "limitations": [
+        "Exact transaction and transition dates and the barcode pair remain unverified.",
+        "Unit-price change is recomputed from raw values; the article's 10.1% statement is inconsistent with these figures. Promotion conditions are unspecified."
+      ],
+      "family_link": {
+        "status": "reported_replacement_barcodes_unresolved",
+        "old_barcode": null,
+        "new_barcode": null,
+        "note": "Source explicitly identifies a replacement, but no barcode pair has been verified"
+      },
+      "photos": []
+    },
+    {
+      "id": "m-and-ms-chocolate-uk-2025",
+      "name": "M&M's Chocolate",
+      "format": "More to Share pouch",
+      "brand": "M&M's",
+      "category": "Chocolate",
+      "market": "GB",
+      "retailer": "Sainsbury's",
+      "old": {
+        "mass_g": 220,
+        "price_gbp": 3.6,
+        "price_basis": "reported_shelf_price_same_retailer",
+        "barcode": null,
+        "period": "Earlier 220g pouch",
+        "transaction_date": null
+      },
+      "new": {
+        "mass_g": 200,
+        "price_gbp": 3.6,
+        "price_basis": "reported_shelf_price_same_retailer",
+        "barcode": null,
+        "period": "Replacement reported February 2025",
+        "transaction_date": null
+      },
+      "event_date": null,
+      "event_date_precision": "Investigation covers 12 weeks ending 24 February 2025; individual transition date unavailable",
+      "reported_year": 2025,
+      "evidence_status": "Price-data provider republishes investigation explicitly identifying the replacement and Sainsbury's prices",
+      "source_ids": [
+        "assosia-chocolate-2025"
+      ],
+      "limitations": [
+        "Exact transaction and transition dates and the barcode pair remain unverified.",
+        "Unit-price change is recomputed from raw values; the article's 10.1% statement is inconsistent with these figures. Promotion conditions are unspecified."
+      ],
+      "family_link": {
+        "status": "reported_replacement_barcodes_unresolved",
+        "old_barcode": null,
+        "new_barcode": null,
+        "note": "Source explicitly identifies a replacement, but no barcode pair has been verified"
+      },
+      "photos": []
+    },
+    {
+      "id": "galaxy-minstrels-uk-pouch-2025",
+      "name": "Galaxy Minstrels",
+      "format": "Chocolate sharing pouch",
+      "brand": "Galaxy",
+      "category": "Chocolate",
+      "market": "GB",
+      "retailer": "Asda",
+      "old": {
+        "mass_g": 125,
+        "price_gbp": 1.75,
+        "price_basis": "reported_shelf_price_same_retailer",
+        "barcode": null,
+        "period": "Earlier 125g pouch",
+        "transaction_date": null
+      },
+      "new": {
+        "mass_g": 118,
+        "price_gbp": 1.75,
+        "price_basis": "reported_shelf_price_same_retailer",
+        "barcode": null,
+        "period": "Replacement reported February 2025",
+        "transaction_date": null
+      },
+      "event_date": null,
+      "event_date_precision": "Investigation covers 12 weeks ending 24 February 2025; individual transition date unavailable",
+      "reported_year": 2025,
+      "evidence_status": "Price-data provider republishes investigation explicitly identifying the replacement and same-retailer prices",
+      "source_ids": [
+        "assosia-chocolate-2025"
+      ],
+      "limitations": [
+        "Exact transaction and transition dates and the barcode pair remain unverified. Promotion conditions are unspecified.",
+        "The source's stated 10.8% unit-price increase does not match the reported weights and prices; we recompute 5.9%."
+      ],
+      "family_link": {
+        "status": "reported_replacement_barcodes_unresolved",
+        "old_barcode": null,
+        "new_barcode": null,
+        "note": "Source explicitly identifies a replacement, but no barcode pair has been verified"
+      },
+      "photos": []
+    },
+    {
+      "id": "revels-uk-pouch-2025",
+      "name": "Revels",
+      "format": "Chocolate sharing pouch",
+      "brand": "Revels",
+      "category": "Chocolate",
+      "market": "GB",
+      "retailer": "Morrisons",
+      "old": {
+        "mass_g": 205,
+        "price_gbp": 2.75,
+        "price_basis": "reported_shelf_price_same_retailer",
+        "barcode": null,
+        "period": "Earlier 205g pouch",
+        "transaction_date": null
+      },
+      "new": {
+        "mass_g": 185,
+        "price_gbp": 3.3,
+        "price_basis": "reported_shelf_price_same_retailer",
+        "barcode": null,
+        "period": "Replacement reported February 2025",
+        "transaction_date": null
+      },
+      "event_date": null,
+      "event_date_precision": "Investigation covers 12 weeks ending 24 February 2025; individual transition date unavailable",
+      "reported_year": 2025,
+      "evidence_status": "Price-data provider republishes investigation explicitly identifying the replacement and same-retailer prices",
+      "source_ids": [
+        "assosia-chocolate-2025"
+      ],
+      "limitations": [
+        "Exact transaction and transition dates and the barcode pair remain unverified. Promotion conditions are unspecified.",
+        "The source rounds/reports the unit-price increase as 33.1%; we recompute 33.0% from the raw weights and prices."
+      ],
+      "family_link": {
+        "status": "reported_replacement_barcodes_unresolved",
+        "old_barcode": null,
+        "new_barcode": null,
+        "note": "Source explicitly identifies a replacement, but no barcode pair has been verified"
+      },
+      "photos": []
+    },
+    {
+      "id": "maltesers-uk-pouch-2017",
+      "name": "Maltesers",
+      "format": "Sharing pouch, 103g format",
+      "brand": "Maltesers",
+      "category": "Chocolate",
+      "market": "GB",
+      "retailer": null,
+      "old": {
+        "mass_g": 103,
+        "price_gbp": 1.5,
+        "transaction_date": null,
+        "period": "Earlier 103g format, reported 27 March 2017",
+        "price_basis": "reported_price_retailer_unspecified",
+        "barcode": null
+      },
+      "new": {
+        "mass_g": 93,
+        "price_gbp": 1.5,
+        "transaction_date": null,
+        "period": "Replacement 93g format reported 27 March 2017",
+        "price_basis": "reported_price_retailer_unspecified",
+        "barcode": null
+      },
+      "event_date": null,
+      "event_date_precision": "Contemporary report dated 27 March 2017; exact shelf transition and transaction dates unknown",
+      "reported_year": 2017,
+      "evidence_status": "Contemporary report attributes the 103g to 93g change to Mars and reports an unchanged £1.50 bag price",
+      "source_ids": [
+        "independent-maltesers-2017"
+      ],
+      "limitations": [
+        "The £1.50 price is reported in the article; retailer, shop location and promotion or loyalty conditions are unspecified. It is not a matched-receipt comparison.",
+        "Exact transition and transaction dates and the barcode pair remain unverified.",
+        "This is a separate reported change from the 2016 121g to 103g case; its prices do not establish the 2016 prices."
+      ],
+      "family_link": {
+        "status": "reported_replacement_barcodes_unresolved",
+        "old_barcode": null,
+        "new_barcode": null,
+        "note": "Source explicitly identifies a 103g to 93g replacement; no barcode pair has been verified"
+      },
+      "photos": []
+    },
+    {
+      "id": "maltesers-uk-pouch-2016",
+      "name": "Maltesers",
+      "format": "Sharing pouch, 121g format",
+      "brand": "Maltesers",
+      "category": "Chocolate",
+      "market": "GB",
+      "retailer": null,
+      "old": {
+        "mass_g": 121,
+        "price_gbp": null,
+        "price_basis": "not_reported",
+        "barcode": null,
+        "period": "Earlier 121g pouch",
+        "transaction_date": null
+      },
+      "new": {
+        "mass_g": 103,
+        "price_gbp": null,
+        "price_basis": "not_reported",
+        "barcode": null,
+        "period": "Smaller pouch reported November 2016",
+        "transaction_date": null
+      },
+      "event_date": null,
+      "event_date_precision": "Contemporary report dated 19 November 2016; exact shelf transition unknown",
+      "reported_year": 2016,
+      "evidence_status": "Contemporary report and manufacturer response support size change; comparable prices unavailable",
+      "source_ids": [
+        "sky-maltesers-2016"
+      ],
+      "limitations": [
+        "No comparable before/after shelf prices are established: price-per-100g and unit-price increase stay unavailable.",
+        "Other Maltesers pouch sizes are not assumed to form one continuous product chain.",
+        "Direct source download returned 403; public article text was independently read through the web tool."
+      ],
+      "family_link": {
+        "status": "reported_replacement_barcodes_unresolved",
+        "old_barcode": null,
+        "new_barcode": null,
+        "note": "Reported 121g format size change; no barcode pair has been verified"
+      },
+      "photos": []
+    }
+  ],
+  "recipe_leads": [
+    {
+      "name": "Club / Toffee Crisp",
+      "status": "historical_label_pair_unavailable",
+      "note": "No complete, supported historical ingredient-declaration pair has been verified for these products."
+    }
+  ],
+  "reuse_note": "Facts are paraphrased from linked reports. Do not reproduce article prose. OFF photographs require contributor attribution and CC-BY-SA compliance; current pictures are not historical transaction proof.",
+  "recipe_findings": [
+    {
+      "brand": "McVitie's",
+      "format": "Original biscuit bar - recipe comparison",
+      "market": "GB",
+      "recipe_history": {
+        "status": "documented_label_comparison",
+        "scope_note": "Two ingredient declarations for Penguin Original: a UK sample purchased in 2008 and the official manufacturer page checked in 2026. The recipe transition date is unknown; these snapshots establish a label comparison.",
+        "old": {
+          "period": "Sample purchased 4 September 2008",
+          "date": "2008-09-04",
+          "date_basis": "actual_sample_purchase_date_recorded_in_government_survey",
+          "mass_g": null,
+          "pack_count": 18,
+          "source_id": "gov-penguin-sampling-2011",
+          "ingredients_summary": [
+            "Coating described as milk chocolate",
+            "Coating share declared at 28% of the biscuit",
+            "Cocoa butter separately listed in the coating",
+            "Vegetable fat already listed, with plant source unspecified"
+          ]
+        },
+        "new": {
+          "period": "Official manufacturer page accessed 8 November 2026",
+          "date": "2026-11-08",
+          "date_basis": "access_date_only_not_publication_or_recipe_transition",
+          "mass_g": null,
+          "source_id": "mcvities-penguin-official-2026",
+          "ingredients_summary": [
+            "Coating described as chocolate flavoured",
+            "Coating share declared at 29% of the biscuit",
+            "Palm and shea specifically named in the coating",
+            "Cocoa butter not separately listed; cocoa mass remains declared"
+          ]
+        },
+        "changes": [
+          {
+            "label": "Coating description",
+            "before": "Milk chocolate",
+            "after": "Milk chocolate flavour coating",
+            "note": "The declarations use different descriptions. No legal-classification claim is made."
+          },
+          {
+            "label": "Declared coating share",
+            "before": "28% of the biscuit",
+            "after": "29% of the biscuit",
+            "note": "These are whole-product coating fractions, not cocoa percentages. They do not measure a cocoa-content decrease."
+          },
+          {
+            "label": "Separately declared cocoa butter",
+            "before": "Listed within the coating",
+            "after": "Not separately listed",
+            "note": "This does not establish that the product contains no cocoa butter; cocoa mass remains listed."
+          },
+          {
+            "label": "Vegetable-fat description",
+            "before": "Vegetable fat listed without a named plant source",
+            "after": "Palm and shea oils named",
+            "note": "Vegetable fat was already present in the older declaration; no exact substitution amounts or date are established."
+          }
+        ],
+        "limitations": [
+          "The 2008 date is a recorded sample purchase; the 2026 date is page access. The reformulation date is unknown and multiple changes may lie between them.",
+          "An 18-pack sample and a current product page do not establish a pack-replacement chain; no shrinkflation or price calculation is attached.",
+          "The documents do not quantify cocoa removed, ingredient-cost savings, product quality or manufacturer motive.",
+          "Original manufacturer HTML was not downloaded: direct HTTP returned 403. The saved source is an honest access note and paraphrased fact extract."
+        ],
+        "source_ids": [
+          "gov-penguin-sampling-2011",
+          "mcvities-penguin-official-2026"
+        ]
+      },
+      "id": "penguin-uk-coating-declaration-comparison",
+      "name": "Penguin Original"
+    }
+  ]
+}

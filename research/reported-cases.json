@@ -1,0 +1,134 @@
+{
+  "researched_on": "2026-11-08",
+  "purpose": "Manually verified UK demonstration cases; not a random sample or forecasting dataset.",
+  "sources": {
+    "which-2025": {
+      "url": "https://www.which.co.uk/news/article/shrinkflation-the-brands-charging-you-more-for-less-atUkT4m2GjuP",
+      "published": "2025-10-28",
+      "type": "consumer investigation",
+      "date_precision": "Reported year-level change; exact shelf transition and transaction dates unavailable."
+    },
+    "which-easter-2026": {
+      "url": "https://www.which.co.uk/news/article/is-your-favourite-easter-egg-shrinking-atsR95I73wSF",
+      "published": "2026-03-20",
+      "type": "consumer investigation",
+      "price_basis": "Same named retailer, base non-promoted prices in 2025 and 2026; exact transaction dates unavailable."
+    }
+  },
+  "cases": [
+    {
+      "id": "quality-street-uk-tub-2025",
+      "name": "Quality Street chocolate tub",
+      "country": "United Kingdom",
+      "retailer": "Morrisons",
+      "old": {
+        "period": "before the reported 2025 change; exact observation date unavailable",
+        "quantity_g": 600,
+        "price_gbp": 6,
+        "barcode": "8445290146434"
+      },
+      "new": {
+        "period": "2025",
+        "quantity_g": 550,
+        "price_gbp": 7,
+        "barcode": "8445291609181"
+      },
+      "source_id": "which-2025",
+      "status": "Reported shrinkflation; old/new OFF records and photographs found independently.",
+      "off": {
+        "old_product": "https://world.openfoodfacts.org/product/8445290146434",
+        "new_product": "https://world.openfoodfacts.org/product/8445291609181",
+        "old_quantity_field": "600gm",
+        "new_quantity_field": "550g",
+        "old_front": "https://images.openfoodfacts.org/images/products/844/529/014/6434/front_en.58.400.jpg",
+        "new_front": "https://images.openfoodfacts.org/images/products/844/529/160/9181/front_en.22.400.jpg",
+        "new_label_weight_and_barcode": "https://images.openfoodfacts.org/images/products/844/529/160/9181/7.400.jpg",
+        "photo_check": "New label visibly shows 550g and barcode. Old front photograph identifies product but does not display weight; 600g corroborated by OFF quantity and retailer listing.",
+        "old_retailer_quantity_and_barcode": "https://www.centralcoop.co.uk/food/products/8445290146434",
+        "limitations": "OFF edit and upload dates are not manufacturing or on-sale dates. OFF barcodes are linked manually using product identity and independent investigation, not an automatic revision chain."
+      },
+      "normalisation_note": "An earlier research draft inferred 2024 for the old observation. The cited article does not establish that exact year, so the inference is removed."
+    },
+    {
+      "id": "galaxy-xl-easter-egg-2026",
+      "name": "Galaxy Milk Chocolate Extra Large Easter Egg",
+      "country": "United Kingdom",
+      "retailer": "Asda",
+      "old": {
+        "period": "2025",
+        "quantity_g": 252,
+        "price_gbp": 4.98,
+        "barcode": null
+      },
+      "new": {
+        "period": "2026",
+        "quantity_g": 210,
+        "price_gbp": 5.97,
+        "barcode": null
+      },
+      "source_id": "which-easter-2026",
+      "status": "Source-supported old/new quantity and comparable base prices; OFF photo pair not verified."
+    },
+    {
+      "id": "m-and-ms-crispy-easter-egg-2026",
+      "name": "M&M's Crispy Easter Egg",
+      "country": "United Kingdom",
+      "retailer": "Asda",
+      "old": {
+        "period": "2025",
+        "quantity_g": 192,
+        "price_gbp": 3.48,
+        "barcode": null
+      },
+      "new": {
+        "period": "2026",
+        "quantity_g": 156,
+        "price_gbp": 3.97,
+        "barcode": null
+      },
+      "source_id": "which-easter-2026",
+      "status": "Source-supported old/new quantity and comparable base prices; OFF photo pair not verified."
+    },
+    {
+      "id": "maltesers-easter-egg-2026",
+      "name": "Maltesers Milk Chocolate Easter Egg",
+      "country": "United Kingdom",
+      "retailer": "Tesco",
+      "old": {
+        "period": "2025",
+        "quantity_g": 231,
+        "price_gbp": 6,
+        "barcode": null
+      },
+      "new": {
+        "period": "2026",
+        "quantity_g": 194,
+        "price_gbp": 7,
+        "barcode": null
+      },
+      "source_id": "which-easter-2026",
+      "status": "Source-supported old/new quantity and comparable base prices; OFF photo pair not verified."
+    },
+    {
+      "id": "cadbury-mini-eggs-easter-egg-2026",
+      "name": "Cadbury Mini Eggs Milk Chocolate Easter Egg",
+      "country": "United Kingdom",
+      "retailer": "Morrisons",
+      "old": {
+        "period": "2025",
+        "quantity_g": 193.5,
+        "price_gbp": 4,
+        "barcode": null
+      },
+      "new": {
+        "period": "2026",
+        "quantity_g": 181,
+        "price_gbp": 5,
+        "barcode": null
+      },
+      "source_id": "which-easter-2026",
+      "status": "Source-supported old/new quantity and comparable base prices; OFF photo pair not verified."
+    }
+  ],
+  "reuse_note": "Keep source links and attribution. These are a few manually collected factual observations, not permission to reproduce article text or republish the publisher's broader dataset. OFF data uses ODbL and images use CC-BY-SA."
+}

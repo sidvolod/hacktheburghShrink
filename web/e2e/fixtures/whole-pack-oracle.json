@@ -1,0 +1,331 @@
+{
+  "method": "Independent exhaustive multiplicity enumeration under a feasible single-product checkout bound; compares exact integer pence, milligrams, then pack count. Equal remaining product-identity ties may differ from UI deterministic ordering.",
+  "source_file": "data/app-public/data/demo.json",
+  "results": [
+    {
+      "group_id": "chocolate-tesco",
+      "retailer": "Tesco",
+      "date": "2024-04-13",
+      "target_grams": 300,
+      "total_price_pence": 290,
+      "total_milligrams": 319500,
+      "total_grams": 319.5,
+      "extra_grams": 19.5,
+      "pack_count": 1,
+      "equally_optimal_basket_count": 1,
+      "oracle_visited": 114,
+      "oracle_seconds": 0.0,
+      "one_optimal_basket": [
+        {
+          "id": "retail:d2d65aae155b2ad8e273d1e7",
+          "name": "Snickers Chocolate Snack Bars Multipack 9 x 35.5g",
+          "count": 1,
+          "mass_milligrams": 319500,
+          "price_pence": 290
+        }
+      ]
+    },
+    {
+      "group_id": "chocolate-tesco",
+      "retailer": "Tesco",
+      "date": "2024-04-13",
+      "target_grams": 500,
+      "total_price_pence": 469,
+      "total_milligrams": 517600,
+      "total_grams": 517.6,
+      "extra_grams": 17.6,
+      "pack_count": 2,
+      "equally_optimal_basket_count": 1,
+      "oracle_visited": 623,
+      "oracle_seconds": 0.0001,
+      "one_optimal_basket": [
+        {
+          "id": "retail:928b084cd64872e90e1f56f5",
+          "name": "Mars Chocolate Bars 4 X 39.4G 157.6G",
+          "count": 1,
+          "mass_milligrams": 157600,
+          "price_pence": 169
+        },
+        {
+          "id": "retail:c8f4257e729fc1acea415fdb",
+          "name": "Twix Caramel & Milk Chocolate Fingers Biscuit Twin Bars 9 x 40g",
+          "count": 1,
+          "mass_milligrams": 360000,
+          "price_pence": 300
+        }
+      ]
+    },
+    {
+      "group_id": "chocolate-tesco",
+      "retailer": "Tesco",
+      "date": "2024-04-13",
+      "target_grams": 1000,
+      "total_price_pence": 880,
+      "total_milligrams": 1000000,
+      "total_grams": 1000.0,
+      "extra_grams": 0.0,
+      "pack_count": 3,
+      "equally_optimal_basket_count": 1,
+      "oracle_visited": 14148,
+      "oracle_seconds": 0.0029,
+      "one_optimal_basket": [
+        {
+          "id": "retail:79dadd407721a8761f030618",
+          "name": "Twix Chocolate Biscuit Fingers Multipack 16 x 20g 320g",
+          "count": 2,
+          "mass_milligrams": 320000,
+          "price_pence": 290
+        },
+        {
+          "id": "retail:c8f4257e729fc1acea415fdb",
+          "name": "Twix Caramel & Milk Chocolate Fingers Biscuit Twin Bars 9 x 40g",
+          "count": 1,
+          "mass_milligrams": 360000,
+          "price_pence": 300
+        }
+      ]
+    },
+    {
+      "group_id": "chocolate-sainsbury's",
+      "retailer": "Sainsbury's",
+      "date": "2024-04-13",
+      "target_grams": 300,
+      "total_price_pence": 270,
+      "total_milligrams": 372600,
+      "total_grams": 372.6,
+      "extra_grams": 72.6,
+      "pack_count": 2,
+      "equally_optimal_basket_count": 3,
+      "oracle_visited": 111,
+      "oracle_seconds": 0.0,
+      "one_optimal_basket": [
+        {
+          "id": "retail:e7afee84b5a0d0da2a40c4e0",
+          "name": "Kit Kat 2 Finger Dark Chocolate Biscuit Bar 9x20.7g",
+          "count": 2,
+          "mass_milligrams": 186300,
+          "price_pence": 135
+        }
+      ]
+    },
+    {
+      "group_id": "chocolate-sainsbury's",
+      "retailer": "Sainsbury's",
+      "date": "2024-04-13",
+      "target_grams": 500,
+      "total_price_pence": 405,
+      "total_milligrams": 558900,
+      "total_grams": 558.9,
+      "extra_grams": 58.9,
+      "pack_count": 3,
+      "equally_optimal_basket_count": 4,
+      "oracle_visited": 486,
+      "oracle_seconds": 0.0001,
+      "one_optimal_basket": [
+        {
+          "id": "retail:e7afee84b5a0d0da2a40c4e0",
+          "name": "Kit Kat 2 Finger Dark Chocolate Biscuit Bar 9x20.7g",
+          "count": 3,
+          "mass_milligrams": 186300,
+          "price_pence": 135
+        }
+      ]
+    },
+    {
+      "group_id": "chocolate-sainsbury's",
+      "retailer": "Sainsbury's",
+      "date": "2024-04-13",
+      "target_grams": 1000,
+      "total_price_pence": 805,
+      "total_milligrams": 1035000,
+      "total_grams": 1035.0,
+      "extra_grams": 35.0,
+      "pack_count": 5,
+      "equally_optimal_basket_count": 5,
+      "oracle_visited": 8173,
+      "oracle_seconds": 0.0017,
+      "one_optimal_basket": [
+        {
+          "id": "retail:5b8066d1136bf1f080b4316b",
+          "name": "Kit Kat 2 Finger Milk Chocolate Biscuit Bar Multipack 14x20.7g",
+          "count": 1,
+          "mass_milligrams": 289800,
+          "price_pence": 265
+        },
+        {
+          "id": "retail:e7afee84b5a0d0da2a40c4e0",
+          "name": "Kit Kat 2 Finger Dark Chocolate Biscuit Bar 9x20.7g",
+          "count": 4,
+          "mass_milligrams": 186300,
+          "price_pence": 135
+        }
+      ]
+    },
+    {
+      "group_id": "crisps-tesco",
+      "retailer": "Tesco",
+      "date": "2024-04-13",
+      "target_grams": 300,
+      "total_price_pence": 300,
+      "total_milligrams": 300000,
+      "total_grams": 300.0,
+      "extra_grams": 0.0,
+      "pack_count": 1,
+      "equally_optimal_basket_count": 4,
+      "oracle_visited": 89,
+      "oracle_seconds": 0.0,
+      "one_optimal_basket": [
+        {
+          "id": "retail:e9db3bbdafe51b7b7d1286f6",
+          "name": "Walkers Cheese & Onion Multipack Crisps 12x25g",
+          "count": 1,
+          "mass_milligrams": 300000,
+          "price_pence": 300
+        }
+      ]
+    },
+    {
+      "group_id": "crisps-tesco",
+      "retailer": "Tesco",
+      "date": "2024-04-13",
+      "target_grams": 500,
+      "total_price_pence": 450,
+      "total_milligrams": 502000,
+      "total_grams": 502.0,
+      "extra_grams": 2.0,
+      "pack_count": 3,
+      "equally_optimal_basket_count": 1,
+      "oracle_visited": 395,
+      "oracle_seconds": 0.0001,
+      "one_optimal_basket": [
+        {
+          "id": "retail:6f8d9b0f742fe78eb3f991e1",
+          "name": "Pringles Texas Bbq Crisps 185G",
+          "count": 2,
+          "mass_milligrams": 185000,
+          "price_pence": 150
+        },
+        {
+          "id": "retail:e245a2a32f4ea23e2bae74de",
+          "name": "Walkers Squares Salt & Vinegar Multipack Crisps 6x22g",
+          "count": 1,
+          "mass_milligrams": 132000,
+          "price_pence": 150
+        }
+      ]
+    },
+    {
+      "group_id": "crisps-tesco",
+      "retailer": "Tesco",
+      "date": "2024-04-13",
+      "target_grams": 1000,
+      "total_price_pence": 900,
+      "total_milligrams": 1004000,
+      "total_grams": 1004.0,
+      "extra_grams": 4.0,
+      "pack_count": 6,
+      "equally_optimal_basket_count": 1,
+      "oracle_visited": 14196,
+      "oracle_seconds": 0.0029,
+      "one_optimal_basket": [
+        {
+          "id": "retail:6f8d9b0f742fe78eb3f991e1",
+          "name": "Pringles Texas Bbq Crisps 185G",
+          "count": 4,
+          "mass_milligrams": 185000,
+          "price_pence": 150
+        },
+        {
+          "id": "retail:e245a2a32f4ea23e2bae74de",
+          "name": "Walkers Squares Salt & Vinegar Multipack Crisps 6x22g",
+          "count": 2,
+          "mass_milligrams": 132000,
+          "price_pence": 150
+        }
+      ]
+    },
+    {
+      "group_id": "crisps-sainsbury's",
+      "retailer": "Sainsbury's",
+      "date": "2024-04-13",
+      "target_grams": 300,
+      "total_price_pence": 300,
+      "total_milligrams": 300000,
+      "total_grams": 300.0,
+      "extra_grams": 0.0,
+      "pack_count": 1,
+      "equally_optimal_basket_count": 2,
+      "oracle_visited": 136,
+      "oracle_seconds": 0.0,
+      "one_optimal_basket": [
+        {
+          "id": "retail:e7bfa12d2f9785811abc52dc",
+          "name": "Walkers Cheese & Onion Crisps 12x25g",
+          "count": 1,
+          "mass_milligrams": 300000,
+          "price_pence": 300
+        }
+      ]
+    },
+    {
+      "group_id": "crisps-sainsbury's",
+      "retailer": "Sainsbury's",
+      "date": "2024-04-13",
+      "target_grams": 500,
+      "total_price_pence": 450,
+      "total_milligrams": 500000,
+      "total_grams": 500.0,
+      "extra_grams": 0.0,
+      "pack_count": 3,
+      "equally_optimal_basket_count": 15,
+      "oracle_visited": 659,
+      "oracle_seconds": 0.0001,
+      "one_optimal_basket": [
+        {
+          "id": "retail:70a83aadd492c2e295bec797",
+          "name": "Walkers Max Strong Jalape\u00f1o & Cheese Sharing Crisps 140g",
+          "count": 1,
+          "mass_milligrams": 140000,
+          "price_pence": 150
+        },
+        {
+          "id": "retail:e2f152d2113babfffb447e12",
+          "name": "Doritos Tangy Cheese Sharing Tortilla Chips Crisps 180g",
+          "count": 2,
+          "mass_milligrams": 180000,
+          "price_pence": 150
+        }
+      ]
+    },
+    {
+      "group_id": "crisps-sainsbury's",
+      "retailer": "Sainsbury's",
+      "date": "2024-04-13",
+      "target_grams": 1000,
+      "total_price_pence": 900,
+      "total_milligrams": 1000000,
+      "total_grams": 1000.0,
+      "extra_grams": 0.0,
+      "pack_count": 6,
+      "equally_optimal_basket_count": 70,
+      "oracle_visited": 27247,
+      "oracle_seconds": 0.0055,
+      "one_optimal_basket": [
+        {
+          "id": "retail:70a83aadd492c2e295bec797",
+          "name": "Walkers Max Strong Jalape\u00f1o & Cheese Sharing Crisps 140g",
+          "count": 2,
+          "mass_milligrams": 140000,
+          "price_pence": 150
+        },
+        {
+          "id": "retail:e2f152d2113babfffb447e12",
+          "name": "Doritos Tangy Cheese Sharing Tortilla Chips Crisps 180g",
+          "count": 4,
+          "mass_milligrams": 180000,
+          "price_pence": 150
+        }
+      ]
+    }
+  ]
+}

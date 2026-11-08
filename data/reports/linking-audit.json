@@ -1,0 +1,79 @@
+{
+  "scope": "11 familiar snack-name groups; not a catalogue-wide entity-resolution result",
+  "candidate_pairs": 7750,
+  "verified_new_links": 0,
+  "groups": [
+    {
+      "focus_family": "dairy-milk",
+      "retail_listings": 337,
+      "off_barcodes": 54,
+      "candidate_pairs": 1685
+    },
+    {
+      "focus_family": "doritos",
+      "retail_listings": 74,
+      "off_barcodes": 42,
+      "candidate_pairs": 370
+    },
+    {
+      "focus_family": "m-and-ms",
+      "retail_listings": 98,
+      "off_barcodes": 97,
+      "candidate_pairs": 490
+    },
+    {
+      "focus_family": "maltesers",
+      "retail_listings": 125,
+      "off_barcodes": 56,
+      "candidate_pairs": 625
+    },
+    {
+      "focus_family": "mcvities",
+      "retail_listings": 264,
+      "off_barcodes": 70,
+      "candidate_pairs": 1320
+    },
+    {
+      "focus_family": "milky-way",
+      "retail_listings": 34,
+      "off_barcodes": 21,
+      "candidate_pairs": 170
+    },
+    {
+      "focus_family": "oreo",
+      "retail_listings": 95,
+      "off_barcodes": 87,
+      "candidate_pairs": 475
+    },
+    {
+      "focus_family": "pringles",
+      "retail_listings": 86,
+      "off_barcodes": 42,
+      "candidate_pairs": 430
+    },
+    {
+      "focus_family": "quality-street",
+      "retail_listings": 17,
+      "off_barcodes": 11,
+      "candidate_pairs": 85
+    },
+    {
+      "focus_family": "snickers",
+      "retail_listings": 35,
+      "off_barcodes": 34,
+      "candidate_pairs": 175
+    },
+    {
+      "focus_family": "walkers",
+      "retail_listings": 385,
+      "off_barcodes": 125,
+      "candidate_pairs": 1925
+    }
+  ],
+  "limitations": [
+    "Current OFF snapshots and 2024 retailer listings may describe different eras or concurrent variants.",
+    "Top five name-similarity candidates require flavour, format, market and temporal evidence review.",
+    "Mass, count and recipe differences are evidence to investigate, never hard rejection gates.",
+    "Candidates are not inserted into reviewed family membership or monthly price targets."
+  ]
+}

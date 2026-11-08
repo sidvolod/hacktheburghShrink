@@ -1,0 +1,362 @@
+{
+  "status": "completed",
+  "as_of": "2026-11-08",
+  "case_count": 10,
+  "price_comparable_cases": 9,
+  "price_trails": 11,
+  "dated_listing_observations": 976,
+  "ingredient_comparisons": 2,
+  "new_cases": [
+    {
+      "id": "galaxy-minstrels-uk-pouch-2025",
+      "name": "Galaxy Minstrels",
+      "retailer": "Asda",
+      "old": {
+        "mass_g": 125,
+        "price_gbp": 1.75,
+        "price_basis": "reported_shelf_price_same_retailer",
+        "barcode": null,
+        "period": "Earlier 125g pouch",
+        "transaction_date": null,
+        "price_per_100g_gbp": 1.4
+      },
+      "new": {
+        "mass_g": 118,
+        "price_gbp": 1.75,
+        "price_basis": "reported_shelf_price_same_retailer",
+        "barcode": null,
+        "period": "Replacement reported February 2025",
+        "transaction_date": null,
+        "price_per_100g_gbp": 1.4830508474576272
+      },
+      "unit_price_change_fraction": 0.059322033898305086,
+      "event_date_precision": "Investigation covers 12 weeks ending 24 February 2025; individual transition date unavailable",
+      "sources": [
+        {
+          "id": "assosia-chocolate-2025",
+          "title": "Assosia / The Grocer — Cadbury and Mars Wrigley shrink chocolate packs amid cocoa inflation",
+          "url": "https://www.assosia.com/cadbury-and-mars-wrigley-shrink-chocolate-packs-amid-cocoa-inflation",
+          "original_url": "https://www.thegrocer.co.uk/news/cadbury-and-mars-wrigley-shrink-chocolate-packs-amid-cocoa-inflation/701463.article",
+          "published": "2025-02-25",
+          "role": "Original price-data provider's republication of the investigation; 12 weeks ending 24 February 2025",
+          "raw_path": "data/raw/snack-evidence/assosia-chocolate-2025.html",
+          "raw_kind": "data_provider_html",
+          "analysis_window_end": "2025-02-24",
+          "analysis_window_weeks": 12
+        }
+      ],
+      "limitations": [
+        "Exact transaction and transition dates and the barcode pair remain unverified. Promotion conditions are unspecified.",
+        "The source's stated 10.8% unit-price increase does not match the reported weights and prices; we recompute 5.9%."
+      ]
+    },
+    {
+      "id": "revels-uk-pouch-2025",
+      "name": "Revels",
+      "retailer": "Morrisons",
+      "old": {
+        "mass_g": 205,
+        "price_gbp": 2.75,
+        "price_basis": "reported_shelf_price_same_retailer",
+        "barcode": null,
+        "period": "Earlier 205g pouch",
+        "transaction_date": null,
+        "price_per_100g_gbp": 1.3414634146341464
+      },
+      "new": {
+        "mass_g": 185,
+        "price_gbp": 3.3,
+        "price_basis": "reported_shelf_price_same_retailer",
+        "barcode": null,
+        "period": "Replacement reported February 2025",
+        "transaction_date": null,
+        "price_per_100g_gbp": 1.7837837837837838
+      },
+      "unit_price_change_fraction": 0.32972972972972975,
+      "event_date_precision": "Investigation covers 12 weeks ending 24 February 2025; individual transition date unavailable",
+      "sources": [
+        {
+          "id": "assosia-chocolate-2025",
+          "title": "Assosia / The Grocer — Cadbury and Mars Wrigley shrink chocolate packs amid cocoa inflation",
+          "url": "https://www.assosia.com/cadbury-and-mars-wrigley-shrink-chocolate-packs-amid-cocoa-inflation",
+          "original_url": "https://www.thegrocer.co.uk/news/cadbury-and-mars-wrigley-shrink-chocolate-packs-amid-cocoa-inflation/701463.article",
+          "published": "2025-02-25",
+          "role": "Original price-data provider's republication of the investigation; 12 weeks ending 24 February 2025",
+          "raw_path": "data/raw/snack-evidence/assosia-chocolate-2025.html",
+          "raw_kind": "data_provider_html",
+          "analysis_window_end": "2025-02-24",
+          "analysis_window_weeks": 12
+        }
+      ],
+      "limitations": [
+        "Exact transaction and transition dates and the barcode pair remain unverified. Promotion conditions are unspecified.",
+        "The source rounds/reports the unit-price increase as 33.1%; we recompute 33.0% from the raw weights and prices."
+      ]
+    },
+    {
+      "id": "maltesers-uk-pouch-2017",
+      "name": "Maltesers",
+      "retailer": null,
+      "old": {
+        "mass_g": 103,
+        "price_gbp": 1.5,
+        "transaction_date": null,
+        "period": "Earlier 103g format, reported 27 March 2017",
+        "price_basis": "reported_price_retailer_unspecified",
+        "barcode": null,
+        "price_per_100g_gbp": 1.4563106796116505
+      },
+      "new": {
+        "mass_g": 93,
+        "price_gbp": 1.5,
+        "transaction_date": null,
+        "period": "Replacement 93g format reported 27 March 2017",
+        "price_basis": "reported_price_retailer_unspecified",
+        "barcode": null,
+        "price_per_100g_gbp": 1.6129032258064515
+      },
+      "unit_price_change_fraction": 0.10752688172043011,
+      "event_date_precision": "Contemporary report dated 27 March 2017; exact shelf transition and transaction dates unknown",
+      "sources": [
+        {
+          "id": "independent-maltesers-2017",
+          "title": "The Independent — Maltesers, M&Ms and Minstrels packs all getting smaller",
+          "url": "https://www.the-independent.com/news/business/malteser-m-ms-minstrels-packs-smaller-shrinkflation-15-per-cent-reduction-size-a7651576.html",
+          "published": "2017-03-27",
+          "role": "Contemporary manufacturer-attributed size change and unchanged reported bag price; retailer unspecified",
+          "raw_path": "data/raw/snack-evidence/independent-maltesers-2017.html",
+          "raw_kind": "publisher_html"
+        }
+      ],
+      "limitations": [
+        "The £1.50 price is reported in the article; retailer, shop location and promotion or loyalty conditions are unspecified. It is not a matched-receipt comparison.",
+        "Exact transition and transaction dates and the barcode pair remain unverified.",
+        "This is a separate reported change from the 2016 121g to 103g case; its prices do not establish the 2016 prices."
+      ]
+    }
+  ],
+  "checks": {
+    "python_passed": 59,
+    "typescript_passed": 7,
+    "desktop_phone_browser_passed": 35,
+    "expected_browser_skips": 1,
+    "original_model_files_unchanged": 79
+  },
+  "scope": "Selected historical cases and separate dated ingredient declarations, not monthly model training labels",
+  "recipe_findings": [
+    {
+      "name": "McVitie's Digestives",
+      "recipe_history": {
+        "status": "documented_label_comparison",
+        "scope_note": "Two ingredient snapshots: a pack purchased in 2008 and a retailer specification updated in 2022. The recipe transition date is unknown; this comparison is separate from the 2018/2019 size change above.",
+        "old": {
+          "period": "Pack purchased 11 November 2008",
+          "mass_g": 500,
+          "source_id": "gov-mcvities-sampling-2011",
+          "date": "2008-11-11",
+          "date_basis": "actual_sample_purchase_date_recorded_in_government_survey",
+          "ingredients_summary": [
+            "Wheat flour declared at 54%",
+            "Wholemeal wheat flour declared at 16%",
+            "Vegetable oil without a named plant source",
+            "Dried skimmed milk listed as an ingredient",
+            "Tartaric acid listed among raising agents"
+          ]
+        },
+        "new": {
+          "period": "Retailer specification updated 29 September 2022",
+          "mass_g": 400,
+          "source_id": "onestop-mcvities-400g-2022",
+          "date": "2022-09-29",
+          "date_basis": "document_last_updated_not_purchase_or_reformulation_date",
+          "barcode": "5000168001159",
+          "ingredients_summary": [
+            "Flour blend declared at 55%, with fortification details",
+            "Wholemeal wheat flour declared at 16%",
+            "Palm identified as the vegetable-oil source",
+            "No milk ingredient listed; a may-contain-milk notice remains",
+            "Ammonium bicarbonate listed among raising agents"
+          ]
+        },
+        "changes": [
+          {
+            "label": "Declared milk ingredient",
+            "before": "Dried skimmed milk listed",
+            "after": "No milk ingredient listed; may-contain notice retained",
+            "note": "This establishes a declaration difference, not the date or reason a formulation changed."
+          },
+          {
+            "label": "Vegetable-oil description",
+            "before": "Plant source unspecified",
+            "after": "Palm identified",
+            "note": "The earlier record does not identify its oil source. This does not prove that palm oil was newly introduced or replaced butter."
+          },
+          {
+            "label": "Declared flour percentage",
+            "before": "54% wheat flour",
+            "after": "55% flour blend",
+            "note": "The later declaration also lists fortification details; compare the declarations rather than inferring an exact manufacturing adjustment."
+          },
+          {
+            "label": "Raising-agent declaration",
+            "before": "Tartaric acid listed",
+            "after": "Ammonium bicarbonate listed; tartaric acid not listed",
+            "note": "Sodium bicarbonate and malic acid appear in both documents."
+          }
+        ],
+        "limitations": [
+          "The 2008 date is a recorded purchase; the 2022 date is a document update. Neither is a reformulation date.",
+          "The documents concern different pack sizes in the same named product family; no historical barcode chain or exact recipe-transition event is established.",
+          "Some differences may reflect more detailed labelling. No oil substitution, cost saving, quality decline or manufacturer motive is established.",
+          "Do not merge these ingredient-observation dates with the separate 2018/2019 size-and-price comparison."
+        ],
+        "source_ids": [
+          "gov-mcvities-sampling-2011",
+          "onestop-mcvities-400g-2022"
+        ],
+        "sources": [
+          {
+            "id": "gov-mcvities-sampling-2011",
+            "title": "Department of Health / Institute of Food Research - biscuit sampling report, sample 4.1, page 68",
+            "url": "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/216390/dh_129727.pdf#page=68",
+            "published": "2011-08-31",
+            "role": "Government label transcription for a 500 g McVitie's Digestives pack purchased 11 November 2008 at Sainsbury's, Norwich",
+            "raw_path": "data/raw/snack-evidence/mcvities-gov-biscuit-survey-2011.pdf",
+            "raw_kind": "government_pdf",
+            "license": "Open Government Licence v 3.0, except where otherwise stated",
+            "rights_note": "PDF page 3 states Crown copyright 2011. Official publication page footer states OGL v 3 except where otherwise stated; third-party rights remain excluded.",
+            "license_source_url": "https://www.gov.uk/government/publications/nutrient-analysis-survey-of-biscuits-buns-cakes-and-pastries",
+            "sample_purchase_date": "2008-11-11",
+            "verified_pdf_pages": [
+              3,
+              68
+            ]
+          },
+          {
+            "id": "onestop-mcvities-400g-2022",
+            "title": "One Stop - McVitie's Digestives The Original 400 g product specification",
+            "url": "https://www.onestop.co.uk/wp-content/uploads/McVities-Digestives-The-Original-400g-273037.pdf",
+            "published": null,
+            "role": "Retailer ingredient specification marked last updated 29 September 2022; the update is not a purchase or reformulation date",
+            "raw_path": "data/raw/snack-evidence/mcvities-onestop-400g-2022.pdf",
+            "raw_kind": "retailer_specification_pdf",
+            "license": "No explicit reuse licence stated in the PDF",
+            "rights_note": "Retailer specification and branding; use paraphrased facts and source link in the UI. Rendered document pages are verification material, not product-pack photographs.",
+            "document_updated": "2022-09-29",
+            "verified_pdf_pages": [
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "brand": "McVitie's",
+      "format": "Original biscuit bar - recipe comparison",
+      "market": "GB",
+      "recipe_history": {
+        "status": "documented_label_comparison",
+        "scope_note": "Two ingredient declarations for Penguin Original: a UK sample purchased in 2008 and the official manufacturer page checked in 2026. The recipe transition date is unknown; these snapshots establish a label comparison.",
+        "old": {
+          "period": "Sample purchased 4 September 2008",
+          "date": "2008-09-04",
+          "date_basis": "actual_sample_purchase_date_recorded_in_government_survey",
+          "mass_g": null,
+          "pack_count": 18,
+          "source_id": "gov-penguin-sampling-2011",
+          "ingredients_summary": [
+            "Coating described as milk chocolate",
+            "Coating share declared at 28% of the biscuit",
+            "Cocoa butter separately listed in the coating",
+            "Vegetable fat already listed, with plant source unspecified"
+          ]
+        },
+        "new": {
+          "period": "Official manufacturer page accessed 8 November 2026",
+          "date": "2026-11-08",
+          "date_basis": "access_date_only_not_publication_or_recipe_transition",
+          "mass_g": null,
+          "source_id": "mcvities-penguin-official-2026",
+          "ingredients_summary": [
+            "Coating described as chocolate flavoured",
+            "Coating share declared at 29% of the biscuit",
+            "Palm and shea specifically named in the coating",
+            "Cocoa butter not separately listed; cocoa mass remains declared"
+          ]
+        },
+        "changes": [
+          {
+            "label": "Coating description",
+            "before": "Milk chocolate",
+            "after": "Milk chocolate flavour coating",
+            "note": "The declarations use different descriptions. No legal-classification claim is made."
+          },
+          {
+            "label": "Declared coating share",
+            "before": "28% of the biscuit",
+            "after": "29% of the biscuit",
+            "note": "These are whole-product coating fractions, not cocoa percentages. They do not measure a cocoa-content decrease."
+          },
+          {
+            "label": "Separately declared cocoa butter",
+            "before": "Listed within the coating",
+            "after": "Not separately listed",
+            "note": "This does not establish that the product contains no cocoa butter; cocoa mass remains listed."
+          },
+          {
+            "label": "Vegetable-fat description",
+            "before": "Vegetable fat listed without a named plant source",
+            "after": "Palm and shea oils named",
+            "note": "Vegetable fat was already present in the older declaration; no exact substitution amounts or date are established."
+          }
+        ],
+        "limitations": [
+          "The 2008 date is a recorded sample purchase; the 2026 date is page access. The reformulation date is unknown and multiple changes may lie between them.",
+          "An 18-pack sample and a current product page do not establish a pack-replacement chain; no shrinkflation or price calculation is attached.",
+          "The documents do not quantify cocoa removed, ingredient-cost savings, product quality or manufacturer motive.",
+          "Original manufacturer HTML was not downloaded: direct HTTP returned 403. The saved source is an honest access note and paraphrased fact extract."
+        ],
+        "source_ids": [
+          "gov-penguin-sampling-2011",
+          "mcvities-penguin-official-2026"
+        ],
+        "sources": [
+          {
+            "id": "gov-penguin-sampling-2011",
+            "title": "Department of Health / Institute of Food Research - Penguin sample 15.1, sampling report page 234",
+            "url": "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/216390/dh_129727.pdf#page=234",
+            "published": "2011-08-31",
+            "role": "Government ingredient-label transcription for a Penguin sample purchased 4 September 2008 at Tesco, Norwich",
+            "raw_path": "data/raw/snack-evidence/mcvities-gov-biscuit-survey-2011.pdf",
+            "raw_kind": "government_pdf",
+            "license": "Open Government Licence v3.0, except where otherwise stated",
+            "rights_note": "PDF page 3 states Crown copyright 2011; the official GOV.UK publication page gives the standard OGL v3 notice.",
+            "license_source_url": "https://www.gov.uk/government/publications/nutrient-analysis-survey-of-biscuits-buns-cakes-and-pastries",
+            "verified_pdf_pages": [
+              234
+            ]
+          },
+          {
+            "id": "mcvities-penguin-official-2026",
+            "title": "McVitie's official Penguin Original ingredient declaration",
+            "url": "https://mcvities.com/en-gb/penguin-original",
+            "published": null,
+            "role": "Manufacturer product and ingredient page accessed 8 November 2026; access date is not a recipe-transition date",
+            "raw_path": "data/raw/snack-evidence/penguin-manufacturer-2026.access.json",
+            "raw_kind": "access_note_not_article_capture",
+            "capture_note": "This file is an access note and paraphrased fact extract, not a copy of the original HTML. Direct HTTP retrieval returned 403. The manufacturer ingredient tab was verified through the web-reading tool; no claim of a captured browser screenshot of that tab is made.",
+            "license": "No explicit reuse licence established; facts paraphrased and official page linked"
+          }
+        ]
+      },
+      "id": "penguin-uk-coating-declaration-comparison",
+      "name": "Penguin Original",
+      "eligible_monthly_training_label": false
+    }
+  ],
+  "unresolved": [
+    "2016 Maltesers prices remain unknown.",
+    "Exact size/recipe transition dates and most historical barcode pairs remain unverified.",
+    "Penguin manufacturer raw source is an access note and paraphrased extract; direct HTML returned 403."
+  ]
+}
