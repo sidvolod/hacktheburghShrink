@@ -1,0 +1,31 @@
+.outlook-evidence { margin: -25px 0 35px; padding: 23px 25px 19px; border: 1px solid #d9dfc9; background: #f0f2e7; }
+.outlook-evidence-heading { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+.outlook-evidence-heading .eyebrow { font-size: 10px; letter-spacing: 1.1px; }
+.outlook-evidence-heading h3 { margin: 8px 0 0; font-family: Georgia, 'Times New Roman', serif; font-size: 27px; letter-spacing: -.6px; font-weight: 400; line-height: 1.2; }
+.outlook-evidence-comparisons { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); margin: 21px 0 16px; }
+.outlook-evidence-comparisons>div { min-width: 0; padding: 0 22px; border-left: 1px solid #d5dcc3; }
+.outlook-evidence-comparisons>div:first-child { border-left: 0; padding-left: 0; }
+.outlook-evidence-comparisons>div:last-child { padding-right: 0; }
+.outlook-evidence-comparisons>div>span { display: block; font-size: 12px; line-height: 1.6; color: #687556; }
+.outlook-evidence-comparisons strong { display: block; font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 28px; line-height: 1.4; letter-spacing: -.6px; color: #4c5c3b; }
+.outlook-evidence-comparisons p { margin: 3px 0 1px; font-size: 13px; line-height: 1.6; font-weight: 500; }
+.outlook-evidence-comparisons .evidence-lower { color: #4f6936; }
+.outlook-evidence-comparisons .evidence-higher { color: #a14a35; }
+.outlook-evidence-comparisons small { font-size: 11px; line-height: 1.7; color: #78836a; }
+.outlook-evidence .outlook-baseline-note { margin: 0; padding: 12px 0 0; border: 0; border-top: 1px solid #d6ddc6; background: none; color: #536347; font-size: 12px; line-height: 1.7; }
+.outlook-evidence-scope { font-size: 11px; line-height: 1.8; color: #727d64; margin: 6px 0 0; }
+@media(max-width:700px) {
+ .outlook-evidence { padding: 20px 18px; margin-top: -25px; }
+ .outlook-evidence-heading { align-items: flex-start; flex-wrap: wrap; gap: 12px; }
+ .outlook-evidence-heading h3 { font-size: 26px; }
+ .outlook-evidence-comparisons { grid-template-columns: minmax(0,1fr); margin: 14px 0 13px; }
+ .outlook-evidence-comparisons>div { display: grid; grid-template-columns: 1fr auto; gap: 1px 15px; border-left: 0; border-top: 1px solid #d6ddc6; padding: 12px 0!important; }
+ .outlook-evidence-comparisons strong { grid-column: 2; grid-row: 1 / span 2; font-size: 25px; align-self: center; white-space: nowrap; }
+ .outlook-evidence-comparisons p { margin: 0; }
+ .outlook-evidence-comparisons small { grid-column: 1 / -1; }
+ .outlook-evidence-heading .pill { font-size: 11px; }
+ .outlook-evidence-scope { font-size: 12px; }
+}
+.outlook-evidence-selected { display: flex; flex-direction: column; align-items: flex-end; gap: 9px; font-size: 12px; line-height: 1.6; color: #697556; }
+.outlook-evidence-selected>span:first-child strong { font-weight: 500; color: #435435; margin-left: 6px; }
+@media(max-width:700px) { .outlook-evidence-selected { align-items: flex-start; } }

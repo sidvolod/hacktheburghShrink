@@ -1,5 +1,8 @@
 # Progress log
 
+- 8 November 2026, HRT forecast presentation: added a compact signed benchmark/feature comparison using existing saved scores, keeping the small incremental commodity contribution distinct from the larger improvement over no change. Unavailable or mismatched comparisons are suppressed, worse comparisons stay negative, and exploratory strategies cannot claim a matched commodity effect. Data, models, predictions and chart scales remain unchanged. Final verification is recorded in VERIFICATION.md.
+
+
 - 8 November 2026, sourced headline reference and publication: verified the dated ONS September 2026 bulletin (release21October), saved published annual CPI3.5%/CPIH3.6% with provenance, and updated the demo comparison. Other spending uses CPI only for a matching comparison period; invalid or stale references are ignored. Synthetic statements/category rules and secondary snack benchmark remain labelled. Verification: 100 Python, 33 TypeScript, 43 desktop/phone browser passes, one expected skip; 36 independent parity cases pass. Frozen models unchanged.
 
 

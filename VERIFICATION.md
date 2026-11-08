@@ -1,5 +1,12 @@
 # Verification record
 
+## Latest: HRT forecast evidence presentation
+
+`./run.sh --check --browser-check --port 4174` passes **100 Python tests, 41 TypeScript tests and 51 Chromium desktop/phone browser checks**, with one expected skip. Log: `data/reports/hrt-evidence-check.log`. New evidence-panel screenshots are `data/reports/browser/screenshots/{desktop,phone}-forecast-evidence-{chocolate,crisps}.png`.
+
+Checks distinguish original chocolate’s 20.3% improvement over no change from the smaller 2.5% improvement over seasonal and 1.3% improvement over matched history-only trees. Crisps’ worse result stays visible. Missing/ambiguous rows, mismatched counts/settings, zero denominators and incomplete months never produce invented percentages. Exploratory adaptive strategies do not inherit commodity-ablation claims. Independent audit reconstructed all six category/report combinations and verified the same 33 evaluation months. All 1,778 frozen experiment files and public source predictions/scores remain unchanged. The following records preserve earlier releases.
+
+
 ## Latest: fixed published ONS headline reference
 
 `./run.sh --check --browser-check --port 4174` passes **100 Python tests, 33 TypeScript tests and 43 Chromium desktop/phone browser checks**, with one expected skip and no unexpected failures. Log: `data/reports/personal-inflation-published-reference.log`. Current browser results and personal screenshots are in `data/reports/browser/`.

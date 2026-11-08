@@ -40,3 +40,12 @@ Use the historical slider and **Reveal actual**. Show misses as well as successe
 Open **Personal inflation → Snack clubs · 13 months → Calculate sample**. Show that the real saved snack indices, weighted by the fictional statement, produce **1.1%** over September 2025–September 2026. The chocolate subscription's **20% amount increase** appears separately and does not enter the index calculation. The official comparison is **3.5% CPI**, with **3.6% CPIH** also shown, from the dated ONS release of 21 October 2026. These are fixed annual-rate references for the same period. The 1.9% equal-weight snack benchmark remains synthetic and separate.
 
 Switch to **Mixed household** to demonstrate the 99.6% `other` warning: these two narrow indices cannot estimate household inflation. The short statement exercises the less-than-three-month warning. All example statements are fabricated and labelled. Local file parsing does not upload bank data.
+
+
+## HRT emphasis: measure the value of extra data
+
+Open **Forecast lab → Original evaluation → UK chocolate** and the **Does the extra data help?** panel. Ask whether weekly commodity inputs add useful information to monthly category-price forecasts. The saved experiment uses 34 earlier validation months for selection and 33 later months for evaluation.
+
+The selected model’s MAE is 1.57 percentage points. Error is 20.3% lower than no change and 2.5% lower than a seasonal baseline. Compared with the same tree settings using price history alone (1.59 pp), weekly commodity inputs add a smaller 1.3% reduction. That last comparison measures the incremental feature contribution; the full 20.3% gain must not be attributed to commodities. These results do not establish causation or predict an individual product’s next shrink.
+
+Switch to crisps if asked about generalisation: its selected history-only Ridge has 6.9% higher MAE than no change. The exploratory rolling searches remain separately labelled and do not isolate a commodity effect. Finish with the existing exact whole-pack purchasing calculation; this is a separate decision module, not an evaluated forecast-driven buying policy. Every historical observation, prediction, model score and chart scale remains unchanged.
